@@ -1,0 +1,168 @@
+{
+  "sections": {
+    "temporal": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "2bb8a6da-a9a3-43ae-ac5a-1cf437b52454": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "b2aa43f6-8144-4232-bad8-b31b95a3d28e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/1_4eba88a4-6a7a-4306-a25d-716ea45f3cb6.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/colchones"
+          }
+        },
+        "09557757-ae2a-4aaf-a523-9b213ae3bd36": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/2_f6864c79-e29d-4532-a0c1-d8a2d7c38206.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/024148"
+          }
+        },
+        "8df13cf3-944b-4c0a-b0fd-6a6c86cad2b9": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/3_0e3091f3-b69f-48d3-a756-f7f06d1abb7e.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029178"
+          }
+        },
+        "5daf217d-187f-4dcf-8d44-c689ccdb569b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/4_994534e0-252d-4947-ba7f-72deee352e49.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/"
+          }
+        },
+        "257a4b49-3c6b-48f8-91e7-23e5aab3dcad": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/5_6b93f964-3fd9-426e-9805-04905acaab5e.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029183"
+          }
+        },
+        "4b2915cb-7cdc-40dc-bdf7-e5f2ac9109c0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/6_0d7bcf92-3c6a-40bc-b5d0-daff72fc3345.jpg",
+            "enlace": ""
+          }
+        },
+        "e2c40a55-133c-4267-b031-fba3d6444a93": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7_606cdf81-13b4-4ef2-996c-2e1e66c12baf.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029187"
+          }
+        },
+        "4eb2f42c-00e3-4534-a3ad-195d3d7046e8": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/8_e9fe1545-7409-457c-9a1f-8bf08ca14df4.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029192"
+          }
+        },
+        "675506fd-e58b-4ab3-baf5-07bfb2edc8a7": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/9_c2285e2f-c6a5-48c9-8772-cca51b526618.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029215"
+          }
+        },
+        "f021a169-5a2a-438a-9cc9-1291bb932049": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/10_fef4ac04-23ab-47ec-b309-5f29f7144591.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7029208"
+          }
+        },
+        "7cf1d7c3-1be8-4aa0-ba29-112b9decb4e0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/11_32393518-c579-40f3-80d9-e43159399e0e.jpg",
+            "enlace": ""
+          }
+        },
+        "640692b3-7fbf-42db-80bb-9145d38aee2c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/12_4595aaf4-4c11-4241-8ff9-fdf39da9ca8a.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/024156"
+          }
+        },
+        "b36c6b93-b227-4402-88a3-a31d4e23b548": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/13_9e1965c7-947f-41c5-9703-8f8a92b2c7f9.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/024170"
+          }
+        },
+        "93f1d84b-d08d-485d-b68d-422441f24e47": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/14_abebf5b9-5692-4142-bdbf-bb2010d1861b.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7004764"
+          }
+        },
+        "a48ea57a-48cf-4c8a-855d-6182b480db5a": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/15_34d3841d-8d65-41f1-a21d-130b101be225.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/colchon-king-venecia-gratis-cama-aurora"
+          }
+        },
+        "81538f55-404e-492f-a8c8-3a8781e99457": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/16_c68efee6-9a01-4ceb-b7d9-5488ad861801.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7015054"
+          }
+        },
+        "fe51b603-a5a7-4634-8eef-bd4c92eb8898": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/17_0ace117e-0351-45f5-8403-678e79150cef.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/sucursales"
+          }
+        },
+        "5eccb9a9-1b98-43ae-9b15-7c97eb7dcdf1": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/18_5a907f25-2a47-42f6-b2aa-54a69d88ac18.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/sucursales"
+          }
+        }
+      },
+      "block_order": [
+        "b2aa43f6-8144-4232-bad8-b31b95a3d28e",
+        "09557757-ae2a-4aaf-a523-9b213ae3bd36",
+        "8df13cf3-944b-4c0a-b0fd-6a6c86cad2b9",
+        "5daf217d-187f-4dcf-8d44-c689ccdb569b",
+        "257a4b49-3c6b-48f8-91e7-23e5aab3dcad",
+        "4b2915cb-7cdc-40dc-bdf7-e5f2ac9109c0",
+        "e2c40a55-133c-4267-b031-fba3d6444a93",
+        "4eb2f42c-00e3-4534-a3ad-195d3d7046e8",
+        "675506fd-e58b-4ab3-baf5-07bfb2edc8a7",
+        "f021a169-5a2a-438a-9cc9-1291bb932049",
+        "7cf1d7c3-1be8-4aa0-ba29-112b9decb4e0",
+        "640692b3-7fbf-42db-80bb-9145d38aee2c",
+        "b36c6b93-b227-4402-88a3-a31d4e23b548",
+        "93f1d84b-d08d-485d-b68d-422441f24e47",
+        "a48ea57a-48cf-4c8a-855d-6182b480db5a",
+        "81538f55-404e-492f-a8c8-3a8781e99457",
+        "fe51b603-a5a7-4634-8eef-bd4c92eb8898",
+        "5eccb9a9-1b98-43ae-9b15-7c97eb7dcdf1"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "temporal",
+    "2bb8a6da-a9a3-43ae-ac5a-1cf437b52454"
+  ]
+}

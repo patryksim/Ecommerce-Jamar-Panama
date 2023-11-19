@@ -1,0 +1,76 @@
+{{ 'custom-assets.scss.css'  | asset_url | stylesheet_tag }} 
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <h2 class="text-center"> {{ section.settings.title}} </h2>
+    <div class="col-11 col-md-11">
+      <div class="row overflow-auto flex-nowrap pb-4 container-scrollbar justify-content-start justify-content-md-around">
+        {% for block in section.blocks %}
+          {% if block.type == 'subcategories' %}
+          {% assign b = block.settings %}
+          <div class="col-md-auto col-5">
+            <div class="card shadow-none border-0">
+              {{ b.image | image_url : width: auto | class: 'img-fluid' }}
+              <div class="card-body">
+                <p class="card-text text-center"><b>{{b.title}}</b></p>
+              </div>
+            </div>
+          </div>
+
+          {% endif %}
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Seccion Compras",
+    "settings": [
+        {
+            "type":"text",
+            "id":"title",
+            "label": "Titulo de seccion"
+        }
+    ],
+    "blocks": [
+        {
+            "name" : "Subcategories",
+            "type": "subcategories",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Titulo"
+                },
+                {
+                    "type": "page",
+                    "id": "link",
+                    "label": "Enlace"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Imagen"
+                }
+            ]
+        }
+    ],
+        "presets": [
+        {
+            "name":"Seccion Compras",
+            "category": "Custom"
+        }
+
+    ] 
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

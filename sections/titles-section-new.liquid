@@ -1,0 +1,49 @@
+<!-- Welcome section starts -->
+<section class="section">
+  <div class="container">
+    <div class="contenedor-titulos-secciones">  
+      {% if section.settings.section-heading-img != blank %}
+        <figure>
+          <img src="{{ section.settings.section-heading-img | img_url:'master'}}" alt="Imagen de prueba" data-rimg="lazy" loading="lazy">
+        </figure>
+      {% endif %}
+        {% if section.settings.section-heading-titles != blank %}
+          <h2 class="title-section">{{ section.settings.section-heading-titles }}</h2>
+        {% endif %}
+    </div> 
+  </div>
+</section>
+<!-- Welcome section ends -->
+{% schema %}
+{
+"name": "Titulos de sección", // Section name
+"settings": [
+{
+"id": "section-heading-titles",
+"type": "richtext",
+"label": "Titulo de la sección"
+},
+{
+"id": "section-heading-img",
+"type": "image_picker",
+"label": "Imagen de titulo"
+
+}
+],
+"presets": [
+{
+"name": "Titulos de sección",
+"category": "Layout Personalizado"
+}
+]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+
+
+{% endstylesheet %}
+{% javascript %}
+
+{% endjavascript %}

@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "page": {
+      "type": "dynamic-html",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "page"
+  ]
+}

@@ -1,0 +1,379 @@
+<!-- FOOTER 4 ICONOS -->
+
+{% comment %} Refactorizar {% endcomment %}
+<style>
+  .footer-enlaces {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  /* or 214% */
+  color: #404B5A;
+  }
+  
+  .footer-titulo-col {
+    font-weight: 500;
+    font-size: 16px!important;
+    line-height: 18px;
+    letter-spacing: .5px;
+    color: #404b5a!important;
+  }
+  
+  .footer-enlaces:hover {
+  color: #404B5A;
+  }
+</style>
+
+
+
+<br><br><br>
+<div class="container-fluid footer-cuatro-iconos">
+  <div class="row">
+    {% if template == 'blog.new-blog' or template.name == 'blog' %}
+      <div class="col-6 col-sm-3 text-center pt-3 pb-3" style="background: #404B5A;">
+        <a href="/pages/sucursales">
+          <img class="mb-0" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/icon-tiendas-footer.svg" data-rimg="lazy" loading="lazy">
+          <p class="text-white m-0">Nuestras</p>
+          <p class="text-white m-0"><b>TIENDAS</b></p>
+        </a>
+      </div>
+    {% else %}
+      <div class="col-6 col-sm-3 text-center pt-3 pb-3" style="background: #404B5A;">
+        <a href="/blogs/jamar">
+          <img class="mb-0" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/icono-blog-jamar-footer.svg?v=1643399370" data-rimg="lazy" loading="lazy">
+          <p class="text-white m-0">Visita nuestro</p>
+          <p class="text-white m-0"><b>BLOG</b></p>
+        </a>
+      </div>
+    {% endif %}
+    <div class="col-6 col-sm-3 text-center pt-3 pb-3 bg-rojo-jamar">
+      <a href="/collections/ofertas">
+        <img class="mb-0" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/icono-ofertas-jamar-footer.svg?v=1643399370" data-rimg="lazy" loading="lazy">
+        <p class="text-white m-0">Consulta nuestras</p>
+        <p class="text-white m-0"><b>OFERTAS</b></p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-3 text-center pt-3 pb-3 bg-azul-jamar">
+      <a href="https://tarjetizacion.jamar.com.pa/form-one">
+        <img class="mb-0" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/icono-credijamar-footer.svg?v=1643399370" data-rimg="lazy" loading="lazy">
+        <p class="text-white m-0">Pide tu</p>
+        <p class="text-white m-0"><b>CREDIJAMAR</b></p>
+      </a>
+    </div>
+    <div class="col-6 col-sm-3 text-center pt-3 pb-3" style="background: #404B5A;">
+      <a href="https://cuenta.jamar.com.pa/">
+        <img class="mb-0" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/icon-portal-cliente-jamar-footer.svg?v=1643399370" data-rimg="lazy" loading="lazy">
+        <p class="text-white m-0">Visita nuestro</p>
+        <p class="text-white m-0"><b>PORTAL DE CLIENTES</b></p>
+      </a>
+    </div>
+  </div>
+</div>
+<!-- FOOTER DESKTOP -->
+<div class="d-none d-lg-block container-fluid">
+	<div class="container">
+		<div class="row mt-4 mb-4">
+			<div class="col-2">
+				<p class="footer-titulo-col">LA EMPRESA</p>
+				<ul>
+					<li><a class="footer-enlaces" href="/pages/nosotros">Nosotros</a></li>
+					<li><a class="footer-enlaces" href="/blogs/jamar">Blogs</a></li>
+					<li><a class="footer-enlaces" href="/pages/politicas-de-privacidad">Políticas de Privacidad</a></li>
+                    <li><a class="footer-enlaces" href="/pages/politicas-de-proteccion-de-datos">Políticas de Protección de Datos</a></li>
+					<li><a class="footer-enlaces" href="https://www.youtube.com/watch?v=OR09EnTp2R4&ab_channel=JamarColombia">Video institucional</a></li>
+                 </ul>   
+			</div>
+			<div class="col-3">
+				<p class="footer-titulo-col">FINANCIAMIENTO</p>
+				<ul>
+					<li><a class="footer-enlaces" href="/pages/portal-de-clientes">Portal de Clientes</a></li>
+					<li><a class="footer-enlaces" href="/pages/tarjeta-jamar">Tarjeta Jamar</a></li>
+					<li><a class="footer-enlaces" href="/pages/cliente-oro">Cliente Oro</a></li>
+					<li><a class="footer-enlaces" href="/pages/preguntas-frecuentes-sobre-pagos">Preguntas Frecuentes sobre Pagos</a></li>
+                  	<li class="mt-2"><a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce" class="btn-footer-credijamar tag-cta-footer-credijamar p-2">
+                  		<img class="me-1" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/tj-credijamar-nuevo-logo.svg?v=1673557846" alt="Icono credijamar">Aplica Crédito</a></li>
+				</ul>
+				<br>
+			</div>
+			<div class="col-2">
+				<p class="footer-titulo-col">SUCURSALES</p>
+				<ul>
+					<li><a class="footer-enlaces" href="/pages/sucursales">Panamá</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-via-espana">Vía España</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-jamar-albrook-mall">Albrook Mall</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-la-chorrera">Chorrera</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-jamar-tocumen">Tocumen</a></li>
+					<li><a class="footer-enlaces" href="/pages/tienda-jamar-los-andes-mall">Los Andes</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-megamall">Megamall</a></li>
+					<li><a class="footer-enlaces" href="/pages/sucursal-jamar-david">David, Chiriquí</a></li>
+				</ul>
+			</div>
+			<div class="col-3">
+				<p class="footer-titulo-col">SERVICIO AL CLIENTE</p>
+				<ul>
+                    <li><a class="footer-enlaces" href="/pages/servicios">Formas seguras de comprar</a></li>
+					<li><a class="footer-enlaces" href="/pages/condiciones-de-entrega">Condiciones de Entrega</a></li>
+					<li><a class="footer-enlaces" href="/pages/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+					<!--li><a class="footer-enlaces" href="/pages/condiciones-de-campanas">Condiciones de Campañas</a></li-->
+					<li><a class="footer-enlaces" href="/pages/condiciones-de-garantias">Condiciones de Garantías</a></li>
+					<li><a class="footer-enlaces" href="/pages/guia-del-cliente">Guía del cliente</a></li>
+					<li><a class="footer-enlaces" href="/pages/paga-y-gana">Paga y Gana</a></li>
+					<li><a class="footer-enlaces" href="/pages/certificado-de-garantia">Certificado de Garantía</a></li>
+					<li><a class="footer-enlaces" href="/pages/politicas-de-cambios-o-devoluciones-para-entregas-online">Políticas para compras online</a></li>
+					<li><a class="footer-enlaces" href="/pages/condiciones-de-campanas-y-promociones">Condiciones de Campañas y Promociones</a></li>
+					<li><a class="footer-enlaces" href="/pages/tecno-tombola-2023">Tecno Tombola 2023</a></li>
+				</ul>
+			</div>
+			<div class="col-2">
+				<p class="footer-titulo-col">COLECCIONES</p>
+				<!--p class="mb-2"><b>Estilos</b></p>
+				<ul>
+					<li><a class="footer-enlaces" href="/pages/estilo-contemporaneo">Estilo Contemporáneo</a></li>
+					<li><a class="footer-enlaces" href="/pages/estilo-moderno-glam">Estilo Moderno Glam</a></li>
+					<li><a class="footer-enlaces" href="/pages/estilo-natural-century">Estilo Natural Century</a></li>
+				</ul>
+				<br>
+				<p class="mb-2"><b>Colecciones</b></p-->
+				<ul>
+                  {% comment %}
+                  <li><a class="footer-enlaces" href="/pages/line">Line</a></li>
+                  <li><a class="footer-enlaces" href="/pages/montreal">Montreal</a></li>
+                  <li><a class="footer-enlaces" href="/pages/nala">Nala</a></li>
+                  {% endcomment %}
+                  <li><a class="footer-enlaces" href="/pages/celta">Celta</a></li>
+                  <li><a class="footer-enlaces" href="/pages/holden">Holden</a></li>
+                  <li><a class="footer-enlaces" href="/pages/alma">Alma</a></li>
+		          <li><a class="footer-enlaces" href="/pages/lumina">Lúmina</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="d-none d-lg-block container-fluid" style="background: #404B5A;">
+	<div class="container pt-4 pb-4">
+		<div class="row">
+			<div class="col-5">
+				<p class="text-white mb-0">Muebles Jamar S.A NIT: 914084-1-517780. Todos los derechos reservados.</p>
+				<p class="text-white">Teléfono: <a class="text-white" href="tel:+5072056500" title="tel:+5072056500">205 6500</a></p>
+				<p class="text-white mb-0">Dirección: Vía España, Entre vía Brasil y Vía Porras</p>
+			</div>
+            <div class="col-3">
+              <div class="row flex-column">
+                <p class="text-white mb-0">Métodos de pago</p>
+                <div class="col-12">
+                  <div class="flex-column pt-3">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/01-visa.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/02-master-card.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/03-sistema-clave.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/04-credijamar.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/05-punto-pago.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/06-banco-general.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/07-yappy.png" data-rimg="lazy" loading="lazy">
+                    <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/08-banistmo.png" data-rimg="lazy" loading="lazy">
+                    <img class="" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/09-multi-pagos.png" data-rimg="lazy" loading="lazy">
+                  </div>
+                </div>
+              </div>
+            </div>
+			<div class="col-4">
+				<ul class="d-flex justify-content-end mb-4">
+					<li><a href="https://www.instagram.com/jamarpanama/">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-instagram-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+					<li><a href="https://www.facebook.com/JamarPanama">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-facebook-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+					<li><a href="https://www.youtube.com/user/mueblesjamarpanama">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-youtube-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+					<li><a href="https://pin.it/5iERh0L">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-pinterest-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+					<li><a href="https://twitter.com/jamarpanama">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-twitter-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+					<li><a href="https://vm.tiktok.com/ZMLy83xAE/">
+						<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-tiktok-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy"></a></li>
+				</ul>
+				<p class="text-white mb-0 text-end pt-2">Correo: <a class="text-white" href="mailto:ssacpanama@jamar.com" title="mailto:ssacpanama@jamar.com">sacpanama@jamar.com</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FOOTER MOVIL -->
+<div class="d-block d-lg-none accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        <p class="footer-titulo-col"><b>LA EMPRESA</b></p>
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul>
+          <li><a class="footer-enlaces" href="/pages/nosotros">Nosotros</a></li>
+          <li><a class="footer-enlaces" href="/blogs/jamar">Blogs</a></li>
+          <li><a class="footer-enlaces" href="/pages/politicas-de-privacidad">Políticas de Privacidad</a></li>
+          <li><a class="footer-enlaces" href="/pages/politicas-de-proteccion-de-datos">Políticas de Protección de Datos</a></li>
+          <li><a class="footer-enlaces" href="https://www.youtube.com/watch?v=OR09EnTp2R4&ab_channel=JamarColombia">Video institucional</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        <p class="footer-titulo-col"><b>FINANCIAMIENTO</b></p>
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul>
+          <li><a class="footer-enlaces" href="/pages/portal-de-clientes">Portal de Clientes</a></li>
+          <li><a class="footer-enlaces" href="/pages/tarjeta-jamar">Tarjeta Jamar</a></li>
+          <li><a class="footer-enlaces" href="/pages/cliente-oro">Cliente Oro</a></li>
+          <li><a class="footer-enlaces" href="/pages/preguntas-frecuentes-sobre-pagos">Preguntas Frecuentes sobre Pagos</a></li>
+          <li class="mt-2"><a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce" class="btn-footer-credijamar tag-cta-footer-credijamar p-2">
+          	<img class="me-1" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/tj-credijamar-nuevo-logo.svg?v=1673557846" alt="Icono credijamar" data-rimg="lazy" loading="lazy">Aplica Crédito</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        <p class="footer-titulo-col"><b>SUCURSALES</b></p>
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul>
+          <li><a class="footer-enlaces" href="/pages/sucursales">Panamá</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-via-espana">Vía España</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-jamar-albrook-mall">Albrook Mall</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-la-chorrera">Chorrera</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-jamar-tocumen">Tocumen</a></li>
+          <li><a class="footer-enlaces" href="/pages/tienda-jamar-los-andes-mall">Los Andes</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-megamall">Megamall</a></li>
+          <li><a class="footer-enlaces" href="/pages/sucursal-jamar-david">David, Chiriquí</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingFive">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+        <p class="footer-titulo-col"><b>SERVICIO AL CLIENTE</b></p>
+      </button>
+    </h2>
+    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <ul>
+          <li><a class="footer-enlaces" href="/pages/servicios">Formas seguras de comprar</a></li>
+          <li><a class="footer-enlaces" href="/pages/condiciones-de-entrega">Condiciones de Entrega</a></li>
+          <li><a class="footer-enlaces" href="/pages/preguntas-frecuentes">Preguntas Frecuentes</a></li>
+          <!--li><a class="footer-enlaces" href="/pages/condiciones-de-campanas">Condiciones de Campañas</a></li-->
+          <li><a class="footer-enlaces" href="/pages/condiciones-de-garantias">Condiciones de Garantías</a></li>
+          <li><a class="footer-enlaces" href="/pages/guia-del-cliente">Guía del cliente</a></li>
+          <li><a class="footer-enlaces" href="/pages/paga-y-gana">Paga y Gana</a></li>
+          <li><a class="footer-enlaces" href="/pages/certificado-de-garantia">Certificado de Garantía</a></li>
+          <li><a class="footer-enlaces" href="/pages/politicas-de-cambios-o-devoluciones-para-entregas-online">Políticas para compras online</a></li>
+          <li><a class="footer-enlaces" href="/pages/condiciones-de-campanas-y-promociones">Condiciones de Campañas y Promociones</a></li>
+          <li><a class="footer-enlaces" href="/pages/tecno-tombola-2023">Tecno Tombola 2023</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingSix">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+        <p class="footer-titulo-col"><b>COLECCIONES</b></p>
+      </button>
+    </h2>
+    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <!--p class="mb-2"><b>Estilos</b></p>
+        <ul>
+          <li><a class="footer-enlaces" href="/pages/estilo-contemporaneo">Estilo Contemporáneo</a></li>
+          <li><a class="footer-enlaces" href="/pages/estilo-moderno-glam">Estilo Moderno Glam</a></li>
+          <li><a class="footer-enlaces" href="/pages/estilo-natural-century">Estilo Natural Century</a></li>
+        </ul>
+        <br>
+        <p class="mb-2"><b>Colecciones</b></p-->
+        <ul>
+          
+          {% comment %}
+          <li><a class="footer-enlaces" href="/pages/line">Line</a></li>
+          <li><a class="footer-enlaces" href="/pages/montreal">Montreal</a></li>
+          <li><a class="footer-enlaces" href="/pages/nala">Nala</a></li>
+          {% endcomment %}
+          <li><a class="footer-enlaces" href="/pages/celta">Celta</a></li>
+          <li><a class="footer-enlaces" href="/pages/holden">Holden</a></li>
+          <li><a class="footer-enlaces" href="/pages/alma">Alma</a></li>
+          <li><a class="footer-enlaces" href="/pages/lumina">Lúmina</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-block d-lg-none container-fluid" style="background: #404B5A;">
+  <div class="container pt-4 pb-4">
+    <div class="row">
+        <ul class="d-flex justify-content-center mb-2">
+          <li><a href="https://www.instagram.com/jamarpanama/">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-instagram-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+          <li><a href="https://www.facebook.com/JamarPanama">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-facebook-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+          <li><a href="https://www.youtube.com/user/mueblesjamarpanama">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-youtube-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+          <li><a href="https://pin.it/5iERh0L">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-pinterest-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+          <li><a href="https://twitter.com/jamarpanama">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-twitter-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+          <li><a href="https://vm.tiktok.com/ZMLy83xAE/">
+          	<img class="ml-3" width="30px" alt="visa" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/logo-tiktok-jamar.svg?v=1645813767" data-rimg="lazy" loading="lazy">
+          </a></li>
+        </ul>
+        <p class="text-white text-center m-0">Muebles Jamar S.A RUC: 914084-1-517780.</p>
+        <p class="text-white text-center mt-0 mb-2">Todos los derechos reservados.</p>
+        <p class="text-white text-center mb-0">Teléfono:</p>
+        <a class="text-white text-center mb-2" href="tel:+5072056500" title="tel:+5072056500">205 6500</a>
+        <p class="text-white text-center m-0">Dirección:</p>
+        <p class="text-white text-center mb-2">Vía España, Entre vía Brasil y Vía Porras</p>
+        <p class="text-white text-center m-0">Correo:</p>
+        <a class="text-white text-center" href="mailto:ssacpanama@jamar.com" title="mailto:ssacpanama@jamar.com">sacpanama@jamar.com</a>
+      </div>
+      <div class="row">
+        <p class="text-white text-center mb-0 mt-2 fw-bold">Métodos de pago</p>
+        <div class="flex-column text-center">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/01-visa.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/02-master-card.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/03-sistema-clave.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/04-credijamar.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/05-punto-pago.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/06-banco-general.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/07-yappy.png" data-rimg="lazy" loading="lazy">
+          <img class="me-1 mb-2" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/08-banistmo.png" data-rimg="lazy" loading="lazy">
+          <img class="" width=45 src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/09-multi-pagos.png" data-rimg="lazy" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style type="text/css">
+  .accordion-button:not(.collapsed) {
+    color: transparent;
+    background-color: transparent;
+  }
+  .accordion-button:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(-180deg);
+  }
+</style>

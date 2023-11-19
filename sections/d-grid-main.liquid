@@ -1,0 +1,238 @@
+{% comment %} 
+    FRANJA PROMOCIONAL - DESCOMENTAR PARA ACTIVAR
+    -----------------------------------
+    Se agrega franja promocional estatica coincidente con el diseño de Colombia
+{% endcomment %}
+
+
+<style>
+  
+  .titulo-slide {
+  	font-size:32px;
+  }
+  
+  .altura-gift {
+  	max-height: 80px;
+  }
+  
+  @media (max-width: 600px) {
+  .titulo-slide {
+    font-size:20px;
+  }
+}
+ 
+</style>
+
+  
+{% comment %} 
+  INICIO DEL SLIDER - BOOTSTRAP COMPONENT 
+  -----------------------------------
+  Tiene las validaciones para mostrar o ocultar las clases que hacen el efecto slide
+{% endcomment %}
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    
+    {% for block in section.blocks %}
+      <span class="d-none">{% increment contador %}</span>
+      <div class="carousel-item
+        {% if contador < 2 %}
+          active
+          {% endif %}
+        ">
+        {% assign bloque = block.settings %}
+            <a href="{{bloque.enlaceslide}}" class="tag-cta-banner-img-slider-{{contador}}">
+                <picture>
+                    <source srcset="{{ bloque.imagen | image_url: width:1920, format: 'pjpg' }}" media="(min-width: 600px)">
+                  	<img src="{{bloque.imagenmovil | image_url : width:600, format: 'pjpg' }}" class="carrousel-item-img img-fluid w-100" style="filter: brightness({{bloque.overlay}})" alt="{{ bloque.imagen.alt }}" data-rimg="lazy" loading="lazy">
+                  	{% comment %}
+                    {{ bloque.imagenmovil | image_url : width: auto, format: 'pjpg' | image_tag: alt: 'Banner del slider', srcset: nil, class: 'carrousel-item-img img-fluid w-100' }}
+                  	{% endcomment %}
+                </picture>
+            </a>
+        <a href="{{bloque.enlaceslide}}" class="text-white text-decoration-none">          
+          <div class="carousel-caption 
+            text-start
+            d-flex
+            flex-column
+            align-items-start
+
+            {% if bloque.mostrarcap == false %} d-none {% endif %}
+            {% if bloque.mostrarcap == true %} d-block {% endif %}
+            " style="left:6%;bottom:7%; heigth:200px;">
+            {% if bloque.textoimage != "" %}
+                    <h5 class="h1 text-start lato-titulos titulo-slide col-12 mb-0 mt-0" style="line-height: 1.6">{{ bloque.textoimage }}</h5>
+            {% endif %}
+
+            {% if bloque.parraforefuerzo != "" %}
+                    <p class="subparrafo-slider lato-parrafos parrafo-descanso text-start text-white col-11 mb-0 mt-md-4">{{ bloque.parraforefuerzo }}</p>
+            {% endif %}
+
+            {% if bloque.textoenlace != "" %}
+                      <a href="{{ bloque.enlaceslide }}" class="mb-0 mt-3 cta-banner-principal tag-cta-banner-slider-{{contador}}"> {{bloque.textoenlace}}</a>
+            {% endif %}
+
+          </div>
+         </a>
+      </div>
+    {% endfor %}
+
+  </div>
+
+  {% if section.blocks.size > 1 %}
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon d-none" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button> 
+  {% endif %}
+</div>
+
+  {% comment %}
+  /***********************************************
+  *  	SE AGREGA BARRA GRIS SI ESTA EN EL INDEX
+  *             PATRYKSIM@GMAIL.COM
+  ***********************************************/
+  {% endcomment %}
+  {% if template == 'index' %}
+    <div class="container-fluid bg-gris-jamar">
+      <div class="container barra-contacto-desktop pl-1 pr-1">
+        <div class="row pt-3 pb-3 d-none d-md-flex">
+            <div class="col-6 align-self-center text-center border-white border-end">
+            <a class="text-white" data-wa="true" data-wa-section-name="slider-cinta-cinta" href="https://bit.ly/3yTL4La">
+                <img class="mt-0 mb-0 mr-2" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/wp-icono.png?v=1630445443" data-rimg="lazy" loading="lazy">
+                Asesoría para comprar tus muebles por WhatsApp
+            </a>
+            </div>
+            <div class="col-6 align-self-center text-center">
+            <a class="text-white" href="/pages/servicios">
+                <img class="mt-0 mb-0 mr-2" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Descubre.svg" data-rimg="lazy" loading="lazy">
+                Así de fácil es renovar tus muebles con Jamar
+            </a>
+            </div>
+        </div>
+        <div class="row pt-3 pb-3 pr-0 pl-0 d-block d-md-none">
+          <div class="col-12 text-center align-self-center p-0">
+            <div id="jamar-recorrido-virtual" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner h-100">
+                  <div class="carousel-item active">
+                    <div class="align-self-center text-center">
+                      <a class="text-white fs-6" data-wa="true" data-wa-section-name="slider-cinta-cinta-movil" href="https://bit.ly/3yTL4La">
+                        <img class="mt-0 mb-0 mr-2" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/wp-icono.png?v=1630445443" data-rimg="lazy" loading="lazy">
+                        Asesoría para comprar tus muebles por WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="align-self-center text-center">
+                      <a class="text-white fs-6" href="/pages/servicios">
+                        <img class="mt-0 mb-0 mr-2" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Descubre.svg" data-rimg="lazy" loading="lazy">
+                        Así de fácil es renovar tus muebles con Jamar
+                       </a>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#jamar-recorrido-virtual" data-bs-slide="prev" style="width: 5%;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#jamar-recorrido-virtual" data-bs-slide="next" style="width: 5%;">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+
+{% schema %}
+
+{
+    "name":"Slider nuevo 1",
+    "tag":"div",
+    "class":"carousel slide",
+    "settings": [
+    {
+      "type": "text",
+      "id": "clase_personalizada",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "checkbox",
+      "id": "mostrarcap",
+      "label": "Mostrar Textos",
+      "default": false
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen para Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "imagenmovil",
+            "label": "Imagen para Movil"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto bajo la imagen"
+        },
+        {
+            "type": "text",
+            "id": "parraforefuerzo",
+            "label": "Texto bajo la imagen"
+        },
+        {
+            "type": "text",
+            "id": "textoenlace",
+            "label": "Texto bajo la imagen"
+        },
+        {
+            "type": "url",
+            "id": "enlaceslide",
+            "label": "Seleccione el enlace"
+        },
+        {
+          "type": "checkbox",
+          "id": "mostrarcap",
+          "label": "Mostrar Textos",
+          "default": false
+        },
+		{
+          "type": "range",
+          "id": "overlay",
+          "min": 0,
+          "max": 1,
+          "step": 0.1,
+          "unit": "px",
+          "label": "Overlay",
+          "default": 1
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Slider nuevo 1",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

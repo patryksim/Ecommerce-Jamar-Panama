@@ -1,0 +1,53 @@
+<div class="row mt-4 {{ section.settings.font_class }}">
+    <div class="col-12">
+        <video controls="" autoplay="" muted="" loop="" preload="auto">
+            <source src="{{ section.settings.video_url }}">
+        </video>
+    </div>
+</div>
+{% schema %}
+  {
+    "name": "Video Full Width",
+    "tag":"section",
+    "class":"container pt-4",
+    "settings": [
+      
+      {
+        "type": "select",
+        "id": "font_class",
+        "label": "Tipo de Letra",
+        "options": [
+          {
+            "value": "style-moderno-glam",
+            "label": "Estilo Moderno Glam"
+          },
+          {
+            "value": "style-natural-century",
+            "label": "Estilo Natural Century"
+          },
+          {
+            "value": "style-contemporaneo",
+            "label": "Estilo Contemporáneo"
+          }
+        ],
+        "default": "style-moderno-glam"
+      },
+      {
+        "type": "text",
+        "id": "video_url",
+        "label": "Url del Video"
+      }
+    ],
+    "presets": [
+        {
+          "name": "Video Full Width"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

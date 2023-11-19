@@ -1,0 +1,108 @@
+{{ 'slick-theme.css' | global_asset_url | stylesheet_tag }}
+{{ 'slick.css' | global_asset_url | stylesheet_tag }}
+
+
+<style>
+        .test {
+            text-align: center;
+        }
+        
+        .card {
+            height: 300px;
+            width: 200px!important;
+        }
+    </style>
+
+<div class="test ">
+    <div class="card" style="background-color: yellow;">your content</div>
+    <div class="card" style="background-color: orange;">your content</div>
+    <div class="card" style="background-color: blue;">your content</div>
+    <div class="card" style="background-color: blue;">your content</div>
+</div>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+{{ 'slick.min.js' | global_asset_url | script_tag }}
+
+<script>
+        $(document).ready(function() {
+            $('.test').slick({
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                responsive: [{
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerMode: true,
+                    }
+                }]
+
+
+            })
+        });
+    </script>
+
+
+
+{% schema %}
+
+{
+    "name":"Grid Promo Cat2",
+    "tag":"section",
+    "class":"container",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "parr_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen de la tarjeta"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "text",
+            "id": "parrimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "url",
+            "id": "linkimage",
+            "label": "Texto sobre la imagen"
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Prueba Section",
+            "category": "Seccion de prueba"
+        }
+    ]
+}
+
+{% endschema %}

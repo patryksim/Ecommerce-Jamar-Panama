@@ -1,0 +1,373 @@
+{
+  "sections": {
+    "slider": {
+      "type": "static-header",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "7ee9e0f3-d535-458f-bceb-9e092b53562e": {
+      "type": "carrusel-dormitorios",
+      "blocks": {
+        "da821b1e-102a-4849-a60e-15d20da92727": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Banner-Landing-RECAMARAS-PC-1_72adfb1e-7b29-4030-ac2b-70d147c575dc.webp",
+            "image_mobile": "shopify:\/\/shop_images\/fondo_mobile_recamara.webp",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "da821b1e-102a-4849-a60e-15d20da92727"
+      ],
+      "settings": {
+        "hover": true,
+        "hover_image": "shopify:\/\/shop_images\/Banner-Landing-RECAMARAS-PC-1-B_fd92a745-a2c3-4cb9-8bf3-8d1130a72a63.webp",
+        "hover_width": 5,
+        "hover_opacity": 1,
+        "hover_title": "CAMAS EN TENDENCIA",
+        "hover_text": "Transforma tu recámara con diseños exclusivos elaborados en 100% roble. Descubre nuestras recámaras completas que aportarán exclusividad y armonía a tu espacio"
+      }
+    },
+    "1662408693c9a46754": {
+      "type": "d-collection-cat-grid",
+      "blocks": {
+        "cd08f99e-d5e9-4299-8be0-5ded371f6d20": {
+          "type": "ver-todos",
+          "settings": {
+            "texto": "VER TODOS",
+            "ver_todos_link": "https:\/\/www.jamar.com.pa\/collections\/recamaras"
+          }
+        },
+        "460471a2-ef18-465f-b6f7-762330ede324": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/recamaras-completas-pa-_25sep.webp",
+            "textoimage": "RECÁMARAS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/recamaras"
+          }
+        },
+        "e89a0028-a7c6-4416-8f27-f8e85f91d72e": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/camas-pa-_25sep.webp",
+            "textoimage": "CAMAS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "\/collections\/recamaras\/recamaras_camas"
+          }
+        },
+        "acaac486-a0f1-4cbe-9223-3c5819315839": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/cabeceros-pa-_25sep.webp",
+            "textoimage": "CABECERAS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/recamaras\/Cabeceras"
+          }
+        },
+        "dc9a8c1a-803e-40e0-b1bf-33d657043530": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/4-mesas-de-noche-jamar.jpg",
+            "textoimage": "MESITAS DE NOCHE",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "\/collections\/recamaras\/recamaras_mesas-de-noche"
+          }
+        },
+        "61ed4764-d947-491c-9bbc-514e3e192a29": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/base-cama-pa-25sep.webp",
+            "textoimage": "BASES O BOX",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/colchones-y-bases\/colchones-y-bases_bases-o-box"
+          }
+        },
+        "493d892a-c126-4718-84de-16035642eb6d": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/colchones-pa-_25sep.webp",
+            "textoimage": "COLCHONES",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/colchones"
+          }
+        },
+        "33f9147b-bbbf-4b80-903f-2e0e772e3886": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/tocadores-pa-_25sep.webp",
+            "textoimage": "TOCADORES",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "\/collections\/recamaras\/Tocadores"
+          }
+        },
+        "5ffca5b8-bf84-4ef6-a9b6-1042001a29a0": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/comodas-pa-25sep_65cac138-18d7-4da4-875a-adedc9f9d75b.webp",
+            "textoimage": "CÓMODAS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "\/collections\/recamaras\/recamaras_comodas"
+          }
+        },
+        "d9006612-fffd-4b39-bad8-2364e8d2b65d": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/roperos-pa-25sep.webp",
+            "textoimage": "CLOSETS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/closets"
+          }
+        }
+      },
+      "block_order": [
+        "cd08f99e-d5e9-4299-8be0-5ded371f6d20",
+        "460471a2-ef18-465f-b6f7-762330ede324",
+        "e89a0028-a7c6-4416-8f27-f8e85f91d72e",
+        "acaac486-a0f1-4cbe-9223-3c5819315839",
+        "dc9a8c1a-803e-40e0-b1bf-33d657043530",
+        "61ed4764-d947-491c-9bbc-514e3e192a29",
+        "493d892a-c126-4718-84de-16035642eb6d",
+        "33f9147b-bbbf-4b80-903f-2e0e772e3886",
+        "5ffca5b8-bf84-4ef6-a9b6-1042001a29a0",
+        "d9006612-fffd-4b39-bad8-2364e8d2b65d"
+      ],
+      "settings": {
+        "title_style_cat": "Los muebles perfectos para la recámara de tus sueños los encuentras aquí",
+        "parr_style_cat": "",
+        "imagen_sale": "shopify:\/\/shop_images\/outlet-jamar-pa.svg",
+        "button_sale_link": "https:\/\/www.jamar.com.pa\/collections\/ofertas\/recamaras"
+      }
+    },
+    "1815e32e-44bb-4d40-b6e8-86681fa6df2a": {
+      "type": "d-grid-ambientes-home",
+      "settings": {
+        "title": "Arma tu recámara con los muebles que prefieras",
+        "text": "Transfroma tus espacios con nuestros muebles exclusivos, elige lo que necesites y personalizálo a tu medida, creando recámaras únicas y llenas de estilo.",
+        "image_1_desktop": "shopify:\/\/shop_images\/ALCOBA_MUNICH-JULIO-A.jpg",
+        "image_1_mobile": "shopify:\/\/shop_images\/ALCOBAMUNICH-JULIO-MOVIL.jpg",
+        "product_1": "7025507",
+        "image_2_desktop": "shopify:\/\/shop_images\/COMEDOR-6PTOS-B.jpg",
+        "image_2_mobile": "shopify:\/\/shop_images\/COMEDOR-6PTOS-MOVIL.jpg",
+        "product_2": "7024270",
+        "image_3_desktop": "shopify:\/\/shop_images\/SOFA-2-PTOS-C.jpg",
+        "image_3_mobile": "shopify:\/\/shop_images\/SOFA-2PTOS-MOVIL.jpg",
+        "product_3": "7024897",
+        "image_4_desktop": "shopify:\/\/shop_images\/MESA-CENTRO-D.jpg",
+        "image_4_mobile": "shopify:\/\/shop_images\/MESADECENTRO-MOVIL.jpg",
+        "product_4": "7022809"
+      }
+    },
+    "3a1ecfcb-70ab-4d72-8eb9-70590f6c4fc2": {
+      "type": "colores-home",
+      "blocks": {
+        "66a97b3b-735c-493e-846f-7975c6318a30": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-1-desk_d2db5ec3-0a68-4f23-96e7-872e35c04fdb.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-1-mob_1fc263f8-b822-4d17-a733-6c2dc6f1f6e4.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-1_c2dc1a03-de62-47bd-bda2-b27d670b045e.png",
+            "product": "7017299"
+          }
+        },
+        "f4b47ab0-8e61-4170-bf20-e4582fa729a0": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-2-desk.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-2-mob.webp",
+            "indicator": "shopify:\/\/shop_images\/Indicador-2.webp",
+            "product": "7024281"
+          }
+        },
+        "11851f8f-1850-48c9-aa68-6d3f232765d6": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-3-desk_533a998b-c5c8-4cbf-81d8-96bb08ba2838.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-3-mob_1cc3e109-4989-4fb5-8d22-cf7909bedacc.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-3_a1c8036f-ad51-482e-80a5-4c8fb39e9bc7.png",
+            "product": "7017300"
+          }
+        },
+        "4847ed6c-add3-4005-b224-a7d5f96ece0a": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-4-desk_b707bc77-52d0-419d-b495-ebbddeba49d6.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-4-mob_075638ff-3379-4a58-9673-1c145c07dac5.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-4_6538fc11-29b2-4684-88f5-15ecb5ca38b4.png",
+            "product": "7020624"
+          }
+        }
+      },
+      "block_order": [
+        "66a97b3b-735c-493e-846f-7975c6318a30",
+        "f4b47ab0-8e61-4170-bf20-e4582fa729a0",
+        "11851f8f-1850-48c9-aa68-6d3f232765d6",
+        "4847ed6c-add3-4005-b224-a7d5f96ece0a"
+      ],
+      "settings": {
+        "title": "La <b>recámara completa<\/b> de tus sueños en el color de tu preferencia",
+        "text": "Añade un toque de estilo único a tu recámara. Elige tu color favorito y adáptalo a tu ambiente.",
+        "link": "https:\/\/www.jamar.com.pa\/collections\/recamaras\/recamaras_camas",
+        "button_text": "Ver camas"
+      }
+    },
+    "16624116207a1e4250": {
+      "type": "d-credijamar-home",
+      "settings": {
+        "bg-credijamar": "shopify:\/\/shop_images\/formulario-credijamar-recamara.webp"
+      }
+    },
+    "1647363637f9bea809": {
+      "type": "d-grid-style-cat2",
+      "blocks": {
+        "96bb86d9-7aa4-46ed-9b91-0fccaa5d3f38": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-4.png",
+            "textoimage": "Madera 100% Roble",
+            "parrimage": "Es la madera de más alta durabilidad. Esta cuenta con un secado que reduce la humedad, y un tratamiento especial que la inmuniza ante plagas.",
+            "linkimage": "",
+            "show": false
+          }
+        },
+        "267ebf4c-4b35-482c-9d2b-1d7f42608ba3": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-3.png",
+            "textoimage": "Tapizado Eurolino",
+            "parrimage": "Una tecnología en nuestro textil, que aporta mayor resistencia al mueble, con propiedades antifluidos para mayor durabilidad y fácil limpieza.",
+            "linkimage": "",
+            "show": false
+          }
+        }
+      },
+      "block_order": [
+        "96bb86d9-7aa4-46ed-9b91-0fccaa5d3f38",
+        "267ebf4c-4b35-482c-9d2b-1d7f42608ba3"
+      ],
+      "settings": {
+        "title_style_cat": "Contamos tecnologías innovadoras que garantizan la durabilidad de tus <b>recámaras<\/b>",
+        "parr_style_cat": ""
+      }
+    },
+    "164694258384e14d2b": {
+      "type": "dynamic-banner-colch",
+      "blocks": {
+        "cf64b779-0ed6-463b-a4ee-47a6945e1eaf": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/Colchon_Caitlyn.jpg",
+            "enlace": ""
+          }
+        },
+        "60a1acb5-d88f-4760-9e92-170667d4308c": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/Colchon_Windsor_Capa_de_Memory_Foam.jpg",
+            "enlace": ""
+          }
+        },
+        "0259a28a-fe1d-413c-b4d5-496250c9da3e": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/dr-dream-semi-ortopedico.jpg",
+            "enlace": ""
+          }
+        },
+        "24c80132-53b3-41f3-9b92-9133737c8b38": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-dreamopedic.jpg",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "cf64b779-0ed6-463b-a4ee-47a6945e1eaf",
+        "60a1acb5-d88f-4760-9e92-170667d4308c",
+        "0259a28a-fe1d-413c-b4d5-496250c9da3e",
+        "24c80132-53b3-41f3-9b92-9133737c8b38"
+      ],
+      "disabled": true,
+      "settings": {
+        "main_title": "El precio que buscabas para dormir como mereces",
+        "main_description": "Tenemos variedad de alcobas para que estrenar un descanso sea cada vez más fácil."
+      }
+    },
+    "16469344100c95667e": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "Descubre más opciones para tu <b>recámara<\/b>",
+        "main_description": "Compártenos tus datos para recibir más información de nuestros muebles",
+        "banner_form": "shopify:\/\/shop_images\/dormitorios-formulario-jamar.webp",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-start",
+        "etiqueta": "form_landing_recamaras",
+        "fondo_boton": "#404b5a",
+        "color_letra_boton": "#ffffff"
+      }
+    },
+    "bafb9598-d391-471d-843c-809be6c91f0d": {
+      "type": "blog-home",
+      "blocks": {
+        "template--16159878676679__bafb9598-d391-471d-843c-809be6c91f0d-1675800624a62ce5a3-0": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Bolg-recamara-1.png",
+            "title": "Habitaciones para descansar bien",
+            "text": "Nuestro cuarto tiene un papel importante en nuestra calidad del sueño. El dormitorio es el lugar donde nos destinamos a descansar...",
+            "link": "shopify:\/\/blogs\/noticias\/que-tener-en-cuenta-en-tu-habitacion-para-un-buen-descanso",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        },
+        "7f6f041c-90a1-4e9f-9c06-dca1e52a05d9": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Bolg-recamara-2.png",
+            "title": "Tu habitación según el estilo de tu hogar",
+            "text": "¿Sabías que pasamos un tercio de nuestras vidas descansando? Uno de nuestros lugares favoritos es nuestra habitación...",
+            "link": "shopify:\/\/blogs\/decoracion-y-estilo\/escoge-tu-habitacion-favorita-segun-el-estilo-de-tu-hogar",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        }
+      },
+      "block_order": [
+        "template--16159878676679__bafb9598-d391-471d-843c-809be6c91f0d-1675800624a62ce5a3-0",
+        "7f6f041c-90a1-4e9f-9c06-dca1e52a05d9"
+      ],
+      "settings": {
+        "title": "Nuestros <b>expertos en recámaras<\/b> te aconsejan",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "7ee9e0f3-d535-458f-bceb-9e092b53562e",
+    "1662408693c9a46754",
+    "1815e32e-44bb-4d40-b6e8-86681fa6df2a",
+    "3a1ecfcb-70ab-4d72-8eb9-70590f6c4fc2",
+    "16624116207a1e4250",
+    "1647363637f9bea809",
+    "164694258384e14d2b",
+    "16469344100c95667e",
+    "bafb9598-d391-471d-843c-809be6c91f0d"
+  ]
+}

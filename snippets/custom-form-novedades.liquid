@@ -1,0 +1,82 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = etiqueta %}
+{% assign prueba = "Pueba" %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+  {% form 'customer', id: form_id, class: "main_form_colchones d-flex align-items-start flex-column align-items-md-start"%}
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="{{ newsletter_tags }}"
+      >
+
+          <input
+                 class="section_contact_lead col-12 col-md-9"
+                 name="contact[note][Nombre]"
+                 id="name"
+                 type="text"
+                 placeholder="Nombre completo*"
+                 required
+                 >
+        
+          <input
+            class="section_contact_lead mt-4 col-12 col-md-9"
+            name="contact[email]"
+            id="email"
+            type="email"
+            placeholder="Tu correo electrónico*"
+            required
+          >
+
+          <button
+            class="btn_to_suavidad d-flex align-items-center position-relative mt-4 tag-cta-enviar"
+            name="subscribe"
+            type="submit"
+            id="btn_{{form_id}}"
+            {% comment %}
+            /**********************************************************
+            *             RETAIL ROCKET CONTENIDO PERSONALIZADO
+            *                   PATRYKSIM@GMAIL.COM
+            **********************************************************/
+            {% endcomment %}
+             
+          >
+          <svg class="position-absolute" width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8.5835L4.5 4.72827L1 0.873036" stroke="#404B5A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+            <b>Enviar</b>
+     </button>
+  {% endform %}
+
+{% comment %}
+/*****************************************************
+*			 TAGS PARA WEB RECOMENDATION
+*	            PATRYKSIM@GMAIL.COM
+******************************************************/
+{% endcomment %}
+
+<script>
+  _etmc.push(["setOrgId", "515007278"]);
+  _etmc.push(["setUserInfo", {
+    "email": document.querySelector("#email").value,
+    /*"details": {
+      "sexo": "INSERT_VALUE_HERE",
+      "edad": "INSERT_VALUE_HERE",
+      "estado civil": "INSERT_VALUE_HERE"
+    }*/
+  }]);
+  _etmc.push(["trackPageView"]);
+     
+  
+  
+</script>

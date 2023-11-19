@@ -1,0 +1,221 @@
+{
+  "sections": {
+    "16572181537dac27f0": {
+      "type": "d-banner-main",
+      "settings": {
+        "image_desktop": "shopify:\/\/shop_images\/banner-SUPERIOR-jamar-PC_f5383c79-a798-418c-b68c-2694f6505667.jpg",
+        "image_movil": "shopify:\/\/shop_images\/banner-SUPERIOR-jamar-Movil_7a7eb6b2-ad3f-4d07-aa0d-69444076f1b5.jpg",
+        "url": "#shopify-section-template--15741764731079__1657219337aaac2908",
+        "titulo": "CONOCE",
+        "subtitulo": "NUESTRAS NOVEDADES",
+        "sectionname": ""
+      }
+    },
+    "1657218964a038ebd6": {
+      "type": "d-section-banners",
+      "blocks": {
+        "9ab4548f-1a67-436e-8521-f005f0075fab": {
+          "type": "block",
+          "settings": {
+            "text_product": "Comedor 6 Ptos Viena Off White\/Natural",
+            "text_product2": "",
+            "boton": "Ver producto",
+            "enlace": "shopify:\/\/products\/7023099",
+            "imagen": "shopify:\/\/shop_images\/Productos_novedades-A.jpg",
+            "image_movil": "shopify:\/\/shop_images\/banner-1-dormitorios-jamar-movil_3bf930e6-cdc7-4b21-85ac-787e6819646c.jpg"
+          }
+        },
+        "793890e9-ce31-4456-9cf5-3ffda520d8f5": {
+          "type": "block",
+          "settings": {
+            "text_product": "Colchón  Full Withfield Push Firm Pillow Top",
+            "text_product2": "",
+            "boton": "Ver producto",
+            "enlace": "shopify:\/\/products\/7022420",
+            "imagen": "shopify:\/\/shop_images\/Productos_novedades-B.jpg",
+            "image_movil": "shopify:\/\/shop_images\/Productos_novedades-B.jpg"
+          }
+        },
+        "88db8d21-7da7-44db-b8ef-510f0484bf4f": {
+          "type": "block",
+          "settings": {
+            "text_product": "Sala Rinconera Sherin<br> Blanca",
+            "text_product2": "",
+            "boton": "Ver producto",
+            "enlace": "shopify:\/\/products\/7020297",
+            "imagen": "shopify:\/\/shop_images\/Productos_novedades-C.jpg",
+            "image_movil": "shopify:\/\/shop_images\/Productos_novedades-C.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "9ab4548f-1a67-436e-8521-f005f0075fab",
+        "793890e9-ce31-4456-9cf5-3ffda520d8f5",
+        "88db8d21-7da7-44db-b8ef-510f0484bf4f"
+      ],
+      "settings": {
+        "titulo": "",
+        "sectionname": ""
+      }
+    },
+    "1657219025fc9ab7dd": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "¡Tenemos un crédito para que estrenes comodidad en casa!",
+        "main_description": "Déjanos tus datos para recibir promociones y novedades",
+        "banner_form": "shopify:\/\/shop_images\/FORMULARIO_NOVEDADES.jpg",
+        "invertir_col": true,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-start",
+        "etiqueta": "landing-novedades-formulario"
+      }
+    },
+    "16572191647be54694": {
+      "type": "dynamic-title-colchones",
+      "disabled": true,
+      "settings": {
+        "main_title": "Novedades en colecciones",
+        "subtitle": "",
+        "title_tag": "h2"
+      }
+    },
+    "1657219337aaac2908": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "<b>Descubre lo nuevo <\/b>que tenemos para tí <br> en cada categoría",
+        "subtitle": "",
+        "title_tag": "h2"
+      }
+    },
+    "165722014363ecb11e": {
+      "type": "d-collection-groups",
+      "blocks": {
+        "18828c00-b508-4e45-9b59-973b79d39102": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-dormitorios_small_2.png",
+            "texto": "Dormitorios",
+            "filtro_tag": "Recámaras"
+          }
+        },
+        "22c61d33-44c4-45c2-b2d1-c2903943000a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-salas.png",
+            "texto": "Salas",
+            "filtro_tag": "Salas"
+          }
+        },
+        "7b9f1ad3-3a08-4937-8dc8-5375071374da": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-dormitorios_small_3.png",
+            "texto": "Comedores",
+            "filtro_tag": "Comedores"
+          }
+        },
+        "0496133d-6f0f-4eb8-86b6-87591948008b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-dormitorios_small_4.png",
+            "texto": "Colchones",
+            "filtro_tag": "Colchones"
+          }
+        },
+        "431a8819-3abb-4927-b258-5f7259b9f4b7": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-dormitorios_small_1.png",
+            "texto": "Mesas de tv y escritorios",
+            "filtro_tag": "Mesas de TV"
+          }
+        },
+        "db122ad3-9fa7-4c36-b6ed-13abc07fb13e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/icon-dormitorios_small_2.png",
+            "texto": "Roperos",
+            "filtro_tag": "Ropero"
+          }
+        },
+        "cacb800c-64d9-4ef8-b671-6b46eb32fb15": {
+          "type": "block",
+          "settings": {
+            "texto": "Todos",
+            "filtro_tag": "\" \""
+          }
+        }
+      },
+      "block_order": [
+        "18828c00-b508-4e45-9b59-973b79d39102",
+        "22c61d33-44c4-45c2-b2d1-c2903943000a",
+        "7b9f1ad3-3a08-4937-8dc8-5375071374da",
+        "0496133d-6f0f-4eb8-86b6-87591948008b",
+        "431a8819-3abb-4927-b258-5f7259b9f4b7",
+        "db122ad3-9fa7-4c36-b6ed-13abc07fb13e",
+        "cacb800c-64d9-4ef8-b671-6b46eb32fb15"
+      ],
+      "settings": {
+        "sectionname": "",
+        "coleccion": "novedades"
+      }
+    },
+    "16572203002ba11569": {
+      "type": "d-credijamar-home",
+      "blocks": {
+        "82920f73-2fb4-4c9a-b9a7-18993cdd0360": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "b6fa5843-ecd9-4dc1-bb3a-32636ef5ca27": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "a14cea75-126b-43bc-961d-63771b6e9a09": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "117e807e-12c3-4976-aac4-8dbd110c3a6e": {
+          "type": "imagenes",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "82920f73-2fb4-4c9a-b9a7-18993cdd0360",
+        "b6fa5843-ecd9-4dc1-bb3a-32636ef5ca27",
+        "a14cea75-126b-43bc-961d-63771b6e9a09",
+        "117e807e-12c3-4976-aac4-8dbd110c3a6e"
+      ],
+      "settings": {
+      }
+    },
+    "1657228103ce164c48": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "165963578958cf60a2": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<br><br><br>"
+      }
+    }
+  },
+  "order": [
+    "16572181537dac27f0",
+    "1657218964a038ebd6",
+    "1657219025fc9ab7dd",
+    "16572191647be54694",
+    "1657219337aaac2908",
+    "165722014363ecb11e",
+    "16572203002ba11569",
+    "1657228103ce164c48",
+    "165963578958cf60a2"
+  ]
+}

@@ -1,0 +1,46 @@
+    <section class="container">{% comment %} Contenedor de la sección de el feed de banners 2 ### {% endcomment %}
+        <div class="row justify-content-center align-items-center">
+            {% for block in section.blocks %}
+                {% assign b = block.settings %}
+                <div class="col-md-2 d-flex justify-content-center align-items-center mb-md-0 mb-4">
+                    {{ b.logo | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid' }}
+                </div>
+            {% endfor %}
+        </div>
+    </section>{% comment %} Contenedor de la sección  del feed de productos {% endcomment %}
+
+
+
+{% schema %}
+{
+  "name": "Logos Grid",
+  "settings": [
+      {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titulo Principal",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+  ],
+    "blocks": [
+    {
+        "name" : "Seleccionar",
+        "type": "imagenes",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Select Logo"
+        }        
+        ]       
+    }
+    ],
+    "presets": [
+    {
+    "name": "Logos Grid",
+    "category": "Promo Colchones"
+    }
+    ]
+    }
+    {% endschema %}
+

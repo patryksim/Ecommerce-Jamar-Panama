@@ -1,0 +1,85 @@
+{% assign blogJamar = section.blocks %}
+
+<div class="container-fluid">
+  {% for block in blogJamar %}
+    {% if block.type == 'blog_category' %}
+        {% if blog.title == block.settings.blog.title %}
+            <div class="row">
+                <div class="col-12 p-0">
+                    <div class="w-100 position-relative overflow-hidden">
+                        <img class="filter-5" src="{{ block.settings.blog_image | image_url: master }}" alt="Imagen de categoria" data-rimg="lazy" loading="lazy">
+                        <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
+                          <h1 class="text-white">{{ block.settings.blog.title }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          {% endif %}
+      {% endif %}
+  {% endfor %}
+</div>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        {% for item in blog.articles %}
+            <div class="col-md-4 col-6">
+                <a href="{{ item.url }}" class="entrada-blog-categoria">
+                    <div class="w-100 position-relative overflow-hidden">
+                        <img src="{{ item.image | image_url: width: 450, height: 300, format: 'pjpg', crop:'center' }}" alt="{{ item.image }}" data-rimg="lazy" loading="lazy">
+                        <div class="position-absolute top-0 end-0">
+                            <span class="btn text-uppercase rounded-pill bg-light-gray lh-1 pt-1 pb-1 mt-2 me-2" style="font-size: 8px;">
+                                {% if item.tags.size > 1 %}
+                                    {{ item.tags[1]}}
+                                {% else %}
+                                    Jamar
+                                {% endif %}
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-dark-gray fw-bold">{{ item.title }}</p>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "cat-principal-blog-grupo",
+    "settings": [
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Imagen"
+        }
+    ],
+  "blocks": [
+     {
+       "name": "blogs",
+       "type": "blog_category",
+       "settings": [
+        {
+            "type": "blog",
+            "id": "blog",
+            "label": "Blog"
+        },
+        {
+            "type": "image_picker",
+            "id": "blog_image",
+            "label": "Imagen del blog"
+          },
+        {
+            "type": "image_picker",
+            "id": "blog_image_movil",
+            "label": "Imagen del blog movil"
+          }
+       ]
+     }
+   ],
+      "presets": [
+        {
+        "name": "Categoria Blog Posts"
+        }
+      ]
+  }
+{% endschema %}

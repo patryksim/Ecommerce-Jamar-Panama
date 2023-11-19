@@ -1,0 +1,92 @@
+{
+    "sections": {
+        "styles": {
+            "type": "styles-render",
+            "disabled": true,
+            "settings": {
+                "main_title": "Estilos"
+            }
+        },
+        "506d075f-7874-4537-bbdf-8fab72b39d27": {
+            "type": "d-banner",
+            "settings": {
+                "imagen_desktop": "shopify:\/\/shop_images\/Los-Andes-Mall-Desktop.jpg",
+                "imagen_movil": "shopify:\/\/shop_images\/Los-Andes-Mobile.jpg",
+                "text_up": "Los Andes",
+                "text_down": "Panamá"
+            }
+        },
+        "dde1b524-c171-469b-b6e7-f764aff5346a": {
+            "type": "d-info-tienda",
+            "settings": {
+                "h2": "Visítanos y renueva tus muebles",
+                "store_name": "Ver en Maps",
+                "phone": "205-6500",
+                "breadcump": "Los Andes",
+                "iframe_link": "https:\/\/maps.google.com\/maps?q=9.052406000000007,-79.50835970000003&hl=es;z=19&output=embed",
+                "share_link": "https:\/\/goo.gl\/maps\/kvMgbfSN1mq2J6Px9",
+                "store_info": "Lunes a Jueves\n<p>10:00 AM a 7:00 PM<\/p>\n<p>Viernes y Sábado<\/p>\n<p>10:00 AM a 8:00 PM<\/p>\n<p>Domingos<\/p>\n<p>11:00 AM a 7:00 PM<\/p>"
+            }
+        },
+        "5183e364-4443-45f6-b412-0d77383c237e": {
+            "type": "d-carrousel-list",
+            "settings": {
+                "collections": [
+                    "7022854",
+                    "7020365",
+                    "7023034",
+                    "7020033",
+                    "7013212",
+                    "7019474",
+                    "7021492",
+                    "7020026",
+                    "7020091"
+                ],
+                "titleCarousel": "Muebles modernos y a crédito",
+                "descriptionCarousel": ""
+            }
+        },
+        "a1a82b41-57a1-440a-91fb-f1b4d6fb2626": {
+            "type": "d-description-tienda",
+            "settings": {
+                "title": "Conoce nuestra tienda en Los Andes Mall",
+                "description": "",
+                "main_image": "shopify:\/\/shop_images\/los-andes-01.jpg",
+                "second_image": "shopify:\/\/shop_images\/los-andes-02.jpg",
+                "third_image": "shopify:\/\/shop_images\/los-andes-03.jpg",
+                "fourt_image": "shopify:\/\/shop_images\/los-andes-04.jpg",
+                "five_image": "shopify:\/\/shop_images\/los-andes-05.jpg"
+            }
+        },
+        "f1303411-90e5-4cf5-be22-a234a244c152": {
+            "type": "d-titles",
+            "settings": {
+                "titulo": "Aquí encuentras los mejores muebles en Panamá",
+                "subtitulo": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra <a href=\"\/pages\/centros-de-entretenimiento\">Muebles para TV<\/a>, todo para tu <a href=\"\/pages\/recamaras\">recámara<\/a> y mucho más. Pregunta también por nuestros <a href=\"\/pages\/tarjeta-jamar\">muebles a crédito<\/a>.",
+                "vertical_alignment": "start",
+                "columnas": 12
+            }
+        },
+        "fffb97dd-c664-4987-8c10-fec39e07683e": {
+            "type": "dynamic-promo-form",
+            "settings": {
+                "main_title": "Entérate de nuestras novedades",
+                "main_description": "",
+                "banner_form": "shopify:\/\/shop_images\/Formulario-de-Home-634x405_5976a75c-3296-44ce-a8d3-780475c0dea7.webp",
+                "invertir_col": true,
+                "vertical_alignment_movil": "align-items-center",
+                "vertical_alignment_desktop": "align-items-md-center",
+                "etiqueta": ""
+            }
+        }
+    },
+    "order": [
+        "styles",
+        "506d075f-7874-4537-bbdf-8fab72b39d27",
+        "dde1b524-c171-469b-b6e7-f764aff5346a",
+        "5183e364-4443-45f6-b412-0d77383c237e",
+        "a1a82b41-57a1-440a-91fb-f1b4d6fb2626",
+        "f1303411-90e5-4cf5-be22-a234a244c152",
+        "fffb97dd-c664-4987-8c10-fec39e07683e"
+    ]
+}

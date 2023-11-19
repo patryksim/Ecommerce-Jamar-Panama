@@ -1,0 +1,73 @@
+/* Mejorando el posicionamiento del botón de syte cuando se cargue la galería de cylindo */
+button.syte-discovery {
+    left: 6px!important;
+    top: 425px!important;
+  }
+
+/* Ajustando los estilos del botón de cylindo para realidad aumentada */
+.cylindo-button.cylindo-ar-button a, .cylindo-button.cylindo-ar-button a div.ar-glyph-background {
+    width: 260px;
+    background-color: transparent;
+}
+
+.cylindo-button.cylindo-ar-button a>.ar-glyph-background>div.ar-text {
+width:195px;
+font-family: Lato;
+color: #404B5A;
+}
+
+.cylindo-ar-modal.is-qr-modal>a {
+width: 220px;
+background-color: #fff;
+border: solid 1px #404B5A;
+}
+
+/* Ajuste del color del boton cuando esta visitado */
+.cylindo-button.cylindo-ar-button a:link, .cylindo-button.cylindo-ar-button a:hover, .cylindo-button.cylindo-ar-button a:visited{
+    background-color: #fff;
+    border: solid 1px #404B5A;
+}
+
+/* Ajuste de la imagen de cylindo en desktop para que sea fullwidth */
+.cylindo-threesixty-list>li>img, .cylindo-custom-list>li>img, .cylindo-threesixty-list>li>div:not(.cylindo-dismiss-on-zoom), .cylindo-custom-list>li>div:not(.cylindo-dismiss-on-zoom){
+    width:100%;
+}
+
+#cylindo-container {
+    height: 660px;
+}
+
+
+
+
+/* Ajuste de la imagen en versión movil */
+
+@media only screen and (min-width: 160px) and (max-width: 768px) {
+    button.syte-discovery {
+        left: 6px!important;
+        top: 350px!important;
+      }
+
+      #cylindo-container {
+        height: 600px;
+    }
+
+    .cylindo-threesixty-list>li>img, .cylindo-custom-list>li>img, .cylindo-threesixty-list>li>div:not(.cylindo-dismiss-on-zoom), .cylindo-custom-list>li>div:not(.cylindo-dismiss-on-zoom) {
+        /* max-width: 100%; */
+        max-height: 375px;
+        width: auto;
+        /* height: auto; */
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        object-fit: cover;
+        -o-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+
+}

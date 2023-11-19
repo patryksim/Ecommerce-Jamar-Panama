@@ -1,0 +1,88 @@
+
+<style>
+    .atc-banner--container {
+        top: 130px;
+    }
+    </style>
+    <section class="atc-banner--container" role="log" data-atc-banner="" data-animation-state="open" tabindex="-1">
+            <div class="atc-banner--outer">
+              <div class="atc-banner--inner">
+                <div class="atc-banner--product">
+                  <h2 class="atc-banner--product-title">
+                    <span class="atc-banner--product-title--icon"><svg aria-hidden="true" focusable="false" role="presentation" width="18" height="13" viewBox="0 0 18 13" xmlns="http://www.w3.org/2000/svg">
+                      <path fill="currentColor" fill-rule="evenodd" d="M6.23 9.1L2.078 5.2 0 7.15 6.23 13 18 1.95 15.923 0z"></path>
+                    </svg>
+                    </span>
+                    Añadido a su carrito:
+                  </h2>
+
+                  <div class="atc--product">
+                    <div class="atc--product-image" data-atc-banner-product-image=""><img src="{{ cart.items[0].image | image_url  }}" alt="Producto Jamar" data-rimg="lazy" loading="lazy"></div>
+                    <div class="atc--product-details">
+                      <h2 class="atc--product-details--title" data-atc-banner-product-title="">{{ cart.items[0].title }}</h2>
+                      <span class="atc--product-details--options" data-atc-banner-product-options=""></span>
+                      <span class="atc--product-details--price">
+                        <span class="atc--product-details--price-quantity" data-atc-banner-product-price-quantity=""></span>
+                        <span class="atc--product-details--price-value money" data-atc-banner-product-price-value="">{{ cart.items[0].price | money }}</span>
+                        <span class="atc--product-details--price-discounted money hidden" data-atc-banner-product-price-discounted=""></span>
+                        <span class="atc--product-details--unit-price hidden" data-atc-banner-unit-price="">
+                          ** total_quantity ** | ** unit_price ** / ** unit_measure **
+                        </span>
+                      </span>
+                      <ul class="discount-list hidden" data-atc-banner-product-discounts="">
+                        <li class="discount-list-item">
+
+
+
+                        <svg class="icon-sale-tag " aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350" fill="none">      <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M0 197.826C0 192.95 1.93821 188.275 5.38762 184.83L179.459 10.7587C186.348 3.86966 195.692 -0.000356971 205.435 2.46966e-08H334.782C343.187 2.46966e-08 350 6.81304 350 15.2173V144.565C350 154.308 346.13 163.651 339.241 170.541L165.17 344.612C161.725 348.061 157.049 350 152.174 350C147.299 350 142.624 348.061 139.179 344.612L5.38762 210.821C1.93821 207.376 0 202.701 0 197.826ZM304.348 68.4786C304.348 81.085 294.128 91.3046 281.521 91.3046C268.915 91.3046 258.695 81.085 258.695 68.4786C258.695 55.8721 268.915 45.6525 281.521 45.6525C294.128 45.6525 304.348 55.8721 304.348 68.4786Z"></path>    </svg>                            
+
+                          <span class="discount-title"></span>
+                          (-<span class="money discount-amount"></span>)
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="atc-banner--cart">
+                  <div class="atc-banner--cart-subtotal">
+                    <span class="atc-subtotal--label">
+                      Subtotal del carrito
+                    </span>
+                    <span class="atc-subtotal--price money" data-atc-banner-cart-subtotal="">{{cart.items_subtotal_price | money }}</span>
+                  </div>
+
+                  <footer class="atc-banner--cart-footer">
+                    <a class="button-secondary atc-button--viewcart mdc-ripple-surface mdc-ripple-upgraded" href="/cart" data-atc-banner-cart-button="">
+                      Ver carrito (<span>{{cart.item_count}}</span>)
+                    </a>
+                    <form action="/cart" method="post" aria-label="cart checkout">
+                      <button class="button-primary atc-button--checkout mdc-ripple-surface mdc-ripple-upgraded" type="submit" name="checkout">
+
+                        <span>Proceso de pago</span>
+                      </button>
+                    </form>
+                  </footer>
+                </div>
+              </div>
+
+              <button class="atc-banner--close" type="button" aria-label="Cerrar" data-atc-banner-close="" onclick="prueba()"><svg aria-hidden="true" focusable="false" role="presentation" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" >
+                <path fill="currentColor" fill-rule="evenodd" d="M5.306 6.5L0 1.194 1.194 0 6.5 5.306 11.806 0 13 1.194 7.694 6.5 13 11.806 11.806 13 6.5 7.694 1.194 13 0 11.806 5.306 6.5z"></path>
+                </svg>
+              </button>
+            </div>
+    </section>
+
+{% schema %}
+  {
+    "name": "static-prueba",
+    "settings": [
+      {
+        "id": "custom_text_title",
+        "type": "text",
+        "label": "Text box heading",
+        "default": "Title"
+      }
+    ]
+  }
+{% endschema %}

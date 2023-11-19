@@ -1,0 +1,13 @@
+{
+  "wrapper": "section.site-page[data-template-page='']",
+  "sections": {
+    "title-free": {
+      "type": "title-free",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "title-free"
+  ]
+}

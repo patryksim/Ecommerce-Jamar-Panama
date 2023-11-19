@@ -1,0 +1,161 @@
+{
+  "sections": {
+    "banner": {
+      "type": "d-banner",
+      "custom_css": [
+        ".icono-tienda {display: none;}"
+      ],
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/06_a5eab1fb-e58c-408d-86dd-0f04027734c4.webp",
+        "imagen_movil": "shopify:\/\/shop_images\/05.webp",
+        "text_up": "",
+        "text_down": ""
+      }
+    },
+    "b5e24567-4553-456c-b91e-a9fad4301743": {
+      "type": "section-titles-col-what",
+      "settings": {
+        "collection_title": "PLENITUD EN SUAVIDAD Y ELEGANCIA",
+        "collection_parrafo": "Una colección muy contemporánea que, entre líneas, figuras, brillos y diseños auténticos, crea escenarios sofisticados.",
+        "product": "",
+        "image_1_desktop": "shopify:\/\/shop_images\/07_910d6aa0-6a14-4e26-bdc2-eff2428e3564.webp",
+        "url_whatsapp": "https:\/\/bit.ly\/3B5HXjV",
+        "color_butt_wha": "#808080"
+      }
+    },
+    "bb49b9b0-19d0-4c87-a37b-e3c8be1cc8df": {
+      "type": "section-dual-img",
+      "settings": {
+        "text_principal": "",
+        "imagen_derecha": "shopify:\/\/shop_images\/08_2a8ddbe9-0a20-4cd8-9f92-929b3b8fd9e5.webp",
+        "url_img": "https:\/\/www.jamar.com.pa\/products\/7024543",
+        "text_derecha": "Texturas suaves y resistentes, con aspecto de terciopelo y apariencia voluminosa.",
+        "imagen_izquier": "shopify:\/\/shop_images\/09_dd1cbfd0-df83-4f59-9245-397c48900ad9.webp",
+        "url_img_2": "https:\/\/www.jamar.com.pa\/products\/7022814",
+        "text_izquier": "Delicados detalles que aportan autenticidad y engalanan cada espacio."
+      }
+    },
+    "2cc2dffa-6f71-49b6-bd14-8ebdf2f43c5a": {
+      "type": "section-img-backg",
+      "settings": {
+        "imagen_back": "shopify:\/\/shop_images\/04_716423bb-54e6-4e10-b6ca-f4d04e87046c.webp",
+        "url_img": "",
+        "imagen_link": "shopify:\/\/shop_images\/05_ea451f58-ad90-483d-addc-90eb65510ecb.webp"
+      }
+    },
+    "8dab4826-5f0f-4d45-a94f-9683d13a2143": {
+      "type": "section-titles-col-center",
+      "custom_css": [
+        ".contenedor-titulos-seccion-detalles-alma p {font-family: \"Geomanist Regular\"; color: #4e4e4e; width: 880px; font-family: Geomanist Regular; font-size: 32px; text-align: center; line-height: 141%;}",
+        ".contenedor-titulos-seccion-detalles-alma {display: flex; justify-content: center;}",
+        "@media (max-width: 800px) {.contenedor-titulos-seccion-detalles-iluminan p {width: 100%; text-align: center; font-size: 16px; }}"
+      ],
+      "settings": {
+        "text_direct": "center",
+        "collection_title": "",
+        "collection_parrafo": "Diseños exclusivos que resaltan por ser únicos, y llaman la atención por sus líneas rectas y figuras geométricas.  Un hogar amoblado con esta colección, es un hogar sofisticado y original."
+      }
+    },
+    "71534234-4c5e-4313-8a16-d417296c843b": {
+      "type": "section-img-cent",
+      "settings": {
+        "name": "",
+        "sect_id": "",
+        "imagen_web": "shopify:\/\/shop_images\/07_101641da-f7c8-4e72-88f0-44ad138d4adf.webp",
+        "imagen_mob": "shopify:\/\/shop_images\/08_8278406e-f30d-4f0d-819c-95d4c8c0ea45.webp",
+        "url_img": ""
+      }
+    },
+    "27f02e1e-905f-41a8-b20d-797f89f9b676": {
+      "type": "section-titles-col-img",
+      "settings": {
+        "collection_title": "",
+        "collection_parrafo": "Se destacan las figuras geométricas irregulares.                                                    Los llamativos contrastes bitono, dan la sensación de mayor volumen y elegancia, otorgando protagonismo a los espacios.",
+        "product": "7027156",
+        "image_1_desktop": "shopify:\/\/shop_images\/16_62460115-fb50-458d-b442-a0338015086b.webp"
+      }
+    },
+    "4a01677f-fc27-4c87-be16-3f94004d9e3b": {
+      "type": "section-img-3-col",
+      "settings": {
+        "imagen_link1": "shopify:\/\/shop_images\/03_f5b075ba-6dbe-47c3-9540-8f01293c1610.webp",
+        "imagen_link2": "shopify:\/\/shop_images\/01.webp",
+        "imagen_link3": "shopify:\/\/shop_images\/02_6ae28683-179d-442e-a802-b172d6eb19f9.webp"
+      }
+    },
+    "44c69428-dce4-4c0c-8dcd-16a5a90484bb": {
+      "type": "collection-grid-products-sin-titles",
+      "blocks": {
+        "39fc93f7-6ecf-401a-b30c-b403cc7b078e": {
+          "type": "imagen",
+          "settings": {
+            "title": "Comedor 4 Puestos Celta",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-1.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7022820"
+          }
+        },
+        "10a9bb12-aad1-4a07-b082-7e823befa8f2": {
+          "type": "imagen",
+          "settings": {
+            "title": "Centro de Entretenimiento",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-2.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7024983"
+          }
+        },
+        "028138e6-7c05-4bda-a4ec-f19e2608bb9a": {
+          "type": "imagen",
+          "settings": {
+            "title": "Comedor 6 Puestos Celta",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-3.webp",
+            "enlace_producto": "shopify:\/\/products\/7024270"
+          }
+        },
+        "e4596a8c-98ea-4ca8-81e2-5e057bfba077": {
+          "type": "imagen",
+          "settings": {
+            "title": "Bifé Bulgary",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-4.webp",
+            "enlace_producto": ""
+          }
+        },
+        "cce9345a-3282-489e-849a-2d29d510ca45": {
+          "type": "imagen",
+          "settings": {
+            "title": "Puff Celta",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-5.webp",
+            "enlace_producto": "shopify:\/\/products\/7024998"
+          }
+        },
+        "65959d20-92ba-4fe4-9190-0f1120873135": {
+          "type": "imagen",
+          "settings": {
+            "title": "Mesa Centro Jansen",
+            "imagen": "shopify:\/\/shop_images\/MOBILE-CELTA-6.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7022809"
+          }
+        }
+      },
+      "block_order": [
+        "39fc93f7-6ecf-401a-b30c-b403cc7b078e",
+        "10a9bb12-aad1-4a07-b082-7e823befa8f2",
+        "028138e6-7c05-4bda-a4ec-f19e2608bb9a",
+        "e4596a8c-98ea-4ca8-81e2-5e057bfba077",
+        "cce9345a-3282-489e-849a-2d29d510ca45",
+        "65959d20-92ba-4fe4-9190-0f1120873135"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "b5e24567-4553-456c-b91e-a9fad4301743",
+    "bb49b9b0-19d0-4c87-a37b-e3c8be1cc8df",
+    "2cc2dffa-6f71-49b6-bd14-8ebdf2f43c5a",
+    "8dab4826-5f0f-4d45-a94f-9683d13a2143",
+    "71534234-4c5e-4313-8a16-d417296c843b",
+    "27f02e1e-905f-41a8-b20d-797f89f9b676",
+    "4a01677f-fc27-4c87-be16-3f94004d9e3b",
+    "44c69428-dce4-4c0c-8dcd-16a5a90484bb"
+  ]
+}

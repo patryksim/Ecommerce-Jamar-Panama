@@ -1,0 +1,45 @@
+        <style>
+        * {margin: 0px;padding: 0px;box-sizing: border-box;}
+
+        .container-share--socialmedia {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            right: 5px;
+            top: -50px;
+        }
+
+        .container-share--socialmedia a.social-media--share {
+            margin: 5px;
+            
+        }
+
+        .container-share--socialmedia p {
+            font-size: 12px;
+            margin:0px;
+            
+        }
+    </style>
+
+    <div class="container-share--socialmedia mt-2">
+        <p>Compartir producto por: </p>
+        <a  href="https://wa.me/50769932222/?text=Quiero%20chatear%20con%20un%20asesor%20experto https://www.jamar.com.pa{{ product.url }}" target="_blank" class="social-media--share">
+            <img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/t/340/assets/compartir-whatsapp.svg?v=126539832272001498861655219065" alt="" srcset="">
+        </a>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.jamar.com.pa{{product.url}}" class="social-media--share">
+            <img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/t/340/assets/compartir-facebook.svg?v=93234036927825056471655219065" alt="" srcset="">
+        </a>
+        <a href="#" class="social-media--share" onclick="copyURL(this)">
+            <img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/t/340/assets/copiar-url-ficha.svg?v=62303329299183463331655219066" alt="" srcset="">
+        </a>
+    </div>
+
+    <script>
+        var text = window.location;
+        navigator.clipboard.writeText(text).then(function() {
+            console.log('Async: Copying to clipboard was successful!');
+            }, function(err) {
+            console.log('Async: Could not copy text: ', err);
+        });
+        
+    </script>

@@ -1,0 +1,55 @@
+{{ 'section-img-backg.css' | asset_url | stylesheet_tag }}
+
+
+<section
+  class="section-textu-urban"
+  style="margin-top: 6rem; background-image: url({{ section.settings.imagen_back | image_url : width: auto}});"
+>
+  <a
+  {% if section.settings.url_img != blank %}
+    href="{{section.settings.url_img}}"
+  {% endif %}
+  >
+  <img
+    class="video-textu-desktop"
+    width="100%"
+    src="{{ section.settings.imagen_link | image_url : width: auto}}"
+    alt="{{ section.settings.imagen_link.alt }}"
+  >
+
+  </a>
+  
+</section>
+{% schema %}
+{
+  "name": "img background",
+  "settings": [
+    {
+        "type":"image_picker",
+        "id":"imagen_back",
+        "label":"Imagen de fondo"
+    },
+    {
+      "type":"text",
+      "id":"url_img",
+      "label":"Link de imgen"
+    },
+    {
+      "type":"image_picker",
+      "id":"imagen_link",
+      "label":"Seleccione Imagen"
+    }
+  ],
+   "presets":[
+    {
+        "name":"img background"
+    }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,70 @@
+{% if section.settings.enable_recently_viewed_products %}
+  {%- capture recently_viewed_data -%}
+    {%-
+      render 'product-recently-viewed',
+      product: product
+    -%}
+  {%- endcapture %}
+
+  <script
+    type="application/json"
+    data-section-type="static-recently-viewed"
+    data-section-id="{{ section.id }}"
+    data-section-data
+  >
+    {
+      {{ recently_viewed_data }}
+    }
+  </script>
+
+  <aside
+    aria-label="Recently viewed products"
+    class="product-section--container product-recently-viewed--section"
+  >
+    <div class="product-recently-viewed-wrapper">
+      <div class="product-recently-viewed-header">
+        <h2 class="product-recently-viewed-heading">
+          {{ 'general.time.previous' | t }}
+        </h2>
+        <button
+          class="product-recently-viewed-clear"
+          data-clear-recently-viewed
+        >
+          {{ 'general.time.clear' | t }}
+        </button>
+      </div>
+
+      <ul
+        class="
+          product-section--content
+          product-recently-viewed--content
+          imagestyle--{% if settings.product_grid_image_crop and settings.product_grid_image_style != 'natural' %}cropped-{% endif %}{{ settings.product_grid_image_style }}
+        "
+        data-recently-viewed-container
+      ></ul>
+    </div>
+  </aside>
+    {% comment %}
+    /**********************************************************
+    *          DIV RETAIL ROCKET CONTENIDO PERSONALIZADO
+    *                   PATRYKSIM@GMAIL.COM
+    **********************************************************/
+    {% endcomment %}
+<div data-retailrocket-markup-block="60edf83097a52815f450399d" data-product-id=“{{product.id}}"></div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Recently viewed products",
+  "class": "recently-viewed--section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_recently_viewed_products",
+      "label": "Enable recently viewed products",
+      "info": "This affects both the collection and product pages."
+    }
+  ]
+}
+
+{% endschema %}

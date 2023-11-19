@@ -1,0 +1,74 @@
+{% comment %} Contenedor de la sección de tamaños de los colchones ###LISTO {% endcomment %}
+{% render 'custom-separator' %}
+
+        <div class="row">
+                <h2 class="text-center lato-titulos"> {{section.settings.main_title}} </h2>
+                <div class="col-12">
+                    <div class="row justify-content-md-center">
+                           <div class="col col-md-10">
+                               <div class="row justify-content-md-around justify-content-start">
+                                    {% for block in section.blocks %}
+                                 	<span class="d-none">{% increment contador %}</span>
+                                        {% assign b = block.settings %}
+                                        <div class="col-6 col-md-3 d-flex justify-content-center">
+                                                <a href="{{b.enlace_tamano}}" target="_blank" rel="noopener noreferrer" class="text-decoration-none tag-cta-banner-sizes-{{contador}}">
+                                                    <figure class="figure-sizes">
+                                                        {{ b.image_sizes | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid' }}
+                                                        <figcaption class="mt-2"><b>{{ b.title }}</b></figcaption>
+                                                    </figure>
+                                                </a>
+                                        </div>
+                                {% endfor %}
+                               </div>
+                           </div>
+                    </div>
+                </div>
+        </div>
+{% comment %} Contenedor de la sección de tamaños de los colchones {% endcomment %}
+
+{% schema %}
+
+{
+    "name":"Seccion Siz 2",
+    "tag":"section",
+    "class":"container section-contenedor-tamanos",
+    "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Colocar titulo del Hero",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+        {
+        "name" : "B Tamano",
+        "type": "block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image_sizes",
+                "label": "Imagen de tamano"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Subtitulo de tamano"
+            },
+            {
+                "type": "url",
+                "id": "enlace_tamano",
+                "label": "Colocar enlace"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Seccion Taman",
+            "category": "Colchones"
+        }
+    ]
+}
+
+{% endschema %}

@@ -1,0 +1,83 @@
+<style>
+  .syte-position {
+    margin-top: 80px;
+  }
+
+  @media only screen and (min-width: 100px) and(max-width: 768px) {
+    div.syte-position {
+      margin-top: 64px;
+    }
+  }
+</style>
+
+{% if section.settings.look %}
+  <div
+    id="syte-shop-the-look-container"
+    class="product--container syte-position"
+    data-placement="PDP"
+    data-sku="{{product.selected_or_first_available_variant.sku}}"
+    data-image-src="{{product.images[0] | img_url: "400x400", format: 'pjpg' }}"></div>
+{% endif %}
+
+{% if section.settings.personalization %}
+  {% if template contains 'product' %}
+    <div
+      id="syte-personalization-container"
+      class="product--container syte-position"
+      data-placement="PDP"></div>
+  {% endif %}
+
+  {% if template contains 'index' or template contains 'article' %}
+    <div
+      id="syte-personalization-container"
+      class="product--container syte-position"
+      data-placement="HOMEPAGE"></div>
+  {% endif %}
+
+  {% if template contains '404' %}
+    <div
+      id="syte-personalization-container"
+      class="product--container syte-position"
+      data-placement="404"></div>
+  {% endif %}
+
+
+{% endif %}
+
+{% if section.settings.similar %}
+  <div
+    id="syte-similar-items-container"
+    class="product--container syte-position"
+    data-sku="{{product.selected_or_first_available_variant.sku}}"
+    data-image-src="{{product.images[0] | img_url: "400x400", format: 'pjpg' }}"></div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Contenedor de Syte",
+    "tag": "section",
+    "class": "container",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "personalization",
+        "label": "Personalizacion"
+      }, {
+        "type": "checkbox",
+        "id": "similar",
+        "label": "Buscar similar"
+      }, {
+        "type": "checkbox",
+        "id": "look",
+        "label": "Buscar por Look"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Syte Contenedor",
+        "category": "Syte"
+      }
+    ]
+  }
+{% endschema %}
+{% include 'BrokenLinkRedirect' %}

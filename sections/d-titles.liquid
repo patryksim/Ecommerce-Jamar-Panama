@@ -1,0 +1,64 @@
+{% assign seccion = section.settings %}
+<div class="container">
+    <div class="row mt-md-5 mt-4">
+        <div class="col-{{seccion.columnas}}">
+            <h2 class="text-gris-jamar lato-titulos">{{seccion.titulo}}</h2>
+            <p class="text-gris-jamar lato-parrafo">{{seccion.subtitulo}}</p>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Titulos Generales",
+  "tag": "section",
+  "class":"container-fluid p-0",
+    "settings": [
+    {
+      "type": "text",
+      "id": "titulo",
+      "label": "Ingresar el titulo"
+    },
+    {
+      "type": "text",
+      "id": "subtitulo",
+      "label": "Ingresar el subtitulo"
+    },
+    {
+      "type": "select",
+      "id": "vertical_alignment",
+      "label": "Seleccionar alineacion",
+      "options":[
+        {
+            "value":"start",
+            "label":"Izquierda"
+        },
+        {
+            "value":"end",
+            "label":"Derecha"
+        },
+        {
+            "value":"center",
+            "label":"Centro"
+        }
+      ],
+      "default": "start"
+    },
+    {
+        "type": "range",
+        "id": "columnas",
+        "min": 1,
+        "max": 12,
+        "step": 1,
+        "label": "Ancho",
+        "default": 12
+    }
+    
+  ],
+  "presets": [
+     {
+       "name": "Titulos Generales"       
+     }
+   ]
+}
+{% endschema %}

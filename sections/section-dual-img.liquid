@@ -1,0 +1,91 @@
+{{ 'section-dual-img.css' | asset_url | stylesheet_tag }}
+{% if section.settings.text_principal != blank %}
+  <div class="text-top-principal">
+    <p class="text-center">
+      {{ section.settings.text_principal }}
+    </p>
+  </div>
+{% endif %}
+<section class="content-dual-img">
+  <div id="dual-desktop-2">
+    <div class="dual-img-1 w-100">
+      <a
+        {% if section.settings.url_img != blank %}
+          href="{{section.settings.url_img}}"
+        {% endif %}
+      >
+        <img
+          src="{{ section.settings.imagen_derecha | image_url : width: auto}}"
+          class="w-100"
+        >
+      </a>
+      <p>{{ section.settings.text_derecha }}</p>
+    </div>
+    <div class="dual-img-2 w-100">
+      <p>{{ section.settings.text_izquier }}</p>
+      <a
+        {% if section.settings.url_img_2 != blank %}
+          href="{{section.settings.url_img_2}}"
+        {% endif %}
+      >
+        <img
+          src="{{ section.settings.imagen_izquier | image_url : width: auto}}"
+          class="w-100"
+        >
+      </a>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Section Dual Imagen",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_principal",
+      "label": "Texto al final"
+    },
+    {
+        "type":"image_picker",
+        "id":"imagen_derecha",
+        "label":"Imagen Derecha"
+    },
+    {
+      "type":"text",
+      "id":"url_img",
+      "label":"Link de imgen"
+    },
+    {
+        "type":"text",
+        "id":"text_derecha",
+        "label":"Texto Derecha"
+    },
+    {
+        "type":"image_picker",
+        "id":"imagen_izquier",
+        "label":"Imagen Izquierda"
+    },
+    {
+      "type":"text",
+      "id":"url_img_2",
+      "label":"Link de imgen"
+    },
+    {
+        "type":"text",
+        "id":"text_izquier",
+        "label":"Texto Izquierda"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Section Dual Imagen"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

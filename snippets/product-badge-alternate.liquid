@@ -1,0 +1,10 @@
+{% for collection in product_collection.collections %}
+    {% if collection.title == 'Ofertas' %}
+      {% if compare_at_price %}
+        {% comment %} {{ compare_at_price | minus: price | times: 100.0 | divided_by: compare_at_price | floor}} {% endcomment %}
+        <span class="bag-oferta ps-2 pe-2 pt-1 pb-1 rounded-pill ms-2 text-white fw-bold"> 
+        Oferta</span>
+      {% endif %}
+      {% comment %} <span class=""> </span> {% endcomment %}
+    {% endif %}
+{% endfor %}

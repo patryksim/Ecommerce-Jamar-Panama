@@ -1,0 +1,16 @@
+<a href="{{ producto.url }}">
+  <div class="col-3 ps-1 pe-1" data-ee-product-sku="{{ producto.selected_or_first_available_variant.sku }}">
+    <div class="border border-light">
+      <img class="mb-2" src="{{ producto | img_url: 'master' }}">
+      <div class="p-1">
+        <p class="text-gris-jamar fw-bold fs-6 mb-0 title">{{ producto.title }}</p>
+        <p class="text-gris-jamar mb-2">{{ producto.price | money }}  
+          {% if producto.compare_at_price > 0 %}
+            <span class="text-decoration-line-through">{{ producto.compare_at_price | money }}</span>
+          {% endif %}
+        </p>
+        <div class="planes-de-credito"></div>
+      </div>
+    </div>
+  </div>
+</a>

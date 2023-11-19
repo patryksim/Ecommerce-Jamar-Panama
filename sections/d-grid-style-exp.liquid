@@ -1,0 +1,122 @@
+{% render 'custom-separator' %}
+<div class="row">
+  <h2 class="text-center lato-titulos"> {{ section.settings.titulo_blog }} </h2>
+  <div class="col-12">
+    <div class="row overflow-auto justify-content-between flex-md-row align-items-center mb-md-5">
+      <div class="col-12 col-md-7 d-flex justify-content-center position-relative">
+        {{ section.settings.blog_img1 | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid w-100'}}
+      </div>
+      <div class="col-12 col-md-5 d-flex flex-column justify-content-center">
+        <h3 class="h2 text-md-start text-start blog-titles mt-md-0 mt-4">
+          {{ section.settings.blog_text1}}
+        </h3>
+        <p class="mt-3 text-md-start text-start lato-parrafos"> {{section.settings.blog_p_text1}} </p>
+        <a class="text_enlaces text-decoration-underline" href=" {{ section.settings.blog_post1.url }} "><b>Saber más </b> 
+          <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 8L4.5 4.5L1 1" stroke="#404B5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center flex-md-row">
+      {% for block in section.blocks %}
+      {% if block.type == 'ent_blog' %}
+      {% assign b = block.settings %}
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-top position-relative mt-md-0 mt-5">
+        <a href=" {{b.link_tecnologia.url}} " class="reset-enlace">
+          <div>
+            {{b.image_post | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid'}}                                    
+            <h4 class="mt-3 col-md-10 blog-titles"> {{b.title_e_blog}} </h4>
+            <p class="lato-parrafos"> {{b.parr_e_blog}} </p>
+            <a class="text_enlaces text-decoration-underline" href=" {{b.link_tecnologia.url}} "><b>Saber más</b> 
+              <svg width="6" height="9" viewBox="0 0 6 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 8L4.5 4.5L1 1" stroke="#404B5A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% schema %}
+
+{
+    "name":"Grid Promo Exp",
+    "tag":"section",
+    "class":"container",
+    "settings": [
+    {
+      "type": "text",
+      "id": "titulo_blog",
+      "label": "Titulo S. Blog"
+    },
+    {
+      "type": "text",
+      "id": "blog_text1",
+      "label": "Titulo E. Blog 1",
+      "default": "Nuestros <b> expertos </b> te hablan"
+    },
+    {
+      "type": "text",
+      "id": "blog_p_text1",
+      "label": "Parrafo del blog 1",
+      "default": "Completar"
+    },
+    {
+      "type": "image_picker",
+      "id": "blog_img1",
+      "label": "Entrada blog 1"
+    },
+    {
+      "type": "text",
+      "id": "blog_parr",
+      "label": "Parrafo blog 1"
+    },
+    {
+      "type": "article",
+      "id": "blog_post1",
+      "label": "enlace_blog"
+    }
+    ],
+    "blocks": [
+        {
+        "name" : "Entradas del blog",
+        "type": "ent_blog",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title_e_blog",
+                "label": "Titulo entrada Blog"
+            },
+            {
+                "type": "text",
+                "id": "parr_e_blog",
+                "label": "Texto de Tecnologias"
+            },
+            {
+                "type": "article",
+                "id": "link_tecnologia",
+                "label": "Enlace blog"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_post",
+                "label": "Imagen Ref"
+            }
+    ]
+}
+],
+    "presets": [
+        {
+            "name": "Grid Promo Exp",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

@@ -1,0 +1,93 @@
+{
+  "layout": "blog",
+  "sections": {
+    "main-section-blog": {
+      "type": "d-main-blog-section",
+      "settings": {
+      }
+    },
+    "blog-categorias-principal": {
+      "type": "blog-categorias-principal",
+      "blocks": {
+        "c4119f3a-7d3e-4da3-a573-be237e899674": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "aprende-sobre-tu-mueble",
+            "blog_image": "shopify:\/\/shop_images\/cama-quen-velvet_1.jpg"
+          }
+        },
+        "947653ee-8ea1-4026-95cf-439f8981de55": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "decoracion-y-estilo",
+            "blog_image": "shopify:\/\/shop_images\/Img-categoria-05_27cf25da-78a4-4f88-b424-9696ed2cc228.webp"
+          }
+        },
+        "47af683c-5902-4a41-9a6d-3e78656944ad": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "noticias",
+            "blog_image": "shopify:\/\/shop_images\/img-solicita-credijamar-home.webp"
+          }
+        },
+        "dbf7bc13-8c0a-40c3-abc9-1b9d5452406d": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "populares",
+            "blog_image": "shopify:\/\/shop_images\/Img-categoria-01_04a1af80-9f5e-42bf-9fc6-f8b80f0a0cd2.webp"
+          }
+        }
+      },
+      "block_order": [
+        "c4119f3a-7d3e-4da3-a573-be237e899674",
+        "947653ee-8ea1-4026-95cf-439f8981de55",
+        "47af683c-5902-4a41-9a6d-3e78656944ad",
+        "dbf7bc13-8c0a-40c3-abc9-1b9d5452406d"
+      ],
+      "settings": {
+      }
+    },
+    "entradas-blog-cat-recient": {
+      "type": "entradas-blog-cat-recient",
+      "blocks": {
+        "993fc3d2-946d-48da-bb63-4b15d1632ca9": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "aprende-sobre-tu-mueble"
+          }
+        },
+        "5be3c7a8-ba19-4875-bf1e-82128a5f2cff": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "decoracion-y-estilo"
+          }
+        },
+        "9dea6b04-1bd0-4e6c-b438-fb400c9e9bb4": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "noticias"
+          }
+        },
+        "2cc5a3f1-2ff5-4e12-a55e-b20d013392bd": {
+          "type": "blog_type",
+          "settings": {
+            "blog": "populares"
+          }
+        }
+      },
+      "block_order": [
+        "993fc3d2-946d-48da-bb63-4b15d1632ca9",
+        "5be3c7a8-ba19-4875-bf1e-82128a5f2cff",
+        "9dea6b04-1bd0-4e6c-b438-fb400c9e9bb4",
+        "2cc5a3f1-2ff5-4e12-a55e-b20d013392bd"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main-section-blog",
+    "blog-categorias-principal",
+    "entradas-blog-cat-recient"
+  ]
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Geomanist Regular";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Regular.otf");
+}
+@font-face {
+  font-family: "Geomanist Bold";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Bold.otf");
+}
+@font-face {
+  font-family: "Geomanist Medium";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Medium.otf");
+}
+.section-black-urban {
+  padding: 70px 103px 70px;
+}
+.section-textu-urban {
+  padding: 70px 103px 0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section-textu-urban video.video-textu-desktop {
+  width: 100%;
+  display: block;
+}
+.section-textu-urban video.video-textu-mobile {
+  width: 100%;
+  display: none;
+}
+@media (max-width: 800px) {
+  .section-textu-urban video.video-textu-desktop {
+    display: none;
+  }
+  .section-textu-urban video.video-textu-mobile {
+    display: block;
+  }
+  .section-black-urban {
+    padding: 48px 22px;
+  }
+  .section-textu-urban {
+    padding: 48px 22px 0px;
+  }
+}

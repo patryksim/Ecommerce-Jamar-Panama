@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "styles": {
+      "type": "styles-render",
+      "disabled": true,
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "9c6fdb66-1da6-4257-8478-cdbb54894f7e": {
+      "type": "d-banner",
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/Chiriqui-David-Desktop.jpg",
+        "imagen_movil": "shopify:\/\/shop_images\/Chiriqui-David-Mobile.jpg",
+        "text_up": "David",
+        "text_down": "Chiriquí"
+      }
+    },
+    "ca4e0ff5-972b-426f-bc7c-a11ba43a5c4d": {
+      "type": "d-info-tienda",
+      "settings": {
+        "h2": "Visítanos y renueva tus muebles",
+        "store_name": "Ver en Maps",
+        "phone": "205-6500",
+        "breadcump": "David",
+        "iframe_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d2019230.701993178!2d-82.09553973920698!3d8.709588716208541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa59d64dddee47f%3A0xfe023ed7a1bb882a!2sJamar%20-%20David!5e0!3m2!1ses-419!2spa!4v1650663622411!5m2!1ses-419!2spa",
+        "share_link": "https:\/\/goo.gl\/maps\/EDyd2FrRtwcUWdke8",
+        "store_info": "Lunes a Sábados\n<p>9:00 AM a 6:00 PM<\/p>"
+      }
+    },
+    "2b9ab856-96c4-4f26-bf09-c7e49d9e3018": {
+      "type": "d-description-tienda",
+      "settings": {
+        "title": "Conoce nuestra tienda en David",
+        "description": "",
+        "main_image": "shopify:\/\/shop_images\/david-01.jpg",
+        "second_image": "shopify:\/\/shop_images\/david-02.jpg",
+        "third_image": "shopify:\/\/shop_images\/david-03.jpg",
+        "fourt_image": "shopify:\/\/shop_images\/david-04.jpg",
+        "five_image": "shopify:\/\/shop_images\/david-05.jpg"
+      }
+    },
+    "fa409872-5fc2-45a1-ba16-1accd9ee0ef6": {
+      "type": "d-carrousel-list",
+      "settings": {
+        "collections": [
+          "7023040",
+          "7023032",
+          "7020033",
+          "7017736",
+          "7020449",
+          "7019480",
+          "7020026",
+          "7010153",
+          "7019909",
+          "7020369",
+          "7017624"
+        ],
+        "titleCarousel": "Muebles modernos y a crédito",
+        "descriptionCarousel": "",
+        "position": "text-start"
+      }
+    },
+    "50847211-40c8-43f8-91d7-824337b98eb0": {
+      "type": "d-titles",
+      "settings": {
+        "titulo": "Aquí encuentras los mejores muebles en Chiriquí",
+        "subtitulo": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra <a href=\"\/collections\/salas\">muebles de sala<\/a>, comedores modernos y mucho más. Pregunta también por nuestros muebles a crédito.",
+        "vertical_alignment": "start",
+        "columnas": 12
+      }
+    },
+    "7945cd21-36a2-435e-b1cf-66b4d9e14274": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "Entérate de nuestras novedades",
+        "main_description": "",
+        "banner_form": "shopify:\/\/shop_images\/Formulario-de-Home-634x405_5976a75c-3296-44ce-a8d3-780475c0dea7.webp",
+        "invertir_col": true,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": ""
+      }
+    }
+  },
+  "order": [
+    "styles",
+    "9c6fdb66-1da6-4257-8478-cdbb54894f7e",
+    "ca4e0ff5-972b-426f-bc7c-a11ba43a5c4d",
+    "2b9ab856-96c4-4f26-bf09-c7e49d9e3018",
+    "fa409872-5fc2-45a1-ba16-1accd9ee0ef6",
+    "50847211-40c8-43f8-91d7-824337b98eb0",
+    "7945cd21-36a2-435e-b1cf-66b4d9e14274"
+  ]
+}

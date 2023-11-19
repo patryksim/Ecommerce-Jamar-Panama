@@ -1,0 +1,60 @@
+{
+  "sections": {
+    "5b4e4282-df6f-49d1-9d1e-26e8b0e8110d": {
+      "type": "carrusel-home",
+      "blocks": {
+        "474b48cb-2d50-4071-926b-5a76268eb74f": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "image_mobile": "shopify:\/\/shop_images\/CONCENTRATE_JUEGA_Y_GANA-_MOVIL.webp",
+            "link": "https:\/\/apps.credijamar.com.pa\/eventos\/memoria\/informacion\/"
+          }
+        },
+        "d1971adc-f52f-4c08-b9ca-a46625d1556b": {
+          "type": "video",
+          "settings": {
+            "video_desktop": "shopify:\/\/files\/videos\/BANNER-TECNOTOMBOLA.mp4",
+            "video_mobile": "shopify:\/\/files\/videos\/mobile-video-TECNOTOMBOLA.mp4",
+            "link": "https:\/\/www.jamar.com.pa\/pages\/tecno-tombola-2023"
+          }
+        }
+      },
+      "block_order": [
+        "474b48cb-2d50-4071-926b-5a76268eb74f",
+        "d1971adc-f52f-4c08-b9ca-a46625d1556b"
+      ],
+      "settings": {
+      }
+    },
+    "523b37e2-cbce-4830-b8d8-940182677856": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "Custom HTML",
+        "custom_html": "<br><br><br>"
+      }
+    },
+    "49c27adc-6d5a-40fc-9f0d-a1dd568d0a3a": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "01584481-507d-4ecb-abb9-893dca33c27a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Paga-y-Gana.png",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "01584481-507d-4ecb-abb9-893dca33c27a"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "5b4e4282-df6f-49d1-9d1e-26e8b0e8110d",
+    "523b37e2-cbce-4830-b8d8-940182677856",
+    "49c27adc-6d5a-40fc-9f0d-a1dd568d0a3a"
+  ]
+}

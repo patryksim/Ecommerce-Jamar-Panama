@@ -1,0 +1,171 @@
+<br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-11 col-md-8">
+      <h2 class="text-center text-gris-jamar">{{ section.settings.title_style_cat }}</h2>
+      <p class="text-gris-jamar mt-2 text-center">{{ section.settings.parr_style_cat }}</p>
+    </div>
+  </div>
+  <div class="row">
+      {% for block in section.blocks %}
+        {% if block.type == "imagen" %}
+          <div class="col-6 col-md-3 rounded mb-4">
+            <a href="{{ block.settings.enlace }}" class="text-decoration-none">
+                <div>
+                    <img class="img-cover-catalogo w-100" src="{{ block.settings.imagen | img_url:'master'}}" data-rimg="lazy" loading="lazy"/>
+                    <button class="btn bg-light-gris-jamar align-items-center text-decoration-none border-0 rounded-0 rounded-bottom w-100 pt-2 pb-2 pe-0 ps-0">
+                      <p class="m-0 text-gris-jamar a-coleccion">{{ block.settings.textoimage }}</p>
+                    </button>
+                </div>
+            </a>
+          </div>
+        {% endif %}
+        {% if block.type == "ver-todos" %}
+          <div class="col-6 col-md-3 rounded mb-4 cat-box">
+            <div class="position-relative h-100 overflow-hidden">
+              <img class="img-fluid h-100" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/d-collection-cat-grid-fondo.png" data-rimg="lazy" loading="lazy" />
+              <a href="{{block.settings.ver_todos_link}}" class="position-absolute top-50 start-50 translate-middle w-100 h-100">
+                <button class="btn bg-light-gris-jamar w-100 h-100 align-items-center text-decoration-none border-0 pt-2 pb-2">
+                  <p class="m-0 text-gris-jamar a-coleccion">{{ block.settings.texto }}</p>
+                </button>
+              </a>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if section.settings.imagen_sale != blank %}
+        <div class="col-6 col-md-3 rounded mb-4">
+            <a href="{{section.settings.button_sale_link}}">
+              <button class="btn w-100 sale-button align-items-center justify-content-center text-decoration-none border-0 pt-2 pb-2"
+                style="background-image: url('{{ section.settings.imagen_sale | img_url:'master'}}'); background-size: cover; background-position: center center;">
+                <p class="m-0 text-white fs-2 w-auto border border-3 border-white d-inline-block ps-4 pe-4 pt-2 pb-2">SALE</p>
+              </button>
+            </a>
+        </div>
+      {% endif %}
+
+      <!--div class="col-6 col-md-3 rounded mb-4">
+          <a href="{{section.settings.button_link}}">
+            <button class="btn bg-light-gris-jamar w-100 h-100 align-items-center text-decoration-none border-0 w-100 pt-2 pb-2">
+              <p class="m-0 text-gris-jamar a-coleccion">VER TODOS</p>
+            </button>
+          </a>
+      </div-->
+  </div>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const catBoxes = document.querySelectorAll(".cat-box");
+
+    const catBox = catBoxes[catBoxes.length - 1];
+    console.log("cat-bx",catBox)
+    const catBoxHeight = catBox.clientHeight;
+    document.documentElement.style.setProperty('--altura-catBox', `${catBoxHeight}px`);
+  })  
+</script>
+
+<style type="text/css">
+  .a-coleccion {
+    font-weight: 600;
+  }
+  @media (max-width: 768px) {
+    .a-coleccion {
+      font-size: 14px;
+    }
+  }
+  .sale-button {
+    height: var(--altura-catBox);
+  }
+</style>
+
+{% schema %}
+
+{
+    "name":"Subcategorias Grid",
+    "tag":"section",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "parr_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_sale",
+      "label": "Imagen de oferta"
+    },
+    {
+      "type": "url",
+      "id": "button_sale_link",
+      "label": "Enlace de oferta"
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen de la tarjeta"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "text",
+            "id": "textpdesc",
+            "label": "Texto descriptivo"
+        },
+        {
+            "type": "checkbox",
+            "id": "show",
+            "label": "Ocultar icono"
+        },
+        {
+            "type": "url",
+            "id": "enlace",
+            "label": "Agregar enlace"
+        }
+        ]
+    },
+          {
+        "name" : "ver-todos",
+        "type": "ver-todos",
+        "settings": [
+        {
+          "type": "text",
+          "id": "texto",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "ver_todos_link",
+          "label": "Enlace ver todos"
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Subcategorias Grid",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

@@ -1,0 +1,825 @@
+<!-- Inicio del header principal de la página -->
+
+
+{% if cart.item_count != 0 %} 
+{% assign mostrar_notificacion = "flex" %} 
+{% else %} 
+{% assign mostrar_notificacion = "none" %} 
+{% endif %} 
+
+{% assign c = cart.item_count %}
+
+
+
+{% comment %} Refactorizar {% endcomment %}
+<style>
+    .icons_cart_contenedor .icon_bubble_cart,
+    .icon_movil_cart .icon_bubble_cart {
+        position: absolute;
+        width: 8px;
+        height: 8px;
+      	right:-4px;
+      	top:-4px;
+        border-radius: 50%;
+        background-color: rgb(177, 51, 51);
+        font-size: 12px;
+        color: white;
+        display: {{ mostrar_notificacion }};
+        justify-content: center;
+        align-items: center;
+      	animation: cart_add 1s linear infinite;
+      	display:none;
+    } 
+      @keyframes cart_add {
+        0% {
+          transform: scale(.4);
+          box-shadow: 0px 0px 0px #B13333;
+        }
+        100% {
+          box-shadow: 0px 0px 15px #B13333;
+          transform: scale(1);
+        }
+      }
+  
+  
+    {% comment %} 
+    ESTILOS PARA EL TOOLTIP DEL BOTON DE REGISTRARSE
+    ------------------------------------------------------------
+  	Se agrega los estilos para el tooltip de crear una cuenta de jamar.
+    {% endcomment %}
+  
+    .registrarse {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tooltip-registrarse {
+      position: absolute;
+      bottom: -28px;
+      width: 130px;
+      height: 34px;
+      text-align: center;
+      background-color: #3F4B59;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: "Lato";
+      font-size: 13px;
+      font-weight: 600;
+      transform: translateX(100px);
+      z-index: 4000;
+    }
+    .tooltip-registrarse::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #3F4B59;
+      top: -5px;
+      right: 30px;
+      transform: rotate(45deg);
+    }
+
+    .tooltip-registrarse[data-show="false"] {
+      opacity: 0;
+      transform: scale(.2) translateY(-20px);
+    }
+
+    .tooltip-registrarse[data-show="true"] {
+      opacity: 1;
+      transform: scale(1) translateY(16px) translateX(-30px);
+      transition: .6s;
+      z-index:1000000;
+    }
+  
+  .--syte-start-camera-upload {
+    cursor:pointer;
+    z-index:10000;
+  }
+
+  .contenedor-tooltip-syte {
+        position: relative;
+        width: 250px;
+        height: 177px;
+        background: #F1F1F1;
+        border-radius: 4px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        position: absolute;
+        right: 18px;
+        top: 50px;
+        z-index: 1000000;
+        box-shadow: 0px 7px 18px rgb(0 0 0 / 0.14);
+    
+    }
+
+    .contenedor-tooltip-syte p {
+        padding: 0px;
+        margin: 0px;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .contenedor-tooltip-syte p.tooltip-title {
+        
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .contenedor-tooltip-syte p.tooltip-subtititle {
+        
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #404B5A;
+        margin-top: 2px;
+        
+    }
+
+    .contenedor-tooltip-syte p.tooltip-complement-text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 17px;
+        text-align: center;
+        color: #6E7A8A;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+
+
+    div.syte-btn-image {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 32px;
+        gap: 10px;
+        width: 128px;
+        height: 38px;
+        background: #404B5A;
+        border-radius: 100px;
+        
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+        border: 0px;
+        color: white;
+        margin-top: 4px;
+    }
+
+    span.syte-line-btn {
+        width: 100%;
+        height: 4px;
+        background: #404B5A;
+        position: absolute;
+        bottom: 0px;
+        border-radius: 0 0 1px 1px;        
+    }
+
+    span.syte-line-indicator {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #F1F1F1;
+        top: 0px;
+        right: 20px;
+        transform: rotate(45deg) translateY(-10px);
+    }
+
+    span.syte-close--btn {
+        position: absolute;
+        top: 2px;
+        right: 6px;
+    }
+
+    span.syte-close--btn img {
+        padding: 0;
+        margin: 0;
+    }
+
+.contenedor-tooltip-syte[data-show="false"] {
+    display: none;
+}
+
+.contenedor-tooltip-syte[data-show="true"] {
+    display: flex;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+    div.contenedor-tooltip-syte {
+        right:3px;
+        top: 45px;
+    }
+}
+
+.--syte-start-camera-upload:hover ~ .contenedor-tooltip-syte  {
+    display: flex;
+}
+  
+.container-barra-financiacion {
+    height: 32px;
+    width: 100%;
+    background-color: #404b5a;
+}
+  
+.container-barra-financiacion,
+.container-barra-financiacion a {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 auto;
+    padding: 7px 0;
+}
+  
+</style>
+
+<div class="contenedor_items_cart_popup"> 
+</div>
+
+
+
+
+
+{% comment %} 
+* HEADER DESKTOP
+* -------------------------------------------------------------
+* Cargando la versión principal del header en la versión desktop de la página
+@@ Para activar el contador debe agregar una propiedad inline de top: 48px; en header desktop
+
+{% endcomment %}
+
+
+
+<header class="d-none d-lg-block d-xl-block d-xxl-block d-md-none d-sm-none fixed-top w-100 header-desktop" style="background:white;">
+  {% comment %} 
+  * CINTA PROMOCIONAL
+  * -------------------------------------------------------------
+  * Cargando la versión principal del header en la versión desktop de la página
+  @@ Para activar el contador debe agregar una propiedad inline de top: 48px; en header desktop
+  {% endcomment %}
+    <div class="container-barra-financiacion" role="alert">
+      <b class="text-decoration-underline"><a class="text-white" href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header">¡SOLICITA TU CREDIJAMAR</a></b> 100% DIGITAL!
+    </div>
+  
+  
+    <nav class="container-fluid bg-nav-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-xxl-11">
+                    <div class="row justify-content-between alig-items-center pt-2 pb-2">
+                        <div class="pt-0 pt-lg-0 pb-lg-0 p-lg-0 col-lg-5 p-xl-0 p-xxl-0 col-xxl-5">
+                            <ul class="menu_top_left__nuevo align-items-center">
+                                <li class="envio separation ps-0 ms-0">Envío gratis</li>
+                                <li class="envio_enlace separation"><a class="terminos" href="https://www.jamar.com.pa/pages/condiciones-de-entrega">Ver Términos y condiciones</a></li>
+                                <span class="envio_enlace_sucursal__separator separation"></span>
+                                <li class="envio_enlace_sucursal separation">
+                                    <img class="icon_sucursal" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1640017614/IMAGENES/JAMAR/icon_suscursales_to1fje.svg" />
+                                    <a href="https://www.jamar.com.pa/pages/sucursales">Nuestras sucursales</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-xxl-4 p-0">
+                            <ul class="menu_top_right__nuevo align-items-center justify-content-end">
+                                <li class="enlace separation" data-wa="true" data-wa-section-name="header-asesoria-cta"><a href="https://wa.me/50769932222?text=Hola, necesito una asesoría en línea">Asesoría en Línea</a></li>
+                                <span class="envio_enlace_sucursal__separator separation"></span>
+                                <li class="enlace separation"><a href="https://www.jamar.com.pa/pages/tour-virtual">Tour Virtual</a></li>
+                                <span class="envio_enlace_sucursal__separator separation"></span>
+                                <li class="enlace separation me-0 pe-0"> <img class="icon_user" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/portal-clientes_r5wrne.svg?v=1678378206" /> <a href="https://cuenta.jamar.com.pa/">Portal de clientes</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="container-fluid">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-xxl-11">
+                    <div class="row pt-3 pb-3 d-flex align-items-center">
+                        <figure class="col-lg-2 m-0 p-0 d-flex align-items-center">
+                        <a href="/">
+                            <img class="w-75" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/muebles-jamar-marca-registrada.svg" alt="">
+                        </a>
+                        </figure>
+                        <div class="col-lg-4">
+                            <form class="form_predictice__search d-flex justify-content-between pl-3 pr-3">
+                                <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1653072103/IMAGENES/icon-new-search_vm9mjy.svg" alt="" srcset="">
+                                <input type="text" name="search_query" id="custom_predictive_input" placeholder="Encuentra algo extrardinario..." autocomplete="off">
+                              	<div class="col-1 end-0 me-3 --syte-start-camera-upload" href="javascript:void(0)" data-camera-button-placement="search-bar" style="border:0px ;">
+                                	<img class="icon_search" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1652896602/IMAGENES/JAMAR/cta-search_mi3hl8.svg" alt="">
+                                </div>
+
+
+                                <div class="contenedor-tooltip-syte" data-show="false">
+                                    <p class="tooltip-title">¡Nuevo!</p>
+                                    <p class="tooltip-subtititle"> Búsqueda por imágenes</p>
+                                    <p class="tooltip-complement-text">Sube una foto de tus muebles favoritos para encontrar productos similares.</p>
+                                    <div class="syte-btn-image --syte-start-camera-upload" href="javascript:void(0)" data-camera-button-placement="search-bar">Comenzar</div>
+                                    <span class="syte-line-btn"></span>
+                                    <span class="syte-line-indicator"></span>
+                                    <span class="syte-close--btn" onclick="closeElement(this)">
+                                        <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/icon-close.svg?v=1653485006" alt="" srcset="">
+                                    </span>
+                                </div>
+
+
+
+                            </form>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <ul class="menu_top_right__nuevo justify-content-around">
+                                <li class="enlace_credijamar d-flex align-items-center"><a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header"><img class="me-1" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/tj-credijamar.svg?v=1655484696" alt="Icono credijamar">Aplica Crédito</a></li>
+                                <li class="enlace"><a href="https://cuenta.jamar.com.pa/pagos">Paga tu crédito</a></li>
+                                <li class="enlace"><a href="https://www.jamar.com.pa/pages/novedades">Novedades</a></li>
+
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-2 p-0 d-flex justify-content-end icons_cart_contenedor">
+                            <a href="https://www.jamar.com.pa/account/login" class="icon_cart_nav enlace">
+                            <img class="icons_nav me-2" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1640203767/IMAGENES/JAMAR/icon-registrate_nxwnbb.svg" alt="">
+                            Regístrate
+                            </a>
+                            <a class="icon_cart_nav position-relative" href="/cart"> <img class="icons_nav" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/carrito.svg" alt=""> </a>
+                            <span class="icon_bubble_cart"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Coleccion y selección de pais -->
+
+    <nav class="container-fluid bg-nav-top">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-xxl-11">
+                    <div class="row pt-2 pb-2 d-flex align-items-center">
+                        <div class="col-lg-1 d-flex pl-0">
+                            <ul class="contenedor_pais d-flex justify-content-start align-items-center">
+                                <li class="icon_pais colom">
+                                    <a href="https://www.jamar.com">
+                                        <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639554932/IMAGENES/JAMAR/colombia_bandera_xq7cm4.svg" alt="">
+                                    </a>
+
+                                </li>
+                                <li>
+                                    <a href="https://www.jamar.com.pa">
+                                        <img style="vertical-align: unset;" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639554932/IMAGENES/JAMAR/panama_bandera_zygn6p.svg" alt=""></a>
+                                </li>
+                                <img style="vertical-align: unset;" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg" alt="">
+                            </ul>
+                        </div>
+                        <ul class="col-lg-9 cont_categorias d-flex justify-content-around p-0">
+                            {% for link in linklists.homologacion-menu-colecciones.links %}
+                                
+
+                            <li class="p-0 item_cat enlace"><a href="{{ link.url }}">{{ link.title }}</a>
+                                <img class="arrow" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg" alt=""> {% if link.links != blank %}
+                                <div class="sub_menu">
+                                    <ul class="sub_items_menu">
+                                        {% for child_link in link.links %}
+                                        <li {% if link.title == "Colecciones" %} 
+                                            class="colecciones"
+                                            {% elsif link.title == "Estilos" %}
+                                            class="estilos"
+                                            {% endif %}>  
+
+                                            <a class="item_sub_menu_2" href="{{ child_link.url }}">{{ child_link.title }}</a> {% if child_link.links != blank %}
+                                            <ul class="grandchild">
+                                                {% for grandchild_link in child_link.links %}
+                                                <li {% if grandchild_link.active %}class="active {% if grandchild_link.child_active %}child-active{% endif %}" {% endif %}><a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a></li>
+                                                {% endfor %}
+
+                                            </ul>
+                                            {% endif %}
+                                        </li>
+                                        {% endfor %}
+
+                                    
+                                    </ul>
+                                    {% for collection in collections %}
+                                    {% if collection.title == link.title  %}
+                                        {% comment %} IMAGEN EXTRAIDA DESDE LA PANTALLA DE FEATURE IMAGEN DE LAS COLECCIONES {% endcomment %}
+                                        {{ collection.image | image_url: width: 300 | image_tag }} 
+                                    {% endif %}
+                                    {% endfor %}
+
+                                {% if link.title == "Estilos" %}
+                                    <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/jamar-estilo-contemporaneo-001.jpg" />
+                                    {% elsif link.title == "Colecciones" %}    
+                                     <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/ELEMENTAL-TOLEDO-400X400px.jpg?v=1654881504" /> 
+                                </div>
+                                {% endif %}
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <ul class="list_catalogo_ofertas d-flex justify-content-end align-items-center col-2 pr-0 pl-5">
+                        <li><a href="/pages/catalogos-digitales-jamar">Catálogos</a></li> 
+                        {% comment %}<li class="p-0 item_cat enlace"><a href="/">Catálogos</a>
+                            <div class="sub_menu sub_menu_catalogo">
+                                    <ul class="sub_items_menu sub_menu_catalogo">
+                                        <li><a class="item_sub_menu_2" href="/pages/catalogo-digital">Catálogo Digital</a></li>
+                                        <li><a class="item_sub_menu_2" href="/pages/catalogo-colchones">Catálogo Colchones</a></li>
+                                    </ul>
+                            </li>
+                          
+                            <span class="envio_enlace_sucursal__separator separation_2"></span>
+                            <li><a href="https://www.jamar.com.pa/pages/sale" class="ofertas_n">SALE</a></li>{% endcomment %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Fin de las colecciones y selección de pais -->
+</header>
+
+<div class="fix-top-position"></div>
+
+
+{% comment %} 
+* HEADER MOVIL
+* -------------------------------------------------------------
+* Se muestra con un display: block para poder evitar la carga de contenido innecesario -> se puede optimizar
+@@ Para activar el contador debe agregar una propiedad inline de top: 80px; en header desktop
+
+{% endcomment %}
+
+<header class="container-fluid movil d-sm-block d-lg-none p-0 pb-2 fixed-top w-100" style="background:white;">
+    {% comment %} 
+  * CINTA PROMOCIONAL
+  * -------------------------------------------------------------
+  * Cargando la versión principal del header en la versión desktop de la página
+  @@ Para activar el contador debe agregar una propiedad inline de top: 48px; en header desktop
+  {% endcomment %}
+    <div class="container-barra-financiacion" role="alert">
+     <b class="text-decoration-underline"><a class="text-white" href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header">¡SOLICITA TU CREDIJAMAR</a></b> 100% DIGITAL!
+    </div>
+    <div class="row justify-content-center ps-2 pe-2">
+        <div class="col-11">
+            <nav class="row align-items-center">
+                <div class="col-3 pl-0 d-flex">
+                    <button class="main_menu_movil col-6" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">
+                            <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1644174112/IMAGENES/JAMAR/HEADER/menu-movil_mv3pac.svg" alt="" style="transform: scale(.8);">
+                    </button>
+
+                    <a href="/pages/sucursales" class="col-6 ms-3 d-flex text-end align-items-center bg-transparent border-0">
+                        <img class="img-sucursal-icon" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1644176499/IMAGENES/JAMAR/HEADER/icon-sucursales_iuraas.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="col-6">
+                    <div class="row justify-content-center">
+                        <figure class="logo_movil d-flex justify-content-center">
+                        <a href="/" class="text-center">
+                            <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/muebles-jamar-marca-registrada.svg" alt="">
+                        </a>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <ul class="row justify-content-end">
+                        <li class="icon_movil col-4">
+                            <a href="https://cuenta.jamar.com.pa/" class="w-100">
+                                <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1644171992/IMAGENES/JAMAR/HEADER/portal-cliente_ysztcj.svg" alt="" style="transform: scale(1.4);"></a>
+                                <span class="btn_portal_tooltip" data-show="false">Regístrate</span>
+                        </li>
+                        <li class="icon_movil col-4 registrarse">
+                            <a href="/account/login" class="w-100">
+                                <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1644171408/IMAGENES/JAMAR/HEADER/cuentas_uxuaoh.svg" alt="" style="transform: translateX(2px)";>
+                            </a>
+                          <span class="tooltip-registrarse" data-show="false">
+                                <a class="text-white enlace" href="/account/login">Registrarse</a>
+                          </span>
+                        </li>
+                        <li class="icon_movil col-4 icon_movil_cart">
+                            <a href="/cart" class="position-relative">
+                                <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1644171943/IMAGENES/JAMAR/HEADER/carrito_eh8kqy.svg" alt="" style="transform: scale(1.2);">
+                                <span class="icon_bubble_cart icon_bubble_cart_movil"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <nav class="row align-items-center">
+                <div class="col mt-1 mb-2 p-0">
+                    <form class="buscador_movil d-flex m-0 ps-2 p-0 align-items-center">
+                        <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1653072103/IMAGENES/icon-new-search_vm9mjy.svg" alt="" srcset="">
+                        <input class="ps-2 col-11 border-0 bg-transparent h-100" id="custom_predictive_input_movil" type="search" placeholder="Encuentra algo extraordinario..." autocomplete="off">
+                      <div class="col-1 p-1 position-absolute end-0 me-3 --syte-start-camera-upload" href="javascript:void(0)" data-camera-button-placement="search-bar" style="border:0px ;">
+                        <img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1652896602/IMAGENES/JAMAR/cta-search_mi3hl8.svg" alt="">
+                      </div>
+
+                    <div class="contenedor-tooltip-syte contenedor-tooltip-syte-movil" data-show="false">
+                        <p class="tooltip-title">¡Nuevo!</p>
+                        <p class="tooltip-subtititle">Búsqueda por imágenes</p>
+                        <p class="tooltip-complement-text">Sube una foto de tus muebles favoritos para encontrar productos similares.</p>
+                        <div class="syte-btn-image --syte-start-camera-upload" href="javascript:void(0)" data-camera-button-placement="search-bar">Comenzar</div>
+                        <span class="syte-line-btn"></span>
+                        <span class="syte-line-indicator"></span>
+                        <span class="syte-close--btn" onclick="closeElement(this)">
+                            <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/icon-close.svg?v=1653485006" alt="" srcset="">
+                        </span>
+                    </div>
+                  </form>
+                </div>
+            </nav>
+
+            <nav class="row">
+                
+                <div class="col-4 d-flex ps-1 pe-1">
+                    <li class="list_catalogo_ofertas">
+                        <a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header">Credijamar</a>
+                    </li>
+                </div>
+                
+                <div class="col-3 d-flex pl-0">
+                    <ul class="contenedor_pais">
+                        <li class="colom colom-movil">
+                            <a href="https://www.jamar.com"><img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639554932/IMAGENES/JAMAR/colombia_bandera_xq7cm4.svg" alt=""></a>
+                        </li>
+                        <li class="icon_panama disabled">
+                            <a href=""><img src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639554932/IMAGENES/JAMAR/panama_bandera_zygn6p.svg" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+
+                <ul class="list_catalogo_ofertas d-flex justify-content-end align-items-center col-5 pr-0 pl-4">
+                    <li><a href="/pages/catalogos-digitales-jamar">Catálogos</a></li>
+                    <span class="envio_enlace_sucursal__separator separation_2"></span>
+                    <li><a href="/pages/sale" class="ofertas_n">SALE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+{% comment %} 
+PERSONALIZACION DE ICONOS
+-------------------------------------------------------------
+Iconos personalizados para los items superior del menu
+{% endcomment %}
+
+<div class="offcanvas-2 offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+    <div class="offcanvas-header d-flex justify-content-center">
+        <img class="menu_movil_image" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/muebles-jamar-marca-registrada.svg" alt="">
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body pl-5">
+        <ul class="col-lg-9 cont_categorias_movil" id="cont_categorias_movil">
+
+          <div class="row d-lg-flex">
+            <li class="col-sm-12 p-2 item_cat enlace_credijamar"><a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header"> <img class="me-1" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/tj-credijamar.svg?v=1655484696" alt="Icono credijamar"> Aplica Crédito</a></li>
+            <li class="col-sm-12 p-2 item_cat"> <a href="https://www.jamar.com.pa/account/login">Regístrate</a> </li>   
+            <li class="col-sm-12 p-2 item_cat"> <a href="https://cuenta.jamar.com.pa/pagos">Paga tu crédito</a> </li>
+          </div>
+          <hr>
+          
+            <div class="row d-lg-flex">
+                {% for link in linklists.homologacion-menu-colecciones.links %}
+                <li class="col-sm-12 p-2 item_cat_movil">
+                  <a class="item_cat_movil" href="{{ link.url }}">{{ link.title }}</a>
+                  {% if link.links != blank %}
+                    <div class="sub_menu_movil" data-show="false">
+                        <ul class="sub_items_menu">
+                            {% for child_link in link.links %}
+                            <li {% if child_link.active %}class="" {% endif %}><a href="{{ child_link.url }}">{{ child_link.title }}</a> {% if child_link.links != blank %}
+                                <ul class="grandchild">
+                                    {% for grandchild_link in child_link.links %}
+                                    <li {% if grandchild_link.active %}class="active {% if grandchild_link.child_active %}child-active{% endif %}" {% endif %}><a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a></li>
+                                    {% endfor %}
+                                </ul>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <img class="icon_movil_fecha" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg" alt="" onclick="motrar_menu_item(this)"> {% endif %}
+                </li>
+                {% endfor %} 
+
+                {% comment %}
+                <li class="col-sm-12 p-2 item_cat_movil" onclick="motrar_menu_item(this)">Salas
+                    <div class="sub_menu_movil" data-show="false">
+                        <ul class="sub_items_menu">
+                            <li>Juego de salas</li>
+                            <li>Salas en L</li>
+                            <li>Sofas</li>
+                            <li>Sofas Camas</li>
+                            <li>Reclinables</li>
+                            <li>Poltronas y Puff</li>
+                            <li>Juego de salas</li>
+                            <li>Salas en L</li>
+                            <li>Sofas</li>
+                            <li>Sofas Camas</li>
+                            <li>Reclinables</li>
+                            <li>Poltronas y Puff</li>
+                            <div class="contenedor_image_destacada">
+                            </div>
+                        </ul>
+
+
+                    </div>
+                    <img class="icon_movil_fecha" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg" alt="">
+                </li>
+
+                <li class="col-sm-12 p-2 item_cat">Comedores</li>
+                <li class="col-sm-12 p-2 item_cat">Dormitorios</li>
+                <li class="col-sm-12 p-2 item_cat">Colchones</li>
+                <li class="col-sm-12 p-2 item_cat">Estudio</li>
+                <li class="col-sm-12 p-2 item_cat">Infantil/Juvenil</li>
+                <li class="col-sm-12 p-2 item_cat">Decoración</li>
+                <li class="col-sm-12 p-2 item_cat">Estilos</li>
+                <li class="col-sm-12 p-2 item_cat">Colecciones</li>
+                {% endcomment %}
+            </div>
+            <hr>
+
+            <div class="row d-lg-flex">
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/sale">Sale</a></li>
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/catalogo-digital">Catálogo</a></li>
+              	
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/catalogo-colchones">Catálogo Colchones</a></li>
+              {% comment %}
+              {% endcomment %}
+            </div>
+            <hr>
+
+            {% comment %} <div class="row d-lg-flex">
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/estilos-y-colecciones">Estilos</a> </li>
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/estilos-y-colecciones">Colecciones</a> </li>
+            </div>
+            <hr> {% endcomment %}
+
+            <div class="row d-lg-flex">
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/novedades">Novedades</a> </li>
+                <li class="col-sm-12 p-2 item_cat"> <a data-wa="true" data-wa-section-name="header-asesoria-cta-movil" href="https://wa.me/50769932222?text=Hola, necesito una asesoría en línea">Asesoría</a> </li>
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/sucursales">Sucursales</a> </li>
+                <li class="col-sm-12 p-2 item_cat"> <a href="/pages/tour-virtual">Tour Virtual</a> </li>
+            </div>
+            <hr>
+
+            <div class="row d-lg-flex">
+                <li class="col-sm-12 p-2 item_cat"> <a href="https://cuenta.jamar.com.pa/">Portal de clientes</a></li>
+            </div>
+            <hr>
+            <nav class="contenedor_social_media">
+                <a href="https://www.instagram.com/jamarpanama/" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836389/IMAGENES/JAMAR/icon_ig_u1mgjk.svg" alt=""></a>
+                <a href="https://www.facebook.com/JamarPanama" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836389/IMAGENES/JAMAR/icon_facebook_vwowzs.svg" alt=""></a>
+                <a href="https://www.youtube.com/user/mueblesjamarpanama" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836389/IMAGENES/JAMAR/icon_yt_cipwab.svg" alt=""></a>
+                <a href="https://www.pinterest.com/jamarpanam" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836389/IMAGENES/JAMAR/icon_pinterest_iw1ujb.svg" alt=""></a>
+                <a href="https://twitter.com/jamarpanama" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836895/IMAGENES/JAMAR/icon_twitter_bsnrrb.svg" alt=""></a>
+                <a href="https://www.tiktok.com/@jamarpanamaoficial" target="_blank"><img class="icon_social_media" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639836895/IMAGENES/JAMAR/icon_tiktok_x2cltz.svg" alt=""></a>
+
+            </nav>
+            <hr>
+
+
+        </ul>
+    </div>
+</div>
+
+
+<div id="contenedor_resultados" data-search_cont="false">
+</div>
+
+ 
+{% comment %} 
+
+CODIGO PARA RENDERIZAR LOS ELEMENTOS DESDE EL BACKEND CON LIQUID
+
+{% for link in linklists.homologacion-menu-colecciones.links %}
+<li class="p-0 item_cat enlace"><a href="{{ link.url }}">{{ link.title }}</a>
+    <img class="arrow" src="https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg" alt=""> {% if link.links != blank %}
+    <div class="sub_menu">
+        <ul class="sub_items_menu">
+            {% for child_link in link.links %}
+            <li {% if child_link.active %}class="" {% endif %}><a href="{{ child_link.url }}">{{ child_link.title }}</a> {% if child_link.links != blank %}
+                <ul class="grandchild">
+                    {% for grandchild_link in child_link.links %}
+                    <li {% if grandchild_link.active %}class="active {% if grandchild_link.child_active %}child-active{% endif %}" {% endif %}><a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</li>
+{% endfor %} {% for link in linklists.main-menu.links %}
+
+<a href="{{ link.url }}">{{ link.title }}</a> 
+{% endfor %}
+
+FIN DEL CODIGO PARA RENDERIZAR LOS ELEMENTOS DESDE EL BACKEND CON LIQUID
+
+{% endcomment %} 
+
+
+
+
+
+<script>
+
+    function motrar_menu_item(e) {
+        if (e.parentNode.children[1].dataset.show == "false") {
+            e.parentNode.children[1].dataset.show = "true";
+            e.style.transform = "rotate(180deg)";
+
+        } else {
+            e.parentNode.children[1].dataset.show = "false";
+            e.style.transform = "rotate(0deg)";
+        }
+    }
+
+{% comment %} 
+INTERACCIONES PARA CREAR LOS TIMEOUTS DE LOS TOOLTIPS
+------------------------------------------------------------
+Las animacion se usan con atributos data asociados que varian dependiendo el timeline y un prefijo tooltip.
+{% endcomment %}
+
+ 
+
+{% if template == "index" %}
+function load_animation() {
+setTimeout(() => {document.querySelector(".btn_whatsapp_toltip").dataset.show="true"}, 3500);
+setTimeout(() => {document.querySelector(".btn_whatsapp_toltip").dataset.show="false"}, 8000);
+setTimeout(() => {document.querySelector(".btn_portalcliente_toltip").dataset.show="true"}, 8100);
+setTimeout(() => {document.querySelector(".btn_portalcliente_toltip").dataset.show="false"}, 12000);
+setTimeout(() => {document.querySelector(".tooltip-registrarse").dataset.show="true"}, 12500);
+setTimeout(() => {document.querySelector(".tooltip-registrarse").dataset.show="false"}, 18000);
+
+document.querySelector(".close_btn_whats").addEventListener("click", () => {
+    document.querySelector(".btn_whatsapp_toltip").dataset.show="false";
+})
+    
+}
+
+window.addEventListener('load', () => {
+    load_animation();
+})
+
+{% endif %}
+
+
+// setTimeout(() => {document.querySelector(".contenedor-tooltip-syte").dataset.show="false"}, 3500);
+// setTimeout(() => {document.querySelector(".contenedor-tooltip-syte-movil").dataset.show="false"}, 3500);
+
+function closeElement(e) {
+    e.parentNode.dataset.show="false";
+}
+  
+  
+
+
+
+
+
+</script>
+
+{% comment %} 
+
+/**********************************************************
+*      ELIMINANDO EL SCRIPT DEL BUSCADOR PREDICTIVO
+        ACTIVAR EN CASO DE FALLO DE DOOFINDER
+*                   JAMAYA@JAMAR.COM
+**********************************************************/
+
+<script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+{{ 'predictive-search-homologation.js' | asset_url | script_tag }}
+
+{% endcomment %}
+
+
+
+ {% schema %} { "name": "Homologation Header", "settings": [], "presets":[ { "name":"Homologación Header", "category": "headers nuevos" } ] } 
+{% endschema %} 
+{% stylesheet %} 
+{% endstylesheet %}

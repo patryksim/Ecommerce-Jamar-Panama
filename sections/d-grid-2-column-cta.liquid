@@ -1,0 +1,135 @@
+<style>
+  
+.titulo-grid-contact {
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 28px;
+    /* identical to box height, or 108% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #404B5A;
+}
+
+p.description-grid-contact {
+    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* or 125% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #404B5A;
+    margin: 10px 0px;
+}
+
+.contenedor-btn-servicios {
+    width: 214px;
+    height: 42px;
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.19));
+    display: flex;
+    background: #F6F6F6;
+    border-radius: 48px;
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 122%;
+    /* identical to box height, or 20px */
+    text-align: center;
+    color: #404B5A;
+    margin-top: 10px;
+}    
+  
+  
+  div.container-icon-whatsapp {
+    height: 100%;
+    width: 42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    border-radius: 50%;
+  }
+  
+  
+  
+</style>
+
+
+<br><br>
+<div class="row {% if section.settings.reverse == true %} flex-row-reverse {%endif%}">
+  <div class="col-md-6">
+    <img class="img-fluid" src="{{section.settings.imagen | image_url: width:auto, format: 'pjpg'}}" alt="" data-rimg="lazy" loading="lazy">
+  </div>
+  <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="titulo-grid-contact mt-3">{{section.settings.titulo}}</h1>
+    <p class="description-grid-contact col-6">{{section.settings.descripcion}}</p>
+    <a href="{{section.settings.ctaenlace.url}}" class="contenedor-btn-servicios d-flex justify-content-between align-items-center text-decoration-none overflow-hidden">
+      <div class="container-icon-whatsapp d-flex">
+        <img src="{{section.settings.imagencta | image_url: width:auto }}" data-rimg="lazy" loading="lazy">
+      </div>
+      <div class="d-flex justify-content-center align-items-center w-75 h-100">
+        {{section.settings.cta}}
+      </div>
+    </a>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+  "name": "Contenedor 2 Col CTA",
+  "tag":"section",
+  "class":"container",
+  "settings": [
+      {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Selecciona imagen"
+      },
+	{
+      "type": "checkbox",
+      "id": "reverse",
+      "label": "Ivertir orden de columnas"
+      },
+	  {
+      "type": "text",
+      "id": "titulo",
+      "label": "Colocar titulo"
+      },
+	{
+      "type": "text",
+      "id": "descripcion",
+      "label": "Colocar descripcion"
+      },
+		{
+      "type": "text",
+      "id": "cta",
+      "label": "Texto del cta"
+      },
+		{
+      "type": "image_picker",
+      "id": "imagencta",
+      "label": "Imagen del cta"
+      },
+	{
+      "type": "url",
+      "id": "ctaenlace",
+      "label": "Enlace del cta"
+      }
+      ],
+      "presets": [
+      {
+      "name": "Contenedor 2 Col CTA",
+      "category": "Servicios"
+      }
+    ]
+  }
+{% endschema %}

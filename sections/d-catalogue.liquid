@@ -1,0 +1,78 @@
+{% comment %}  
+SECCION QUE CONTIENE LOS GRADOS DE SUAVIDAD
+---------------------------------------------
+imagen que contiene los grados de suavidad dentro de la tienda
+{% endcomment %} 
+{% render 'custom-separator' %}
+
+        <div class="row justify-content-center">
+                <h2 class="h1 text-center lato-titulos">{{ section.settings.main_title }}</h2>
+                <div class="col-11 col-md-11">
+                    <div class="row justify-content-start justify-content-md-center container-scrollbar overflow-auto flex-nowrap pb-0">
+                         {% for block in section.blocks %}
+                                {% assign b = block.settings %}
+                                <div class="col-md-4 col-8 d-flex justify-content-center">
+                                    <div class="card border-0 shadow-none" style="width: 18rem;">
+                                    {{ b.imagen | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'card-img-top' }}
+                                        <div class="card-body d-flex flex-column align-items-center pt-0">
+                                            <p class="card-text text-center lato-parrafos">{{ b.title }}</p>
+                                            <a href="{{b.enlace_suavidad}}" class="btn_to_suavidad lato-parrafos mt-0"><b>Ir a comprar</b></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+        </div>
+{% schema %}
+
+{
+    "name":"New Catalogue",
+    "tag":"section",
+    "class":"container",
+    "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Colocar titulo del Hero",
+      "default": "Introducir titulo"
+    }
+    ],
+    "blocks": [
+        {
+        "name" : "Catalogo",
+        "type": "block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "imagen",
+                "label": "Imagen de tamano"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Subtitulo de tamano"
+            },
+            {
+                "type": "url",
+                "id": "enlace",
+                "label": "Enlace"
+            },
+            {
+                "type": "checkbox",
+                "id": "icon",
+                "label": "Enlace"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Imagen con botones",
+            "category": "Colchones"
+        }
+    ]
+}
+
+{% endschema %}

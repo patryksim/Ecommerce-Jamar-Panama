@@ -1,0 +1,144 @@
+<div class="container-lg">
+  <div class="row mt-2">
+    <div class="col-12 col-sm-6 text-center align-self-center">
+      <img class="mb-3 mt-3" src="{{ section.settings.image_style_newsletter | img_url:'master' }}" alt="Header-Image" data-rimg="lazy" loading="lazy">
+    </div>
+    <div class="col-12 col-sm-6 align-self-center">
+      <h2 class="text-body">{{ section.settings.heading_style_newsletter }}</h2>
+      <p>{{ section.settings.text_style_newsletter }}</p>
+      <div class="newsletter">
+        {% form 'customer', id: form_id %}
+        {% if form.posted_successfully? %}
+        <p class="newsletter-success">
+          {{ 'general.newsletter.success' | t }}
+        </p>
+        {% else %}
+        <input
+               type="hidden"
+               name="contact[tags]"
+               value="{{ newsletter_tags }}"
+               >
+        <div class="form-fields-inline ">
+          <div class="form-field name">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][Nombre]"
+                   id="{{ input_name }}"
+                   type="text"
+                   aria-label="nombre"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_name }}"
+                   >
+              Nombre *
+            </label>
+          </div>
+          <div class="form-field tel">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][Nombre]"
+                   id="{{ input_tel }}"
+                   type="tel"
+                   aria-label="telefono"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_tel }}"
+                   >
+              Telefono *
+            </label>
+          </div>
+          <div class="form-field email">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[email]"
+                   id="{{ input_id }}"
+                   type="email"
+                   aria-label="{{ 'general.newsletter.placeholder' | t }}"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_id }}"
+                   >
+              {{ 'general.newsletter.placeholder' | t }}
+            </label>
+          </div>
+          <div class="form-field">
+            <button type="button" class="btn btn-dark" name="subscribe" type="submit">Enviar</button>
+          </div>
+        </div>
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+  </div>
+</div>
+  
+
+{% schema %}
+{
+  "name": "contact-form",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_style_newsletter",
+      "label": "Image newsletter"
+    },
+    {
+      "id": "heading_style_newsletter",
+      "type": "text",
+      "label": "Heading",
+      "default": "Heading newsletter"
+    },
+    {
+      "id": "text_style_newsletter",
+      "type": "text",
+      "label": "Text",
+      "default": "Text newsletter"
+    }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

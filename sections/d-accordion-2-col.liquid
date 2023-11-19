@@ -1,0 +1,92 @@
+<div class="accordion accordion-flush d-flex flex-wrap justify-content-between" id="accordionsJamar">
+
+  {% for block in section.blocks %}
+    <div class="accordion-item col-md-5 col-12 m-2 accordion-items-servicios">
+      <h2 class="accordion-header" id="flush-h-{{block.id}}">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{block.id}}" aria-expanded="false" aria-controls="flush-collapse-{{block.id}}">
+          {{ block.settings.tituloAcordion }}
+        </button>
+      </h2>
+      <div id="flush-collapse-{{block.id}}" class="accordion-collapse collapse" aria-labelledby="flush-h-{{block.id}}" data-bs-parent="#accordionsJamar">
+        <div class="accordion-body">{{ block.settings.descripcionAcordion }}</div>
+      </div>
+    </div>
+  {% endfor %}
+    
+  </div>
+
+
+  {% comment %} Refactorizar {% endcomment %}
+  <style>
+    #accordionsJamar div.accordion-item .accordion-button {
+      background: #FAFAFA;
+    }
+
+    #accordionsJamar div.accordion-item .accordion-button:not(.collapsed) {
+      color: #F6F6F6;
+      background-color: #6E7A8A;
+    }
+
+    #accordionsJamar div.accordion-item .accordion-collapse:not(.collapsed) {
+      background-color: #F8F8F8;
+    }
+
+    div.accordion div.accordion-items-servicios {
+      min-width:95%;
+      max-width:95%;
+    }
+
+  </style>
+
+
+
+{% schema %}
+
+{
+    "name": "Acordiones 2 Cols",
+    "tag":"section",
+    "class":"container",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "personalization",
+        "label": "Personalizacion"
+      },
+      {
+        "type": "checkbox",
+        "id": "similar",
+        "label": "Buscar similar"
+      },
+      {
+        "type": "checkbox",
+        "id": "look",
+        "label": "Buscar por Look"
+      }
+      ],
+      "blocks":[
+        {
+          "name":"Acordiones",
+          "type":"Acordion",
+          "settings": [
+            {
+              "type":"text",
+              "id":"tituloAcordion",
+              "label":"Titulo del acrodion"
+            },
+            {
+              "type":"text",
+              "id":"descripcionAcordion",
+              "label":"Descripcion del acrodion"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+        "name": "Acordiones 2 Cols",
+        "category": "Servicios"
+        }
+      ]
+}
+
+{% endschema %}

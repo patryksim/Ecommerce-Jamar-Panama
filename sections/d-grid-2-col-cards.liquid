@@ -1,0 +1,113 @@
+<style>
+ 
+  .item-box {
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    /* identical to box height, or 119% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #404B5A;
+}
+  
+  
+</style>
+
+{% render 'custom-separator' %}
+
+<div class="row {% if section.settings.reverse == true %} flex-row-reverse {%endif%}">
+  <div class="col-md-6 d-md-block d-none">
+    
+    <div class="row  gy-4">
+      
+        
+        {% for block in section.blocks %}
+      <div class="col-4">
+        <img class="img-fluid" src="{{block.settings.imagen | image_url: width:auto, format: 'pjpg'}}" alt="" data-rimg="lazy" loading="lazy">
+        	<a href="{{block.settings.enlaceslide}}" class="item-box ms-3 mt-1 text-decoration-none">{{block.settings.textoimage}}</a>
+        </div>
+    	{% endfor %}
+    </div>
+    
+    
+  </div>
+
+  <div class="col-md-6 d-md-none">
+    
+    <div class="row gy-4 flex-nowrap overflow-scroll">
+        {% for block in section.blocks %}
+      <div class="col-5">
+        <img class="img-fluid" src="{{block.settings.imagen | image_url: width:auto, format: 'pjpg'}}" alt="" data-rimg="lazy" loading="lazy">
+        	<a href="{{block.settings.enlaceslide}}" class="item-box ms-3 mt-1 text-decoration-none">{{block.settings.textoimage}}</a>
+        </div>
+    	{% endfor %}
+    </div>
+    
+    
+  </div>
+
+  <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+    <h2 class="titulo-grid-contact mt-3">{{section.settings.titulo}}</h1>
+    <p class="description-grid-contact col-6">{{section.settings.descripcion}}</p>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+  "name": "Contenedor 2 Col Cards",
+  "tag":"section",
+  "class":"container",
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "reverse",
+      "label": "Ivertir orden de columnas"
+      },
+	  {
+      "type": "text",
+      "id": "titulo",
+      "label": "Colocar titulo"
+      },
+		{
+      "type": "text",
+      "id": "descripcion",
+      "label": "Colocar descripcion"
+      }
+      ],
+    "blocks": [
+    {
+        "name" : "Tarjeta",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen para Desktop"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto bajo la imagen"
+        },
+        {
+            "type": "url",
+            "id": "enlaceslide",
+            "label": "Seleccione el enlace"
+        }
+        ]
+    }
+
+    ],
+      "presets": [
+      {
+      "name": "Contenedor 2 Col Cards",
+      "category": "Servicios"
+      }
+    ]
+  }
+{% endschema %}

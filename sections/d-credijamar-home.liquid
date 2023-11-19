@@ -1,0 +1,73 @@
+{{ 'novedades.css'  | asset_url | stylesheet_tag }}
+{% assign mo_credijamar = shop.metaobjects.d_credijamar_home["seccion-credijamar"] %}
+<br><br><br>
+<div class="container credijamar-section">
+  <div class="row justify-content-between">
+    <div class="col-md-8 d-flex justify-content-md-start justify-content-center align-items-center position-relative container-credijamar--bg" style="background-image: url({{section.settings.bg-credijamar | image_url: width: '584', format: 'pjpg' }});" alt="{{ section.settings.bg-credijamar.alt }}">
+      <center class="credijamar-card rounded bg-light-gris-jamar p-4 d-flex justify-content-center">
+        <h3 class="text-gris-jamar fw-bold">{{ mo_credijamar.titulo }}</h3>
+        {{ mo_credijamar.logo | metafield_tag| replace: '<img', '<img class="w-50 me-auto ms-auto mb-0"' }}
+        {{ mo_credijamar.parrafo }}
+        <a href="{{ mo_credijamar.link }}" class="me-auto ms-auto">
+            <button type="button" class="btn rounded-pill border border-azul-jamar text-azul-jamar fw-bold">
+              {{ mo_credijamar.logo_boton | metafield_tag }}
+              {{ mo_credijamar.texto_boton }}
+            </button>
+        </a>
+      </center>
+    </div>
+    <div class="col-md-4 d-flex align-items-center mt-md-0 contenedor-features">
+      <div class="row">
+        <div class="col-md-6 col-6 mt-2 mb-3">
+          <div class="feature-credijamar d-flex flex-column align-items-center text-center">
+            {{ mo_credijamar.imagen_icono_1 | metafield_tag| replace: '<img', '<img width="97"' }}
+            <p class="pt-2 mb-2">{{ mo_credijamar.icono_1 }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-6 mt-2 mb-3">
+          <div class="feature-credijamar d-flex flex-column align-items-center text-center">
+            {{ mo_credijamar.imagen_icono_2 | metafield_tag| replace: '<img', '<img width="97"' }}
+            <p class="pt-2 mb-2">{{ mo_credijamar.icono_2 }}</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-6 mt-2 mb-3">
+          <div class="feature-credijamar d-flex flex-column align-items-center text-center">
+            {{ mo_credijamar.imagen_icono_3 | metafield_tag| replace: '<img', '<img width="97"' }}
+            <p class="pt-2 mb-2">{{ mo_credijamar.icono_3 }}</p>
+          </div>
+        </div>  
+        <div class="col-md-6 col-6 mt-2 mb-3">
+          <div class="feature-credijamar d-flex flex-column align-items-center text-center">
+            {{ mo_credijamar.imagen_icono_4 | metafield_tag| replace: '<img', '<img width="97"' }}
+            <p class="pt-2 mb-2">{{ mo_credijamar.icono_4 }}</p>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "Seccion Credijamar",
+"settings": [
+  {
+    "type":"image_picker",
+    "id": "bg-credijamar",
+    "label":"Fondo credijamar",
+    "info": "584 x 394"
+  }
+],
+"blocks":[
+  {
+    "name":"Imagen",
+    "type":"imagenes",
+    "settings":[]
+  }
+],
+"presets":[{
+    "name":"Seccion Credijamar",
+    "category":"Homepage"
+}]
+}
+{% endschema %}

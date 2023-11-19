@@ -1,0 +1,199 @@
+<br><br><br>
+<div class="container skeleton" id="{{ section.settings.id_section }}">
+  {% if section.settings.title != blank %}
+    <div class="row justify-content-center m-0 m-md-4">
+      <div class="col-11 col-md-8 p-0">
+        <h2 class="text-center text-dark-gray mb-3">{{ section.settings.title }}</h2>
+        {% if section.settings.text != blank %}
+          <p class="text-dark-gray mt-2 text-center">{{ section.settings.text }}</p>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+  <div class="row justify-content-center">
+      <div class="col-12 d-none d-md-block">
+        <div class="carousel-arrow left position-absolute top-50 start-0 translate-middle inactive">
+          <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="">
+        </div>
+        <div class="carousel-arrow right position-absolute top-50 start-100 translate-middle">
+          <img src="{{ 'icon-arrow-right.svg' | asset_url }}" alt="">
+      </div>
+      <div class="container position-relative">
+        <div class="w-100 carousel overflow-hidden">
+          <div class="row flex-nowrap carrusel-interno" style="transition: transform 0.5s ease;">
+            {% for block in section.blocks %}
+              <div class="ps-xs-1 pe-xs-1 tarjeta">
+                <a href="{{ block.settings.enlace }}" class="text-decoration-none">
+                  <div class="mb-4">
+                    <img class="shadow-hover-80 w-100 sk-categorias-grid" src="{{ block.settings.imagen | image_url: width: auto}}" data-rimg="lazy" loading="lazy"/>
+                    <a class="text-gris-jamar a-coleccion" href="{{ block.settings.enlace }}">
+                      {{ block.settings.textoimage | replace: '<p>', '<p class="mb-0">' }}
+                    </a>
+                  </div>
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row d-flex d-md-none">
+    {% for block in section.blocks %}
+      <div class="col-6 col-sm-4">
+        <a href="{{ block.settings.enlace }}" class="text-decoration-none">
+          <div class="mb-4">
+            <img class="shadow-hover-80 w-100 sk-categorias-grid" src="{{ block.settings.imagen | image_url: width: auto}}" data-rimg="lazy" loading="lazy"/>
+            <a class="text-gris-jamar a-coleccion" href="{{ block.settings.enlace }}">
+              {{ block.settings.textoimage | replace: '<p>', '<p class="mb-0">' }}
+            </a>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+
+  .tarjeta {
+    width: 264px;
+  }
+  .carousel-arrow {
+    transform: translateY(-50%);
+    background-color: #ccc;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer
+  }
+  .carousel-arrow:hover {
+    background-color: #aaa
+  }
+  .carousel-arrow.left {
+    background-color: rgba(0, 0, 0, 0)
+  }
+  .carousel-arrow.left img {
+    background-color: rgba(0, 0, 0, 0);
+    transform: rotate(180deg)
+  }
+  .carousel-arrow.right {
+    right: -60px;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0)
+  }
+  .carousel-arrow.active {
+    opacity: 1
+  }
+  .carousel-arrow.inactive {
+    opacity: .5;
+    pointer-events: none
+  }
+</style>
+
+<script>
+  // Lógica del carrusel con flechas
+  const carousel = document.querySelector('.carousel');
+  const carousel_width = carousel.offsetWidth; // ancho del carrusel
+console.log(carousel_width)
+  
+  const carouselInner = document.querySelector('.carrusel-interno');
+  const tarjetas = document.querySelectorAll('.tarjeta');
+  const prevButton = document.querySelector('.carousel-arrow.left');
+  const nextButton = document.querySelector('.carousel-arrow.right');
+  const tarjetaWidth = tarjetas[0].offsetWidth;
+  let currentIndex = 0;
+  let total_clics = Math.ceil( tarjetas.length - (carousel_width/tarjetaWidth) );
+
+
+  console.log(tarjetas.length)
+
+  console.log("total clicks", total_clics)
+
+  function moveTotarjeta(index) {
+    let endArrow = tarjetas.length -(tarjetas.length - index);
+    carouselInner.style.transform = `translateX(-${
+      index * tarjetaWidth
+    }px)`;
+    console.log("entre a la funcion nueva", endArrow)
+    if (index == 0) {
+      prevButton.classList.add("inactive")
+    } else {
+      prevButton.classList.remove("inactive")
+    }
+    if (total_clics == index) {
+      nextButton.classList.add("inactive")
+    } else {
+      nextButton.classList.remove("inactive")
+    }
+  }
+
+  prevButton.addEventListener('click', () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    moveTotarjeta(currentIndex);
+  });
+
+  nextButton.addEventListener('click', () => {
+    console.log("currentIndex", currentIndex)
+    console.log("tarjetas.length", tarjetas.length)
+    let detectStopScroll = (tarjetas.length - 1 ) - currentIndex;
+    console.log("detectStopScroll", detectStopScroll)
+    if (detectStopScroll === 1) {
+      return; // Detener el desplazamiento si se alcanza la última tarjeta
+    }currentIndex = Math.min(currentIndex + 1, tarjetas.length - 1);
+    moveTotarjeta(currentIndex);
+  });
+</script>
+
+{% schema %}
+  {
+    "name": "carrusel-seccion-grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "id_section",
+        "label": "ID de la seccion",
+        "default": "carrusel-section-grid"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titulo"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Texto"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Tarjeta carrusel",
+        "type": "tarjeta",
+        "settings": [
+          {
+            "id": "textoimage",
+            "type": "richtext",
+            "label": "Colocar texto de la tarjeta",
+            "info": "El texto permite edición para agregar saltos de linea"
+          }, {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Subir la imagen",
+            "info": "Subir la imagen el siguiente tamaño 264x264 (px)"
+          }, {
+            "type": "url",
+            "id": "enlace",
+            "label": "Link de la tarjeta",
+            "info": "Insertar el enlace de la tarjeta"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "carrusel-seccion-grid"
+      }
+    ]
+  }
+{% endschema %}

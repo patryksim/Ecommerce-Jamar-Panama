@@ -1,0 +1,65 @@
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center text-gris-jamar">{{ section.settings.title }}</h2>
+      <p class="text-gris-jamar mt-2 text-center">{{ section.settings.text }}</p>
+    </div>
+  </div>
+  <div class="row tarjeta-producto-box">
+    {% for product in section.settings.collection.products limit: 10 %}
+      {% render "tarjeta-producto", producto: {{product}} %}
+    {% endfor %}
+  </div>
+</div>
+
+{% comment %}
+/**********************************************************
+          VARIABLE PARA EL SERVICIO DE PRECIO
+                 PATRYKSIM@GMAIL.COM
+**********************************************************/
+{% endcomment %}
+
+{% for product in section.settings.collection.products limit: 10 %}
+  <script>
+    skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+  </script>
+{% endfor %}
+
+
+{% render 'product-grid-fee-alt' %}
+
+
+{% schema %}
+  {
+    "name": "Carrusel productos",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titulo"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Texto"
+      },
+      {
+        "id": "collection",
+        "type": "collection",
+        "label": "Collection"
+      }
+    ],
+      "presets": [
+        {
+        "name": "Carrusel productos"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

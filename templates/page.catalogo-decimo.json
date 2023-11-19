@@ -1,0 +1,652 @@
+{
+  "sections": {
+    "temporal": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "16591962065eb05f3b": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "45e341ab-c807-404b-9eff-cf3e7fdf9ddc": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_01.jpg",
+            "enlace": ""
+          }
+        },
+        "4dd99a39-7597-4f11-8a0c-5638550604c2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_02.jpg",
+            "enlace": "shopify:\/\/products\/7017275"
+          }
+        },
+        "567b7c47-2647-41ff-9d57-d7f7901deb28": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_03.jpg",
+            "enlace": "#"
+          }
+        },
+        "dc8fe770-d3a2-4777-a8b1-5a435252c41e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_04.jpg",
+            "enlace": "shopify:\/\/products\/7018557"
+          }
+        },
+        "ba86d73f-18ef-4097-8dbf-0a45b1e26255": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_05.jpg",
+            "enlace": "shopify:\/\/products\/7020084"
+          }
+        },
+        "11eaf07a-444a-471c-baf6-6cd9f2d06d08": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_06.jpg",
+            "enlace": "shopify:\/\/products\/7015344"
+          }
+        },
+        "6e1de134-6b9c-4351-ba2b-22a47251a8ac": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_07.jpg",
+            "enlace": "shopify:\/\/products\/7015344"
+          }
+        },
+        "8e066151-36d5-46f1-929b-d89df1545023": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_08.jpg",
+            "enlace": ""
+          }
+        },
+        "f9b0877d-daa7-4a30-b15c-479b9ae3daf0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_09.jpg",
+            "enlace": "shopify:\/\/products\/7015602"
+          }
+        },
+        "f75bdcbf-ddc8-46e6-9c14-239430c6748a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_10.jpg",
+            "enlace": ""
+          }
+        },
+        "19b96676-8267-4897-b130-4d2389e36e12": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_11.jpg",
+            "enlace": "#"
+          }
+        },
+        "f1e7211c-6e95-4b11-9f7c-c1f12bf47906": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_12.jpg",
+            "enlace": "shopify:\/\/products\/7020058"
+          }
+        },
+        "f70cb57b-983d-468b-a98d-5b6388194cc7": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_13.jpg",
+            "enlace": "shopify:\/\/products\/7006057"
+          }
+        },
+        "7da7bd01-6825-4951-9b3a-936df1b56dfe": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_14.jpg",
+            "enlace": "shopify:\/\/products\/7003962"
+          }
+        },
+        "5b843860-6851-449a-b82e-bbd515991bf0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_15.jpg",
+            "enlace": ""
+          }
+        },
+        "8bc60442-ee00-461f-ac29-5b8c2791322f": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_17.jpg",
+            "enlace": "shopify:\/\/products\/7012627"
+          }
+        },
+        "8b3046d2-ae7e-4c8e-a125-02370bc4bdcb": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_18.jpg",
+            "enlace": "shopify:\/\/products\/7014221"
+          }
+        },
+        "ac812ad1-35b7-4693-9321-3210a94f37d2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_19.jpg",
+            "enlace": "shopify:\/\/products\/7015619"
+          }
+        },
+        "c945d29e-b8e7-4332-bcd7-68aa12166268": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_20.jpg",
+            "enlace": "https:\/\/cuenta.jamar.com.pa\/"
+          }
+        },
+        "012a828d-a065-4184-8ffe-622a4d1bddf1": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_21.jpg",
+            "enlace": "shopify:\/\/products\/7020280"
+          }
+        },
+        "b913f6a1-4cff-476e-ab6a-ddae4682ba28": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_22.jpg",
+            "enlace": "shopify:\/\/products\/7021383"
+          }
+        },
+        "f80e9988-db6d-46e5-beda-5af4e83cd865": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_23.jpg",
+            "enlace": "shopify:\/\/products\/7017833"
+          }
+        },
+        "cd167d9b-2db8-4f37-8dda-74ce9cfb221c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_24.jpg",
+            "enlace": ""
+          }
+        },
+        "c32da617-e7ad-4e9b-8096-55a068800371": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_25.jpg",
+            "enlace": "#"
+          }
+        },
+        "be5e1faa-4b8b-4365-824a-1cabb3eff6a3": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_26.jpg",
+            "enlace": "shopify:\/\/products\/7019983"
+          }
+        },
+        "02e415e2-37b0-4f58-8964-5097d3b1e06d": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_27.jpg",
+            "enlace": "shopify:\/\/products\/7001370"
+          }
+        },
+        "51c6f73a-3c94-420c-8923-3a030820e6cd": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_28.jpg",
+            "enlace": "shopify:\/\/products\/7019132"
+          }
+        },
+        "19384177-c21c-4594-b2a8-999b3d082ec4": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_29.jpg",
+            "enlace": "#"
+          }
+        },
+        "74e2bcc0-f8b3-4161-b96b-c048954e9260": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_30.jpg",
+            "enlace": "shopify:\/\/products\/7019513"
+          }
+        },
+        "001a066b-c5b9-41e3-a1b3-0860cb659cbb": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_31.jpg",
+            "enlace": "#"
+          }
+        },
+        "2b2fa55b-ceab-456e-961f-76193fd1863b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_32.jpg",
+            "enlace": "shopify:\/\/products\/7018619"
+          }
+        },
+        "3326ec3a-9b7c-4b57-9733-758dd557edc6": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_33.jpg",
+            "enlace": "shopify:\/\/products\/7011993"
+          }
+        },
+        "c832342b-06f7-4a20-aa9e-b596a869a1fd": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_34.jpg",
+            "enlace": "shopify:\/\/products\/7016001"
+          }
+        },
+        "85a31ddc-6dfb-4f29-9e5b-3ed6bc4a5713": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_35.jpg",
+            "enlace": "shopify:\/\/products\/7016002"
+          }
+        },
+        "4a13bab0-30a9-4c6e-9475-0ad18c1ebd7a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_36.jpg",
+            "enlace": "shopify:\/\/products\/7017656"
+          }
+        },
+        "50ec7f71-3a90-4b6d-957e-1777ad745d9d": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_37.jpg",
+            "enlace": "shopify:\/\/products\/7003455"
+          }
+        },
+        "57e27984-73ba-44fd-aef3-b342ec960b33": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_39.jpg",
+            "enlace": "https:\/\/wa.me\/50769932222?text=Hola,%20necesito%20una%20asesor%C3%ADa%20en%20l%C3%ADnea"
+          }
+        },
+        "eab10090-9445-4adc-a2bf-4a6be8f76547": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/S1_40.jpg",
+            "enlace": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "45e341ab-c807-404b-9eff-cf3e7fdf9ddc",
+        "4dd99a39-7597-4f11-8a0c-5638550604c2",
+        "567b7c47-2647-41ff-9d57-d7f7901deb28",
+        "dc8fe770-d3a2-4777-a8b1-5a435252c41e",
+        "ba86d73f-18ef-4097-8dbf-0a45b1e26255",
+        "11eaf07a-444a-471c-baf6-6cd9f2d06d08",
+        "6e1de134-6b9c-4351-ba2b-22a47251a8ac",
+        "8e066151-36d5-46f1-929b-d89df1545023",
+        "f9b0877d-daa7-4a30-b15c-479b9ae3daf0",
+        "f75bdcbf-ddc8-46e6-9c14-239430c6748a",
+        "19b96676-8267-4897-b130-4d2389e36e12",
+        "f1e7211c-6e95-4b11-9f7c-c1f12bf47906",
+        "f70cb57b-983d-468b-a98d-5b6388194cc7",
+        "7da7bd01-6825-4951-9b3a-936df1b56dfe",
+        "5b843860-6851-449a-b82e-bbd515991bf0",
+        "8bc60442-ee00-461f-ac29-5b8c2791322f",
+        "8b3046d2-ae7e-4c8e-a125-02370bc4bdcb",
+        "ac812ad1-35b7-4693-9321-3210a94f37d2",
+        "c945d29e-b8e7-4332-bcd7-68aa12166268",
+        "012a828d-a065-4184-8ffe-622a4d1bddf1",
+        "b913f6a1-4cff-476e-ab6a-ddae4682ba28",
+        "f80e9988-db6d-46e5-beda-5af4e83cd865",
+        "cd167d9b-2db8-4f37-8dda-74ce9cfb221c",
+        "c32da617-e7ad-4e9b-8096-55a068800371",
+        "be5e1faa-4b8b-4365-824a-1cabb3eff6a3",
+        "02e415e2-37b0-4f58-8964-5097d3b1e06d",
+        "51c6f73a-3c94-420c-8923-3a030820e6cd",
+        "19384177-c21c-4594-b2a8-999b3d082ec4",
+        "74e2bcc0-f8b3-4161-b96b-c048954e9260",
+        "001a066b-c5b9-41e3-a1b3-0860cb659cbb",
+        "2b2fa55b-ceab-456e-961f-76193fd1863b",
+        "3326ec3a-9b7c-4b57-9733-758dd557edc6",
+        "c832342b-06f7-4a20-aa9e-b596a869a1fd",
+        "85a31ddc-6dfb-4f29-9e5b-3ed6bc4a5713",
+        "4a13bab0-30a9-4c6e-9475-0ad18c1ebd7a",
+        "50ec7f71-3a90-4b6d-957e-1777ad745d9d",
+        "57e27984-73ba-44fd-aef3-b342ec960b33",
+        "eab10090-9445-4adc-a2bf-4a6be8f76547"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "527c2970-8bc6-4b7b-a90e-8b6d5db274ec": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "4606bd25-a78c-4c8d-82b5-a3807439675e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-1.webp",
+            "enlace": "#"
+          }
+        },
+        "6086fa88-7752-4515-a3d9-f714140dc0e9": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-2.webp",
+            "enlace": "shopify:\/\/products\/7021097-1"
+          }
+        },
+        "1dd2b25d-5ad7-46e7-9791-29afee59a261": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-3.webp",
+            "enlace": "shopify:\/\/products\/7019391"
+          }
+        },
+        "5871d35a-9e35-4595-a367-fbb00b511748": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-4.webp",
+            "enlace": "shopify:\/\/products\/7022813"
+          }
+        },
+        "12b3d814-7605-44e1-a2ff-8b77590a2293": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-5.webp",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce"
+          }
+        },
+        "240a0d9f-84c1-4366-9f27-19c3be0eb202": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-6.webp",
+            "enlace": "shopify:\/\/products\/7025195"
+          }
+        },
+        "4380a386-6767-4dca-b2ce-30f5848d851e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-7.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/salas\/sillas-butacas-y-puff_sillas-reclinables"
+          }
+        },
+        "c2e71028-8f4d-4919-9d42-a61c09bd1f04": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-8.webp",
+            "enlace": "shopify:\/\/products\/7003961"
+          }
+        },
+        "644a770e-407e-4fb2-b56f-ed6073e102a0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-9.webp",
+            "enlace": "shopify:\/\/products\/7027003"
+          }
+        },
+        "8e751a47-f697-42f8-aac2-46e349eb5f03": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-10.webp",
+            "enlace": "shopify:\/\/products\/7018557"
+          }
+        },
+        "8915116d-cb63-41b4-bdea-c229b5f2429b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-11.webp",
+            "enlace": "shopify:\/\/products\/7020400"
+          }
+        },
+        "070f33d8-983a-4df6-9954-2ca78d0811cd": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-12.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/salas\/sillas-butacas-y-puff_puff"
+          }
+        },
+        "08e74190-70fc-4188-8ddc-c139cb705ab4": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-13.webp",
+            "enlace": "shopify:\/\/products\/7029267"
+          }
+        },
+        "d8e5df21-1139-4ac9-96e1-34bf6a17eb87": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-14.webp",
+            "enlace": "shopify:\/\/products\/7015594"
+          }
+        },
+        "bf8f8d01-be06-4971-8b91-05376a65250f": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-15.webp",
+            "enlace": "shopify:\/\/products\/7017624"
+          }
+        },
+        "79ec3284-c4d2-4a65-8b74-b5c1c2a56052": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-16.webp",
+            "enlace": "shopify:\/\/products\/7020568"
+          }
+        },
+        "ce5acdb3-3a05-4173-92ba-d18aab2e5bdb": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-17.webp",
+            "enlace": "shopify:\/\/products\/7016503"
+          }
+        },
+        "b909e6af-c339-4fca-8ac8-fa4f575dadd5": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-18.webp",
+            "enlace": "shopify:\/\/products\/67078"
+          }
+        },
+        "51607943-8681-4b9c-973c-ed28311a885f": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-19.webp",
+            "enlace": "shopify:\/\/products\/7024958"
+          }
+        },
+        "794fb27f-216a-4f59-889e-1319ed5e14ba": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-20.webp",
+            "enlace": "shopify:\/\/products\/7024542"
+          }
+        },
+        "90fc27e9-4a4a-4bb1-9fdb-b7194e94144c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-21.webp",
+            "enlace": "shopify:\/\/products\/7020304"
+          }
+        },
+        "5b22d0c7-66b4-4bdd-92c0-7a5567f0ae3e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-22.webp",
+            "enlace": "shopify:\/\/products\/7027156"
+          }
+        },
+        "96c5d9cb-4974-40a7-994d-6a17f4597eda": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-23.webp",
+            "enlace": "shopify:\/\/products\/7025277"
+          }
+        },
+        "524a952b-b9e9-4fb7-a240-53218ef082c2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-24.webp",
+            "enlace": "shopify:\/\/products\/7024911"
+          }
+        },
+        "4f183c81-8e37-40cc-b510-6a1691d25c6b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-25.webp",
+            "enlace": "shopify:\/\/products\/7020467"
+          }
+        },
+        "476eb51f-0b7c-45eb-95c5-b3a42c1c9ea2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-26.webp",
+            "enlace": "shopify:\/\/products\/7021383"
+          }
+        },
+        "818a3166-b033-4cbe-b7d3-8a64e3e31852": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-27.webp",
+            "enlace": "shopify:\/\/products\/7016399"
+          }
+        },
+        "85d432e5-b7c6-416e-b9af-c9ee334cbb32": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-28.webp",
+            "enlace": "shopify:\/\/products\/7022288"
+          }
+        },
+        "b671a784-2c6a-4cb2-b8c4-9cfc68d484b1": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-29.webp",
+            "enlace": "shopify:\/\/products\/7023981"
+          }
+        },
+        "099ed6b2-9a43-4976-9d94-601c1821a168": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-30.webp",
+            "enlace": "shopify:\/\/products\/7024220"
+          }
+        },
+        "b06c765a-cc22-4df5-8637-811c1c767183": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-31.webp",
+            "enlace": "shopify:\/\/products\/7024223"
+          }
+        },
+        "1ef7326c-62cf-4b90-9169-f9a45e2f6707": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-33.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/muebles-para-tv-y-escritorios\/muebles-para-tv-y-escritorios_bibliotecas"
+          }
+        },
+        "ea63d301-1a1d-464c-ab5b-b929ccb253b0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-34.webp",
+            "enlace": "shopify:\/\/products\/7016662"
+          }
+        },
+        "6ba7bef1-6bfa-4fb0-9b88-a8f14ce8eb79": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-35.webp",
+            "enlace": "shopify:\/\/products\/7021444"
+          }
+        },
+        "5e102d44-aa33-4263-a9c9-931bffbe1b17": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-36.webp",
+            "enlace": ""
+          }
+        },
+        "12640855-b8e6-4c78-bc56-3b5b438c1add": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-37.webp",
+            "enlace": "shopify:\/\/products\/7016662"
+          }
+        },
+        "068dfdaa-f7a9-458a-a2c1-22a075b8f64b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-38.webp",
+            "enlace": "shopify:\/\/products\/7016693"
+          }
+        },
+        "ca9a2ae9-4c52-4c9f-84bf-dc59287fad63": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-39.webp",
+            "enlace": "shopify:\/\/pages\/sucursales"
+          }
+        },
+        "34b048ef-f40c-45fc-9571-95b23ebb9a29": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/catalogo-decimo-jamar-40.webp",
+            "enlace": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "4606bd25-a78c-4c8d-82b5-a3807439675e",
+        "6086fa88-7752-4515-a3d9-f714140dc0e9",
+        "1dd2b25d-5ad7-46e7-9791-29afee59a261",
+        "5871d35a-9e35-4595-a367-fbb00b511748",
+        "12b3d814-7605-44e1-a2ff-8b77590a2293",
+        "240a0d9f-84c1-4366-9f27-19c3be0eb202",
+        "4380a386-6767-4dca-b2ce-30f5848d851e",
+        "c2e71028-8f4d-4919-9d42-a61c09bd1f04",
+        "644a770e-407e-4fb2-b56f-ed6073e102a0",
+        "8e751a47-f697-42f8-aac2-46e349eb5f03",
+        "8915116d-cb63-41b4-bdea-c229b5f2429b",
+        "070f33d8-983a-4df6-9954-2ca78d0811cd",
+        "08e74190-70fc-4188-8ddc-c139cb705ab4",
+        "d8e5df21-1139-4ac9-96e1-34bf6a17eb87",
+        "bf8f8d01-be06-4971-8b91-05376a65250f",
+        "79ec3284-c4d2-4a65-8b74-b5c1c2a56052",
+        "ce5acdb3-3a05-4173-92ba-d18aab2e5bdb",
+        "b909e6af-c339-4fca-8ac8-fa4f575dadd5",
+        "51607943-8681-4b9c-973c-ed28311a885f",
+        "794fb27f-216a-4f59-889e-1319ed5e14ba",
+        "90fc27e9-4a4a-4bb1-9fdb-b7194e94144c",
+        "5b22d0c7-66b4-4bdd-92c0-7a5567f0ae3e",
+        "96c5d9cb-4974-40a7-994d-6a17f4597eda",
+        "524a952b-b9e9-4fb7-a240-53218ef082c2",
+        "4f183c81-8e37-40cc-b510-6a1691d25c6b",
+        "476eb51f-0b7c-45eb-95c5-b3a42c1c9ea2",
+        "818a3166-b033-4cbe-b7d3-8a64e3e31852",
+        "85d432e5-b7c6-416e-b9af-c9ee334cbb32",
+        "b671a784-2c6a-4cb2-b8c4-9cfc68d484b1",
+        "099ed6b2-9a43-4976-9d94-601c1821a168",
+        "b06c765a-cc22-4df5-8637-811c1c767183",
+        "1ef7326c-62cf-4b90-9169-f9a45e2f6707",
+        "ea63d301-1a1d-464c-ab5b-b929ccb253b0",
+        "6ba7bef1-6bfa-4fb0-9b88-a8f14ce8eb79",
+        "5e102d44-aa33-4263-a9c9-931bffbe1b17",
+        "12640855-b8e6-4c78-bc56-3b5b438c1add",
+        "068dfdaa-f7a9-458a-a2c1-22a075b8f64b",
+        "ca9a2ae9-4c52-4c9f-84bf-dc59287fad63",
+        "34b048ef-f40c-45fc-9571-95b23ebb9a29"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "temporal",
+    "16591962065eb05f3b",
+    "527c2970-8bc6-4b7b-a90e-8b6d5db274ec"
+  ]
+}

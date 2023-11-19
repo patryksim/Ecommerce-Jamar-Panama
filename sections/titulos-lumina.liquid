@@ -1,0 +1,32 @@
+<!-- Seccion AMBIENTES QUE ILUMINAN CON DISTINCIÓN. -->
+{{ 'titulos-colecciones.css'  | asset_url | stylesheet_tag }}
+
+<div class="contenedor-titulos-seccion-detalles-iluminan style-2">
+    <h2 class="style-2">{{ section.settings.section_titles }}</h2>
+    <p>{{ section.settings.section_paragraph }}</p>
+</div>
+
+{% schema %}
+    {
+    "name": "Titulos Colecciones",
+    "settings": [
+        {
+            "id": "section_titles",
+            "type": "text",
+            "label": "Titulo de la sección"
+        },
+        {
+            "id": "section_paragraph",
+            "type": "text",
+            "label": "Parrafo secundario"
+
+        }
+    ],
+    "presets": [
+        {
+            "name": "Titulos Colecciones",
+            "category": "Lumina"
+        }
+    ]
+}
+{% endschema %}

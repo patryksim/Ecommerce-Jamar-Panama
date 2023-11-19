@@ -1,0 +1,13 @@
+{
+  "layout": "blog",
+  "sections": {
+    "articulo-blog-menu-lat": {
+      "type": "articulo-blog-menu-lat",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "articulo-blog-menu-lat"
+  ]
+}

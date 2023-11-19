@@ -1,0 +1,69 @@
+{{ 'section-img-cent.css' | asset_url | stylesheet_tag }}
+
+<section id="{{section.settings.sect_id}}" class="section-general" >
+  <h2 class="display-none">{{ section.settings.name }}</h2>
+  <a
+    {% if section.settings.url_img != blank %}
+      href="{{section.settings.url_img}}"
+    {% endif %}
+  >
+    <img
+      class="w-100 desktop"
+      src="{{ section.settings.imagen_web | image_url : width: auto}}"
+      alt="{{ section.settings.imagen_web.alt }}"
+      srcset=""
+    >
+    <img
+      class="w-100 mobile"
+      src="{{ section.settings.imagen_mob | image_url : width: auto}}"
+       alt="{{ section.settings.imagen_mob.alt }}"
+      srcset=""
+    >
+  </a>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "img-cent",
+  "settings": [
+     {
+      "type": "text",
+      "id": "name",
+      "label": "Nombre de la sección"
+    },
+    {
+        "type": "text",
+        "id": "sect_id",
+        "label": "ID de la sección"
+      },
+    {
+        "type":"image_picker",
+        "id":"imagen_web",
+        "label":"Imagen web"
+    },
+    {
+        "type":"image_picker",
+        "id":"imagen_mob",
+        "label":"Imagen mobile"
+    },
+    {
+      "type":"text",
+      "id":"url_img",
+      "label":"Link de imagen"
+    }
+  ],
+   "presets":[
+    {
+        "name":"img-cent"
+    }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

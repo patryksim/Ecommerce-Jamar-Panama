@@ -1,0 +1,25 @@
+<div class="site-mobile-nav" id="site-mobile-nav" data-mobile-nav tabindex="0">
+  <div class="mobile-nav-panel" data-mobile-nav-panel>
+
+    {% render 'site-header-actions' %}
+
+    <a
+      class="mobile-nav-close"
+      href="#site-header-nav"
+      data-mobile-nav-close>
+      {% render 'icon-menu-close' %}
+      <span class="visually-hidden">{{ 'general.accessibility.close' | t }}</span>
+    </a>
+
+    <div class="mobile-nav-content">
+      {%
+        render 'mobile-nav-list',
+        menu: section.settings.menu,
+        blocks: blocks,
+      %}
+    </div>
+
+  </div>
+
+  <div class="mobile-nav-overlay" data-mobile-nav-overlay></div>
+</div>

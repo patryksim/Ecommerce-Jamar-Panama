@@ -1,0 +1,107 @@
+{
+  "sections": {
+    "styles": {
+      "type": "styles-render",
+      "disabled": true,
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "b488fa6b-c133-46ed-a4ef-a4c1b9b018f1": {
+      "type": "d-banner",
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/jamar-tocumen_59a48b4b-7533-44cf-8427-f5c0c779d485.jpg",
+        "imagen_movil": "shopify:\/\/shop_images\/jamar-tocumen-mob.jpg",
+        "text_up": "Albrook",
+        "text_down": "Panamá"
+      }
+    },
+    "b5e4c0d0-2e7b-4b5a-8e09-c3167201e60a": {
+      "type": "d-liquid-input",
+      "settings": {
+        "breadcump": "{{ 'page-sucursales.css'  | asset_url | stylesheet_tag }}"
+      }
+    },
+    "ecfcb0e1-5e3d-4886-8532-773968e3bd82": {
+      "type": "d-info-tienda",
+      "settings": {
+        "h2": "Visítanos y renueva tus muebles",
+        "store_name": "Ver en Maps",
+        "phone": "205-6500",
+        "breadcump": "Albrook Mall",
+        "iframe_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3940.978916737218!2d-79.55484558519913!3d8.974086692317508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca898830bc407%3A0x6163b5b24b7c1ad4!2sJamar%20-%20Albrook%20Mall!5e0!3m2!1ses-419!2sus!4v1650664066951!5m2!1ses-419!2sus",
+        "share_link": "https:\/\/goo.gl\/maps\/bZdPSauDTcV7A6zc8",
+        "store_info": "Lunes a Viernes\n<p>10:00 AM a 7:30 PM<\/p>\n<p>Sábado<\/p>\n<p>10:00 AM a 8:00 PM<\/p>\n<p>Domingos<\/p>\n<p>11:00 AM a 7:00 PM<\/p>\n<p>Estacionamiento disponible<\/p>"
+      }
+    },
+    "e6fde665-3a78-462f-94d8-d28ed3cf9e8a": {
+      "type": "d-description-tienda",
+      "settings": {
+        "title": "Conoce nuestra tienda en Allbrook Mall",
+        "description": "",
+        "main_image": "shopify:\/\/shop_images\/albrook-mall-01.jpg",
+        "second_image": "shopify:\/\/shop_images\/albrook-mall-02.jpg",
+        "third_image": "shopify:\/\/shop_images\/albrook-mall-03.jpg",
+        "fourt_image": "shopify:\/\/shop_images\/albrook-mall-04.jpg",
+        "five_image": "shopify:\/\/shop_images\/albrook-mall-05.jpg"
+      }
+    },
+    "0760eef9-454b-4df4-b0a8-f863a5d2218b": {
+      "type": "d-carrousel-list",
+      "settings": {
+        "collections": [
+          "7017736",
+          "7005082",
+          "7023032",
+          "7020033",
+          "7020275",
+          "7023034",
+          "7017218",
+          "7020582",
+          "7010152",
+          "7021383",
+          "7020026",
+          "7017291",
+          "7016680",
+          "7022556"
+        ],
+        "titleCarousel": "Muebles modernos y a crédito en Panamá",
+        "descriptionCarousel": "",
+        "position": "text-start"
+      }
+    },
+    "7fef6908-d378-41f5-90ed-d7e5df5e87e6": {
+      "type": "d-titles",
+      "settings": {
+        "titulo": "Aquí encuentras los mejores muebles en Panamá",
+        "subtitulo": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra <a href=\"\/pages\/centros-de-entretenimiento\">Centros de Entretenimiento<\/a>, <a href=\"\/pages\/recamaras\">muebles para recámaras<\/a> y mucho más. Pregunta también por nuestros muebles a <a href=\"https:\/\/www.jamar.com.pa\/pages\/tarjeta-jamar\">muebles a crédito.<\/a>.",
+        "vertical_alignment": "start",
+        "columnas": 12
+      }
+    },
+    "f2186472-f0e0-4baf-9383-30d7c15a8318": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "¡Tenemos un crédito para que estrenes comodidad en casa!",
+        "main_description": "Déjanos tus datos y un asesor te contactará",
+        "banner_form": "shopify:\/\/shop_images\/Formulario-de-Home-634x405_70c74079-f590-4f03-9d1a-8ca93bc13631.jpg",
+        "invertir_col": true,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": "",
+        "fondo_boton": "#404b5a",
+        "color_letra_boton": "#FFFFFF"
+      }
+    }
+  },
+  "order": [
+    "styles",
+    "b488fa6b-c133-46ed-a4ef-a4c1b9b018f1",
+    "b5e4c0d0-2e7b-4b5a-8e09-c3167201e60a",
+    "ecfcb0e1-5e3d-4886-8532-773968e3bd82",
+    "e6fde665-3a78-462f-94d8-d28ed3cf9e8a",
+    "0760eef9-454b-4df4-b0a8-f863a5d2218b",
+    "7fef6908-d378-41f5-90ed-d7e5df5e87e6",
+    "f2186472-f0e0-4baf-9383-30d7c15a8318"
+  ]
+}

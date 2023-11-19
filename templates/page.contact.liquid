@@ -1,0 +1,337 @@
+<article class="site-page" data-template-page data-template-contact>
+
+  <header class="page-masthead">
+    <h1 class="page-title">
+      {{ page.title }}
+    </h1>
+  </header>
+  {% form 'contact' %}
+
+    {% if page.content != blank %}
+      <div class="page-content rte">
+        {{ page.content }}
+      </div>
+    {% endif %}
+
+    <div class="contact-page-content">
+      {% assign has_message = false %}
+
+      {% if form.errors != blank %}
+        {% assign has_message = true %}
+        {% assign message_type = 'error' %}
+      {% endif %}
+
+      {% if form.posted_successfully? %}
+        {% assign has_message = true %}
+        {% assign message_type = 'success' %}
+      {% endif %}
+
+      {% if has_message %}
+        <div class="contact-message message--{{ message_type }}">
+          {% case message_type %}
+            {% when 'success' %}
+              <p>
+                {{ 'contact.form.post_success' | t }}
+              </p>
+            {% when 'error' %}
+              {{ form.errors | default_errors }}
+          {% endcase %}
+        </div>
+      {% endif %}
+
+      <div class="form-fields-columns">
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.name -%}
+            {% assign value = form.name %}
+          {%- elsif customer -%}
+            {% assign value = customer.name %}
+          {%- endif -%}
+
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'name' %}form-field-error{% endif %}"
+            id="contact_name"
+            name="contact[name]"
+            type="text"
+            value="{{ value }}">
+
+          <label class="form-field-title" for="contact_name">
+            {{ 'contact.form.name' | t }}
+          </label>
+        </div>
+        {% comment %}
+        /***********************************************************************
+        SE AGREGÓ APELLIDO AL FORMULARIO (VER LOCALES/EN.DEFAULT.JSON & ES.JSON)
+                          		  PATRYKSIM@GMAIL.COM
+        ***********************************************************************/
+        {% endcomment %}
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.last_name -%}
+            {% assign value = form.last_name %}
+          {%- elsif customer -%}
+            {% assign value = customer.last_name %}
+          {%- endif -%}
+
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'last_name' %}form-field-error{% endif %}"
+            id="contact_last_name"
+            name="contact[last_name]"
+            type="text"
+            value="{{ value }}">
+
+          <label class="form-field-title" for="contact_last_name">
+            {{ 'contact.form.last_name' | t }}
+          </label>
+        </div>
+        {% comment %}
+        /*********************************************************************
+        SE AGREGÓ CEDULA AL FORMULARIO (VER LOCALES/EN.DEFAULT.JSON & ES.JSON)
+                           		 PATRYKSIM@GMAIL.COM
+        *********************************************************************/
+        {% endcomment %}
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.id_number -%}
+            {% assign value = form.id_number %}
+          {%- elsif customer -%}
+            {% assign value = customer.id_number %}
+          {%- endif -%}
+
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'id_number' %}form-field-error{% endif %}"
+            id="contact_id_number"
+            name="contact[id_number]"
+            type="text"
+            value="{{ value }}">
+
+          <label class="form-field-title" for="contact_id_number">
+            {{ 'contact.form.id_number' | t }}
+          </label>
+        </div>
+        
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.email -%}
+            {% assign value = form.email %}
+          {%- elsif customer -%}
+            {% assign value = customer.email %}
+          {%- endif -%}
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'email' %}form-field-error{% endif %}"
+            id="contact_email"
+            name="contact[email]"
+            type="text"
+            value="{{ value }}"
+            autocorrect="off"
+            autocapitalize="off">
+
+          <label class="form-field-title" for="contact_email">
+            {{ 'contact.form.email' | t }}
+          </label>
+        </div>
+        
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.phone -%}
+            {% assign value = form.phone %}
+          {%- elsif customer -%}
+            {% assign value = customer.phone %}
+          {%- endif -%}
+          <input
+            class="form-field-input form-field-text {% if form.errors contains 'phone' %}form-field-error{% endif %}"
+            id="phone"
+            name="contact[phone]"
+            type="tel"
+            value="{{ value }}"
+            autocorrect="off"
+            autocapitalize="off">
+
+          <label class="form-field-title" for="phone">
+            {{ 'contact.form.phone' | t }}
+          </label>
+        </div>
+        {% comment %}
+        /*********************************************************************
+        SE AGREGÓ CIUDAD AL FORMULARIO (VER LOCALES/EN.DEFAULT.JSON & ES.JSON)
+                                 PATRYKSIM@GMAIL.COM
+        *********************************************************************/
+        {% endcomment %}
+        <div class="form-field form-field--half">
+          {% assign value = '' %}
+          {%- if form.city -%}
+            {% assign value = form.city %}
+          {%- elsif customer -%}
+            {% assign value = customer.city %}
+          {%- endif -%}
+          <span class="form-field-select-wrapper">
+            <select 
+               class="form-field-select"
+                id="contact_city"
+                name="contact[city]"
+                type="text"
+                value="{{ value }}">
+              {{ search_filter_content_first }}
+                <option disabled selected></option>
+                <option value="Panamá">Panamá</option>
+                <option value="Colón">Colón</option>
+                <option value="Chiriquí">Chiriquí</option>
+              {{ search_filter_content_rest }}
+            </select>
+            {% render 'icon-chevron-down-small' %}
+          </span>
+          <label class="form-field-title" for="city">
+            {{ 'contact.form.city' | t }}
+          </label>
+        </div>
+        
+        {% comment %}
+        /*************************************************************************************
+        SE AGREGÓ MOTIVO DE LA SOLICITUD AL FORMULARIO (VER LOCALES/EN.DEFAULT.JSON & ES.JSON)
+                          				  PATRYKSIM@GMAIL.COM
+        **************************************************************************************/
+        {% endcomment %}
+      <div class="form-field form-field--half">
+        {% assign value = '' %}
+        {%- if form.reason_request -%}
+          {% assign value = form.reason_request %}
+        {%- elsif customer -%}
+          {% assign value = customer.reason_request %}
+        {%- endif -%}
+        <span class="form-field-select-wrapper">
+          <select 
+             class="form-field-select"
+              id="contact_reason_request"
+              name="contact[reason_request]"
+              type="text"
+              value="{{ value }}">
+            {{ search_filter_content_first }}
+            <option disabled selected></option>
+            <option value="Cartera">Cartera</option>
+            <option value="Servicio al Cliente">Servicio al Cliente</option>
+            <option value="Información de Venta">Información de Venta</option>
+            {{ search_filter_content_rest }}
+          </select>
+          {% render 'icon-chevron-down-small' %}
+        </span>
+        <label class="form-field-title" for="contact_reason_request">
+          {{ 'contact.form.reason_request' | t }}
+        </label>
+      </div>
+        {% comment %}
+        /*************************************************************************************
+        SE AGREGÓ TIPO DE LA SOLICITUD AL FORMULARIO (VER LOCALES/EN.DEFAULT.JSON & ES.JSON)
+                          				  PATRYKSIM@GMAIL.COM
+        **************************************************************************************/
+        {% endcomment %}
+      <div class="form-field form-field--half">
+        {% assign value = '' %}
+        {%- if form.type_request -%}
+          {% assign value = form.type_request %}
+        {%- elsif customer -%}
+          {% assign value = customer.type_request %}
+        {%- endif -%}
+        <span class="form-field-select-wrapper">
+          <select 
+             class="form-field-select"
+              id="contact_type_request"
+              name="contact[type_request]"
+              type="text"
+              value="{{ value }}">
+            {{ search_filter_content_first }}
+            <option disabled selected></option>
+            <option value="Ley Moratoria">Ley Moratoria</option>
+            <option value="Consulta de Saldo">Consulta de Saldo</option>
+            <option value="Acuerdo de Pago">Acuerdo de Pago</option>
+            <option value="Consignaciones no Aplicadas">Consignaciones no Aplicadas</option>
+            <option value="Quejas Sobre la Atención de Cartera">Quejas Sobre la Atención de Cartera</option>
+            <option value="Otros">Otros</option>
+            {{ search_filter_content_rest }}
+          </select>
+          {% render 'icon-chevron-down-small' %}
+        </span>
+        <label class="form-field-title" for="contact_type_request">
+          {{ 'contact.form.type_request' | t }}
+        </label>
+      </div>
+        
+      </div>
+
+      
+      <div class="form-field">
+        {% assign value = '' %}
+        {%- if form.body -%}
+          {% assign value = form.body %}
+        {%- endif -%}
+        <textarea
+          class="form-field-input form-field-textarea {% if form.errors contains 'body' %}form-field-error{% endif %}"
+          id="contact_message"
+          name="contact[message]">{{ value }}</textarea>
+
+        <label class="form-field-title" for="contact_body">
+          {{ 'contact.form.message' | t }}
+        </label>
+      </div>
+
+      <div class="form-action-row">
+        <button class="button-primary contact-form-button" type="submit">
+          {{ 'contact.form.send' | t }}
+        </button>
+      </div>
+    </div>
+  {% endform %}
+</article>
+
+    
+
+<script>
+/*****************************************************
+*    ENVIAR DATOS FORMULARIO DE CONTACTO A SAGGIC
+*	            PATRYKSIM@GMAIL.COM
+******************************************************/
+  
+  
+const btnContactform = document.querySelectorAll(".contact-form-button")[0];
+
+
+
+async function postContactform(data) {
+	let body = {
+		"sagicc_token": "021cff033a4342ecf16fad85ae62453f",
+		"apellido": (data.apellido != "") ? data.apellido : null,
+		"nombre": (data.nombre != "") ? data.nombre : null,
+		"nro_documento": (data.nro_documento != "") ? data.nro_documento : null,
+		"tipo_documento": (data.tipo_documento != "") ? data.tipo_documento : null,
+		"telefono": (data.telefono != "") ? data.telefono : null,		
+      	"ciudad": (data.ciudad != "") ? data.ciudad : null,
+		"motivo_de_la_solicitud": (data.motivo_de_la_solicitud != "") ? data.motivo_de_la_solicitud : null,
+		"tipo_de_solicitud": (data.tipo_de_solicitud != "") ? data.tipo_de_solicitud : null,
+		"mensaje": (data.mensaje != "") ? data.mensaje : null
+	}
+	console.log(body)
+	const response = await fetch("https://jamar.sagicc.co/api/v2/canal-website/website-callback", {
+	    method: 'POST',
+	    headers: new Headers({ 'Content-Type': 'application/json' }),
+	    body: JSON.stringify(body),
+	    redirect: 'follow'
+	});
+	return response.json();
+}
+
+// SE ENVIA A SAGICC DESDE EL FORMULARIO DE CONTACTO
+btnContactform?.addEventListener("click", () => {
+    let dataContactform = {
+      "apellido": document.getElementById("contact_last_name").value,
+      "nombre": document.getElementById("contact_name").value,
+      "nro_documento": document.getElementById("contact_id_number").value,
+      "tipo_documento": "CC",
+      "telefono": document.getElementById("phone").value,
+      "ciudad": document.getElementById("contact_city").value,
+      "motivo_de_la_solicitud": document.getElementById("contact_reason_request").value,
+      "tipo_de_solicitud": document.getElementById("contact_type_request").value,
+      "mensaje": document.getElementById("contact_message").value
+    }
+	postContactform(dataContactform);
+})
+    
+</script>

@@ -1,0 +1,262 @@
+{
+  "sections": {
+    "slider": {
+      "type": "static-header",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "eddfb769-ce52-472a-b80b-5c309fc626c2": {
+      "type": "carrusel-dormitorios",
+      "blocks": {
+        "ec7df719-1424-4224-a8a1-5873af0426dd": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Banner-Landing-JUVENIL-PC-1_0dbcf990-e76a-4c66-a7f9-ef198aed105c.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Banner-Landing-Juvenil-Mobile-1_49a886e3-c668-4bde-8416-75c045dae59a.webp",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "ec7df719-1424-4224-a8a1-5873af0426dd"
+      ],
+      "settings": {
+        "hover": true,
+        "hover_image": "shopify:\/\/shop_images\/Banner-Landing-JUVENILB-PC-2_83a7b534-e3da-48db-b32e-9ec46ab3eba0.webp",
+        "hover_width": 5,
+        "hover_opacity": 1,
+        "hover_title": "RECÁMARAS JUVENILES E INFANTILES",
+        "hover_text": "Vive la emoción de crear un mundo mágico para tus hijos con nuestras recámaras. Descubre diseños exclusivos y funcionales para dormitorios juveniles e infantiles, que harán volar su imaginación."
+      }
+    },
+    "a86887c6-1d8a-463c-88dc-d06237248710": {
+      "type": "d-collection-cat-grid",
+      "blocks": {
+        "76fd9b08-6458-4c41-bde8-4e99e7fe9354": {
+          "type": "ver-todos",
+          "settings": {
+            "texto": "VER TODOS",
+            "ver_todos_link": "https:\/\/www.jamar.com.pa\/collections\/juvenil-e-infantil\/Tama%C3%B1o_Twin"
+          }
+        },
+        "2e7615a7-a107-4f1b-9c19-53daae0a5e53": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/cama-cuna-pa-25sep.webp",
+            "textoimage": "CAMA CUNA",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/juvenil-e-infantil\/juvenil-e-infantil_cama-cuna"
+          }
+        },
+        "d98e2e23-3798-43d2-9b2e-ad56da85ff17": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/camas-twin-pa-25sep.webp",
+            "textoimage": "CAMAS TWIN",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/juvenil-e-infantil\/Tama%C3%B1o_Twin"
+          }
+        },
+        "51ff4040-57e7-4536-ad1b-fdb3cc55d9aa": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/alcoba-juvenil-jamar-03.jpg",
+            "textoimage": "ALCOBA JUVENIL",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/juvenil-e-infantil\/recamaras_recamaras-completas"
+          }
+        },
+        "59deb622-af20-4d55-920d-85a1f5fc5502": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/literas-pa-25sep.webp",
+            "textoimage": "LITERAS",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/juvenil-e-infantil\/juvenil-e-infantil_literas"
+          }
+        },
+        "f015df8f-f179-4f48-a068-b1bc696e1497": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/duplex-jamar-05.jpg",
+            "textoimage": "CAMA DUPLEX",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/juvenil-e-infantil\/juvenil-e-infantil_duplex"
+          }
+        },
+        "1c4ab4a0-1fb3-4b6a-97a8-07a69303beaf": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/comodas-pa-25sep_6029f116-ec14-4e09-a763-c519f99f5dba.webp",
+            "textoimage": "CÓMODAS",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/recamaras\/recamaras_comodas"
+          }
+        },
+        "8b717530-698f-4fff-8620-813862cd1d9d": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/tocadores-jamar-07.jpg",
+            "textoimage": "TOCADORES",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "\/collections\/recamaras\/Tocadores"
+          }
+        }
+      },
+      "block_order": [
+        "76fd9b08-6458-4c41-bde8-4e99e7fe9354",
+        "2e7615a7-a107-4f1b-9c19-53daae0a5e53",
+        "d98e2e23-3798-43d2-9b2e-ad56da85ff17",
+        "51ff4040-57e7-4536-ad1b-fdb3cc55d9aa",
+        "59deb622-af20-4d55-920d-85a1f5fc5502",
+        "f015df8f-f179-4f48-a068-b1bc696e1497",
+        "1c4ab4a0-1fb3-4b6a-97a8-07a69303beaf",
+        "8b717530-698f-4fff-8620-813862cd1d9d"
+      ],
+      "settings": {
+        "title_style_cat": "Descubre muebles con diseños creativos y divertidos para tus hijos",
+        "parr_style_cat": "",
+        "imagen_sale": "shopify:\/\/shop_images\/outlet-jamar-pa.svg",
+        "button_sale_link": "https:\/\/www.jamar.com.pa\/collections\/ofertas\/juvenil-e-infantil"
+      }
+    },
+    "81955641-1645-47c3-8842-f6de1f0deced": {
+      "type": "d-grid-ambientes-home",
+      "settings": {
+        "title": "Diseños de muebles <b>prácticos y funcionales<\/b> para niños y jóvenes",
+        "text": "Transforma los espacios de tus hijos con piezas exclusivas. Escoge los productos que necesites y personaliza el espacio a tu gusto, creando un entorno perfecto para ellos.",
+        "image_1_desktop": "shopify:\/\/shop_images\/Imagen_1_desktop_f2562227-a1ba-421f-b132-5ae1cdde2320.jpg",
+        "image_1_mobile": "shopify:\/\/shop_images\/Imagen_1_mobile_c5f8ee54-8a2b-4d0f-b389-ef1c2f88544c.jpg",
+        "product_1": "7020448",
+        "image_2_desktop": "shopify:\/\/shop_images\/Imagen_2_desktop_70fa6ceb-55bf-4134-9698-eaf64ba8f429.jpg",
+        "image_2_mobile": "shopify:\/\/shop_images\/Imagen_2_mobile_f30962a1-6d79-41cd-866b-7ee22339c7f9.jpg",
+        "product_2": "7020442",
+        "image_3_desktop": "shopify:\/\/shop_images\/Imagen_3_desktop_88110b39-5a89-4069-a09f-be5c80959b38.jpg",
+        "image_3_mobile": "shopify:\/\/shop_images\/Imagen_3_mobile_57caaa8b-6a4a-4257-827d-6d420d6f8b60.jpg",
+        "product_3": "7020473",
+        "image_4_desktop": "shopify:\/\/shop_images\/Imagen_4_desktop_f065ad1d-3029-4fdb-8d93-300c7c38eecd.jpg",
+        "image_4_mobile": "shopify:\/\/shop_images\/Imagen_4_mobile_9101883f-b335-4c41-967f-fdf40fcb8915.jpg",
+        "product_4": "7020481"
+      }
+    },
+    "cce0cd2b-c4cb-448a-8060-0d80298dcf5c": {
+      "type": "d-credijamar-home",
+      "settings": {
+        "bg-credijamar": "shopify:\/\/shop_images\/Seccion_Credijamar.png"
+      }
+    },
+    "83dc6437-e19f-4a2c-853c-a8224ccaa06c": {
+      "type": "d-grid-style-cat2",
+      "blocks": {
+        "02aa3a3b-e8c3-4ff3-8152-c269881f7f8f": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-4.png",
+            "textoimage": "Madera 100% Roble",
+            "parrimage": "Es la madera de más alta durabilidad. Esta cuenta con un secado que reduce la humedad, y un tratamiento especial que la inmuniza ante plagas",
+            "linkimage": "",
+            "show": false
+          }
+        },
+        "3f61ab02-de08-4460-8bea-0a962c73acc8": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-3.png",
+            "textoimage": "Tapizado Eurolino",
+            "parrimage": "Una tecnología en nuestro textil, que aporta mayor resistencia al mueble, con propiedades antifluidos para mayor durabilidad y fácil limpieza.",
+            "linkimage": "",
+            "show": false
+          }
+        }
+      },
+      "block_order": [
+        "02aa3a3b-e8c3-4ff3-8152-c269881f7f8f",
+        "3f61ab02-de08-4460-8bea-0a962c73acc8"
+      ],
+      "settings": {
+        "title_style_cat": "Contamos <b>tecnologías innovadoras<\/b> que garantizan la durabilidad de tus muebles",
+        "parr_style_cat": ""
+      }
+    },
+    "c5f9e724-4ec4-4dff-868b-22e5394198ac": {
+      "type": "dynamic-banner-colch",
+      "disabled": true,
+      "settings": {
+        "main_title": "Los consentidos estrenarán con el precio que tanto buscabas",
+        "main_description": ""
+      }
+    },
+    "fc7d60ca-2fb9-413f-abe5-1deab3887a64": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "Tenemos muchas opciones más para tus hijos. <b>¡Conócelas!<\/b>",
+        "main_description": "Compártenos tus datos para recibir más información de nuestros muebles",
+        "banner_form": "shopify:\/\/shop_images\/formulario-juvenil.jpg",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": "form_landing_colchones_prom",
+        "fondo_boton": "#404b5a",
+        "color_letra_boton": "#ffffff"
+      }
+    },
+    "37591c07-ebe8-4874-8d57-bf5f9012f187": {
+      "type": "blog-home",
+      "blocks": {
+        "template--16159877955783__37591c07-ebe8-4874-8d57-bf5f9012f187-16758038363ce19baa-0": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Blog-juvenil-1.png",
+            "title": "Ahorra espacio en tus habitaciones usando literas",
+            "text": "Que el espacio en tus habitaciones no te limite al momento de acomodar tus muebles. Aprende aquí todo sobre los usos y funciones...",
+            "link": "shopify:\/\/blogs\/noticias\/ahorra-espacio-en-tus-habitaciones-usando-literas",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        },
+        "d76a94be-7c85-4912-88d1-e88db708c145": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Blog-juvenil-2.png",
+            "title": "Cuida tus Muebles y a tus Mascotas",
+            "text": "Estar en casa no sólo significa compartir el espacio con nuestra familia, las mascotas también tienen un lugar importante en nuestro hogar...",
+            "link": "shopify:\/\/blogs\/noticias\/cuida-tus-muebles-y-a-tus-mascotas",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        }
+      },
+      "block_order": [
+        "template--16159877955783__37591c07-ebe8-4874-8d57-bf5f9012f187-16758038363ce19baa-0",
+        "d76a94be-7c85-4912-88d1-e88db708c145"
+      ],
+      "settings": {
+        "title": "Nuestros expertos en recámaras <b>juveniles e infantiles<\/b> te aconsejan",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "eddfb769-ce52-472a-b80b-5c309fc626c2",
+    "a86887c6-1d8a-463c-88dc-d06237248710",
+    "81955641-1645-47c3-8842-f6de1f0deced",
+    "cce0cd2b-c4cb-448a-8060-0d80298dcf5c",
+    "83dc6437-e19f-4a2c-853c-a8224ccaa06c",
+    "c5f9e724-4ec4-4dff-868b-22e5394198ac",
+    "fc7d60ca-2fb9-413f-abe5-1deab3887a64",
+    "37591c07-ebe8-4874-8d57-bf5f9012f187"
+  ]
+}

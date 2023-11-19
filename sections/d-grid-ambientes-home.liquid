@@ -1,0 +1,232 @@
+<br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-11 col-md-8 p-0">
+      <h2 class="text-center text-gris-jamar mb-3">{{ section.settings.title }}</h2>
+      <p class="text-center text-gris-jamar">{{ section.settings.text }}</p>
+      <br>
+    </div>
+  </div>
+</div>
+<div class="container d-none d-sm-block">
+    <div class="row">
+        <div class="col-md-8">
+          <div class="position-relative mb-sm-4 mb-md-0">
+            {% if section.settings.product_1 != blank %}
+              <a href="{{ section.settings.product_1.url }}">
+                  <img class="w-100" src="{{ section.settings.image_1_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+              </a>
+              <a href="{{ section.settings.product_1.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-4 mb-3 rounded-circle p-1 bg-white">
+                  <img class="m-0 p-1" width="25" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+              </a>
+            {% else %}
+              <img class="w-100" src="{{ section.settings.image_1_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-md-4">
+            <div class="row h-100">
+              <div class="col-12">
+                <div class="position-relative mb-sm-4 mb-mb-0">
+                  {% if section.settings.product_2 != blank %}
+                    <a href="{{ section.settings.product_2.url }}">
+                        <img class="w-100 align-self-start" src="{{ section.settings.image_2_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    </a>
+                    <a href="{{ section.settings.product_2.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-4 mb-3 rounded-circle p-1 bg-white">
+                        <img class="m-0 p-1" width="25" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% else %}
+                    <img class="w-100 align-self-start" src="{{ section.settings.image_2_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-6 align-self-end">
+                <div class="position-relative">
+                  {% if section.settings.product_3 != blank %}
+                    <a href="{{ section.settings.product_3.url }}">
+                        <img class="w-100 m-0" src="{{ section.settings.image_3_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    </a>
+                    <a href="{{ section.settings.product_3.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-4 mb-3 rounded-circle p-1 bg-white">
+                        <img class="m-0 p-1" width="25" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% else %}
+                    <img class="w-100 m-0" src="{{ section.settings.image_3_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-6 align-self-end">
+                <div class="position-relative">
+                  {% if section.settings.product_4 != blank %}
+                    <a href="{{ section.settings.product_4.url }}">
+                        <img class="w-100 m-0" src="{{ section.settings.image_4_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    </a>
+                    <a href="{{ section.settings.product_4.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-4 mb-3 rounded-circle p-1 bg-white">
+                        <img class="m-0 p-1" width="25" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% else %}
+                    <img class="w-100 m-0" src="{{ section.settings.image_4_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-block d-sm-none">
+    <div class="row">
+        <div class="col-12 p-0 mb-3">
+          <div class="position-relative">
+            {% if section.settings.product_1 != blank %}
+              <a href="{{ section.settings.product_1.url }}">
+                  <img class="w-100" src="{{ section.settings.image_1_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+              </a>
+              <a href="{{ section.settings.product_1.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-2 mb-2 rounded-circle p-1 bg-white">
+                  <img class="m-0 p-1" width="20" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+              </a>
+            {% else %}
+              <img class="w-100" src="{{ section.settings.image_1_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+
+        <div class="col-8 ps-0 pr-2">
+          <div class="position-relative">
+            {% if section.settings.product_2 != blank %}
+              <a href="{{ section.settings.product_2.url }}">
+                  <img class="w-100 h-100" src="{{ section.settings.image_2_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+              </a>
+              <a href="{{ section.settings.product_2.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-2 mb-2 rounded-circle p-1 bg-white">
+                  <img class="m-0 p-1" width="20" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+              </a>
+            {% else %}
+              <img class="w-100 h-100" src="{{ section.settings.image_2_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+            {% endif %}
+          </div>
+        </div>
+        <div class="col-4 pe-0 ps-2">
+            <div class="row h-100">
+              <div class="col-12 align-self-start">
+                <div class="position-relative">
+                  {% if section.settings.product_3 != blank %}
+                    <a class=""  href="{{ section.settings.product_3.url }}">
+                        <img class="w-100" src="{{ section.settings.image_3_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    </a>
+                    <a href="{{ section.settings.product_3.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-2 mb-2 rounded-circle p-1 bg-white">
+                        <img class="m-0 p-1" width="20" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% else %}
+                    <img class="w-100" src="{{ section.settings.image_3_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                  {% endif %}
+                </div>
+              </div>
+              <div class="col-12 align-self-end">
+                <div class="position-relative">
+                  {% if section.settings.product_4 != blank %}
+                    <a class="col-12" href="{{ section.settings.product_4.url }}">
+                        <img class="w-100" src="{{ section.settings.image_4_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    </a>
+                    <a href="{{ section.settings.product_4.url }}" class="position-absolute img-linked bottom-0 d-flex justify-content-center end-0 mr-2 mb-2 rounded-circle p-1 bg-white">
+                        <img class="m-0 p-1" width="20" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Untitled_design_3.png?v=1641233166" data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% else %}
+                    <img class="w-100" src="{{ section.settings.image_4_mobile | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Ambientes home",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titulo"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Texto"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1_desktop",
+        "label": "Primera imagen Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_1_mobile",
+        "label": "Primera imagen mobile"
+      },
+      {
+        "type": "product",
+        "id": "product_1",
+        "label": "Primer producto"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2_desktop",
+        "label": "Segunda imagen Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_2_mobile",
+        "label": "Segunda imagen mobile"
+      },
+      {
+        "type": "product",
+        "id": "product_2",
+        "label": "Segundo producto"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3_desktop",
+        "label": "Tercera imagen Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_3_mobile",
+        "label": "Tercera imagen mobile"
+      },
+      {
+        "type": "product",
+        "id": "product_3",
+        "label": "Tercer producto"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4_desktop",
+        "label": "Cuarta imagen Desktop"
+      },
+      {
+        "type": "image_picker",
+        "id": "image_4_mobile",
+        "label": "Cuarta imagen mobile"
+      },
+      {
+        "type": "product",
+        "id": "product_4",
+        "label": "Cuarto producto"
+      }
+    ],
+    "presets": [
+        {
+          "name": "Ambientes home",
+           "settings": {
+              "title": "Ambientes home"
+            }
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,476 @@
+    :root {
+       --font-main: "Lato";
+       --color-main-text: #404B5A;
+   }
+   
+   * {
+       margin: 0px;
+       padding: 0px;
+       box-sizing: border-box;
+   }
+   
+   h1,
+   h2,
+   h3,
+   p,
+   figcaption {
+       color: var(--color-main-text);
+   }
+   
+   p {
+       font-size: 16px;
+   }
+   /* Utilidad para que no expanda hacia los lados  */
+   
+   .border-box {
+       box-sizing: border-box;
+   }
+
+{% comment %} Estilos del landing {% endcomment %}
+h1, h2, h3, p, figcaption {
+    color: var(--color-main-text);
+}
+
+p {
+    font-size: 16px;
+}
+
+
+.line {
+    background-color: #404B5A;
+    height: 308px;
+}
+
+
+
+/* Utilidad para que no expanda hacia los lados  */
+.border-box {
+    box-sizing: border-box;
+}
+
+/* Tamaño de las figures */
+.figure-sizes {
+    width: 190px;
+    height: 182px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    background: #F7F7F7;
+}
+
+/* Custom btn */
+.btn_to_suavidad {
+    color: var(--color-main-text);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width: 125px;
+    height: 40px;
+    border: 1px solid var(--color-main-text);
+    text-decoration: none;
+    border-radius: 27px;
+    font-size: 16px;
+
+}
+
+
+/* Estilos para los inputs del formulario de la sección de contacto */
+input.section_contact_lead {
+    height: 48px;
+    background-color: #FAFAFA;
+    border: 1px solid #D8D8D8;
+    box-sizing: border-box;
+    border-radius: 34px;
+    padding-left: 15px;
+}
+
+input.section_contact_lead::placeholder {
+    color: #6E7A8A;
+}
+
+.position-absolute {
+    right: 20px;
+}
+
+.container-img-group {
+    padding: 0px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width: 398px;
+}
+
+.img_descanso_group {
+    width: 398px;
+    height: 178px;
+}
+
+.svg_icon_descanso {
+    z-index: 1000;
+}
+
+/* Estilos para los iconos */
+.section-categorias-icon {
+    border-radius: 40.5px;
+    background-color: #F6F6F6;
+}
+
+.reset-enlace {
+    text-decoration: none;
+    color: #404B5A;
+}
+
+.reset-enlace:hover {
+    text-decoration: none;
+    color: #404B5A;
+}
+
+/* Estilizando la barra de scroll */
+/* width */
+.container-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 7px;
+  
+}
+
+/* Track */
+.container-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+  height: 7px;
+}
+
+/* Handle */
+.container-scrollbar::-webkit-scrollbar-thumb {
+  background: #404B5A;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.container-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+{% comment %} Tamaños de fuentes globales  {% endcomment %}
+
+.lato-parrafos {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: auto;
+    margin-top: 16px;
+    color: #404b5a;
+}
+
+.lato-titulos {
+    font-size: 34px;
+    font-weight: 400;
+    margin: 80px 0px 48px 0px;
+    letter-spacing: 0.5px;
+}
+
+.separador-section {
+    margin-top: 80px;
+}
+
+.letter-spacing-0 {
+    letter-spacing: 0px;
+}
+
+.blog-titles {
+    font-size: 26px;
+}
+
+.line-h-enlace {
+    line-height: 3.5px;
+}
+
+
+a.text_enlaces {
+    color: #404b5a;
+}
+
+.parrafo-descanso {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+.parrafo-groups-colchones {
+    left: 10px;
+}
+
+.custom-cards-spaces {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+
+/* Consulta del tamaño de la pantalla */
+@media only screen and (max-width: 600px) {
+    .img-cover {
+        width: 90%;
+        transform: translateY(-20%);
+    }
+
+    .lato-parrafos {
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .lato-titulos {
+        font-size: 24px;
+        font-weight: 400;
+        margin: 64px 0px 24px 0px;
+    }
+
+    .separador-section {
+        margin-top: 64px;
+    }
+
+    p {
+    font-size: 14px;
+    }
+
+    .btn_to_suavidad {
+        width: 115px;
+    }
+    .blog-titles {
+    font-size: 20px;
+    }
+
+    .parrafo-descanso {
+        margin-top: 16px;
+        margin-bottom: 28px;
+    }
+
+    .espacio-b-groups-colchones {
+        margin-bottom: 20px;
+    }
+
+
+}
+
+
+{% comment %}  {% endcomment %}
+
+
+   /* Tamaño de las figures */
+   
+   .figure-sizes {
+       width: 190px;
+       height: 182px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       background: #F7F7F7;
+   }
+   /* Custom btn */
+   
+   .btn_to_suavidad {
+       color: var(--color-main-text);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       width: 125px;
+       height: 40px;
+       border: 1px solid var(--color-main-text);
+       text-decoration: none;
+       border-radius: 27px;
+       font-size: 16px;
+   }
+   /* Estilos para los inputs del formulario de la sección de contacto */
+   
+   input.section_contact_lead {
+       height: 48px;
+       background-color: #FAFAFA;
+       border: 1px solid #D8D8D8;
+       box-sizing: border-box;
+       border-radius: 34px;
+       padding-left: 15px;
+   }
+   
+   input.section_contact_lead::placeholder {
+       color: #6E7A8A;
+   }
+   
+   .position-absolute {
+       right: 20px;
+   }
+   
+   .container-img-group {
+       padding: 0px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       width: 398px;
+   }
+   
+   .img_descanso_group {
+       width: 398px;
+       height: 178px;
+   }
+   
+   .svg_icon_descanso {
+       z-index: 1000;
+   }
+   /* Estilos para los iconos */
+   
+   .section-categorias-icon {
+       border-radius: 40.5px;
+       background-color: #F6F6F6;
+   }
+   
+   .reset-enlace {
+       text-decoration: none;
+       color: #404B5A;
+   }
+   
+   .reset-enlace:hover {
+       text-decoration: none;
+       color: #404B5A;
+   }
+   /* Estilizando la barra de scroll */
+   /* width */
+   
+   .container-scrollbar::-webkit-scrollbar {
+       width: 10px;
+       height: 7px;
+   }
+   /* Track */
+   
+   .container-scrollbar::-webkit-scrollbar-track {
+       background: #f1f1f1;
+       border-radius: 20px;
+       height: 7px;
+   }
+   /* Handle */
+   
+   .container-scrollbar::-webkit-scrollbar-thumb {
+       background: #404B5A;
+       border-radius: 20px;
+   }
+   /* Handle on hover */
+   
+   .container-scrollbar::-webkit-scrollbar-thumb:hover {
+       background: #555;
+   }
+   
+   {
+       % comment %
+   }
+   
+   Tamaños de fuentes globales {
+       % endcomment %
+   }
+   
+   .lato-parrafos {
+       font-size: 16px;
+       font-weight: 300;
+       line-height: auto;
+       color: #404b5a;
+   }
+   
+   .lato-titulos {
+       font-size: 34px;
+       font-weight: 400;
+       letter-spacing: 0.5px;
+       margin-bottom: 30px;
+   }
+   
+   .separador-section {
+       height: 50px;
+   }
+   
+   .letter-spacing-0 {
+       letter-spacing: 0px;
+   }
+   
+   .blog-titles {
+       font-size: 26px;
+   }
+   
+   .line-h-enlace {
+       line-height: 3.5px;
+   }
+   
+   a.text_enlaces {
+       color: #404b5a;
+   }
+   
+   .parrafo-descanso {
+       margin-top: 16px;
+       margin-bottom: 48px;
+   }
+   
+   .parrafo-groups-colchones {
+       left: 10px;
+   }
+   
+   .custom-cards-spaces {
+       margin-top: 12px;
+       margin-bottom: 16px;
+   }
+   
+   {
+       % comment %
+   }
+   
+   Calses personalizadas para liquid {
+       % endcomment %
+   }
+   
+   .img-icon-promo {
+       max-width: 86px;
+       margin-bottom: 32px;
+   }
+   
+   .description-prod {
+       height: 200px;
+   }
+   
+   .radius-card-product {
+       border-radius: 14px;
+   }
+   
+   .custom-separator {
+       height: 80px;
+   }
+   
+   a.featured-collection--button {
+       text-decoration: none;
+       color: #404B5A;
+   }
+   /* Consulta del tamaño de la pantalla */
+   
+   @media only screen and (max-width: 600px) {
+       .img-cover {
+           width: 90%;
+           transform: translateY(-20%);
+       }
+       .lato-parrafos {
+           font-size: 14px;
+           font-weight: 400;
+       }
+       .lato-titulos {
+           font-size: 24px;
+           font-weight: 400;
+       }
+       p {
+           font-size: 14px;
+       }
+       .btn_to_suavidad {
+           width: 115px;
+       }
+       .blog-titles {
+           font-size: 20px;
+       }
+       .img-icon-promo {
+           margin-bottom: 16px;
+       }
+   }

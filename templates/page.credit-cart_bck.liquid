@@ -1,0 +1,542 @@
+<article class="site-page rich-text--container" data-template-page>
+  <div class="shopify-section cart--section contact-page-content page-content" id="credijamar-steps">
+    <header class="page-masthead">
+      {%- comment -%}
+      WIZARD
+      {%- endcomment -%}
+      <div id="progress-bar-1">
+        <div class="progress-bar">
+          <div class="step">
+            <p><i class="fas fa-shopping-cart"></i></p>
+            <div class="bullet">
+              <span>1</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="fas fa-user-edit"></i></p>
+            <div class="bullet">
+              <span>2</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="fas fa-user-check"></i></p>
+            <div class="bullet">
+              <span>3</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+        </div>
+      </div>
+      <div class="display-no" id="progress-bar-2">
+        <div class="progress-bar">
+          <div class="step">
+            <p><i class="fas fa-map-marked-alt"></i></p>
+            <div class="bullet">
+              <span>1</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="far fa-id-badge"></i></p>
+            <div class="bullet">
+              <span>2</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="fas fa-user-check"></i></p>
+            <div class="bullet">
+              <span>3</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="fas fa-file-signature"></i></p>
+            <div class="bullet">
+              <span>4</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+          <div class="step">
+            <p><i class="far fa-calendar-alt"></i></p>
+            <div class="bullet">
+              <span>5</span>
+            </div>
+            <div class="check fas fa-check"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="cartitems--container {% if has_sidebar %}has-sidebar{% endif %}" id="step-1">
+
+      <header class="cart-title">
+        <div class="cart-title-left">
+          <h1>{{ 'cart.general.your_cart' | t }}</h1>
+          {% if has_items %}
+          <div class="cart-title-total--small"></div>
+          {% endif %}
+        </div>
+        {% if has_items or show_continue_link %}
+        <div class="cart-title-right">
+          {% if has_items %}
+          <div class="cart-title-total--large">
+            <div class="cart-title-total" data-cart-title-total>
+              {{ 'cart.general.subtotal' | t }}
+              <span class="money" id="priceTotaltop">
+              </span>
+            </div>
+          </div>
+          <a class="button-primary cart-title-button"
+            href="https://www.jamar.com.pa/pages/credijamar-autogestion-de-creditos">
+            {% if settings.enable_checkout_lock_icon %}
+            {% render 'icon-checkout-lock' %}
+            {% else %}
+            {% render 'icon-cart' %}
+            {% endif %}
+            COMPRAR
+          </a>
+          {% elsif show_continue_link %}
+          {{ continue_link_html }}
+          {% endif %}
+        </div>
+        {% endif %}
+      </header>
+
+      <div class="cartitems">
+        <ul class="cartitems--list" id="container-producs"></ul>
+
+        <div class="cart-total">
+
+          {% if section.settings.enable_order_notes %}
+          <div class="cart-ordernote">
+            <span class="cart-ordernote-heading">{{ 'cart.general.enter_order_note' | t }}</span>
+            <div class="form-field">
+              <textarea class="form-field-input form-field-textarea" name="note"
+                id="cart-note">{{ cart.note }}</textarea>
+              <label class="form-field-title" for="cart-note">{{ 'cart.general.special_instructions' | t }}</label>
+            </div>
+          </div>
+          {% endif %}
+
+          {% comment %}
+          /***************************************************
+              SE ELIMINO EL SUBTOTAL DEL CARRITO DE CREDITO
+                         PATRYKSIM@GMAIL.COM
+          ***************************************************/
+          {% endcomment %}
+
+          <!--div class="cart-final-total">
+            <ul class="discount-list" data-cart-discounts aria-label="{{ 'product.general.discounts' | t }}">
+              {% render 'cart-discounts',
+              	 cart: cart
+              %}
+            </ul>
+            <div class="cart-subtotal">
+              <span>{{ 'cart.general.subtotal' | t }}</span>
+              <span class="money" id="priceTotalbotton" data-cart-total></span>
+            </div>
+          </div-->
+
+          <div class="cart-shipping">
+            Estos productos se han escogido para pagar en modalidad de crédito
+          </div>
+
+          <div class="cart-checkout">
+            <button class="button-primary" id="btn-step-1">COMPRAR A CRÉDITO</button>
+
+            {% if additional_checkout_buttons %}
+            <div class="additional-checkout-buttons">
+              {{ content_for_additional_checkout_buttons }}
+            </div>
+            {% endif %}
+
+            {% if show_continue_link %}
+            {{ continue_link_html }}
+            {% endif %}
+          </div>
+        </div>
+        
+        {% comment %}
+        /**********************************************************
+        *          DIV RETAIL ROCKET CONTENIDO PERSONALIZADO
+        *                   PATRYKSIM@GMAIL.COM
+        **********************************************************/
+        {% endcomment %}        
+        <div data-retailrocket-markup-block="60edf86997a52815f45039a2" ></div>
+        
+      </div>
+
+      {% if has_sidebar %}
+      <div class="cart-sidebar">
+        {% for block in section.blocks %}
+        {% if block.type == 'image' %}
+        {% assign image = block.settings.image %}
+
+        <article class="cart-sidebar-item">
+          {% if image %}
+            {%
+              render 'rimg',
+              img: image,
+              class: 'cart-sidebar-item-image',
+              size: '445x',
+              lazy: true,
+              canvas: true
+            %}
+          {% else %}
+          	{{ 'image' | placeholder_svg_tag: 'placeholder--image cart-sidebar-item-image' }}
+          {% endif %}
+        </article>
+        {% endif %}
+
+        {% if block.type == 'richtext' %}
+        <article class="cart-sidebar-item cart-sidebar-item--text rte">
+          {{ block.settings.richtext }}
+        </article>
+        {% endif %}
+
+        {% if block.type == 'page' %}
+        <article class="cart-sidebar-item cart-sidebar-item--text rte">
+          {{ pages[block.settings.page].content }}
+        </article>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </section>
+
+    <section class="display-no" id="step-2">
+      <form action="javascript:void(0);" id="credijamar-form">
+        <div class="credijamar-form-step-1-message message--error inactivo">
+          <div class="errors">
+            <ul>
+              <li>ERROR: Por favor rellenar todos los campos del formulario.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="form-fields-columns">
+          <div id="step-2-1">
+            <div id="form-field__tipo_documento" class="form-field form-field--half">
+              <span class="form-field-select-wrapper">
+                <select id="tipo_documento" class="form-field-select" name="tipo_documento">
+                  <option value="-1" disabled selected>Seleccione el tipo de documento</option>
+                </select>
+                {% render "icon-chevron-down" %}
+              </span>
+              <label class="form-field-title" for="">¿Tipo de documento?</label>
+              <p class="error-message form-field__incorrecto-inactivo">Error Message</p>
+            </div>
+            <div id="form-field__cedula" class="form-field form-field--half">
+              <input id="cedula" class="form-field-input form-field-text" autocomplete="on" name="cedula" type="text"
+                onkeyup="javascript:this.value=this.value.toUpperCase()" onclick="warningShow()">
+              <label class="form-field-title" for="cedula">Tú número de documento</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+              <div id="form-field__cedula-warning" class="display-no">
+                <ul>
+                  <li>Si tú documento de identidad empieza con cero (0) no incluirlo</li>
+                  <li>Si tú documento de identidad incluye guiones (-) debes ingresarlo</li>
+                  <li>Si tu documento de identidad incluye Letras, debes incluirlas.</li>
+                </ul>
+              </div>
+            </div>
+            <center>
+              <div id="terminos-apc" style="margin-top: 16px">
+                <label class="checkbox">
+                  <input type="checkbox" id="terminos" required
+                    onchange="this.setCustomValidity(validity.valueMissing ? 'Por favor, indique que acepta los Términos y Condiciones' : '');">
+                  <span style="color:black; padding-left:5px;">Aceptar los
+                    <a style="color:blue;" href="/pages/autorizacion-apc" target="_blank">Términos y
+                      Condiciones</a>
+                  </span>
+                </label>
+              </div>
+              <button class="button-primary" id="btn-step-2-1">Siguiente</button>
+            </center>
+          </div>
+          <div class="display-no" id="step-2-2">
+            <div id="form-field__nombre" class="form-field form-field--half">
+              <input id="nombre" class="form-field-input form-field-text" autocomplete="on" name="nombre"
+                placeholder="Escríbe aquí tu primer nombre" type="text">
+              <label class="form-field-title" for="nombre">Tú primer nombre</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div id="form-field__segundo_nombre" class="form-field form-field--half">
+              <input id="segundo_nombre" class="form-field-input form-field-text" autocomplete="on"
+                name="segundo_nombre" placeholder="Escríbe aquí tu segundo nombre" type="text">
+              <label class="form-field-title" for="segundo_nombre">Tú segundo nombre</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div id="form-field__apellido" class="form-field form-field--half">
+              <input id="apellido" class="form-field-input form-field-text" autocomplete="on" name="apellido"
+                placeholder="Escríbe aquí tu primer apellido" type="text">
+              <label class="form-field-title" for="apellido">Tú primer apellido</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div id="form-field__segundo_apellido" class="form-field form-field--half">
+              <input id="segundo_apellido" class="form-field-input form-field-text" autocomplete="on"
+                name="segundo_apellido" placeholder="Escríbe aquí tu segundo apellido" type="text">
+              <label class="form-field-title" for="sgundo_apellido">Tú segundo apellido</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div id="form-field__celular" class="form-field form-field--half">
+              <input id="celular" class="form-field-input form-field-text" autocomplete="on" name="celular"
+                placeholder="Escríbe aquí tu número celular" type="text" required>
+              <label class="form-field-title" for="celular">Tú número celular</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div id="form-field__email" class="form-field form-field--half">
+              <input id="email" class="form-field-input form-field-text" autocomplete="on" name="email"
+                placeholder="Escríbe aquí correo electrónico" type="email">
+              <label class="form-field-title" for="email">Tú correo electrónico</label>
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <center>
+              <button 
+                class="button-primary" 
+                id="btn-step-2-2" 
+                {% comment %}
+                /**********************************************************
+                *             RETAIL ROCKET CONTENIDO PERSONALIZADO
+                *                   PATRYKSIM@GMAIL.COM
+                **********************************************************/
+                {% endcomment %}
+                onclick="try {rrApi.setEmail($('#email').val());}catch(e){}"
+              >Siguiente</button>
+            </center>
+          </div>
+          <div class="display-no" id="step-2-3">
+            <div id="form-field__ocupaciones" class="form-field form-field--half">
+              <span class="form-field-select-wrapper">
+                <select id="ocupaciones" class="form-field-select" name="ocupaciones">
+                  <option value>selecciona tu ocupación</option>
+                </select>
+                {% render "icon-chevron-down" %}
+              </span>
+              <label class="form-field-title" for="">¿Cu&aacute;l es tu ocupaci&oacute;n?</label>
+            </div>
+            <div id="form-field__actividad_comercial" class="form-field form-field--half">
+              <span class="form-field-select-wrapper">
+                <select id="actividad" class="form-field-select" name="actividad" type="text" value>
+                  <option value>selecciona a que te dedicas</option>
+                </select>
+                {% render "icon-chevron-down" %}
+              </span>
+              <label class="form-field-title" for="">¿Cu&aacute;l es tu actividad comercial?</label>
+            </div>
+            <div id="form-field__ingresos" class="form-field form-field--half">
+              <input id="ingresos" class="form-field-input ingresosInput form-field-text"
+                placeholder="¿Cu&aacute;ntos son tus ingresos?" name="ingresos" type="text">
+              <p class="error-message form-field__incorrecto-inactivo"></p>
+            </div>
+            <div style="display: none;" id="form-field__sucursales" class="form-field form-field--half">
+              <span class="form-field-select-wrapper">
+                <select id="tienda" class="form-field-select" name="tienda" type="text" value>
+                  <option value>Selecciona tienda más cercana</option>
+                  <option value="ALBROOK MALL">ALBROOK MALL</option>
+                  <option value="VÍA ESPAÑA">VÍA ESPAÑA</option>
+                  <option value="VÍA ESPAÑA">LA CHORRERA</option>
+                  <option value="VÍA ESPAÑA">TOCUMEN</option>
+                  <option value="VÍA ESPAÑA">LOS ANDES</option>
+                  <option value="MEGAMALL">MEGAMALL</option>
+                  <option value="DAVID CHIRIQUÍ">DAVID CHIRIQUÍ</option>
+                </select>
+                {% render "icon-chevron-down" %}
+              </span>
+              <label class="form-field-title" for="">¿Qué tienda tienes más cerca?</label>
+            </div>
+            <div style="display: none;" class="form-field form-field--half">
+              <p>¿Quiere que te llame un asesor?</p>
+              <input type="radio" id="llamada_asesor_si" name="llamada_asesor" value="si" checked>
+              <label for="llamada_asesor_si">S&iacute;</label><br>
+              <input type="radio" id="llamada_asesor_no" name="llamada_asesor" value="no">
+              <label for="llamada_asesor_no">No</label><br>
+            </div>
+            <div class="form-action-row">
+              <!--button class="button-primary contact-form-button mdc-ripple-surface mdc-ripple-upgraded btn-atras"
+                    id="previous">
+              Atrás
+            </button>
+            <button class="button-primary contact-form-button mdc-ripple-surface mdc-ripple-upgraded" id="btn-step-3"
+                    type="submit">
+              Finalizar
+            </button-->
+              <button class="button-primary" id="btn-step-2-3">Siguiente</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+    </section><!-- CONSULTA VISOR -->
+
+    <section class="display-no" id="step-3">
+      <center class="display-no" id="img-step-3-amarillo">
+        <img id="img-step-3-amarillo-oro" class="display-no"
+          src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/CrediJamar-Cliente-Amarillo-Oro.jpg?v=1620138602">
+        <img id="img-step-3-amarillo-verde" class="display-no"
+          src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Credito-Cliente_Viable-01.jpg?v=1620328453">
+        <br>
+        <button class="button-primary" id="btn-step-3">Siguiente</button>
+      </center>
+      <center class="display-no" id="img-step-3-viable">
+        <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/CrediJamar-Cliente-Viable.jpg?v=1614276290">
+        <br>
+        <a class="button-primary mdc-ripple-surface mdc-ripple-upgraded btn" href="/">SEGUIR COMPRANDO</a>
+      </center>
+      <center class="display-no" id="img-step-3-no-viable">
+        <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/CrediJamar-Cliente-No-Viable.jpg?v=1614276290">
+        <br>
+        <a class="button-primary mdc-ripple-surface mdc-ripple-upgraded btn" href="/">SEGUIR COMPRANDO</a>
+      </center>
+    </section><!-- VERIFICACION DE ESTRATEGIA -->
+
+    <section class="display-no" id="step-4">
+      <form action="javascript:void(0);">
+        <div class="form-fields-columns">
+          <div id="form-field__province" class="form-field form-field--half">
+            <span class="form-field-select-wrapper">
+              <select id="province" class="form-field-select" name="province" placeholder="Seleccione la provincia">
+              </select>
+              {% render "icon-chevron-down" %}
+            </span>
+            <label class="form-field-title" for="">Provincia</label>
+            <p class="error-message form-field__incorrecto-inactivo">Error Message</p>
+          </div>
+          <div id="form-field__city" class="form-field form-field--half">
+            <span class="form-field-select-wrapper">
+              <select id="city" class="form-field-select" name="city" placeholder="Seleccione la ciudad">
+              </select>
+              {% render "icon-chevron-down" %}
+            </span>
+            <label class="form-field-title" for="">Ciudad</label>
+            <p class="error-message form-field__incorrecto-inactivo">Error Message</p>
+          </div>
+          <div id="form-field__township" class="form-field form-field--half">
+            <span class="form-field-datalist-wrapper">
+              <input list="townships-list" id="township-selected" type="text" required="data-value"
+                placeholder="Seleccione el corregimiento">
+              <datalist id="townships-list">
+
+              </datalist>
+            </span>
+            <label class="form-field-title" for="">Corregimiento</label>
+          </div>
+        </div>
+        <div class="form-field">
+          <textarea class="form-field-input" id="address" name="address" placeholder="Escríba su dirección"
+            required></textarea>
+          <label class="form-field-title" for="">Dirección</label>
+        </div>
+        <div class="form-field">
+          <textarea class="form-field-input" id="indications" name="indications"
+            placeholder="Por favor anexe señas para llegar al lugar de entrega"></textarea>
+          <label class="form-field-title" for="">Indicaciones adicionales</label>
+        </div>
+        <button type="submit" class="button-primary" id="btn-step-4">Siguiente</button>
+      </form>
+    </section><!-- DIRECCION -->
+
+    <section class="display-no" id="step-5">
+      <p>Usted debe verificar su identidad, para esto presione en Veríficame</p>
+      <div id="btn-become" style="text-align: center;padding-top: 16px;"></div>
+    </section><!-- BECOME -->
+
+    <section class="display-no" id="step-6">
+      <form action="javascript:void(0);" id="precalificacion">
+      </form>
+      <div id="div-empresa" class="form-field form-field--half display-no">
+        <input id="empresa" class="form-field-input form-field-text" autocomplete="on" name="empresa"
+          placeholder="Seleccione la empresa" type="text" readonly onclick="buscarEmpresa()">
+        <label class="form-field-title" for="nombre">En qué empresa labora?</label>
+
+        <div class="form-field form-field--half" style="margin-top: 16px;">
+          <span class=" form-field-select-wrapper">
+            <select id="tipoempresa" class="form-field-select" name="tipoempresa">
+              <option value="-1" disabled selected>Seleccione el tipo de empresa</option>
+              <option value="ddempresaprivadapanama">Empresa Privada</option>
+              <option value="ddsemiautonomopanama">Empresa Semiautonoma</option>
+              <option value="ddcajasegurosocialpanama">Caja del Seguro Social</option>
+            </select>
+          </span>
+          <label class="form-field-title" for="">Tipo empresa?</label>
+        </div>
+
+        <button class="button-primary" id="btn-step-6" style="margin-top: 16px;">Siguiente</button>
+      </div>
+      <br>
+    </section><!-- PRECALIFICACION -->
+
+    <section class="display-no" id="step-7">
+      <center>
+        <p>Pulse los siguientes enlaces, léalos atentamente. Si marca las casillas, reconoce que ha leído y acepta los
+          siguientes términos </p>
+        <br>
+        <label class="checkbox">
+          <input type="checkbox" onclick="selectAll()">
+          Marcar todos los documentos
+        </label>
+        <br><br>
+      </center>
+      <form action="javascript:void(0);" id="documents" name="documents" style="text-align: left;">
+      </form>
+      <div id="buttonsd" style="text-align: center;">
+      </div>
+      <br>
+      <center>
+        <label class="checkbox">
+          <input type="checkbox" id="manifiesto" onclick="manifiesto()">
+          Manifiesto que he leído y acepto el documento
+        </label>
+        <br>
+        <button class="button-primary display-no" id="btn-step-7">Siguiente</button>
+      </center>
+    </section><!-- FIRMA DE DOCUMENTOS 7 -->
+
+    <section class="display-no" id="step-8">
+      <p>Estimado cliente: Por favor escoja la fecha de entrega de su pedido</p>
+
+      <div id="select-delivery-date-input" style="text-align: center; margin: 16px 0px;"> </div>
+
+      <center>
+        <button class="button-primary" id="btn-step-8">Confirmar cita y finalizar</button>
+      </center>
+    </section><!-- FECHA DE ENTREGA -->
+
+  </div>
+
+  <div class="display-no" id="help-section">
+    <center>
+      <a href="https://wa.link/muzvc5" id="btn-help">
+        <p><span><i class="fab fa-whatsapp"></i></span> ¿Necesitas ayuda? Chatéanos</p>
+      </a>
+    </center>
+  </div>
+
+  <div class="display-no" id="exit-section">
+    <center>
+      <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/CrediJamar-Exit-Section.jpg?v=1619186481">
+      <br>
+      <a class="button-primary mdc-ripple-surface mdc-ripple-upgraded btn" href="/">SEGUIR COMPRANDO</a>
+    </center>
+  </div><!-- SALIDA DEL PROCESO -->
+  
+    <div class="display-no" id="viable-section">
+    <center>
+      <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/CrediJamar-Cliente-Viable.jpg?v=1614276290">
+      <br>
+      <a class="button-primary mdc-ripple-surface mdc-ripple-upgraded btn" href="/">SEGUIR COMPRANDO</a>
+    </center>
+  </div><!-- SALIDA DEL PROCESO -->
+</article>
+
+
+<!-- Script Visor CrediJamar -->
+{{'inputmask.min.js' | asset_url | script_tag}}
+{{'button.js' | asset_url | script_tag}}
+{{'https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js' | script_tag}}
+{{'https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.css' | stylesheet_tag}}
+{{'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' | stylesheet_tag}}
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript" defer="defer"></script>
+{{'written-number.min.js' | asset_url | script_tag}}

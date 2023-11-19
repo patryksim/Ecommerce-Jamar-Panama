@@ -1,0 +1,508 @@
+{
+  "sections": {
+    "temporal": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "16571131339816f75b": {
+      "type": "d-catalogo-style",
+      "disabled": true,
+      "blocks": {
+        "c56e8927-d01c-490c-8145-75633663a79e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_01.jpg",
+            "enlace": ""
+          }
+        },
+        "bb83d460-1f6c-4f2f-ab1e-cbd56c4aa69c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_02.jpg",
+            "enlace": "shopify:\/\/products\/7019682"
+          }
+        },
+        "d1092353-5577-4b60-8390-e0334e9bf5c7": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_03.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion&utm_content=boton%20header"
+          }
+        },
+        "14f88736-e6c8-4963-ab33-1166438e56df": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_04.jpg",
+            "enlace": "shopify:\/\/products\/7019474"
+          }
+        },
+        "f35e214c-1d38-4833-bcde-a60e4cb82da0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_05.jpg",
+            "enlace": "shopify:\/\/products\/7020084"
+          }
+        },
+        "fff64df0-d2ef-4787-82de-dc86ef56f5fc": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_06.jpg",
+            "enlace": "shopify:\/\/products\/7018557"
+          }
+        },
+        "52ebbe87-b298-4ae5-b230-6f0d27481b66": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_07.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce"
+          }
+        },
+        "4779182b-3762-4562-b0c8-ca5ea84370ff": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_08.jpg",
+            "enlace": "shopify:\/\/products\/7003961"
+          }
+        },
+        "2550d4d8-966e-4ebf-9e71-6cb86dc8a20b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_09.jpg",
+            "enlace": "shopify:\/\/products\/7003962"
+          }
+        },
+        "f87376cb-35a5-4b33-8e48-84d7119b649a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_10.jpg",
+            "enlace": "shopify:\/\/products\/7020020"
+          }
+        },
+        "de4097f1-6598-4f8e-99a0-aabdd7d3f6f6": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_11.jpg",
+            "enlace": "shopify:\/\/products\/7014220"
+          }
+        },
+        "8bf18188-f94e-4ee0-853c-6d6bc0992d39": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_12.jpg",
+            "enlace": "shopify:\/\/products\/7014222"
+          }
+        },
+        "be3bc4f0-8b63-47ba-b794-b926f9afcc0c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_13.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion"
+          }
+        },
+        "ee03349f-937c-47cd-99f9-da3ae28d3a2a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_14.jpg",
+            "enlace": "\/"
+          }
+        },
+        "7d162c33-89c8-415d-9015-d87c7fc6e6e4": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_15.jpg",
+            "enlace": ""
+          }
+        },
+        "8d551092-8d98-4d4b-afe1-070d152fadb6": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_16.jpg",
+            "enlace": "shopify:\/\/products\/7006057"
+          }
+        },
+        "9a16003f-3973-48f5-b8a0-45b75f875b08": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_17.jpg",
+            "enlace": "shopify:\/\/products\/7019989"
+          }
+        },
+        "0d712ab7-d26c-49e0-8a17-e9aca8fb8168": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_18.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion"
+          }
+        },
+        "14c43492-d01e-44d2-a438-f719faf69a8e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_19.jpg",
+            "enlace": "shopify:\/\/products\/7020626"
+          }
+        },
+        "3a90ffe8-129e-44e3-ad83-cb2e9db5005a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_20.jpg",
+            "enlace": "shopify:\/\/products\/7026344"
+          }
+        },
+        "9137509c-1c35-446a-805e-5b6b6468aff0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_21.jpg",
+            "enlace": "shopify:\/\/products\/7015635"
+          }
+        },
+        "4fe188c9-d579-4735-9335-0f7565fcdfe9": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_22.jpg",
+            "enlace": "shopify:\/\/products\/7020061"
+          }
+        },
+        "747a3d83-d1d5-49bf-8d4a-93fec53ce6fc": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_23.jpg",
+            "enlace": "https:\/\/cuenta.jamar.com.pa\/"
+          }
+        },
+        "4f24f4c6-1250-4b97-a49e-a138beae9edb": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_24.jpg",
+            "enlace": "shopify:\/\/products\/7016002"
+          }
+        },
+        "e1289111-a4b2-43c8-8618-58639f4b8c31": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_25.jpg",
+            "enlace": "shopify:\/\/products\/7025208"
+          }
+        },
+        "8f8eed47-217f-4eda-91d7-7107839649ab": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_26.jpg",
+            "enlace": "shopify:\/\/products\/7017731"
+          }
+        },
+        "8a17f7b3-c8c9-4e4b-805d-1667f952ee22": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_27.jpg",
+            "enlace": "shopify:\/\/products\/7010272"
+          }
+        },
+        "306eb354-f509-49e5-93d0-ce912f2f52e7": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_28.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion"
+          }
+        },
+        "1969bd9f-c2e1-44ed-8afa-bf7e9966c584": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_29.jpg",
+            "enlace": "shopify:\/\/products\/7003455"
+          }
+        },
+        "ae7a3335-d640-44b6-b8d4-e91f0270b51c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_30.jpg",
+            "enlace": "shopify:\/\/products\/7021301"
+          }
+        },
+        "3761a0fa-5598-4960-885b-0fd5946d818a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_31.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion"
+          }
+        },
+        "3dc523c1-2f68-41b8-bcca-b63c5a8427fd": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_32.jpg",
+            "enlace": "shopify:\/\/products\/7017656"
+          }
+        },
+        "7fb31bbe-019d-48e8-9de2-02e5e61a1bc0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_33.jpg",
+            "enlace": "shopify:\/\/products\/7020731"
+          }
+        },
+        "25c0398b-dce8-4f26-a7d7-e067ab66dcca": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_34.jpg",
+            "enlace": "shopify:\/\/products\/7001370"
+          }
+        },
+        "36590734-415d-47da-8b9c-caed4d7a1a63": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_35.jpg",
+            "enlace": "shopify:\/\/products\/7018619"
+          }
+        },
+        "3a474ad0-1de3-49ce-91d3-318169401342": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_36.jpg",
+            "enlace": "shopify:\/\/products\/7022288"
+          }
+        },
+        "a794239d-152e-4a3c-a82b-be2eec9aae64": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_37.jpg",
+            "enlace": "shopify:\/\/products\/035264"
+          }
+        },
+        "74c8b9e4-9a19-4e43-811e-268993f825e2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_38.jpg",
+            "enlace": "https:\/\/wa.me\/50769932222"
+          }
+        },
+        "f6684a3e-d31d-45ac-9353-8475e38ce6a3": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/PART-1_39.jpg",
+            "enlace": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "c56e8927-d01c-490c-8145-75633663a79e",
+        "bb83d460-1f6c-4f2f-ab1e-cbd56c4aa69c",
+        "d1092353-5577-4b60-8390-e0334e9bf5c7",
+        "14f88736-e6c8-4963-ab33-1166438e56df",
+        "f35e214c-1d38-4833-bcde-a60e4cb82da0",
+        "fff64df0-d2ef-4787-82de-dc86ef56f5fc",
+        "52ebbe87-b298-4ae5-b230-6f0d27481b66",
+        "4779182b-3762-4562-b0c8-ca5ea84370ff",
+        "2550d4d8-966e-4ebf-9e71-6cb86dc8a20b",
+        "f87376cb-35a5-4b33-8e48-84d7119b649a",
+        "de4097f1-6598-4f8e-99a0-aabdd7d3f6f6",
+        "8bf18188-f94e-4ee0-853c-6d6bc0992d39",
+        "be3bc4f0-8b63-47ba-b794-b926f9afcc0c",
+        "ee03349f-937c-47cd-99f9-da3ae28d3a2a",
+        "7d162c33-89c8-415d-9015-d87c7fc6e6e4",
+        "8d551092-8d98-4d4b-afe1-070d152fadb6",
+        "9a16003f-3973-48f5-b8a0-45b75f875b08",
+        "0d712ab7-d26c-49e0-8a17-e9aca8fb8168",
+        "14c43492-d01e-44d2-a438-f719faf69a8e",
+        "3a90ffe8-129e-44e3-ad83-cb2e9db5005a",
+        "9137509c-1c35-446a-805e-5b6b6468aff0",
+        "4fe188c9-d579-4735-9335-0f7565fcdfe9",
+        "747a3d83-d1d5-49bf-8d4a-93fec53ce6fc",
+        "4f24f4c6-1250-4b97-a49e-a138beae9edb",
+        "e1289111-a4b2-43c8-8618-58639f4b8c31",
+        "8f8eed47-217f-4eda-91d7-7107839649ab",
+        "8a17f7b3-c8c9-4e4b-805d-1667f952ee22",
+        "306eb354-f509-49e5-93d0-ce912f2f52e7",
+        "1969bd9f-c2e1-44ed-8afa-bf7e9966c584",
+        "ae7a3335-d640-44b6-b8d4-e91f0270b51c",
+        "3761a0fa-5598-4960-885b-0fd5946d818a",
+        "3dc523c1-2f68-41b8-bcca-b63c5a8427fd",
+        "7fb31bbe-019d-48e8-9de2-02e5e61a1bc0",
+        "25c0398b-dce8-4f26-a7d7-e067ab66dcca",
+        "36590734-415d-47da-8b9c-caed4d7a1a63",
+        "3a474ad0-1de3-49ce-91d3-318169401342",
+        "a794239d-152e-4a3c-a82b-be2eec9aae64",
+        "74c8b9e4-9a19-4e43-811e-268993f825e2",
+        "f6684a3e-d31d-45ac-9353-8475e38ce6a3"
+      ],
+      "settings": {
+      }
+    },
+    "311a8028-78d2-476a-8440-ab9ab34960c5": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "74ea42a0-047b-48c1-801d-1dc0faa9eccf": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/1_3f70bb5d-c579-4340-8a5e-9e31d136e3c6.jpg",
+            "enlace": ""
+          }
+        },
+        "064647d4-bae9-453b-ae09-9b87007b3458": {
+          "type": "block",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/2_e7c7537b-7925-41db-b114-95e9473efa06.jpg",
+            "enlace": ""
+          }
+        },
+        "68da3e69-ca74-4cc4-af1c-58d59c980e7c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/3_92dbb41d-8ba9-4a19-8977-c6814f045ffd.jpg",
+            "enlace": "shopify:\/\/products\/7024606"
+          }
+        },
+        "dc958a30-ab9f-4717-8064-5ef102403483": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/4_feff9b29-581f-444b-9766-131525dca7f3.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7024059"
+          }
+        },
+        "6efdeda0-27f1-4182-9b53-fe07e6c4712a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/5_c086ccdc-dd42-4123-b872-1aedcc0b5986.jpg",
+            "enlace": "shopify:\/\/products\/7018802"
+          }
+        },
+        "ae5f9de3-e2a7-4966-b303-274d187ed9bb": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/6_48ac3ae4-1b6e-4d12-b762-0348f059b676.jpg",
+            "enlace": "shopify:\/\/products\/7020740"
+          }
+        },
+        "6e5b85ca-a605-4218-bd04-6c230bb7df4c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7_59cfd8b7-54dd-4444-81d3-3330108c9e12.jpg",
+            "enlace": "https:\/\/tarjetizacion.jamar.com.pa\/"
+          }
+        },
+        "3cd02a32-dc0c-47b1-8750-92bbd76aec82": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/8_eb4e5b61-238e-4ff7-b06f-9021c44989cd.jpg",
+            "enlace": "shopify:\/\/products\/7026459"
+          }
+        },
+        "11caf7ae-b1b8-4398-aa2d-22a9d5075ea2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/9_b8b44f34-fb4f-4900-9d08-a52ab7d5b1ac.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/condiciones-de-entrega"
+          }
+        },
+        "0b085f66-f7bb-4b6f-9540-1af19e9dfd99": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/10_c42cd2c5-cbd0-4cb0-880b-f73f65039cde.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/recamaras\/recamaras_comodas"
+          }
+        },
+        "d38425c0-b17c-495a-a89d-0dfe67b5dfc4": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/11_2d484411-4b6c-4e80-b80c-3fbc2792fbd3.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7020478"
+          }
+        },
+        "60510905-8ea8-491e-81e2-a2074e7ca475": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/12_3c1aedaf-bb8d-49b7-bc5d-6aea6a5ef7d5.jpg",
+            "enlace": "shopify:\/\/products\/7020452"
+          }
+        },
+        "aed6c055-1e63-4020-ba7f-ba6a067fe80b": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/13_4d0ba48c-ace7-4d95-9ebb-95955da29f81.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7024217"
+          }
+        },
+        "00981102-7054-47e7-b8cb-c4d42775204a": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/14_2776e959-97fc-4f31-a81c-371a57fbc222.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/condiciones-de-entrega"
+          }
+        },
+        "91ae4689-15c4-4a20-8531-444148d612f0": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/15_9ae99f63-78c7-4733-bce2-2b3e502f49b9.jpg",
+            "enlace": "shopify:\/\/products\/7024223"
+          }
+        },
+        "0f19ba54-7c5a-420d-a4d9-aa5d2962a95e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/16_61baafbc-471d-4199-b7d4-b42c5f5efc3a.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7025964"
+          }
+        },
+        "4328214e-97f1-4c2b-a4d6-dc1db64bb6e3": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/17_c665638a-d00e-46c7-be4c-bcf1c41936b7.jpg",
+            "enlace": "shopify:\/\/products\/7009087"
+          }
+        },
+        "9fb28f58-77ce-4173-a3ac-a9a913864b7e": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/18_bb3bbbc7-2c47-4204-b90b-a3cabfc3b40a.jpg",
+            "enlace": "shopify:\/\/products\/024148"
+          }
+        },
+        "a20778cb-37c2-4b6d-85fd-6aea4007345c": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/19_b047d626-bdee-41d2-bc1e-27f77815ddd7.jpg",
+            "enlace": "shopify:\/\/products\/7014992"
+          }
+        },
+        "6f66afd7-2d1c-4f80-8059-636d5027faf1": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/20_a4069828-ebaa-43cd-a619-cb3bedc69e7e.jpg",
+            "enlace": "https:\/\/www.jamar.com.pa\/pages\/sucursales"
+          }
+        }
+      },
+      "block_order": [
+        "74ea42a0-047b-48c1-801d-1dc0faa9eccf",
+        "064647d4-bae9-453b-ae09-9b87007b3458",
+        "68da3e69-ca74-4cc4-af1c-58d59c980e7c",
+        "dc958a30-ab9f-4717-8064-5ef102403483",
+        "6efdeda0-27f1-4182-9b53-fe07e6c4712a",
+        "ae5f9de3-e2a7-4966-b303-274d187ed9bb",
+        "6e5b85ca-a605-4218-bd04-6c230bb7df4c",
+        "3cd02a32-dc0c-47b1-8750-92bbd76aec82",
+        "11caf7ae-b1b8-4398-aa2d-22a9d5075ea2",
+        "0b085f66-f7bb-4b6f-9540-1af19e9dfd99",
+        "d38425c0-b17c-495a-a89d-0dfe67b5dfc4",
+        "60510905-8ea8-491e-81e2-a2074e7ca475",
+        "aed6c055-1e63-4020-ba7f-ba6a067fe80b",
+        "00981102-7054-47e7-b8cb-c4d42775204a",
+        "91ae4689-15c4-4a20-8531-444148d612f0",
+        "0f19ba54-7c5a-420d-a4d9-aa5d2962a95e",
+        "4328214e-97f1-4c2b-a4d6-dc1db64bb6e3",
+        "9fb28f58-77ce-4173-a3ac-a9a913864b7e",
+        "a20778cb-37c2-4b6d-85fd-6aea4007345c",
+        "6f66afd7-2d1c-4f80-8059-636d5027faf1"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "temporal",
+    "16571131339816f75b",
+    "311a8028-78d2-476a-8440-ab9ab34960c5"
+  ]
+}

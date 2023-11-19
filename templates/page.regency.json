@@ -1,0 +1,137 @@
+{
+  "sections": {
+    "banner": {
+      "type": "d-banner",
+      "custom_css": [
+        ".icono-tienda {display: none;}"
+      ],
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/IMG_1_-_DESKTOP.png",
+        "imagen_movil": "shopify:\/\/shop_images\/IMG_1_-_MOBILE.png",
+        "text_up": "",
+        "text_down": ""
+      }
+    },
+    "ae16c835-caf6-4ca6-8f98-a79a1a72e236": {
+      "type": "section-titles-col-what",
+      "settings": {
+        "collection_title": "CONTEMPORANEIDAD Y ELEGANCIA QUE DESLUMBRAN",
+        "collection_parrafo": "La colección Regency, viene con diseños idóneos para crear espacios actuales, exclusivos y llenos de glamour.",
+        "product": "7024896",
+        "image_1_desktop": "shopify:\/\/shop_images\/VIDEO_31003e05-6b33-4fce-a2e5-538a297324df.png",
+        "url_whatsapp": "https:\/\/bit.ly\/3NOxAbO",
+        "color_butt_wha": "#808080"
+      }
+    },
+    "61498e21-58c7-4634-8c27-31af28b06203": {
+      "type": "section-titles-col-img",
+      "settings": {
+        "collection_title": "",
+        "collection_parrafo": "Muebles revestidos de materiales que resplandecen por sus brillos sutiles, son textiles de alta suavidad.",
+        "product": "7025404",
+        "image_1_desktop": "shopify:\/\/shop_images\/IMG_3.png"
+      }
+    },
+    "5ae707eb-55dc-46ab-a2f6-670b839105ca": {
+      "type": "section-img-3-col",
+      "settings": {
+        "imagen_link1": "shopify:\/\/shop_images\/3_143286b0-79f9-498e-a6e6-a54472598026.png",
+        "imagen_link2": "shopify:\/\/shop_images\/1_477aba1c-f439-4139-8846-2261f6bb170a.png",
+        "imagen_link3": "shopify:\/\/shop_images\/2_3a522b5b-b985-4293-a2e8-68f8ec7f30a3.png"
+      }
+    },
+    "3e7c67d6-9ac8-4294-a452-2c9358ea5d81": {
+      "type": "section-dual-img",
+      "settings": {
+        "text_principal": "",
+        "imagen_derecha": "shopify:\/\/shop_images\/IMG_4.1_-_DESKTOP_1.png",
+        "url_img": "https:\/\/www.jamar.com.pa\/products\/7025404",
+        "text_derecha": "Sus formas están muy en tendencia, y proporcionan mucha comodidad sin sacrificar el estilo.",
+        "imagen_izquier": "shopify:\/\/shop_images\/IMG_4.1_-_DESKTOP.png",
+        "url_img_2": "https:\/\/www.jamar.com.pa\/products\/7027156",
+        "text_izquier": "Los tonos suaves y delicados, con la exquisitez que otorgan el mármol y el champaña, se conjugan para crear ambientes versátiles. Estos contrastes dan protagonismo al hogar."
+      }
+    },
+    "07ee0f73-0aaf-4050-98fb-5800c7f818fa": {
+      "type": "section-img-backg",
+      "settings": {
+        "imagen_back": "shopify:\/\/shop_images\/07_1.png",
+        "url_img": "https:\/\/www.jamar.com.pa\/products\/7027156",
+        "imagen_link": "shopify:\/\/shop_images\/Frame_2906.png"
+      }
+    },
+    "a78fedb5-65a5-48a9-969c-af25b13310e0": {
+      "type": "collection-grid-products",
+      "blocks": {
+        "69f1c6b3-c054-4e85-9951-d60117014704": {
+          "type": "imagen",
+          "settings": {
+            "title": "Sofá 2 Ptos Berlin Velvet",
+            "imagen": "shopify:\/\/shop_images\/R1-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7025471"
+          }
+        },
+        "54d1368e-e59d-4919-abe5-f36af5abcdc5": {
+          "type": "imagen",
+          "settings": {
+            "title": "Comedor 6 Ptos Roma",
+            "imagen": "shopify:\/\/shop_images\/R2-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7024896"
+          }
+        },
+        "64a84589-75d4-461a-9d4a-92818a4ca01c": {
+          "type": "imagen",
+          "settings": {
+            "title": "Mesa Decorativa Baru",
+            "imagen": "shopify:\/\/shop_images\/R3-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7017364"
+          }
+        },
+        "791a6acf-6f01-4741-9e43-57b3ec5d646a": {
+          "type": "imagen",
+          "settings": {
+            "title": "Sofá 3 Ptos Roma",
+            "imagen": "shopify:\/\/shop_images\/R4-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7024901"
+          }
+        },
+        "97e63691-8812-4901-b586-e26d8614c188": {
+          "type": "imagen",
+          "settings": {
+            "title": "Comedor 6 Ptos Berlin",
+            "imagen": "shopify:\/\/shop_images\/R5-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7025470"
+          }
+        },
+        "2e38dc48-6aeb-4d4e-9f97-b79fa060c227": {
+          "type": "imagen",
+          "settings": {
+            "title": "Puff Celta",
+            "imagen": "shopify:\/\/shop_images\/R6-DESKTOP.webp",
+            "enlace_producto": "https:\/\/www.jamar.com.pa\/products\/7024998"
+          }
+        }
+      },
+      "block_order": [
+        "69f1c6b3-c054-4e85-9951-d60117014704",
+        "54d1368e-e59d-4919-abe5-f36af5abcdc5",
+        "64a84589-75d4-461a-9d4a-92818a4ca01c",
+        "791a6acf-6f01-4741-9e43-57b3ec5d646a",
+        "97e63691-8812-4901-b586-e26d8614c188",
+        "2e38dc48-6aeb-4d4e-9f97-b79fa060c227"
+      ],
+      "settings": {
+        "title_text": "Novedosos diseños, conformados por líneas inclinadas y apliques de madera en tonos champaña, que construyen una distinguida composición."
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "ae16c835-caf6-4ca6-8f98-a79a1a72e236",
+    "61498e21-58c7-4634-8c27-31af28b06203",
+    "5ae707eb-55dc-46ab-a2f6-670b839105ca",
+    "3e7c67d6-9ac8-4294-a452-2c9358ea5d81",
+    "07ee0f73-0aaf-4050-98fb-5800c7f818fa",
+    "a78fedb5-65a5-48a9-969c-af25b13310e0"
+  ]
+}

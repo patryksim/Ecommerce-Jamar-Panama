@@ -1,0 +1,134 @@
+@font-face {
+  font-family: "Geomanist Regular";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Regular.otf");
+}
+@font-face {
+  font-family: "Geomanist Bold";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Bold.otf");
+}
+@font-face {
+  font-family: "Geomanist Medium";
+  src: url("https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Medium.otf");
+}
+.content-three-img {
+  padding: 60px 106px 0px 106px;
+  width: 100%;
+}
+.content-dual-img {
+  padding: 60px 106px 0px 106px;
+  width: 100%;
+  margin-bottom: -28px;
+}
+#dual-desktop {
+  display: flex;
+  width: 100%;
+}
+#dual-desktop-2 {
+  display: flex;
+  width: 100%;
+}
+#dual-mobile {
+  display: none;
+}
+.dual-img-1 {
+  margin-right: 44px;
+}
+.dual-img-1 p {
+  margin-top: 90px;
+  font-family: "Geomanist Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 141%;
+  color: #4e4e4e;
+  text-align: start;
+}
+.dual-img-2 {
+  margin-left: 44px;
+}
+.dual-img-2 p {
+  margin-bottom: 90px;
+  font-family: "Geomanist Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 141%;
+  color: #4e4e4e;
+  margin-top: 40px;
+  text-align: start;
+}
+.dual-text-mobile p {
+  font-family: "Geomanist Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 141%;
+  text-align: center;
+  color: #4e4e4e;
+  padding: 0px 32px;
+}
+.dual-text-mobile p:nth-child(1) {
+  padding-top: 32px;
+  margin: 0;
+}
+.dual-text-mobile p:nth-child(2) {
+  padding-top: 32px;
+  margin-bottom: 32px;
+}
+.text-top-principal {
+  display: flex;
+  justify-content: center;
+}
+.text-top-principal p {
+  font-family: "geomanist";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  width: 85%;
+  color: #4e4e4e;
+  line-height: 141%;
+  text-align: center;
+  margin-top: 47px;
+}
+@media (max-width: 800px) {
+  .text-top-principal p {
+    font-size: 16px;
+    margin-top: 32px;
+  }
+  #dual-desktop {
+    display: none;
+  }
+  #dual-desktop-2 {
+    display: block;
+  }
+  #dual-mobile {
+    display: block;
+  }
+  .dual-img-1 {
+    margin-right: 0px;
+  }
+  .dual-img-2 {
+    margin-left: 0px;
+    display: grid;
+  }
+  .content-dual-img {
+    padding: 32px 0px 0px 0px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  .content-three-img {
+    padding: 32px 0px 0px 0px;
+    width: 100%;
+  }
+  .dual-img-1 p {
+    margin: 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .dual-img-2 p {
+    order: 2;
+    margin: 32px 32px 0px 32px;
+    font-size: 16px;
+    text-align: center;
+  }
+}

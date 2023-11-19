@@ -1,0 +1,105 @@
+<style>
+ 
+.cta-btn--portal {
+    width: 158px;
+    height: 42px;
+    left: 844px;
+    top: 3799.04px;
+
+    background: #404B5A;
+    border-radius: 48px;
+    
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 122%;
+    /* identical to box height, or 20px */
+
+    text-align: center;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}
+  
+  
+</style>
+
+<br><br><br>
+<div class="container bg-extra-light-gray mb-4 mb-lg-0">
+<div class="row {% if section.settings.reverse == true %} flex-row-reverse {%endif%}">
+            <div class="col-lg-6 m-0 p-0">
+                <a href=""><img class="img-fluid" src="{{section.settings.imagen | image_url: width:auto, format: 'pjpg'}}" alt="" data-rimg="lazy" loading="lazy"></a>
+            </div>
+            <div class="col-lg-6 m-0 p-4 ps-5">
+                <h6 class="mb-4 title-portal-cliente">{{section.settings.titulo}}</h6>
+              {% for block in section.blocks %}
+              <p class="description-portal-cliente">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="me-2">
+                        <path d="M22.7235 10.8687V11.868C22.7222 14.2102 21.9637 16.4893 20.5613 18.3653C19.1589 20.2413 17.1876 21.6136 14.9414 22.2778C12.6953 22.9419 10.2947 22.8621 8.09758 22.0504C5.90047 21.2387 4.02462 19.7385 2.74978 17.7736C1.47495 15.8086 0.869432 13.4843 1.02354 11.1471C1.17766 8.80991 2.08314 6.58516 3.60495 4.80465C5.12676 3.02413 7.18336 1.78325 9.46802 1.26706C11.7527 0.750868 14.143 0.987032 16.2825 1.94033" stroke="#404B5A" stroke-width="1.67104" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M22.7235 3.17896L11.8618 14.0516L8.60327 10.793" stroke="#404B5A" stroke-width="1.67104" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    {{block.settings.textoimage}}
+                </p>        
+              {% endfor %}
+                
+                <a class="cta-btn--portal d-flex justify-content-center align-items-center text-decoration-none text-white" href="{{section.settings.enlace}}" target="_blank" rel="noopener noreferrer">
+                   {{section.settings.textobtn}} 
+                </a>
+            </div>
+        </div>
+ </div>
+
+{% schema %}
+  {
+  "name": "Contenedor 2 Col Feat",
+  "tag":"section",
+  "class":"mb-md-5",
+  "settings": [
+	{
+      "type": "checkbox",
+      "id": "reverse",
+      "label": "Ivertir orden de columnas"
+      },
+	  {
+      "type": "text",
+      "id": "titulo",
+      "label": "Colocar titulo"
+      },
+		{
+      "type": "text",
+      "id": "textobtn",
+      "label": "Colocar texto del boton"
+      },
+		{
+      "type": "url",
+      "id": "enlace",
+      "label": "Colocar enlace"
+      },
+		{
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Colocar imagen"
+      }
+      ],
+    "blocks": [
+    {
+        "name" : "Tarjeta",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto bajo la imagen"
+        }
+        ]
+    }
+
+    ],
+      "presets": [
+      {
+      "name": "Contenedor 2 Col Feat",
+      "category": "Servicios"
+      }
+    ]
+  }
+{% endschema %}

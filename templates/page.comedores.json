@@ -1,0 +1,319 @@
+{
+  "sections": {
+    "slider": {
+      "type": "static-header",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1647467930ff098b72": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "00c2f728-c6e4-4569-8db5-b12549684aa1": {
+      "type": "carrusel-dormitorios",
+      "blocks": {
+        "6c298e97-7f4e-4985-b9f5-2e5e78359504": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Banner-Landing-Comedores-PC-1_9b8665a8-23f3-457e-bce0-9156453bd33e.webp",
+            "image_mobile": "shopify:\/\/shop_images\/Banner-Landing-Comedores-Mobile-1_b8ec5a1c-390d-4887-a053-53b7a39b4baa.webp",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c298e97-7f4e-4985-b9f5-2e5e78359504"
+      ],
+      "settings": {
+        "hover": true,
+        "hover_image": "shopify:\/\/shop_images\/Banner-Landing-Comedores-PC-1-b_948ec68c-331d-4bd8-80ed-309b91a67f49.webp",
+        "hover_width": 5,
+        "hover_opacity": 1,
+        "hover_title": "COMEDORES CON DISEÑOS EXCLUSIVOS",
+        "hover_text": "Disfruta de momentos inolvidables en tu hogar con un comedor moderno. Descubre nuestros muebles con diseños exclusivos, especialmente adaptados a tus espacios."
+      }
+    },
+    "1662472577f59be7aa": {
+      "type": "d-collection-cat-grid",
+      "blocks": {
+        "ab51a9b3-39f1-4ff7-b5fb-f317611e6a8b": {
+          "type": "ver-todos",
+          "settings": {
+            "texto": "VER TODOS",
+            "ver_todos_link": "https:\/\/www.jamar.com.pa\/collections\/comedores\/comedores_comedores"
+          }
+        },
+        "50bed797-e802-4811-b35b-c863ae1e3746": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/comedor-4-puestos-pa-25sep.webp",
+            "textoimage": "COMEDORES 4 PUESTOS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/comedores\/tamano_4-puestos"
+          }
+        },
+        "8e734253-2a16-4e30-b771-7a523e0f7100": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/comedor-6-puestos-pa-25sep.webp",
+            "textoimage": "COMEDORES 6 PUESTOS",
+            "textpdesc": "",
+            "show": false,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/comedores\/tamano_6-puestos"
+          }
+        },
+        "fc84d331-1abf-4527-adf6-46baf21ce541": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/bife-pa-25sep.webp",
+            "textoimage": "BUFETERAS",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "https:\/\/www.jamar.com.pa\/collections\/comedores\/comedores_bifes"
+          }
+        },
+        "36d0d2cb-9eea-48e5-a907-97ada599a4a8": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Rectangle_2118.png",
+            "textoimage": "VITRINAS DE COMEDOR",
+            "textpdesc": "",
+            "show": true,
+            "enlace": "\/collections\/comedores\/comedores_vitrinas"
+          }
+        }
+      },
+      "block_order": [
+        "ab51a9b3-39f1-4ff7-b5fb-f317611e6a8b",
+        "50bed797-e802-4811-b35b-c863ae1e3746",
+        "8e734253-2a16-4e30-b771-7a523e0f7100",
+        "fc84d331-1abf-4527-adf6-46baf21ce541",
+        "36d0d2cb-9eea-48e5-a907-97ada599a4a8"
+      ],
+      "settings": {
+        "title_style_cat": "Encuentra el comedor de tus sueños: opciones exclusivas para tu hogar",
+        "parr_style_cat": "",
+        "imagen_sale": "shopify:\/\/shop_images\/outlet-jamar-pa.svg",
+        "button_sale_link": "https:\/\/www.jamar.com.pa\/collections\/ofertas\/comedores"
+      }
+    },
+    "122084a3-77da-490f-856e-73ee77aac202": {
+      "type": "d-grid-ambientes-home",
+      "disabled": true,
+      "settings": {
+        "title": "Diseños en tendencia para <b>tu comedor<\/b>",
+        "text": "Crea ambientes únicos para tu comedor con piezas exclusivas, llévalo todo o escoge los productos que necesites. Ármalo como prefieras.",
+        "product_1": "",
+        "product_2": "",
+        "product_3": "",
+        "product_4": ""
+      }
+    },
+    "142f9e68-7263-4549-9c78-0d5d59bd9ea9": {
+      "type": "colores-home",
+      "blocks": {
+        "024bb13b-e624-44f1-aa13-f1d5b475d52f": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-1-comedor-desk.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-1-comedor-mob.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-1_6a2d54ec-6f91-4bdc-9f17-34a0e319b9a6.png",
+            "product": "7020626"
+          }
+        },
+        "0b025bc4-da9f-4f1d-b2ed-57596ec0e7a5": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-2-comedor-desk.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-2-comedor-mob.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-2_b67957ca-e9a9-4bba-bd99-46bf0ccf0d4e.png",
+            "product": "7019474"
+          }
+        },
+        "0dac2cce-3dfe-4fe3-bcca-3837971f0f65": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Colores-3-comedor-desk.png",
+            "image_mobile": "shopify:\/\/shop_images\/Colores-3-comedor-mob.png",
+            "indicator": "shopify:\/\/shop_images\/Indicador-3_8f111fd1-9945-4f38-a56a-1543a87b41f7.png",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "024bb13b-e624-44f1-aa13-f1d5b475d52f",
+        "0b025bc4-da9f-4f1d-b2ed-57596ec0e7a5",
+        "0dac2cce-3dfe-4fe3-bcca-3837971f0f65"
+      ],
+      "settings": {
+        "title": "<b>El comedor<\/b> de tus sueños en el color de tu preferencia",
+        "text": "Añade un toque de estilo único a tu comedor. Elige tu color favorito y adáptalo a tu ambiente.",
+        "link": "shopify:\/\/collections\/comedores",
+        "button_text": "Ver comedores"
+      }
+    },
+    "1662472978b715a6d6": {
+      "type": "d-credijamar-home",
+      "settings": {
+        "bg-credijamar": "shopify:\/\/shop_images\/formulario-comedor-credijamar.webp"
+      }
+    },
+    "164746915746c5159b": {
+      "type": "d-grid-style-cat2",
+      "blocks": {
+        "120dcaa7-9de1-4101-abf2-500a01f91b8e": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-4.png",
+            "textoimage": "Madera 100% Roble",
+            "parrimage": "Es la madera de más alta durabilidad. Esta cuenta con un secado que reduce la humedad, y un tratamiento especial que la inmuniza ante plagas.",
+            "linkimage": "",
+            "show": false
+          }
+        },
+        "d7d36478-7ee9-4dba-ab75-2c7323a400b7": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-2.png",
+            "textoimage": "Acabado glass",
+            "parrimage": "Esta tecnología aporta a la superficie del mueble la belleza del vidrio y su brillo, pero con toda la seguridad para que se proteja y no sea fácil de romper.",
+            "linkimage": "",
+            "show": false
+          }
+        },
+        "449bb960-4036-49f7-8ef5-218cde8d6405": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Sello-3.png",
+            "textoimage": "Tapizado Eurolino",
+            "parrimage": "Una tecnología en nuestro textil, que aporta mayor resistencia al mueble, con propiedades antifluidos para mayor durabilidad y fácil limpieza.",
+            "linkimage": "",
+            "show": false
+          }
+        }
+      },
+      "block_order": [
+        "120dcaa7-9de1-4101-abf2-500a01f91b8e",
+        "d7d36478-7ee9-4dba-ab75-2c7323a400b7",
+        "449bb960-4036-49f7-8ef5-218cde8d6405"
+      ],
+      "settings": {
+        "title_style_cat": "Contamos tecnologías innovadoras que garantizan la durabilidad de tus <b>comedores<\/b>",
+        "parr_style_cat": ""
+      }
+    },
+    "1647468407a1ba6d33": {
+      "type": "dynamic-banner-colch",
+      "blocks": {
+        "4a81995d-fd19-4e10-aeb4-39fbcd14dcec": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/promo-comedor-jun-01.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7018557"
+          }
+        },
+        "46d6b231-348c-40b7-ab64-5b23d81c0d14": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/promo-comedor-jun-02.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7020400"
+          }
+        },
+        "827ac2c1-062b-470f-bc63-036ba73a898e": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/promo-comedor-jun03.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7025928"
+          }
+        },
+        "52b4d3e8-f219-44aa-a4d2-ce0726a894a9": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/promo-comedor-jun-04.webp",
+            "enlace": "https:\/\/www.jamar.com.pa\/products\/7022289"
+          }
+        }
+      },
+      "block_order": [
+        "4a81995d-fd19-4e10-aeb4-39fbcd14dcec",
+        "46d6b231-348c-40b7-ab64-5b23d81c0d14",
+        "827ac2c1-062b-470f-bc63-036ba73a898e",
+        "52b4d3e8-f219-44aa-a4d2-ce0726a894a9"
+      ],
+      "disabled": true,
+      "settings": {
+        "main_title": "Encuentra el comedor perfecto al mejor precio para estrenar",
+        "main_description": "Tu búsqueda llega a su fin. Descubre las mejores opciones para que tus reuniones familiares giren en torno a un comedor adecuado y cómodo para todos."
+      }
+    },
+    "1647468227a2ab185e": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "Descubre más opciones para tu <b>comedor<\/b>",
+        "main_description": "Compártenos tus datos para recibir más información de nuestros muebles",
+        "banner_form": "shopify:\/\/shop_images\/Comedor-formulario-jamar.webp",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-start",
+        "etiqueta": "form_landing_comedores",
+        "fondo_boton": "#404b5a",
+        "color_letra_boton": "#ffffff"
+      }
+    },
+    "053acd16-f2c0-4e45-89d3-cb958880ac90": {
+      "type": "blog-home",
+      "blocks": {
+        "template--16159879463111__053acd16-f2c0-4e45-89d3-cb958880ac90-16758038363ce19baa-0": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Bolg-comedor-1.png",
+            "title": "El comedor blanco y su fácil limpieza",
+            "text": "El comedor es el espacio donde nos podemos reunir con nuestra familia y amigos, conversar sobre diversos temas, contar largas historias...",
+            "link": "shopify:\/\/blogs\/aprende-sobre-tu-mueble\/el-comedor-blanco-y-su-facil-limpieza",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        },
+        "5dd85b02-146a-49db-abb9-1d68b00f087b": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/Bolg-comedor-2.png",
+            "title": "Comedores para espacios pequeños",
+            "text": "Probablemente elegir los muebles del comedor cuando se cuenta con una zona estrecha acaba siendo un reto. Por eso queremos ayudarte...",
+            "link": "shopify:\/\/blogs\/noticias\/comedores-comodos-para-espacios-pequenos",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        }
+      },
+      "block_order": [
+        "template--16159879463111__053acd16-f2c0-4e45-89d3-cb958880ac90-16758038363ce19baa-0",
+        "5dd85b02-146a-49db-abb9-1d68b00f087b"
+      ],
+      "settings": {
+        "title": "Nuestros <b>expertos en comedores<\/b> te aconsejan",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "1647467930ff098b72",
+    "00c2f728-c6e4-4569-8db5-b12549684aa1",
+    "1662472577f59be7aa",
+    "122084a3-77da-490f-856e-73ee77aac202",
+    "142f9e68-7263-4549-9c78-0d5d59bd9ea9",
+    "1662472978b715a6d6",
+    "164746915746c5159b",
+    "1647468407a1ba6d33",
+    "1647468227a2ab185e",
+    "053acd16-f2c0-4e45-89d3-cb958880ac90"
+  ]
+}

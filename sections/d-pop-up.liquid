@@ -1,0 +1,46 @@
+{{ 'pop-up.css' | asset_url | stylesheet_tag  }}
+
+<div class="fixed-container-popup" data-popup_show="false">
+    <div class="container-popup-form">
+        <button class="close-btn" id="close">
+            <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.50001 10.6083L5.62084 14.4875C5.4757 14.6326 5.29098 14.7052 5.06667 14.7052C4.84237 14.7052 4.65765 14.6326 4.51251 14.4875C4.36737 14.3424 4.2948 14.1576 4.2948 13.9333C4.2948 13.709 4.36737 13.5243 4.51251 13.3792L8.39168 9.50001L4.51251 5.62084C4.36737 5.4757 4.2948 5.29098 4.2948 5.06667C4.2948 4.84237 4.36737 4.65765 4.51251 4.51251C4.65765 4.36737 4.84237 4.2948 5.06667 4.2948C5.29098 4.2948 5.4757 4.36737 5.62084 4.51251L9.50001 8.39168L13.3792 4.51251C13.5243 4.36737 13.709 4.2948 13.9333 4.2948C14.1576 4.2948 14.3424 4.36737 14.4875 4.51251C14.6326 4.65765 14.7052 4.84237 14.7052 5.06667C14.7052 5.29098 14.6326 5.4757 14.4875 5.62084L10.6083 9.50001L14.4875 13.3792C14.6326 13.5243 14.7052 13.709 14.7052 13.9333C14.7052 14.1576 14.6326 14.3424 14.4875 14.4875C14.3424 14.6326 14.1576 14.7052 13.9333 14.7052C13.709 14.7052 13.5243 14.6326 13.3792 14.4875L9.50001 10.6083Z" fill="black"/>
+                </svg>
+                
+        </button>
+        <picture>
+            <source srcset="{{section.settings.imagen_popup | img_url: '500x360', format: 'pjpg' }}" media='(max-width: 600)' type='image/jpeg'>
+            <img src="{{section.settings.imagen_popup | img_url: '500x360', format: 'pjpg' }}" alt="{{section.settings.imagen_popup.alt}}" data-rimg="lazy" loading="lazy"> 
+        </picture>
+        {% render 's-pop-up'%}
+    </div>
+</div>
+
+
+
+{{ 'pop-up.js' | asset_url | script_tag }}
+
+
+{% schema %}
+  {
+    "name": "PopUp - Jamar Panama",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"imagen_popup",
+        "label": "Seleccionar imagen "
+      }
+    ],
+     "presets": [
+     {
+       "name": "PopUp - Jamar Panama"       
+     }
+   ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

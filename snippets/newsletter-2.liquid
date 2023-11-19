@@ -1,0 +1,168 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'prospect' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+<div class="newsletter">
+  {% form 'customer', id: form_id %}
+    {% if form.posted_successfully? %}
+      <p class="newsletter-success">
+        {{ 'general.newsletter.success' | t }}
+      </p>
+    {% else %}
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="{{ newsletter_tags }}"
+      >
+
+      <div class="form-fields-inline">
+        <div class="form-field name">
+          <input
+                 class="form-field-input form-field-text"
+                 name="contact[note][Nombre]"
+                 id="{{ input_name }}"
+                 type="text"
+                 aria-label="nombre"
+                 >
+
+          <label
+                 class="form-field-title"
+                 for="{{ input_name }}"
+                 >
+            Nombre *
+          </label>
+        </div>
+        <div class="form-field tel">
+          <input
+                 class="form-field-input form-field-text"
+                 name="contact[note][Nombre]"
+                 id="{{ input_tel }}"
+                 type="tel"
+                 aria-label="telefono"
+                 >
+
+          <label
+                 class="form-field-title"
+                 for="{{ input_tel }}"
+                 >
+            Telefono *
+          </label>
+        </div>
+        <div class="form-field email">
+          <input
+            class="form-field-input form-field-text"
+            name="contact[email]"
+            id="{{ input_id }}"
+            type="email"
+            aria-label="{{ 'general.newsletter.placeholder' | t }}"
+          >
+
+          <label
+            class="form-field-title"
+            for="{{ input_id }}"
+          >
+            {{ 'general.newsletter.placeholder' | t }}
+          </label>
+        </div>
+        <div class="form-field direccion">
+          <span class="form-field-select-wrapper">
+            <select 
+               class="form-field-select"
+                id="input_address"
+                name="contact[note][Dirección]"
+                type="text"
+                value="{{ value }}">
+              {{ search_filter_content_first }}
+                <option disabled selected></option>
+                <option value="Bocas del Toro">Bocas del Toro</option>
+                <option value="Coclé">Coclé</option>
+                <option value="Colón">Colón</option>
+                <option value="Chiriquí">Chiriquí</option>
+                <option value="Darién">Darién</option>
+                <option value="Herrera">Herrera</option>
+                <option value="Los Santos">Los Santos</option>
+                <option value="Panamá">Panamá</option>
+                <option value="Veraguas">Veraguas</option>
+                <option value="Panamá Oeste">Panamá Oeste</option>
+              {{ search_filter_content_rest }}
+            </select>
+            {% render 'icon-chevron-down-small' %}
+          </span>
+          <label class="form-field-title" for="address">
+            ¿Donde vives?
+          </label>
+        </div>
+        <div class="form-field coleccion">
+          <span class="form-field-select-wrapper">
+            <select 
+               class="form-field-select"
+                id="input_category"
+                name="contact[note][Lo que le interesa]"
+                type="text"
+                value="{{ value }}">
+              {{ search_filter_content_first }}
+                <option disabled selected></option>
+                <option value="Recámaras">Recámaras</option>
+                <option value="Comedores">Comedores</option>
+                <option value="Salas">Salas</option>
+                <option value="Colchones y Bases">Colchones y Bases</option>
+                <option value="Juvenil e Infantil">Juvenil e Infantil</option>
+                <option value="Muebles para TV y Escritorios">Muebles para TV y Escritorios</option>
+              {{ search_filter_content_rest }}
+            </select>
+            {% render 'icon-chevron-down-small' %}
+          </span>
+          <label class="form-field-title" for="category">
+            ¿En qué producto estas interesado?
+          </label>
+        </div>
+
+
+        <div class="form-field boton">
+          <button
+            name="subscribe"
+            type="submit"
+            {% comment %}
+            /**********************************************************
+            *             RETAIL ROCKET CONTENIDO PERSONALIZADO
+            *                   PATRYKSIM@GMAIL.COM
+            **********************************************************/
+            {% endcomment %}
+            onclick="try {rrApi.setEmail($('#newsletter_email').val());}catch(e){}"     
+          >
+            {{ 'general.newsletter.subscribe' | t }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  {% endform %}
+</div>
+
+{% comment %}
+/*****************************************************
+*			 TAGS PARA WEB RECOMENDATION
+*	            PATRYKSIM@GMAIL.COM
+******************************************************/
+{% endcomment %}
+
+<script>
+  _etmc.push(["setOrgId", "515007278"]);
+  _etmc.push(["setUserInfo", {
+    "email": document.querySelector("#newsletter_email").value,
+    /*"details": {
+      "sexo": "INSERT_VALUE_HERE",
+      "edad": "INSERT_VALUE_HERE",
+      "estado civil": "INSERT_VALUE_HERE"
+    }*/
+  }]);
+  _etmc.push(["trackPageView"]);
+</script>

@@ -1,0 +1,89 @@
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center text-gris-jamar">{{ section.settings.title }}</h2>
+      <p class="text-gris-jamar mt-2 text-center">{{ section.settings.text }}</p>
+    </div>
+  </div>
+  <div class="row overflow-auto flex-nowrap contenedor-scroll pb-4">
+    {% if section.settings.by-colection == true %}
+      {% for product in section.settings.collection.products limit: 10  %}
+        <div class="col-11 col-md-3 ps-1 pe-1">
+          {% render "tarjeta-producto", producto: {{product}} %}
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for product in section.settings.listado  %}
+        <div class="col-11 col-md-3 ps-1 pe-1">
+          {% render "tarjeta-producto", producto: {{product}} %}
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% comment %}
+/**********************************************************
+          VARIABLE PARA EL SERVICIO DE PRECIO
+                 PATRYKSIM@GMAIL.COM
+**********************************************************/
+{% endcomment %}
+
+{% if section.settings.by-colection == true %}
+  {% for product in section.settings.collection.products %}
+    <script>
+      skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+    </script>
+  {% endfor %}
+{% else %}
+  {% for product in section.settings.listado.products %}
+    <script>
+      skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+    </script>
+  {% endfor %}
+{% endif %}
+
+{% render 'product-grid-fee-alt' %}
+
+{% schema %}
+{
+  "name": "Scroll coleccion o lista",
+  "tag": "section",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texto"
+    },
+    {
+      "type": "checkbox",
+      "id": "by-colection",
+      "label": "Por coleccion",
+      "info": "Aqui se muestran los productos de una coleccion",
+      "default": true
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Seleccionar Coleccion"
+    },
+    {
+      "type": "product_list",
+      "id": "listado",
+      "label": "Seleccionar productos",
+      "limit":14
+    }
+  ],
+  "presets": [
+     {
+       "name": "Scroll coleccion o lista"       
+     }
+   ]
+}
+{% endschema %}

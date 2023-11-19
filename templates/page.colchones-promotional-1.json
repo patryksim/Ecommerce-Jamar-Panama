@@ -1,0 +1,375 @@
+{
+  "sections": {
+    "slider": {
+      "type": "static-header",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "1645477617ca9f773e": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "164564136839d739fa": {
+      "type": "d-grid-main",
+      "blocks": {
+        "5dc91289-3c49-4bff-bb15-fea99e716998": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Colchon-Landing-promo-PC-01.jpg",
+            "imagenmovil": "shopify:\/\/shop_images\/Colchon-Landing-promo-MO-01.jpg",
+            "textoimage": "El Colchón que buscas",
+            "parraforefuerzo": "al precio que sueñas...",
+            "textoenlace": "¡LO QUIERO!",
+            "enlaceslide": "shopify:\/\/collections\/colchones-y-bases",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "fb49081a-4065-4be5-89a5-7fc82f2c0a84": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Colchon-Landing-promo-PC-02.jpg",
+            "imagenmovil": "shopify:\/\/shop_images\/Colchon-Landing-promo-MO-02.jpg",
+            "textoimage": "Los favoritos para",
+            "parraforefuerzo": "noches inolvidables",
+            "textoenlace": "¡LO QUIERO!",
+            "enlaceslide": "https:\/\/tarjetizacion.jamar.com.pa\/form-one?utm_source=jamar&utm_medium=ecommerce",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "eff62742-94e2-4a12-963b-456231025f4c": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/Colchon-4.jpg",
+            "imagenmovil": "shopify:\/\/shop_images\/Colchon-4-movil.jpg",
+            "textoimage": "Variedad y calidad para",
+            "parraforefuerzo": "garantizar un buen descanso",
+            "textoenlace": "¡LO QUIERO!",
+            "enlaceslide": "shopify:\/\/products\/7017469",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        }
+      },
+      "block_order": [
+        "5dc91289-3c49-4bff-bb15-fea99e716998",
+        "fb49081a-4065-4be5-89a5-7fc82f2c0a84",
+        "eff62742-94e2-4a12-963b-456231025f4c"
+      ],
+      "settings": {
+        "clase_personalizada": "Doler ipsum dolor sit amet consectetur adipiscing",
+        "mostrarcap": false
+      }
+    },
+    "16593810697a0dce1f": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<div class=\"mt-5\"> <\/div>"
+      }
+    },
+    "164432342796fda63f": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "<b> Súper ofertas<\/b> que mejoran tu descanso",
+        "subtitle": "<span><\/span>",
+        "icono_grid": "shopify:\/\/shop_images\/icon-title-percent.png",
+        "title_tag": "h2"
+      }
+    },
+    "1644261516eceb6d38": {
+      "type": "dynamic-featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "ss",
+        "layout": "slideshow",
+        "collection": "colchones-y-bases",
+        "product_count": 10,
+        "cta_label": "",
+        "cta_button_style": "secondary"
+      }
+    },
+    "1644323507175ea239": {
+      "type": "dynamic-banner-colch",
+      "blocks": {
+        "2ee6e3bd-43ac-4010-a6e2-78b4ee23e944": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-dreamopedic.jpg",
+            "enlace": "shopify:\/\/products\/024148"
+          }
+        },
+        "367af710-6806-46cc-b366-b519e1138bbc": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/dr-dream-semi-ortopedico.jpg",
+            "enlace": "shopify:\/\/products\/024156"
+          }
+        },
+        "e0bf8e66-ebf6-4624-8fa5-ef3df093f2e4": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/desktop_20.jpg",
+            "enlace": "shopify:\/\/products\/7015019"
+          }
+        },
+        "7c098dbf-ac26-45da-a34b-0bc80a7a47d8": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/Colchon_Caitlyn.jpg",
+            "enlace": "shopify:\/\/products\/7015000"
+          }
+        }
+      },
+      "block_order": [
+        "2ee6e3bd-43ac-4010-a6e2-78b4ee23e944",
+        "367af710-6806-46cc-b366-b519e1138bbc",
+        "e0bf8e66-ebf6-4624-8fa5-ef3df093f2e4",
+        "7c098dbf-ac26-45da-a34b-0bc80a7a47d8"
+      ],
+      "settings": {
+        "main_title": "Tu colchón, tu presupuesto, tu <b>descanso<\/b>",
+        "main_description": "Encuentra en Jamar el colchón que necesitas, con el precio que buscas. Descubre nuestra selección de colchones para que renueves tu descanso."
+      }
+    },
+    "1644324604fdc784b2": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "Tu descanso estará en las manos y <b>productos correctos.<\/b>",
+        "main_description": "",
+        "banner_form": "shopify:\/\/shop_images\/colchon-formulario.png",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": "landing_promo_colchones"
+      }
+    },
+    "1644324710c35fdcfe": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "Tus <b>noches serán inolvidables<\/b> con estas opciones",
+        "subtitle": "Hemos seleccionado estas opciones para que renueves tu descanso. Son las opciones favoritas de nuestros expertos y clientes.",
+        "icono_grid": "shopify:\/\/shop_images\/icon-title-nigth.png",
+        "title_tag": "h2"
+      }
+    },
+    "164432471362b4bd94": {
+      "type": "dynamic-featured-collection",
+      "settings": {
+        "title": ".",
+        "layout": "slideshow",
+        "collection": "muebles-para-tv-y-escritorios",
+        "product_count": 10,
+        "cta_label": "",
+        "cta_button_style": "primary"
+      }
+    },
+    "164432495767a41505": {
+      "type": "dynamic-banner-colch",
+      "disabled": true,
+      "blocks": {
+        "bc1806e1-8d00-401d-9aff-61386d5752c6": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-precio.jpg",
+            "enlace": ""
+          }
+        },
+        "90efe07c-655a-4395-ae47-6f5432c1c153": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-precio.jpg",
+            "enlace": ""
+          }
+        },
+        "cedc2018-059f-4138-af6d-9614391a9d7e": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-precio.jpg",
+            "enlace": ""
+          }
+        },
+        "3b9135d5-e9b5-44d6-9b0f-d77b630f43a4": {
+          "type": "imagenes",
+          "settings": {
+            "coltitle": "shopify:\/\/shop_images\/colchon-precio.jpg",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "bc1806e1-8d00-401d-9aff-61386d5752c6",
+        "90efe07c-655a-4395-ae47-6f5432c1c153",
+        "cedc2018-059f-4138-af6d-9614391a9d7e",
+        "3b9135d5-e9b5-44d6-9b0f-d77b630f43a4"
+      ],
+      "settings": {
+        "main_title": "Súper Combos:<br><b> mayor ahorro y mayor descanso<\/b>",
+        "main_description": "En combo todo es mejor, por eso te ofrecemos las mejores opciones para que complementes la compra de tu colchón y así el descanso nunca falte ni en tu hogar ni en tu familia."
+      }
+    },
+    "1644261255a86372e7": {
+      "type": "section-colchones-promo1",
+      "settings": {
+        "main_title": "Doler ipsum dolor sit amet consectetur adipiscing",
+        "title_precio": "El Colchón que buscas al precio que sueñas",
+        "parrafo_precio": "En Jamar encuentras un colchón para cada necesidad y al precio que mejor se acomode a tu presupuesto. Dale a tu cuerpo el descanso que se merece con esta selección de colchones.",
+        "imagen_precio": "shopify:\/\/shop_images\/colchon-precio.jpg",
+        "banner_form": "shopify:\/\/shop_images\/banner-contact-promo.png",
+        "tamano_title": "Tamaños de nuestros colchones",
+        "colfdeed": "juvenil-e-infantil"
+      }
+    },
+    "1644326378323a31ed": {
+      "type": "dynamic-quote-colc",
+      "disabled": true,
+      "settings": {
+        "main_title": "Apuntes de <b>  Descanso y Salud <\/b>",
+        "main_description": "Descubre los",
+        "feature_image": "shopify:\/\/shop_images\/recomendation-para-seo-6.png"
+      }
+    },
+    "1644326505cc05b07b": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "<b> Te acompañamos  <\/b>en tu compra",
+        "subtitle": "Sabemos que elegir el colchón ideal según tus necesidades es importante a la hora de la compra, por eso, contamos con expertos del descanso dispuestos a ayudarte. Tenemos múltiples opciones para asesorarte.",
+        "icono_grid": "shopify:\/\/shop_images\/icon-title-cooperate.png",
+        "title_tag": "h2"
+      }
+    },
+    "164432654981bf0c82": {
+      "type": "dynamic-contact-bub",
+      "blocks": {
+        "d50a694a-888b-49f5-af1a-f8153c720d2b": {
+          "type": "imagenes",
+          "settings": {
+            "icono": "shopify:\/\/shop_images\/icon-compra-llamando_0eaa3d0d-2d55-40bb-ae0f-7f47d79d7387.png",
+            "titulo": "Compra llamando",
+            "info": "al 205-6500",
+            "enlace": "tel:2056500"
+          }
+        },
+        "095e9645-af8f-4411-9f42-e5ab5976be09": {
+          "type": "imagenes",
+          "settings": {
+            "icono": "shopify:\/\/shop_images\/icon-asesoria-whatsapp.png",
+            "titulo": "Recibe Asesoría en línea",
+            "info": "por WhatsApp",
+            "enlace": "https:\/\/bit.ly\/3CLmjC2"
+          }
+        },
+        "02a463b8-e1a5-41ee-bdd8-c7187b550e70": {
+          "type": "imagenes",
+          "settings": {
+            "icono": "shopify:\/\/shop_images\/icon-expertos-te-asesoran.png",
+            "titulo": "Expertos te asesoran",
+            "info": "Agendar tu cita virtual",
+            "enlace": "http:\/\/asesoria.jamar.com.pa\/"
+          }
+        }
+      },
+      "block_order": [
+        "d50a694a-888b-49f5-af1a-f8153c720d2b",
+        "095e9645-af8f-4411-9f42-e5ab5976be09",
+        "02a463b8-e1a5-41ee-bdd8-c7187b550e70"
+      ],
+      "settings": {
+        "main_title": "Doler ipsum dolor sit amet consectetur adipiscing",
+        "main_description": "Doler ipsum dolor sit amet consectetur adipiscing"
+      }
+    },
+    "1644327269afc251a5": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "<b>Variedad y calidad para<\/b><br> garantizar un buen descanso",
+        "subtitle": "Cuando de <a href=\"\/pages\/colchones\">colchones<\/a> se trata, en JAMAR lo tenemos todo. En nuestro portafolio encontrarás las marcas líderes en tecnología, garantía y calidad. Variedad y experiencia con las mejores opciones de financiación.",
+        "icono_grid": "shopify:\/\/shop_images\/icon-title-sleep.png",
+        "title_tag": "h2"
+      }
+    },
+    "1644344984ad989995": {
+      "type": "dynamic-logos-grid",
+      "blocks": {
+        "465a986c-30ed-4451-b731-42d2d950a2f0": {
+          "type": "imagenes",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/LOGO-DR-DREAM.png"
+          }
+        },
+        "55f79445-4742-40c2-9d04-630f8714d36a": {
+          "type": "imagenes",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/LOGO-SUITE-SLEEP_SLEEP-TEC.png"
+          }
+        },
+        "628148ff-0392-403b-9a74-4ce2e376a7d1": {
+          "type": "imagenes",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/LOGO-BEAUTYREST_2915.png"
+          }
+        }
+      },
+      "block_order": [
+        "465a986c-30ed-4451-b731-42d2d950a2f0",
+        "55f79445-4742-40c2-9d04-630f8714d36a",
+        "628148ff-0392-403b-9a74-4ce2e376a7d1"
+      ],
+      "settings": {
+        "main_title": "Doler ipsum dolor sit amet consectetur adipiscing"
+      }
+    },
+    "1644420479917b34ef": {
+      "type": "section-colchones-promo1",
+      "settings": {
+        "main_title": "Doler ipsum dolor sit amet consectetur adipiscing",
+        "title_precio": "El Colchón que buscas al precio que sueñas",
+        "parrafo_precio": "En Jamar encuentras un colchón para cada necesidad y al precio que mejor se acomode a tu presupuesto. Dale a tu cuerpo el descanso que se merece con esta selección de colchones.",
+        "tamano_title": "Tamaños de nuestros colchones",
+        "colfdeed": ""
+      }
+    },
+    "164432645749b172c4": {
+      "type": "dynamic-banner-promo",
+      "disabled": true,
+      "settings": {
+        "feature_image": "shopify:\/\/shop_images\/pagina-promocional-colchones.png",
+        "feature_movil": "shopify:\/\/shop_images\/colchon-precio.jpg"
+      }
+    },
+    "16593817417ba8f2f1": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<br><br><br>"
+      }
+    }
+  },
+  "order": [
+    "slider",
+    "1645477617ca9f773e",
+    "164564136839d739fa",
+    "16593810697a0dce1f",
+    "164432342796fda63f",
+    "1644261516eceb6d38",
+    "1644323507175ea239",
+    "1644324604fdc784b2",
+    "1644324710c35fdcfe",
+    "164432471362b4bd94",
+    "164432495767a41505",
+    "1644261255a86372e7",
+    "1644326378323a31ed",
+    "1644326505cc05b07b",
+    "164432654981bf0c82",
+    "1644327269afc251a5",
+    "1644344984ad989995",
+    "1644420479917b34ef",
+    "164432645749b172c4",
+    "16593817417ba8f2f1"
+  ]
+}

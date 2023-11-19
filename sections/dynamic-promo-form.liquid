@@ -1,0 +1,126 @@
+<br><br><br>
+<section class="container">{% comment %}Contenedor de la sección que contiene el formulario de contacto {% endcomment %}
+  <div class="row">
+    <div class="col-12">
+      <div class="row overflow-auto justify-content-center flex-column-reverse {% if section.settings.invertir_col == true  %} flex-md-row-reverse {% else %}flex-md-row {% endif %} {% if page.template_suffix == "novedades" %} formulario-novedades pb-3 pb-md-0 {% endif %}">
+        <div class="col-12 col-md-6 d-flex flex-column  justify-content-center">
+          <!--h2 class="text-md-start text-gris-jamar text-center mt-md-0 mt-2 mb-2">
+            {{ section.settings.main_title }}
+          </h2>
+          <p class="mt-0 text-md-start text-center text-gris-jamar mb-3">{{ section.settings.main_description }}</p-->
+
+          {% render 'custom-form-colchones', 
+              form_id: {{section.settings.etiqueta}}, 
+              titulo: {{section.settings.main_title}},
+              texto: {{section.settings.main_description}},
+              alignment: {{section.settings.vertical_alignment_desktop}},
+              alignment_movil: {{section.settings.vertical_alignment_movil}},
+              fondo_boton: {{section.settings.fondo_boton}},
+              color_letra_boton: {{section.settings.color_letra_boton}}
+          
+           %}  
+        </div>
+    
+        <div class="d-none col-md-6 d-md-flex justify-content-center">
+            {{ section.settings.banner_form | image_url : width: auto | image_tag: alt: 'Imagen de mueble', srcset: nil, class: 'img-fluid w-100' }}
+        </div>
+       
+        </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Formulario C.",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titulo Principal",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "main_description",
+      "label": "Descripcion",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_form",
+      "label": "Imagen destacada"
+    },
+	{	
+      "type": "checkbox",
+      "id": "invertir_col",
+      "label": "Invertir orden de columnas",
+	  "default": false
+    },
+    {
+        "type": "select",
+        "id": "vertical_alignment_movil",
+        "label": "Alineación en Móviles",
+        "options": [
+            {
+            "value": "align-items-start",
+            "label": "Izquierda"
+          },
+          {
+            "value": "align-items-end",
+            "label": "Derecha"
+        },
+            {
+            "value": "align-items-center",
+            "label": "Centro"
+          }
+        ],
+        "default": "align-items-center"
+      },
+    {
+    "type": "select",
+    "id": "vertical_alignment_desktop",
+    "label": "Alineacion en Desktop",
+    "options": [
+        {
+        "value": "align-items-md-start",
+        "label": "Izquierda"
+        },
+        {
+        "value": "align-items-md-end",
+        "label": "Derecha"
+    },
+        {
+        "value": "align-items-md-center",
+        "label": "Centro"
+        }
+    ],
+        "default": "align-items-md-center"
+    },
+    {
+      "type": "text",
+      "id": "etiqueta",
+      "label": "Etiquetar formulario"
+    },
+    {
+      "type": "color",
+      "id": "fondo_boton",
+      "label": "Fondo del boton",
+      "default": "#404b5a"
+    },
+    {
+      "type": "color",
+      "id": "color_letra_boton",
+      "label": "Letra del boton",
+      "default": "#FFFFFF"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Formulario Colch",
+    "category": "Promo Colchones"
+    }
+    ]
+    }
+
+    {% endschema %}
