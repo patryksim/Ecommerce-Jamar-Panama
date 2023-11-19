@@ -22,7 +22,6 @@ Enlaces de interes:
 - Capacitaciones de uso de temas locales y github
 - Cómo usar la linea de comandos de Shopify para ambientes locales
 - Cómo subir solo archivos especificos a nuestros temas
-- Soporte y apoyo en [slack](https://app.slack.com/huddle/T0269J2LF2N/C02FXQ1FW3G)
 
 ![Cover (1)](https://user-images.githubusercontent.com/68615071/228630529-7bd7ba30-b90f-429d-aabb-2d5ce50dca8e.jpg)
 
@@ -73,10 +72,6 @@ shopify theme push --theme numero_tema_remoto --only filenames.extesiones
 ## Pull Requests
 Considerar siempre que cada pull request que sea solicitado use una etiqueda correspondiente al trabajo que se esta realizando. De esta forma el analisis del mismo será mas agil.
 
-
-# Guías de desarrollo
-
-[Ver la documentación en la wiki.](https://github.com/JamarRepository/eccomerce-pan/wiki)
 
 ### Enlaces importantes:
 
