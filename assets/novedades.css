@@ -1,0 +1,372 @@
+.mt-80 {
+    margin-top: 80px;
+}
+
+.main-text--ofertas {
+    width: 100%;
+    height: 70vh;
+    color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 50px;
+    font-family: Lato;
+    text-decoration: none;
+    display: flex;
+}
+
+.main-text--ofertas p {
+    text-align: center;
+    letter-spacing: .27em;
+    text-transform: uppercase;
+    color: #fff;
+    align-items: center;
+    font-family: Lato;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    text-decoration: none;
+    display: flex;
+}
+
+.main-text--ofertas p:nth-child(2) {
+    letter-spacing: .03em;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+div.contenedor-alcobas {
+    /* max-width: 100%; */
+    justify-content: center;
+    gap: 20px;
+}
+
+div.contenedor-alcobas a.card-alcobas--cta {
+    max-width: 390px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+div.contenedor-alcobas a.card-alcobas--cta p {
+    letter-spacing: .02em;
+    width: 75%;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Lato;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 20px;
+}
+
+div.contenedor-alcobas a.card-alcobas--cta p:nth-child(2) {
+    font-family: Lato;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+div.contenedor-alcobas a.card-alcobas--cta button {
+    width: 145px;
+    height: 33px;
+    letter-spacing: .05em;
+    color: #fff;
+    background: #404b5a;
+    border-radius: 25px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11px;
+    padding: 8px 26px 11px;
+    font-family: Lato;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    text-decoration: none;
+    display: flex;
+    left: 133.11px;
+    border: none;
+}
+
+div.contenedor-alcobas a.card-alcobas--cta picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.row div.tarjeta-producto--mosaic {
+    height: 450px;
+    width: 275px;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3.38636px 3.38636px #0000000d, 0 4.23294px 15.2386px #5a5a5a26;
+}
+
+.row div.tarjeta-producto--mosaic div.load-animation {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: loading-tarjeta 1s linear;
+    display: flex;
+    position: absolute;
+}
+
+.row div.tarjeta-producto--mosaic div.load-animation:before {
+    content: "";
+    height: 40px;
+    width: 40px;
+    border: 3px solid #000;
+    border-radius: 50%;
+    animation: loading-tarjeta--icon .6s;
+    display: none;
+}
+
+.row div.tarjeta-producto--mosaic div.load-animation:after {
+    content: "";
+    height: 5px;
+    width: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(19px);
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details {
+    transform: translateY(-30px);
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details h4.product-title {
+    color: #404b5a;
+    margin-top: 8px;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details p.prices {
+    color: #404b5a;
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details p.prices del {
+    color: #6e7a8a;
+    margin-right: 5px;
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details img {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details p.container-cuota--mosaic {
+    color: #404b5a;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details p.container-cuota--mosaic img {
+    transform: translateY(0)translateX(6px);
+}
+
+.row div.tarjeta-producto--mosaic div.tarjeta-details p.advertising {
+    color: #00b5ad;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-family: Lato;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+}
+
+.row div.tarjeta-producto--mosaic a.btn-comprar {
+    color: #404b5a;
+    width: 128px;
+    border: 1px solid #404b5a;
+    border-radius: 28px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+    font-family: lato;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    position: absolute;
+    bottom: 15px;
+    left: 11px;
+}
+
+div.container-filters--oferta {
+    gap: 15px;
+    margin: 20px 0;
+    display: flex;
+    overflow: auto;
+    padding-bottom: 20px;
+
+}
+
+div.container-filters--oferta button.filter--action {
+    height: 40px;
+    text-transform: uppercase;
+    color: #404b5a;
+    background-color: #fff;
+    border: 0.5px solid #404b5a;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 14px;
+    display: flex;
+    white-space: nowrap;
+}
+
+div.container-filters--oferta button.active {
+    border: 1px solid #404b5a;
+    font-weight: 700;
+}
+
+div.container-filters--oferta button.filter--action img {
+    max-width: 20px;
+    margin-right: 4px;
+    padding: 0;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+    .main-text--ofertas {
+        background-position: center;
+        max-height: 410px;
+    }
+
+    .main-text--ofertas p {
+        letter-spacing: .27em;
+        font-family: Lato;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+
+    .main-text--ofertas p:nth-child(2) {
+        margin-bottom: 14px;
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .main-text--ofertas img {
+        max-width: 25px;
+    }
+
+    a.card-alcobas--cta {
+        height: 338.462px;
+        width: 330px;
+        border-radius: 4px;
+    }
+
+    .formulario-novedades {
+        background: #F6F6F6;
+    }
+}
+
+@keyframes loading-tarjeta {
+    0% {
+        background: #fff;
+    }
+
+    50% {
+        background: #fff;
+    }
+
+    100% {
+        background: #fff;
+    }
+}
+
+@keyframes loading-tarjeta--icon {
+    0% {
+        display: block;
+        transform: rotate(0deg);
+        z-index: 10;
+    }
+
+    50% {
+        background: #fff;
+        z-index: 10;
+    }
+
+    100% {
+        background: #fff;
+        z-index: 10;
+    }
+}
+
+.credijamar-card {
+    width: 367px;
+    height: 262px;
+  background: rgba(241, 241, 241, 0.94);  
+    flex-direction: column;
+    position: absolute;
+}
+
+
+
+.feature-credijamar p {
+    max-width: 122px;
+}
+
+div.container-credijamar--bg {
+    height: 400px;
+    background-image: url("https://res.cloudinary.com/www-ismyt-com/image/upload/v1656434337/IMAGENES/JAMAR/CREDIJAMR-SECTION/tarjeta-credijamar_mvrry4.jpg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+
+  div.container-credijamar--bg {
+    height: 260px;
+}
+    .credijamar-card {
+        width: 85%;
+        height: 213px;
+        background: rgba(241, 241, 241, 0.94);
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 206px;
+        transform: translateX(0px);
+    }
+
+    .contenedor-features {
+        margin-top: 165px;
+    }
+
+    .feature-credijamar p {
+        max-width: 110px;
+    }
+
+}
+
+
+/*# sourceMappingURL=index.e8265c92.css.map */

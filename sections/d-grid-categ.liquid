@@ -1,0 +1,91 @@
+<style>
+    .card-sizes-description {
+            height: 60px;
+            background-color:#758293;
+            font-size: 30px;
+            color: white;
+        }
+</style>
+{% render 'custom-separator' %}
+
+    <div class="row justify-content-center">
+        <h2 class="text-center lato-titulos col-10">{{ section.settings.title_style_cat }} </h2>
+            {% if section.settings.main_description != "" %}
+                <p class="lato-parrafos parrafo-descanso text-center col-10 mt-0 fw-normal">{{ section.settings.parr_style_cat }}</p>
+            {% endif %}
+    </div>
+    <div class="row justify-content-start justify-content-md-center overflow-auto flex-nowrap">
+        
+        {% for block in section.blocks %}
+            {% assign bloque = block.settings %}
+            <div class="col-md-4 col-10">
+                <div class="d-flex justify-content-center  flex-column card-sizes-description rounded-top">
+                    <h6 class="text-center m-0 p-0 h4" style="font-family:{{bloque.fuentes}}">{{bloque.textoimage}}</h6>
+                </div>
+                {{ bloque.imagen | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid w-100 rounded-top-1' }}
+                <a href="{{bloque.enlace_st}}" class="text-enlace reset-enlace text-center d-block lato-parrafo fw-bold pt-2 pb-2 mt-2"> <u>Ver Estilo </u> </a>
+            </div>
+            
+        {% endfor %}
+    </div>
+
+{% schema %}
+
+{
+    "name":"Grid Promo Cat",
+    "tag":"section",
+    "class":"container",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "parr_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen de la tarjeta"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "text",
+            "id": "fuentes",
+            "label": "Seleccionar fuente"
+        },
+        {
+            "type": "url",
+            "id": "enlace_st",
+            "label": "Seleccionar pagina"
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Grid Promo Cat",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

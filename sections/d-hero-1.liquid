@@ -1,0 +1,64 @@
+{% comment %}  
+{{ 'custom-assets.css' | asset_url | stylesheet_tag }}
+{% endcomment %}
+
+{% comment %} Contenedor principal de la página web ###LISTO {% endcomment %}
+        <div class="row m-0">
+            <div class="col-12">
+                <div class="row h-100 align-items-center {% if section.settings.orden == true %} flex-row-reverse {% endif %}">
+                    <div class="col-md-6 p-0">
+                        <div class="line d-flex flex-column align-items-center justify-content-center text-center text-md-center">
+                            <h1 class="col-10 col-md-8 text-white lato-titulos m-0 p-0">{{ section.settings.main_title }}</h1>
+                            <p class="col-8 text-white lato-parrafos m-0 p-0" style="margin-top: 16px!important">{{ section.settings.main_description}}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-0 d-flex justify-content-center">
+                        {{ section.settings.imagen | image_url : width: auto | image_tag: alt: 'Imagen de banner', srcset: nil, class: 'img-cover img-fluid' }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% comment %} Fin del contenedor principal de la página web {% endcomment %}
+
+
+{% schema %}
+
+{
+    "name":"Seccion Hero 1",
+    "tag":"section",
+    "class":"colchones-container-main container-fluid m-0 p-0",
+    "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Colocar titulo del Hero",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "main_description",
+      "label": "Colocar subtitulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Imagen del banner"
+    },
+    {
+      "type": "checkbox",
+      "id": "orden",
+      "label": "Orden de elementos"
+    }
+    ],
+    "presets": [
+        {
+            "name": "Seccion Hero 1",
+            "category": "Colchones"
+        }
+    ]
+}
+
+
+
+{% endschema %}

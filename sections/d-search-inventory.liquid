@@ -1,0 +1,64 @@
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<style>
+    #input-search {
+        width: 400px;
+        height: 80px;
+        padding-left: 20px;
+        font-size: 20px;
+    }
+    #input-search::placeholder {
+        width: 400px;
+        height: 80px;
+    }
+    #buscador-inventario {
+        width: 80px;
+        height: 80px;
+        background-color: #000;
+        color: white;
+        outline: white;
+    }
+    .contenedor-resultados {
+        padding: 10px;
+        font-size: 18px;
+        color: #353535;
+        font-weight: 500;
+    }
+</style>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-8 d-flex justify-content-center">
+            <input id="input-search" type="text" placeholder="{{section.settings.text_placeholder}}">
+            <button id="buscador-inventario">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="contenedor-resultados text-center">
+            <span class="text-results"></span>
+        </div>
+    </div>
+</div>
+
+<script src="{{ 'module-inventory.js' | asset_url }}"> </script>
+
+{% schema %}
+{
+  "name": "Buscador Inventario",
+  "tag": "section",
+  "class":"container",
+    "settings": [
+    {
+      "type": "text",
+      "id": "text_placeholder",
+      "label": "Placeholder del input"
+    }
+  ],
+  "presets": [
+     {
+       "name": "Buscador Inventario"       
+     }
+   ]
+}
+{% endschema %}

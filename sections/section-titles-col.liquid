@@ -1,0 +1,49 @@
+{{ 'section-titles-col.css'  | asset_url | stylesheet_tag }}
+
+<div class="contenedor-titulos-seccion-detalles-iluminan style-2">
+    <h2 class="style-2">{{section.settings.collection_title}}</h2>
+    <p>{{section.settings.collection_parrafo}}</p>
+</div>
+
+<div class="banner-video-large">
+    <video autoplay="autoplay"
+    loop="loop"
+    muted
+    defaultMuted
+    playsinline
+    oncontextmenu="return false;"
+    preload="auto">
+        <source src="{{section.settings.video_link}}">
+    </video>
+</div>
+
+
+    {% schema %}
+    {
+       "name":"Titulos Coleccion",
+       "class":"section-titulos-colecciones",
+       "settings": [
+        {
+            "type":"text",
+            "id":"collection_title",
+            "label":"Colocar el titulo"
+        },
+        {
+            "type":"text",
+            "id":"collection_parrafo",
+            "label":"Colocar el parrafo"
+        },
+        {
+            "type":"text",
+            "id":"video_link",
+            "label":"Colocar el link del video"
+        }
+        
+       ],
+       "presets":[
+        {
+            "name":"Titulos Coleccion"
+        }
+       ]
+    }
+    {% endschema %}

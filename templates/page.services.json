@@ -1,0 +1,262 @@
+{
+  "sections": {
+    "main": {
+      "type": "d-grid-main-servicios",
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/000-landing-de-servicios_d8173f85-7b18-4850-ae7d-a6f12ae67b60.jpg",
+        "titulo": "Pensamos en ti y en tus formas favoritas de renovar tu hogar",
+        "descripcion": "Queremos que el proceso de cambiar tus espacios sea el más cómodo y se adapte a tu estilo de vida. Contamos con diferentes canales de compra para que disfrutes cada momento. ¡Conócelos!​"
+      }
+    },
+    "16536712669a37416b": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "<b>4 formas<\/b> seguras de comprar y recibir atención",
+        "subtitle": "",
+        "title_tag": "h2"
+      }
+    },
+    "1653671418609efc13": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "1653672063f4667efd": {
+      "type": "d-grid-2-column-cta",
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/001-landing-de-servicios_5eebfccf-67b2-4de1-a758-be6b77cf6600.jpg",
+        "reverse": true,
+        "titulo": "1. Compra en nuestras tiendas físicas",
+        "descripcion": "Contamos con sedes en todo el territorio nacional para que descubras todo nuestro portafolio de muebles y colchones que espera por ti.",
+        "cta": "Buscar una tienda",
+        "imagencta": "shopify:\/\/shop_images\/buscar-tienda-icon.svg",
+        "ctaenlace": "https:\/\/www.jamar.com.pa\/pages\/sucursales"
+      }
+    },
+    "1653673826cfc6f6b1": {
+      "type": "d-grid-2-col-cards",
+      "blocks": {
+        "6c96ac6a-4ad7-47b7-8741-7b2902b9c389": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-salas_69ca896d-b109-416b-a70f-b785d73e526c.jpg",
+            "textoimage": "Salas",
+            "enlaceslide": ""
+          }
+        },
+        "f3fa684f-3963-4003-bc7b-38c85cc9160d": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-comedores_14e41d65-5fea-4d04-b832-aa5f52403a90.jpg",
+            "textoimage": "Comedores",
+            "enlaceslide": ""
+          }
+        },
+        "087a34b9-b4a1-4be8-afe0-1c662b98112c": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-dormitorios_7457859f-31df-4228-9047-7e5189d12ade.jpg",
+            "textoimage": "Camas",
+            "enlaceslide": ""
+          }
+        },
+        "02883c3f-3ba6-4e5d-9a74-7129fa2be448": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-colchones_fcb706fd-1d65-4138-9ce1-f2a6b77c0d20.jpg",
+            "textoimage": "Colchones",
+            "enlaceslide": ""
+          }
+        },
+        "b1a585e6-eea8-4cbb-a0ac-036a60ccc1c8": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-estudio_ddff89d6-c8fb-4b98-980d-6fa6546808b7.jpg",
+            "textoimage": "Estudio",
+            "enlaceslide": ""
+          }
+        },
+        "b615c3a0-a1d6-4ee9-a70e-3a78ee36768c": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/002-landing-de-servicios-juvenil-e-infantil_ee2f1c55-c38d-4f26-891f-64439991bfd0.jpg",
+            "textoimage": "Juvenil",
+            "enlaceslide": ""
+          }
+        }
+      },
+      "block_order": [
+        "6c96ac6a-4ad7-47b7-8741-7b2902b9c389",
+        "f3fa684f-3963-4003-bc7b-38c85cc9160d",
+        "087a34b9-b4a1-4be8-afe0-1c662b98112c",
+        "02883c3f-3ba6-4e5d-9a74-7129fa2be448",
+        "b1a585e6-eea8-4cbb-a0ac-036a60ccc1c8",
+        "b615c3a0-a1d6-4ee9-a70e-3a78ee36768c"
+      ],
+      "settings": {
+        "reverse": false,
+        "titulo": "2. Compra en línea: fácil y rápido",
+        "descripcion": "Navega por nuestras categorías y explora los productos que necesitas para que en tu hogar nunca falte la comodidad y variedad."
+      }
+    },
+    "165367587335e8fa0a": {
+      "type": "d-grid-2-column-cta",
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/003-landing-de-servicios_e7233c74-dac6-4560-87f3-4abd158b1fac.jpg",
+        "reverse": true,
+        "titulo": "3. Chatea en línea con un asesor",
+        "descripcion": "Uno de nuestros asesores se encuentra disponible para guiarte en tu compra.",
+        "cta": "Chatear ahora",
+        "imagencta": "shopify:\/\/shop_images\/chat-whatsapp-icon.svg",
+        "ctaenlace": "https:\/\/api.whatsapp.com\/send?phone=50769932222&text=%C2%A1Hola!%20Me%20gustar%C3%ADa%20me%20asesoren%20para%20realizar%20mi%20compra"
+      }
+    },
+    "16536759352b7415ca": {
+      "type": "d-grid-2-column-cta",
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/004-landing-de-servicios_4eb16320-3cb8-46cf-b7d9-49c6c54f7574.jpg",
+        "reverse": false,
+        "titulo": "4. Recibe atención por llamada",
+        "descripcion": "Nuestros asesores se encuentran disponibles para atenderte. Te puedes comunicar con nosotros para recibir apoyo en tu compra o resolver inquietudes.",
+        "cta": "Llamar ahora",
+        "imagencta": "shopify:\/\/shop_images\/llamar-icon.svg",
+        "ctaenlace": "tel:+50769932222"
+      }
+    },
+    "16591050216fd126b8": {
+      "type": "d-grid-2-column-cta",
+      "disabled": true,
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/005-landing-de-servicios.jpg",
+        "reverse": true,
+        "titulo": "5. Explora nuestro Tour Virtual",
+        "descripcion": "Navega por nuestro tour virtual donde podrás visualizar, comprar y consultar todo sobre tus productos favoritos en una experiencia digital.​",
+        "cta": "Ir al tour virtual",
+        "imagencta": "shopify:\/\/shop_images\/icon-tour-virtual.png",
+        "ctaenlace": "shopify:\/\/pages\/tour-virtual"
+      }
+    },
+    "165910615824d272d6": {
+      "type": "d-grid-2-column-cta",
+      "disabled": true,
+      "settings": {
+        "imagen": "shopify:\/\/shop_images\/006-landing-de-servicios_dd373903-192b-4708-999b-5bec071a6c7a.jpg",
+        "reverse": false,
+        "titulo": "6. Recibe atención por llamada",
+        "descripcion": "Nuestros asesores se encuentran disponibles para atenderte. Te puedes comunicar con nosotros para recibir apoyo en tu compra o resolver inquietudes.",
+        "cta": "Llamar ahora",
+        "imagencta": "shopify:\/\/shop_images\/icon-tour-call.png",
+        "ctaenlace": ""
+      }
+    },
+    "165367713940c780ae": {
+      "type": "d-grid-2-col-feat",
+      "blocks": {
+        "794355b1-508e-4476-a0aa-491b24aeef8a": {
+          "type": "imagen",
+          "settings": {
+            "textoimage": "Consulta tus compras"
+          }
+        },
+        "29de21e3-1d74-4383-9d68-c4cbd0f3a8ea": {
+          "type": "imagen",
+          "settings": {
+            "textoimage": "<b>Paga tus cuotas<\/b>"
+          }
+        },
+        "d3719d0c-a0fd-43d9-8383-f3d000f8b4bf": {
+          "type": "imagen",
+          "settings": {
+            "textoimage": "Descarga tus extractos"
+          }
+        },
+        "f446ce09-07cd-46e4-bc1d-ed3ae1666efd": {
+          "type": "imagen",
+          "settings": {
+            "textoimage": "Visualiza tu cupo"
+          }
+        }
+      },
+      "block_order": [
+        "794355b1-508e-4476-a0aa-491b24aeef8a",
+        "29de21e3-1d74-4383-9d68-c4cbd0f3a8ea",
+        "d3719d0c-a0fd-43d9-8383-f3d000f8b4bf",
+        "f446ce09-07cd-46e4-bc1d-ed3ae1666efd"
+      ],
+      "settings": {
+        "reverse": false,
+        "titulo": "Regístrate a nuestro portal para facilitar todos tus trámites.",
+        "textobtn": "Ir al portal",
+        "enlace": "https:\/\/cuenta.jamar.com.pa\/",
+        "imagen": "shopify:\/\/shop_images\/007-landing-de-servicios-portal-de-clientes.png"
+      }
+    },
+    "165367740887ba8799": {
+      "type": "dynamic-title-colchones",
+      "settings": {
+        "main_title": "Preguntas frecuentes",
+        "subtitle": "",
+        "title_tag": "h2"
+      }
+    },
+    "165826573640001ed5": {
+      "type": "d-accordion-2-col",
+      "blocks": {
+        "1fd9f165-dc39-4840-aba1-08ef5534badc": {
+          "type": "Acordion",
+          "settings": {
+            "tituloAcordion": "¿Qué necesito para hacer un crédito con Muebles Jamar?",
+            "descripcionAcordion": "Sólo debes acercarte con tú documento de identidad a la sucursal más cercana, escoger la mercancía de tú preferencia y pasar al área de crédito para completar tú solicitud."
+          }
+        },
+        "997a376c-7ccd-4323-bd1d-e810950cafe5": {
+          "type": "Acordion",
+          "settings": {
+            "tituloAcordion": "¿Cómo hago para saber el saldo de mi cuenta?",
+            "descripcionAcordion": "Puedes consultarlo a través de nuestra línea de Servicio al Cliente 2056501 Opción 1, sólo debes tener tú documento de identidad a mano. O puedes acercarte a cualquier sucursal de Muebles Jamar donde te brindarán la información."
+          }
+        },
+        "c5c69429-afca-4dc0-810a-a70d5c4f1635": {
+          "type": "Acordion",
+          "settings": {
+            "tituloAcordion": "¿Cómo hago para saber si mi crédito está aprobado?",
+            "descripcionAcordion": "Puedes comunicarte directamente con el asesor comercial que te atendió en el almacén o llamar a nuestra línea de atención al cliente 2056501.  También desde el área de crédito te estarán contactando para validar tus datos. Luego del área de despacho te llamarán para coordinar el día de entrega de la mercancía. De este modo sabrás que tú crédito fue aprobado."
+          }
+        },
+        "30983717-13e4-4f7d-bbb0-63394fa224d9": {
+          "type": "Acordion",
+          "settings": {
+            "tituloAcordion": "¿Dónde puedo solicitar un paz y salvo?",
+            "descripcionAcordion": "Los paz y salvo de las cuentas que ya fueron canceladas se pueden solicitar directamente en las oficinas de atención al cliente de Muebles Jamar ubicadas en Casa Matriz Vía España."
+          }
+        }
+      },
+      "block_order": [
+        "1fd9f165-dc39-4840-aba1-08ef5534badc",
+        "997a376c-7ccd-4323-bd1d-e810950cafe5",
+        "c5c69429-afca-4dc0-810a-a70d5c4f1635",
+        "30983717-13e4-4f7d-bbb0-63394fa224d9"
+      ],
+      "settings": {
+        "personalization": false,
+        "similar": false,
+        "look": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "16536712669a37416b",
+    "1653671418609efc13",
+    "1653672063f4667efd",
+    "1653673826cfc6f6b1",
+    "165367587335e8fa0a",
+    "16536759352b7415ca",
+    "16591050216fd126b8",
+    "165910615824d272d6",
+    "165367713940c780ae",
+    "165367740887ba8799",
+    "165826573640001ed5"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+    "sections": {
+        "styles": {
+            "type": "styles-render",
+            "disabled": true,
+            "settings": {
+                "main_title": "Estilos"
+            }
+        },
+        "0f738583-480e-4179-b73b-005ec78ec3b4": {
+            "type": "d-banner",
+            "settings": {
+                "imagen_desktop": "shopify:\/\/shop_images\/Mega-Mall-Desktop.jpg",
+                "imagen_movil": "shopify:\/\/shop_images\/Mega-mall-Mobile.jpg",
+                "text_up": "Megamall",
+                "text_down": "Panamá"
+            }
+        },
+        "01dbab73-7a03-4c44-a359-7d457dadb738": {
+            "type": "d-info-tienda",
+            "settings": {
+                "h2": "Visita nuestra tienda",
+                "store_name": "Ver en Maps",
+                "phone": "205-6500",
+                "breadcump": "Megamall",
+                "iframe_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d3939.5982785214474!2d-79.35362668519868!3d9.10031029037361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e54ab7104405a79%3A0x1b102f121b1cbf12!2sJamar%20%7C%20Megamall!5e0!3m2!1ses-419!2sus!4v1650664984992!5m2!1ses-419!2sus",
+                "share_link": "https:\/\/goo.gl\/maps\/CN6DwgxYaqzi87CG7",
+                "store_info": "Lunes aDomingo\n<p>10:30 AM a 7:00 PM<\/p>"
+            }
+        },
+        "6eb24162-0355-4ca7-8e95-efc33670dc12": {
+            "type": "d-carrousel-list",
+            "settings": {
+                "collections": [
+                    "7020091",
+                    "7020355",
+                    "7017330",
+                    "7005082",
+                    "7022821",
+                    "7017624",
+                    "7020568",
+                    "7020582",
+                    "7025277",
+                    "7020708",
+                    "7020574",
+                    "7017291",
+                    "7020365",
+                    "7020369"
+                ],
+                "titleCarousel": "Muebles modernos y a crédito",
+                "descriptionCarousel": ""
+            }
+        },
+        "681807a9-cd9d-498d-9425-d26694017604": {
+            "type": "d-description-tienda",
+            "settings": {
+                "title": "Conoce nuestra tienda en Megamall",
+                "description": "",
+                "main_image": "shopify:\/\/shop_images\/mega-mall-01.jpg",
+                "second_image": "shopify:\/\/shop_images\/david-02.jpg",
+                "third_image": "shopify:\/\/shop_images\/david-03.jpg",
+                "fourt_image": "shopify:\/\/shop_images\/david-04.jpg",
+                "five_image": "shopify:\/\/shop_images\/david-05.jpg"
+            }
+        },
+        "06c35f82-6108-4f9f-bd7f-bdedc9956bad": {
+            "type": "d-titles",
+            "settings": {
+                "titulo": "Aquí encuentras los mejores muebles en Panamá",
+                "subtitulo": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra <a href=\"\/pages\/colchones\">Colchones de todos los tamaños<\/a>, <a href=\"\/collections\/juvenil-e-infantil\">muebles para recámaras infantiles<\/a> y mucho más. Pregunta también por nuestros <a href=\"\/pages\/tarjeta-jamar\">muebles a crédito<\/a>.",
+                "vertical_alignment": "start",
+                "columnas": 12
+            }
+        },
+        "126fe0bc-a151-4321-88dc-4eba1a23efbe": {
+            "type": "dynamic-promo-form",
+            "settings": {
+                "main_title": "Entérate de nuestras novedades",
+                "main_description": "",
+                "banner_form": "shopify:\/\/shop_images\/Formulario-de-Home-634x405_5976a75c-3296-44ce-a8d3-780475c0dea7.webp",
+                "invertir_col": true,
+                "vertical_alignment_movil": "align-items-center",
+                "vertical_alignment_desktop": "align-items-md-center",
+                "etiqueta": ""
+            }
+        }
+    },
+    "order": [
+        "styles",
+        "0f738583-480e-4179-b73b-005ec78ec3b4",
+        "01dbab73-7a03-4c44-a359-7d457dadb738",
+        "6eb24162-0355-4ca7-8e95-efc33670dc12",
+        "681807a9-cd9d-498d-9425-d26694017604",
+        "06c35f82-6108-4f9f-bd7f-bdedc9956bad",
+        "126fe0bc-a151-4321-88dc-4eba1a23efbe"
+    ]
+}

@@ -1,0 +1,17 @@
+    <button class="close-search" id="closeSearch">
+        <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/icon-close.svg?v=1676484509" alt="" data-rimg="lazy" loading="lazy">
+    </button>    
+    <h6>Articulos</h6>
+    <div class="contenedor-entradas">
+
+    {% if predictive_search.resources.articles.size > 1 %}
+        {% for article in predictive_search.resources.articles limit: 4 %}
+            <a class="article" href="{{ article.url }}" >
+                <img src="{{ article.image.src | img_url: '200x300'  }}" alt="" data-rimg="lazy" loading="lazy">              
+                <p>{{ article.title }}</p>
+            </a>
+        {% endfor %}
+    {% else %}
+    <p style="margin-left:0px;">No hay resultados...</p>
+    {% endif %}
+    </div>

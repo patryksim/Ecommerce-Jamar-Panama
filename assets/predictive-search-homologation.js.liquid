@@ -1,0 +1,31 @@
+{% comment %} let positionForm = document.querySelector('.form_predictice__search').offsetLeft;
+buscador_predictivo.addEventListener('input', () => {
+        
+    if (buscador_predictivo.value.length>2) {
+        contenedor_resultados.style.display="grid";
+        contenedor_resultados.innerHTML = "";
+        fetch("/search/suggest?q="+buscador_predictivo.value+"&resources[type]=product&section_id=predictive-search").then(res => res.text()).then(data => {
+            contenedor_resultados.innerHTML = data;
+        })
+    }
+})
+
+
+custom_predictive_input_movil.addEventListener('input', () => {
+        
+    if (custom_predictive_input_movil.value.length>2) {
+        contenedor_resultados.style.display="grid";
+        contenedor_resultados.innerHTML = "";
+        fetch("/search/suggest?q="+custom_predictive_input_movil.value+"&resources[type]=product&section_id=predictive-search").then(res => res.text()).then(data => {
+            contenedor_resultados.innerHTML = data;
+        })
+    }
+})
+
+
+function cerrar_contenedor_resultados() {
+    contenedor_resultados.style.display="none";
+
+} {% endcomment %}
+
+

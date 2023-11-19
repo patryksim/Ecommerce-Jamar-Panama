@@ -1,0 +1,101 @@
+{{ 'page-sucursales.css'  | asset_url | stylesheet_tag }}
+
+
+<div class="container">
+   <div class="col-11 col-md-12 mt-md-4 mt-1 mb-4 page__location"><span class="page_tienda__home"><a href="/">Inicio</a></span> <span class="page_tienda__slash">/</span> <span class="page_tienda__home"><a href="/pages/sucursales">Sucursales</a></span> <span class="page_tienda__slash">/</span> <span class="page_tienda_tiendas fw-bold gris-jamar"> <a href="/"> {{ section.settings.breadcump }} </a> <span> </span></span></div>
+</div>
+<div class="mt-5 mb-5"></div>
+<div class="container">
+   <div class="row justify-content-center">
+      <div class="col-md-5 col-11 d-flex flex-column container-info-btn align-items-start">
+         <h2 class="main-title-tienda">{{section.settings.h2}}</h2>
+         <a class="info-btn-informacion" target="_blank" href="{{section.settings.share_link}}" rel="noopener noreferrer">
+            <svg class="me-2" width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <ellipse cx="14.5589" cy="14.5" rx="14.5589" ry="14.5" fill="#404B5A"></ellipse>
+               <path d="M19.9548 13.2833C19.9548 17.542 14.457 21.1924 14.457 21.1924C14.457 21.1924 8.95923 17.542 8.95923 13.2833C8.95923 11.8311 9.53846 10.4383 10.5695 9.41148C11.6005 8.38462 12.9989 7.80774 14.457 7.80774C15.9151 7.80774 17.3135 8.38462 18.3445 9.41148C19.3756 10.4383 19.9548 11.8311 19.9548 13.2833Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M14.4572 15.1084C15.4693 15.1084 16.2898 14.2912 16.2898 13.2832C16.2898 12.2752 15.4693 11.458 14.4572 11.458C13.4451 11.458 12.6246 12.2752 12.6246 13.2832C12.6246 14.2912 13.4451 15.1084 14.4572 15.1084Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            {{section.settings.store_name}}
+         </a>
+         <a class="info-btn-informacion mt-2" href="tel:+507{{section.settings.phone | remove: "-"}}">
+            <svg class="me-2" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="14.5" cy="14.5" r="14.5" fill="#404B5A"></circle>
+               <path d="M20.1669 12.6449V8.80762H16.3296" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M15.6897 13.2845L20.1666 8.80762" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M19.5271 18.9893V20.908C19.5278 21.0861 19.4914 21.2624 19.42 21.4256C19.3486 21.5888 19.244 21.7353 19.1127 21.8557C18.9815 21.9761 18.8265 22.0678 18.6578 22.1249C18.4891 22.1819 18.3103 22.2031 18.1329 22.1871C16.1649 21.9733 14.2745 21.3008 12.6136 20.2237C11.0683 19.2417 9.75816 17.9316 8.77623 16.3864C7.69538 14.7179 7.02274 12.8183 6.81281 10.8414C6.79683 10.6646 6.81784 10.4863 6.87453 10.318C6.93121 10.1497 7.02231 9.9951 7.14203 9.86395C7.26175 9.7328 7.40747 9.62801 7.5699 9.55626C7.73234 9.48451 7.90794 9.44737 8.08552 9.44721H10.0042C10.3146 9.44415 10.6155 9.55406 10.8508 9.75645C11.0861 9.95884 11.2398 10.2399 11.2833 10.5472C11.3643 11.1612 11.5144 11.7641 11.731 12.3444C11.817 12.5733 11.8356 12.8221 11.7846 13.0612C11.7336 13.3004 11.6151 13.5199 11.4432 13.6938L10.6309 14.5061C11.5414 16.1072 12.8671 17.4329 14.4683 18.3434L15.2805 17.5312C15.4544 17.3592 15.6739 17.2407 15.9131 17.1897C16.1522 17.1387 16.401 17.1573 16.6299 17.2434C17.2102 17.4599 17.8131 17.6101 18.4271 17.691C18.7378 17.7349 19.0215 17.8914 19.2243 18.1307C19.4271 18.3701 19.5349 18.6757 19.5271 18.9893Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            {{section.settings.phone}}
+         </a>
+         <a class="info-btn-horario mt-2" href="#">
+            <svg class="" width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <circle cx="14.5" cy="14.5" r="13.9" fill="#404B5A" stroke="#404B5A" stroke-width="1.2"></circle>
+               <path d="M14.4999 21.1922C18.196 21.1922 21.1922 18.196 21.1922 14.4999C21.1922 10.8039 18.196 7.80762 14.4999 7.80762C10.8039 7.80762 7.80762 10.8039 7.80762 14.4999C7.80762 18.196 10.8039 21.1922 14.4999 21.1922Z" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+               <path d="M14.5 10.4846V14.5L17.1769 15.8385" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            
+            {{section.settings.store_info}}
+         </a>
+      </div>
+      <div class="col-md-7 d-flex contenedor-iframe-tienda"><iframe class="w-100" src="{{section.settings.iframe_link}}" frameborder="0"> </iframe></div>
+   </div>
+</div>
+
+
+
+
+{% schema %}
+
+{
+    "name":"Seccion Tienda",
+    "tag":"div",
+    "class":"tienda-section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "h2",
+            "label": "Titulo de sección",
+            "default": "Visita nuestra tienda"
+        },
+        {
+            "type": "text",
+            "id": "store_name",
+            "label": "Nombre de la tienda",
+            "default": "Ver en Maps"
+        },
+        {
+            "type": "text",
+            "id": "phone",
+            "label": "Numero de contacto",
+            "default": "205-6500"
+        },
+        {
+            "type": "text",
+            "id": "breadcump",
+            "label": "Introducir Breadcrump titulo",
+            "default": "Sucursal Jamar"
+        },
+        {
+            "type": "url",
+            "id": "iframe_link",
+            "label": "Link del Mapa"
+        },
+        {
+            "type": "url",
+            "id": "share_link",
+            "label": "Link de App de Mapas"
+        },
+        {
+            "type": "html",
+            "id": "store_info",
+            "label": "Texto descriptivo"
+        }
+    ],
+    "presets": [
+    {
+        "name": "Seccion Tienda",
+        "category": "Pages"
+    }
+    ]
+}
+
+{% endschema %}

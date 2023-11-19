@@ -1,0 +1,98 @@
+{% comment %} {{ page.url }}
+{% if page.url == "page"  %} 
+{% endif %} {% endcomment %}
+{% render 'custom-separator' %}
+
+{% comment %} Inicio de la sección de garantias, tranporte... de colchones 
+{% endcomment %}
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="row align-items-center">
+                    <div class="col-md-5">
+                        {% for block in section.blocks %}
+                      		
+                            {% assign b = block.settings %}
+                            <div class="col-md-8 section-categorias-icon d-flex align-items-center justify-content-start mt-3 mb-3">
+                                {{ b.imagen | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid' }}
+                                <p class="ms-4 mb-1"><b>{{ b.textoimage }}</b></p>
+                            </div> 
+                        {% endfor %}
+                    </div>
+
+                    <div class="col-md-7">
+                        <div class="position-relative">
+                            <a href="#" class="tag-cta-features">
+                                {{ section.settings.imagencover | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid w-100' }}
+                            </a>                        
+
+                            <a class="position-absolute text-white mb-2 bottom-0 text-decoration-none cta-banner-principal" href="{{section.settings.linkcolchones}}">{{section.settings.title_style_cat}}</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% comment %} Fin de la sección de imagenes de colchones {% endcomment %}  
+
+
+
+{% schema %}
+
+{
+    "name":"Grid Slide Feat",
+    "tag":"section",
+    "class":"container grid-slide-feat",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagencover",
+      "label":"Imagen grande"
+    },
+    {
+      "type": "url",
+      "id": "linkcolchones",
+      "label":"Imagen grande"
+    }
+    
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen de la tarjeta"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "url",
+            "id": "enlace",
+            "label": "Enlace personalizado"
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Grid Slide Feat",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

@@ -1,0 +1,36 @@
+<script>
+    function showFee(){
+      let sendToService = {
+        "agency": "C2",
+        "groups":["A","G"],
+        "skus": skuLISTAS,
+        "fees":["24"],
+        "saleTypes":["TJ"]
+      };
+      
+      fetch("https://8wrhzmlo68.execute-api.us-east-1.amazonaws.com/api/v1/JP/prices", {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(sendToService)
+      })
+      .then( data => data.json())
+      .then( data => {
+        data.map( i => {
+          let precio = i.precios[0].data.cuota_sem;
+          var elementos = document.querySelector(`[data-ee-product-sku="${i.sku}"]`);
+          if( elementos != null ){
+            console.log(elementos);
+            elementos.innerHTML = `
+            <div class="product-grid-credit pb-0 mb-0">
+              <p style="font-size:12px;"><b>$${precio}</b> semanales x 24 meses con
+              <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/credijamar.svg">
+              </p>
+            </div>`;
+          }
+        })    
+      })
+    };
+    showFee();
+  </script>

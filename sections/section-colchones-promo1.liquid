@@ -1,0 +1,103 @@
+{% schema %}
+{
+  "name": "Contenido",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titulo Principal",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "title_precio",
+      "label": "Titulo Precio",
+      "default": "El Colchón que buscas al precio que sueñas"
+    },
+    {
+      "type": "text",
+      "id": "parrafo_precio",
+      "label": "Parrafo Precio",
+      "default": "En Jamar encuentras un colchón para cada necesidad y al precio que mejor se acomode a tu presupuesto. Dale a tu cuerpo el descanso que se merece con esta selección de colchones."
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen_precio",
+      "label": "Agregar imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_form",
+      "label": "Agregar imagen Form"
+    },
+    {
+      "type": "text",
+      "id": "tamano_title",
+      "label": "Titulo Tamaños",
+      "default": "Tamaños de nuestros colchones"
+    },
+    {
+      "type": "collection",
+      "id": "colfdeed",
+      "label": "Titulo grados suavidad"
+    }
+  ],
+  
+    "blocks": [
+    {
+        "name" : "Tamaño de Colchones",
+        "type": "textos",
+        "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Nombre de la sucursal"
+        },
+        {
+            "type": "link",
+            "id": "enlace_",
+            "label": "Enlace"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_sizes",
+            "label": "Imagen Ref"
+        }
+        ]       
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "Seleccionar",
+        "type": "feedproducts",
+        "settings": [
+        {
+            "type": "text",
+            "id": "coltitle",
+            "label": "Nombre colección"
+        }
+        ]       
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "Seleccionar colección",
+        "type": "coleccion",
+        "settings": [
+        {
+            "type": "collection",
+            "id": "title",
+            "label": "Nombre colección"
+        }
+        ]       
+    }
+    ], 
+    "presets": [
+    {
+    "name": "Product Feed Colchones",
+    "category": "Custom Layouts"
+    }
+    ]
+}
+
+{% endschema %}

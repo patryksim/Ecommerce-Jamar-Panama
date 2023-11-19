@@ -1,0 +1,13 @@
+{
+  "wrapper": "section.site-page.rich-text--container[data-template-page='']",
+  "sections": {
+    "title-free-full-width": {
+      "type": "title-free-full-width",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "title-free-full-width"
+  ]
+}

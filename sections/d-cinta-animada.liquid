@@ -1,0 +1,198 @@
+<style>
+    .contenedor-cinta {
+    overflow: hidden;
+    background-color: {{section.settings.background_cinta}};
+    
+}
+.contenedor-cinta-animada {
+    width: 100%;
+    height: 50px;
+    display:flex;
+    justify-content:start;
+    align-items:center;
+    flex-wrap: nowrap;
+    padding: 0px 20px;
+    animation: cintaAnimada {{section.settings.speed_animacion}}s infinite linear;
+}
+
+.contenedor-cinta-animada span {
+    min-width: {{section.settings.anchura_span}}px;
+    font-size: 25px;
+    font-weight: lighter;
+    display: flex;
+    overflow-wrap: normal;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.contenedor-cinta-animada span img {
+    max-width: 145px;
+}
+
+.enlace-cinta-animada {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.enlace-cinta-animada:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes cintaAnimada {
+    0%{
+        transform: translateX(0px);
+        
+    }
+
+    100%{
+        transform: translateX(-{{section.settings.anchura_span}}px);
+    }
+}
+
+
+@media screen and (min-width: 100px) and (max-width:800px) {
+
+    .contenedor-cinta-animada {
+        height: 36px;
+    }
+
+    .contenedor-cinta-animada span {
+        min-width: {{section.settings.anchura_movil}}px;
+        font-size: 16px;
+        font-weight: bold;
+        
+    }
+
+    @keyframes cintaAnimada {
+    0%{
+        transform: translateX(0px);
+        
+    }
+
+    100%{
+        transform: translateX(-{{section.settings.anchura_movil}}px);
+    }
+}
+
+
+}
+
+
+.fix-top-position {
+    position: static;
+    height: {{section.settings.altura_desktop}};
+}
+
+@media (max-width: 599px) {
+
+  .fix-top-position {
+    position: static;
+    height:  {{section.settings.altura_movil}}; 
+    }
+  }
+
+
+
+</style>
+
+
+<a class="enlace-cinta-animada" href="{{section.settings.enlace}}">
+    <div class="contenedor-cinta">
+        <div class="contenedor-cinta-animada">
+            {% for i in (1..9) %}
+                <span>{{ section.settings.cintaTexto }} 
+                   <img class="ms-3" alt="{{ section.settings.imagen.alt}}" src="{{ section.settings.imagen | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                    
+                </span>
+            {% endfor %}
+        </div>
+    </div>
+    
+</a>
+
+
+{% schema %}
+
+{
+    "name":"Cinta Animada",
+    "tag":"section",
+    "class":"section-cinta-animada",
+    "settings": [
+    {
+    "type": "range",
+    "id": "anchura_span",
+    "min": 50,
+    "max": 4000,
+    "step": 50,
+    "unit": "px",
+    "label": "Anchura en desktop",
+    "default": 100
+    },
+    {
+    "type": "range",
+    "id": "anchura_movil",
+    "min": 40,
+    "max": 4000,
+    "step": 40,
+    "unit": "px",
+    "label": "Anchura en movil",
+    "default": 40
+    },
+    {
+    "type": "range",
+    "id": "speed_animacion",
+    "min": 1,
+    "max": 30,
+    "step": 1,
+    "unit": "s",
+    "label": "Velocidad",
+    "default": 2
+    },
+    {
+    "type": "color",
+    "id": "background_cinta",
+    "label": "Fondo cinta",
+    "default": "#404b5a"
+    },
+    {
+      "type": "text",
+      "id": "cintaTexto",
+      "label": "Texto de la cinta animada",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "imagen",
+      "label": "Adjuntar imagen"
+    },
+    {
+      "type": "text",
+      "id": "altura_desktop",
+      "label": "Altura en Desktop"
+    },
+    {
+      "type": "text",
+      "id": "altura_movil",
+      "label": "Altura en movil"
+    },
+    {
+      "type": "url",
+      "id": "enlace",
+      "label": "Enlace Cinta Animada"
+    }
+    ],
+    "presets": [
+        {
+            "name": "Cinta Animada",
+            "category": "Animaciones"
+        }
+    ]
+}
+
+
+
+{% endschema %}

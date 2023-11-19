@@ -1,0 +1,76 @@
+{% comment %} Contenedor de la sección de el feed de banners 2 ### {% endcomment %}
+        <div class="row justify-content-around">
+            {% for block in section.blocks %}
+                {% assign b = block.settings %}
+                <a href="{{b.enlace}}" class="col-md-3 col-9 section-categorias-icon d-flex align-items-center justify-content-start mt-3 mb-3 ps-0 ms-0">
+                    {% comment %} <div class=""> {% endcomment %}
+                        {{ b.icono | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: '' }}
+                        <div class="col flex-column align-items-center ms-md-3 ms-0 me-md-0 me-1">
+                        <p class="mb-1 text-center"><b>{{ b.titulo}}</b></p>
+                        <p class="mb-1 text-center d-block">{{b.info}}</p>
+                    </div>
+                </a>
+            {% comment %} </div> {% endcomment %}
+            {% endfor %}
+
+        </div>
+{% comment %} Contenedor de la sección  del feed de productos {% endcomment %}
+
+
+
+{% schema %}
+{
+  "name": "Burbujas de contacto",
+  "tag":"section",
+  "class":"container",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titulo Principal",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "main_description",
+      "label": "Descripción",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "Seleccionar",
+        "type": "imagenes",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "icono",
+            "label": "Icono"
+        },
+        {
+            "type": "text",
+            "id": "titulo",
+            "label": "Titulo"
+        },
+        {
+            "type": "text",
+            "id": "info",
+            "label": "Informacion"
+        },
+        {
+            "type": "url",
+            "id": "enlace",
+            "label": "Colocar enlace"
+        }
+        ]       
+    }
+    ],
+    "presets": [
+    {
+    "name": "Burbujas de contacto",
+    "category": "Promo Colchones"
+    }
+    ]
+    }
+    {% endschema %}
+

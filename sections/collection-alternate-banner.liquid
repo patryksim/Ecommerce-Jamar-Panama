@@ -1,0 +1,568 @@
+
+<script
+  type="application/json"
+  data-section-type="static-collection"
+  data-section-id="{{ section.id }}"
+  data-section-data
+>
+  {
+    "context": {
+      "see_more": {{ 'general.general.see_more' | t | json }},
+      "see_less": {{ 'general.general.see_less' | t | json }},
+      "grid_list": {{ section.settings.default_view | json }},
+      "collectionUrl": {{ collection.url | default: '/collections/all' | json }}
+    }
+  }
+</script>
+
+{% comment %} {% render 'breadcrumbs' %} {% endcomment %}
+
+{% comment %} {% assign show_sidebar = false %} {% endcomment %}
+{% assign show_filters = true %}
+{% assign show_filter_trigger = false %}
+
+{% if section.settings.filter_style == 'none' %}
+  {% assign show_filters = false %}
+{% endif %}
+
+{% if section.settings.show_sidebar %}
+  {% comment %}
+    Sidebar toggle is used on mobile only, and will only show Filters
+  {% endcomment %}
+
+  {% if collection.all_tags.size > 0 and show_filters %}
+    {% assign show_filter_trigger = true %}
+  {% endif %}
+
+  {% if section.blocks.size > 0 or collection.all_tags.size > 0 and show_filters %}
+    {% comment %}
+      Sidebar to show only if there are tags in the collection, or there are menus
+    {% endcomment %}
+    {% assign show_sidebar = true %}
+  {% endif %}
+{% endif %}
+
+{% assign paginate_by = section.settings.products_per_page_range %}
+{% if template contains 'view-24' %}
+  {% assign paginate_by = 24 %}
+{% elsif template contains 'view-36' %}
+  {% assign paginate_by = 36 %}
+{% elsif template contains 'view-48' %}
+  {% assign paginate_by = 48 %}
+{% endif %}
+
+{%- capture collection_classes -%}
+  {% if show_sidebar %}
+    layout--has-sidebar
+  {% else %}
+    layout--no-sidebar
+  {% endif %}
+
+  {% if section.settings.default_view == 'grid-view' %}
+    productgrid-gridview
+  {% else %}
+    productgrid-listview
+  {% endif %}
+{%- endcapture -%}
+
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}
+ 
+  {% for product in products limit: product_count %}
+    <script>
+      skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+    </script>
+  {% endfor %}
+
+  {% comment %}  
+  SNIPPET QUE RENDERIZA EL SERVIVIO DE PRECIO DESDE EL API
+  ----------------------------------------------------------------
+  Endpoint usado: https://8wrhzmlo68.execute-api.us-east-1.amazonaws.com/api/v1/JP/prices
+  {% endcomment %}
+
+  {% render 'product-grid-fee-alt' %}
+  
+ 
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}  
+
+  
+
+
+{% paginate collection.products by paginate_by %}
+  <div class="productgrid--outer {{ collection_classes | strip_newlines }}">
+    <div class="productgrid--masthead">
+      {% render 'breadcrumbs' %}
+
+      {% comment %} 
+     ELIMINANDO LA IMAGEN DESTACADA DE LA COLECCIÓN
+     -------------------------------------------------------
+     Se quita la imagen destacada de la colección
+      {% if section.settings.show_collection_image and collection.image %}
+        <figure class="collection--image">
+          {%
+            render 'rimg',
+            img: collection.image,
+            size: '1350x',
+            lazy: true,
+            canvas: true
+          %}
+        </figure>
+      {% endif %}
+      {% endcomment %}
+
+      <h2 class="text-start text-gris-jamar fs-4 mb-md-0 mb-0 mt-0 ms-md-0">
+        {{ collection.title }}
+      </h2>
+
+
+      {% if collection.description != blank %}
+        <div class="collection--description rte">
+          {{ collection.description }}
+        </div>
+      {% endif %}
+    </div>
+
+    {% if show_sidebar %}
+      {%
+        render 'product-grid-sidebar-alt',
+        filter_style: section.settings.filter_style,
+        filter_position: section.settings.filter_position,
+        filter_limit: section.settings.filter_limit,
+        menu_depth: section.settings.menu_depth_range,
+        show_prod_count: section.settings.show_prod_count
+      %}
+    {% endif %}
+    <div class="productgrid--wrapper">
+      
+      {% if show_filter_trigger or section.settings.sort_by or section.settings.show_by or section.settings.grid_list %}
+        {% capture utility_class %}
+          productgrid--utils
+
+          {% if show_filter_trigger or section.settings.sort_by or section.settings.grid_list %}
+            productgrid--utils--visible-mobile
+          {% endif %}
+
+          {% unless section.settings.show_by or section.settings.sort_by or section.settings.grid_list %}
+            productgrid--utils--hidden-desktop
+          {% endunless %}
+        {% endcapture %}
+        <nav
+          class="{{ utility_class | strip_newlines }}"
+          aria-label="{{ 'general.accessibility.nav_collection_utilities' | t }}"
+        >
+          {% if show_filter_trigger %}
+            {%- assign filter_count = 0 -%}
+            {%- if current_tags.size > 0 -%}
+              {%- assign filter_count = current_tags.size -%}
+            {%- endif -%}
+            <div class="productgrid--utils utils-filter d-none">
+              <button
+                class="utils-filter-button"
+                type="button"
+                aria-label="{{ 'product_grid.filters.title_count' | t: count: filter_count }}"
+                data-productgrid-trigger-filters
+              >
+                <span class="utils-filter-icon">
+                  {%- render 'icon-filters' -%}
+                </span>
+                <span class="utils-filter-text">
+                  {{- 'product_grid.filters.title_count' | t: count: filter_count -}}
+                </span>
+              </button>
+            </div>
+          {% endif %}
+
+          {%- if section.settings.sort_by -%}
+            {%-
+              render 'product-grid-sortby-alt',
+              type: 'select',
+            -%}
+          {%- endif -%}
+
+          {%- if section.settings.show_by or section.settings.grid_list -%}
+            <div
+              class="
+                productgrid--utils
+                utils-view
+                {% if section.settings.grid_list == false %}
+                  utils-hide
+                {% endif %}
+              "
+            >
+              <div class="utils-view-container">
+                {%- if section.settings.show_by -%}
+                  {%-
+                    render 'product-grid-showby',
+                    show_by: paginate_by,
+                  -%}
+                {%- endif -%}
+
+                {% if section.settings.grid_list %}
+                  <div class="utils-viewtoggle">
+                    <span class="utils-viewtoggle-label">
+                      {{ 'product_grid.view_as.title' | t }}
+                    </span>
+
+                    <button
+                      class="utils-viewtoggle-button {% if section.settings.default_view == 'grid-view' %}active{% endif %}"
+                      data-collection-view="grid-view"
+                      aria-label="grid view"
+                    >
+                      {% render 'icon-library', id: 'icon-grid' %}
+                    </button>
+
+                    <button
+                      class="utils-viewtoggle-button {% if section.settings.default_view == 'list-view' %}active{% endif %}"
+                      data-collection-view="list-view"
+                      aria-label="list view"
+                    >
+                      {% render 'icon-library', id: 'icon-list' %}
+                    </button>
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {%- endif -%}
+        </nav>
+      {% endif %}
+      {% if current_tags.size > 0 %}
+        <div class="productgrid--filters">
+          {%- render 'product-grid-tags-active' %}
+        </div>
+      {% endif %}
+
+      {% if collection.products.size > 0 %}
+      
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}
+  
+  {% assign send_to_service = blank | split: ',' %}
+  {% assign product_sku = blank | split: ',' %}
+  {% for product in collection.products %}
+    {% for variant in product.variants %}
+      {% assign product_sku = variant.sku | split: ',' | first | split: ',' %}
+      {% assign send_to_service = send_to_service | concat: product_sku  %}
+    {% endfor %}
+  {% endfor %}
+  <script>
+  	var productsShow = {{ send_to_service | json }};
+  </script>
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}  
+      
+      
+  	  {% comment %}
+  	  /**********************************************************
+  	                   ATRIBUTOS DATA PARA EL DMP
+  	                      PATRYKSIM@GMAIL.COM
+  	  **********************************************************/
+  	  {% endcomment %}
+      {% assign list_name = collection.title | escape %}
+      
+        <ul class="productgrid--items products-per-row-{{- section.settings.products_per_row -}}">
+          {% assign count = 0 %}
+          {% for product in collection.products %}
+          {% assign count = count | plus: 1 %}
+          
+          {% if count == 3  %}
+            {% for block in section.blocks %}
+          	{% assign enlace = block.settings.banner_link | downcase %} 
+              {% if enlace  == canonical_url  %}
+                <a href="{{ block.settings.banner_promo_url }}" class="d-flex justify-content-md-start justify-content-center mb-md-0 mb-3 banner--collection--cta">
+                    <img class="img-banner-mosaico" src="{{ block.settings.banner_image | img_url: "700x700", format: 'pjpg'  }}" alt="Banner de mosaico promocional" data-rimg="lazy"  loading="lazy">
+                </a>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          
+            {%
+              render 'product-grid-item-alt',
+              product: product,
+          	  list_name: list_name
+            %}
+          {% endfor %}
+        </ul>
+      {% else %}
+        <div class="productgrid--no-results">
+          <h2 class="productgrid--no-results-title">
+            {%- if collection.all_products_count == 0 -%}
+              {{ 'product_grid.no_results.empty' | t }}
+            {%- else -%}
+              {{ 'product_grid.no_results.tags_empty' | t }}
+            {%- endif -%}
+          </h2>
+
+          <a class="productgrid--no-results-button" href="{{ routes.all_products_collection_url }}">
+            {{ 'search.general.view_all_products' | t }}
+          </a>
+        </div>
+      {% endif %}
+
+      {%
+        render 'pagination', paginate: paginate,
+        grid_list: true
+      %}
+    </div>
+  </div>
+{% endpaginate %}
+
+{%- if section.settings.sort_by -%}
+  {%-
+    render 'product-grid-sortby-alt',
+    type: 'modal',
+  -%}
+{%- endif -%}
+
+{% render 'quick-shop' %}
+
+{% schema %}
+{
+  "name": "Collection pages",
+  "class": "collection--section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_collection_image",
+      "label": "Show collection image",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "products_per_page_range",
+      "label": "Products per page",
+      "min": 24,
+      "max": 48,
+      "step": 12,
+      "default": 24
+    },
+    {
+      "type": "select",
+      "id": "products_per_row",
+      "label": "Products per row",
+      "options": [
+        {
+          "label": "3",
+          "value": "3"
+        },
+        {
+          "label": "4",
+          "value": "4"
+        }
+      ],
+      "default": "4"
+    },
+    {
+      "type": "header",
+      "content": "Utility bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "sort_by",
+      "label": "Show \"Sort by\" Dropdown",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_by",
+      "label": "Show products per page links",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "grid_list",
+      "label": "Show grid/list view toggle",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "default_view",
+      "label": "Default view",
+      "options": [
+        {
+          "label": "Grid",
+          "value": "grid-view"
+        },
+        {
+          "label": "List",
+          "value": "list-view"
+        }
+      ],
+      "default": "grid-view"
+    },
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sidebar",
+      "label": "Show sidebar",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_prod_count",
+      "label": "Show product counts",
+      "info": "Only applies to collection links in sidebar menus",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "filter_style",
+      "label": "Filters",
+      "info": "[Learn more](https://support.pixelunion.net/hc/en-us/articles/360026081933-Setting-up-product-tag-filters-in-Empire)",
+      "options": [
+        {
+          "value": "none",
+          "label": "Hide filters"
+        },
+        {
+          "value": "tags",
+          "label": "By tag"
+        },
+        {
+          "value": "groups",
+          "label": "By group"
+        }
+      ],
+      "default": "tags"
+    },
+    {
+      "id": "filter_limit",
+      "type": "select",
+      "label": "Hide additional tags after",
+      "options": [
+        {
+          "value": "5",
+          "label": "5 tags"
+        },
+        {
+          "value": "6",
+          "label": "6 tags"
+        },
+        {
+          "value": "8",
+          "label": "8 tags"
+        },
+        {
+          "value": "10",
+          "label": "10 tags"
+        },
+        {
+          "value": "15",
+          "label": "15 tags"
+        },
+        {
+          "value": "20",
+          "label": "20 tags"
+        },
+        {
+          "value": "999",
+          "label": "Show all tags"
+        }
+      ],
+      "default": "999"
+    },
+    {
+      "type": "select",
+      "id": "filter_position",
+      "label": "Filters position",
+      "options": [
+        {
+          "value": "above_menus",
+          "label": "Above menus"
+        },
+        {
+          "value": "below_menus",
+          "label": "Below menus"
+        }
+      ],
+      "default": "above_menus"
+    },
+    {
+      "type":      "text",
+      "id":        "grid_categories",
+      "label":     "Display filters as grid",
+      "info":      "List groups to display in an alternate grid format, like “Size, Price”. [Learn more](https://support.pixelunion.net/hc/en-us/articles/360026081933-Setting-up-product-tag-filters-in-Empire)"
+    },
+    {
+      "type":      "textarea",
+      "id":        "custom_ordered_categories",
+      "label":     "Group order",
+      "info":      "Define a custom order for groups, like “Color, Brand, Size”. Other groups will appear at the bottom."
+    },
+    {
+      "type":      "textarea",
+      "id":        "custom_ordered_tags",
+      "label":     "Tag order",
+      "info":      "Define a custom order for tags, like “Size_S, Size_M, Size_L”. Items must exactly match tag name, including group prefix. Other tags will appear at the bottom."
+    },
+    {
+      "type": "range",
+      "id": "menu_depth_range",
+      "label": "Menu depth visibility",
+      "info": "[Learn more](https://help.shopify.com/manual/sell-online/online-store/menus-and-links#create-a-drop-down-menu)",
+      "min": 1,
+      "max": 3,
+      "step": 1,
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Menu",
+      "settings": [
+        {
+          "id": "menu",
+          "type": "link_list",
+          "label": "Menu",
+          "info": "This menu will show as many dropdown items as specified in \"Menu depth visibility\"."
+        }
+      ]
+    },
+	{
+      "type": "banners",
+      "name": "Banners",
+      "settings": [
+        {
+          "id": "banner_link",
+          "type": "text",
+          "label": "Enlace del banner",
+          "info": "Colocar los enlaces de los banners."
+        },
+        {
+          "id": "banner_image",
+          "type": "image_picker",
+          "label": "Imagen a renderizar",
+          "info": "Colocar imagen de los banners"
+        },
+		{
+          "id": "banner_promo_url",
+          "type": "url",
+          "label": "Agregar enlace",
+          "info": "Colocar enlace de la promo"
+        }
+      ]
+    }
+  ]
+}
+
+{% endschema %}

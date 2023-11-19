@@ -1,0 +1,207 @@
+{%- assign shopify_store_country = shop.address.country_code -%}
+{%- assign cart_first_step = true -%}
+{%- assign step_checkout_offset = 0 -%}
+{%- if cart_first_step == true -%}
+    {%- assign step_checkout_offset = 1 -%}
+{%- endif -%}
+{%- assign google_business_vertical = "retail" -%}
+<script>
+    {%- if checkout -%}
+        (function () {
+            var dataLayerData = {
+                'pageType': 'Checkout',
+                'page': {
+                    'template': 'checkout',
+                    'title':    {{ page_title | json }},
+                },
+                'visitorLoginState': 'Guest',
+                'currency': {{ shop.currency | json }},
+                'customerType': 'newCustomer'
+            };
+
+            {%- if checkout.order -%}
+                dataLayerData.pageType = 'Order';
+            {%- endif -%}
+
+            {%- if customer -%}
+                dataLayerData.visitorLoginState = 'Logged In';
+                dataLayerData.customer = {
+                    'id':           {{ customer.id | json }},
+                    'firstName':    {{ customer.first_name | json }},
+                    'lastName':     {{ customer.last_name | json }},
+                    'email':        {{ customer.email | json }},
+                    'phone':        {{ customer.phone | json }},
+                    'address': {
+                        'street':       {{ customer.default_address.street | json }},
+                        'city':         {{ customer.default_address.city | json }},
+                        'state':        {{ customer.default_address.province | json }},
+                        'stateCode':    {{ customer.default_address.province_code | json }},
+                        'postalCode':   {{ customer.default_address.zip | json }},
+                        'country':      {{ customer.default_address.country | json }},
+                        'countryCode':  {{ customer.default_address.country_code | json }},
+                        'company':      {{ customer.default_address.company | json }},
+                        'phone':        {{ customer.default_address.phone | json }}
+                    },
+                    'ordersCount': {{ customer.orders_count | json }},
+                    'totalSpent':  {{ customer.total_spent | divided_by: 100.0 | json }},
+                    'acceptsMarketing': {{ customer.accepts_marketing | json }},
+                    'tags': {{ customer.tags | json }}
+                };
+                dataLayerData.customerType =  ({{customer.orders_count}} > 1) ? 'repeatCustomer' : 'newCustomer';
+            {%- endif -%}
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push(dataLayerData);
+        })();
+    {%- endif -%}
+
+    function _ready(fn) {
+        if (document.readyState != 'loading') {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
+
+    {%- if checkout -%}
+        {%- unless checkout.order -%}
+            _ready(function() {
+                var dataLayerData = {};
+
+                var checkoutStep = {{ step_checkout_offset }};
+                var checkoutOption = undefined;
+                var checkoutLabel = "Not Identified";
+                var eventLabel = "checkout";
+                var processEnhanced = false;
+
+                if ( Shopify.Checkout && Shopify.Checkout.step ) {
+
+                    checkoutLabel = Shopify.Checkout.step.split("_").map(function(string){
+                            return string.charAt(0).toUpperCase() + string.slice(1);
+                        }).join(" ");
+
+                    switch (Shopify.Checkout.step) {
+                        case 'contact_information':
+                            checkoutStep += 1;
+                            eventLabel = "checkoutContactInformation";
+                            processEnhanced = true;
+                            break;
+                        case 'shipping_method':
+                            checkoutStep += 2;
+                            eventLabel = "checkoutShippingMethod";
+                            checkoutOption = {{ checkout.shipping_method.title | json }} || undefined;
+                            processEnhanced = true;
+                            break;
+                        case 'payment_method':
+                            checkoutStep += 3;
+                            eventLabel = "checkoutPaymentMethod";
+                            processEnhanced = true;
+                            break;
+                        case 'review':
+                            checkoutStep += 4;
+                            eventLabel = "checkoutReview";
+                            processEnhanced = true;
+                            break;
+                    }
+                };
+
+                dataLayerData.pageType = "Checkout > " + checkoutLabel;
+                dataLayerData.event = eventLabel;
+
+                dataLayerData.checkout = {
+                    'id':             {{ checkout.id | json }},
+                    'subtotal':       {{checkout.subtotal_price | divided_by: 100.0 | json }},
+                    'total':          {{ checkout.total_price | divided_by: 100.0 | json }},
+                    'tax':            {{ checkout.tax_price | divided_by: 100.0 | json }},
+                    'shippingMethod': {{ checkout.shipping_method.title | json }},
+                    'shippingPrice':  {{ checkout.shipping_price | divided_by: 100.0 | json }},
+                    'discounts': [
+                        {%- for discount in checkout.discount_applications -%}
+                            {
+                                'title':  {{ discount.title | json }},
+                                'amount': {{ discount.total_allocated_amount | divided_by: 100.0 | json }}
+                            },
+                        {%- endfor -%}
+                    ],
+                    'totalDiscounts': {{ checkout.discounts_amount | divided_by: 100.0 | json }},
+                    'itemCount':      {{ checkout.line_items.size | json }},
+                    'email':          {{ checkout.email | json }},
+                    'products':       []
+                };
+
+                dataLayerData.ecommerce = {
+                    'currency': {{ shop.currency | json }},
+                    'items': 	[],
+                    'value': 	{{ checkout.total_price | divided_by: 100.0 | json }}
+                };
+
+                if (processEnhanced) {
+                    dataLayerData.ecommerce.currencyCode = {{ shop.currency | json }};
+                    dataLayerData.ecommerce.checkout = {
+                        'actionField': {
+                            'step':     checkoutStep,
+                            'option':   checkoutOption
+                        },
+                        'products': []
+                    };
+                }
+
+                {%- for line_item in checkout.line_items -%}
+                    dataLayerData.checkout.products.push({
+                        'index':        {{ forloop.index }},
+                        'id':           {{ line_item.product_id | json }},
+                        'sku':          {{ line_item.sku | json }},
+                        'shopifyId':    'shopify_{{ shopify_store_country }}_{{ line_item.product_id }}_{{ line_item.variant_id }}',
+                        'name':         {{ line_item.product.title | json }},
+                        'price':        {{ line_item.final_price | divided_by: 100.0 | json }},
+                        'quantity':     {{ line_item.quantity | json }},
+                        'linePrice':    {{ line_item.final_line_price | divided_by: 100.0 | json }},
+                        'category':     {{ line_item.product.type | json }},
+                        'brand':        {{ line_item.product.vendor | json }},
+                        'handle':       {{ line_item.product.handle | json }},
+                        'url':          {{ line_item.product.url | json }},
+                        'imageUrl':     {{ line_item | image_url: width: 1024 | json }},
+                        'variant':      {{ line_item.variant.title | json }},
+                        'variantId':    {{ line_item.variant_id | json }},
+                        'variantSku':   {{ line_item.sku | json }}
+                    });
+
+                    if (processEnhanced) {
+                        dataLayerData.ecommerce.checkout.products.push({
+                            'id':       {{ line_item.sku | json }},
+                            'name':     {{ line_item.product.title | json }},
+                            'price':    {{ line_item.final_price | divided_by: 100.0 | json }},
+                            'quantity': {{ line_item.quantity | json }},
+                            'category': {{ line_item.product.type | json }},
+                            'brand':    {{ line_item.product.vendor | json }},
+                            'variant':  {{ line_item.variant.title | json }}
+                        });
+                    }
+
+                    dataLayerData.ecommerce.items.push({
+                        'item_id':        {{ line_item.sku | json }},
+                        'item_name':      {{ line_item.product.title | json }},
+                        'price':          {{ line_item.final_price | divided_by: 100.0 | json }},
+                        'item_brand':     {{ line_item.product.vendor | json }},
+                        'item_category':  {{ line_item.product.type | json }},
+                        'item_variant':   {{ line_item.variant.title | json }},
+                        'quantity':		  {{ line_item.quantity | json }},
+                        'id':             {{ line_item.sku | json }},
+                        'google_business_vertical': {{ google_business_vertical | json }}
+                    });
+                {%- endfor -%}
+
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push(dataLayerData);
+            });
+        {%- endunless -%}
+    {%- endif -%}
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BFKTBB');</script>
+<!-- End Google Tag Manager -->

@@ -1,0 +1,342 @@
+{
+  "sections": {
+    "16630180203365ef2f": {
+      "type": "d-grid-main",
+      "disabled": true,
+      "blocks": {
+        "16b88672-744a-4c41-aba5-f754aba0aa39": {
+          "type": "imagen",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/BANNER-SALE-junio-PC-1_020d07af-aa34-498c-8631-5d55182389fc.webp",
+            "imagenmovil": "shopify:\/\/shop_images\/BANNER-SALE-junio-MOBILE-1_a089cfff-7181-409b-b5f5-a38b781e4cec.webp",
+            "textoimage": "",
+            "parraforefuerzo": "",
+            "textoenlace": "",
+            "enlaceslide": "https:\/\/www.jamar.com.pa\/pages\/sale",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "396e8822-81d0-46b0-9373-0f89ed2d528d": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/SECCION-SALE-banner-48horas-PC.webp",
+            "imagenmovil": "shopify:\/\/shop_images\/BANNER-SALE-48HORAS-Movil.webp",
+            "textoimage": "",
+            "parraforefuerzo": "",
+            "textoenlace": "",
+            "enlaceslide": "",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "9c34fb69-7ec0-4003-abfe-d7d75f0a1ee6": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/SECCION-SALE-banner-OFERTASMAGICAS-PC.jpg",
+            "imagenmovil": "shopify:\/\/shop_images\/SECCION-SALE-banner-OFERTASMAGICAS-Movil.jpg",
+            "textoimage": "",
+            "parraforefuerzo": "",
+            "textoenlace": "",
+            "enlaceslide": "#",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "c1265207-47d5-4bb4-8c60-00995390e805": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/SECCION-SALE-banner-hasta40-PC.webp",
+            "imagenmovil": "shopify:\/\/shop_images\/SECCION-SALE-banner-hasta40-Movil.webp",
+            "textoimage": "",
+            "parraforefuerzo": "",
+            "textoenlace": "",
+            "enlaceslide": "",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        },
+        "d3ba8418-12a3-4dd6-8933-a7d17238e371": {
+          "type": "imagen",
+          "disabled": true,
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/BANNER-SALE-CAPA-PC.jpg",
+            "imagenmovil": "shopify:\/\/shop_images\/BANNER-SALE-CAPA-Movil.jpg",
+            "textoimage": "",
+            "parraforefuerzo": "",
+            "textoenlace": "",
+            "enlaceslide": "#",
+            "mostrarcap": false,
+            "overlay": 1
+          }
+        }
+      },
+      "block_order": [
+        "16b88672-744a-4c41-aba5-f754aba0aa39",
+        "396e8822-81d0-46b0-9373-0f89ed2d528d",
+        "9c34fb69-7ec0-4003-abfe-d7d75f0a1ee6",
+        "c1265207-47d5-4bb4-8c60-00995390e805",
+        "d3ba8418-12a3-4dd6-8933-a7d17238e371"
+      ],
+      "settings": {
+        "clase_personalizada": "Doler ipsum dolor sit amet consectetur adipiscing",
+        "mostrarcap": false
+      }
+    },
+    "e06a440f-ef80-4242-ae57-1f32fd79f2f6": {
+      "type": "carrusel-dormitorios",
+      "blocks": {
+        "9e82c6e5-7476-4838-8623-57bd2cc5ed8b": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/banner-sale-jamar-desktop.webp",
+            "image_mobile": "shopify:\/\/shop_images\/banner-sale-jamar-mobile.webp",
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "9e82c6e5-7476-4838-8623-57bd2cc5ed8b"
+      ],
+      "settings": {
+        "hover": true,
+        "hover_image": "shopify:\/\/shop_images\/22222.jpg",
+        "hover_width": 5,
+        "hover_opacity": 1,
+        "hover_title": "Muebles y colchones en oferta",
+        "hover_text": "Descubre muebles y colchones exclusivos con los mejores precios en Panamá. Renueva tu hogar y transforma tus ambientes con productos de alta calidad."
+      }
+    },
+    "d918823d-b94c-451e-9545-0e038cca90d7": {
+      "type": "colecciones-home",
+      "disabled": true,
+      "blocks": {
+        "template--16159879102663__d918823d-b94c-451e-9545-0e038cca90d7-1685464700f333d297-0": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/outlet-salas-10-mayo.webp",
+            "image_mobile": "shopify:\/\/shop_images\/outlet-salas-10-mayo.webp",
+            "title": "SALAS",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/salas-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        },
+        "17628040-265c-4a8e-9239-2abc52cd8a2d": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/outlet-dormitorios-10-mayo.webp",
+            "image_mobile": "shopify:\/\/shop_images\/outlet-dormitorios-10-mayo.webp",
+            "title": "RECÁMARAS",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/recamaras-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        },
+        "bcd21ef9-9753-401a-aa23-3125a47296e7": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/outlet-comedores-10-mayo.webp",
+            "image_mobile": "shopify:\/\/shop_images\/outlet-comedores-10-mayo.webp",
+            "title": "COMEDORES",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/comedores-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        },
+        "435bf608-bd53-4c39-9ed7-5abb45900334": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/outlet-colchones-10-mayo.webp",
+            "image_mobile": "shopify:\/\/shop_images\/outlet-colchones-10-mayo.webp",
+            "title": "COLCHONES",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/colchones-y-bases-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        },
+        "ef307a50-ae61-46d7-bb1b-c15f408301ab": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/outlet-mueblesparatv-estudio-10-mayo.webp",
+            "image_mobile": "shopify:\/\/shop_images\/outlet-mueblesparatv-estudio-10-mayo.webp",
+            "title": "MUEBLES PARA TV Y ESTUDIOS",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/muebles-para-tv-y-escritorios-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        },
+        "b40d2575-f60c-4f72-8108-e234d20aedca": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/JUVE.webp",
+            "image_mobile": "shopify:\/\/shop_images\/JUVE.webp",
+            "title": "JUVENIL E INFANTIL",
+            "link": "https:\/\/www.jamar.com.pa\/collections\/colecciones-juvenil-e-infantil-sale",
+            "mobile_width": 6,
+            "padding_mobile_0": false,
+            "desktop_width": 4
+          }
+        }
+      },
+      "block_order": [
+        "template--16159879102663__d918823d-b94c-451e-9545-0e038cca90d7-1685464700f333d297-0",
+        "17628040-265c-4a8e-9239-2abc52cd8a2d",
+        "bcd21ef9-9753-401a-aa23-3125a47296e7",
+        "435bf608-bd53-4c39-9ed7-5abb45900334",
+        "ef307a50-ae61-46d7-bb1b-c15f408301ab",
+        "b40d2575-f60c-4f72-8108-e234d20aedca"
+      ],
+      "settings": {
+        "title": "",
+        "text": ""
+      }
+    },
+    "temporal": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    },
+    "1659465913e6b7c866": {
+      "type": "d-collection-groups",
+      "blocks": {
+        "2a295e41-0f4e-49a6-8675-bc8a9c05e127": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/recamara.svg",
+            "texto": "Recámaras",
+            "filtro_tag": "Recámaras"
+          }
+        },
+        "6bd4708c-9f9b-4843-86e3-4f5a8078b09f": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/sala.svg",
+            "texto": "Salas",
+            "filtro_tag": "Salas"
+          }
+        },
+        "f6473916-6ce4-4556-b1ca-99ec18b17629": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/colchon.svg",
+            "texto": "Colchones",
+            "filtro_tag": "Colchones"
+          }
+        },
+        "e682be7f-7624-414d-a423-1327216bc6c8": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/comedor.svg",
+            "texto": "Comedores",
+            "filtro_tag": "Comedores"
+          }
+        },
+        "112d9001-a6ec-4026-b1cd-77f3196926f2": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/mesa_de_tv_y_escritorio.svg",
+            "texto": "Escritorios",
+            "filtro_tag": "Mesas de TV"
+          }
+        },
+        "8a74c375-7008-4a89-83f1-524129900da8": {
+          "type": "block",
+          "settings": {
+            "texto": "Ver todos",
+            "filtro_tag": ""
+          }
+        }
+      },
+      "block_order": [
+        "2a295e41-0f4e-49a6-8675-bc8a9c05e127",
+        "6bd4708c-9f9b-4843-86e3-4f5a8078b09f",
+        "f6473916-6ce4-4556-b1ca-99ec18b17629",
+        "e682be7f-7624-414d-a423-1327216bc6c8",
+        "112d9001-a6ec-4026-b1cd-77f3196926f2",
+        "8a74c375-7008-4a89-83f1-524129900da8"
+      ],
+      "settings": {
+        "title": "Conoce las opciones que tenemos para ti al <b>mejor precio<\/b> en cada categoría",
+        "text": "",
+        "sectionname": "",
+        "coleccion": "ofertas"
+      }
+    },
+    "1659466154b8f6d30f": {
+      "type": "d-credijamar-home",
+      "blocks": {
+        "052052f2-70b4-4161-aafc-a5351aaf4b41": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "67b96bb4-3fad-4204-ac65-c2f0128597fe": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "a47057ca-a7bd-4a56-9244-010106846392": {
+          "type": "imagenes",
+          "settings": {
+          }
+        },
+        "e7bfcc99-17f7-4409-b4aa-5e8549306700": {
+          "type": "imagenes",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "052052f2-70b4-4161-aafc-a5351aaf4b41",
+        "67b96bb4-3fad-4204-ac65-c2f0128597fe",
+        "a47057ca-a7bd-4a56-9244-010106846392",
+        "e7bfcc99-17f7-4409-b4aa-5e8549306700"
+      ],
+      "settings": {
+        "bg-credijamar": "shopify:\/\/shop_images\/credijamar-outlet-10-mayo.webp"
+      }
+    },
+    "16594663650ea8bba2": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "¡Suscríbete a nuestro boletín de ofertas!",
+        "main_description": "Sé el primero en recibir nuestras mejores ofertas en muebles, colchones, decoración y mucho más.",
+        "banner_form": "shopify:\/\/shop_images\/formulario-outlet-10-mayo.webp",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-start",
+        "vertical_alignment_desktop": "align-items-md-start",
+        "etiqueta": "form_zona_sale",
+        "fondo_boton": "#404b5a",
+        "color_letra_boton": "#FFFFFF"
+      }
+    },
+    "165946648982f1c51e": {
+      "type": "dynamic-html",
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "custom_html": "<br><br><br>"
+      }
+    }
+  },
+  "order": [
+    "16630180203365ef2f",
+    "e06a440f-ef80-4242-ae57-1f32fd79f2f6",
+    "d918823d-b94c-451e-9545-0e038cca90d7",
+    "temporal",
+    "1659465913e6b7c866",
+    "1659466154b8f6d30f",
+    "16594663650ea8bba2",
+    "165946648982f1c51e"
+  ]
+}

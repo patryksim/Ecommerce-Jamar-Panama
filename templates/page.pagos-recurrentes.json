@@ -1,0 +1,10 @@
+{
+    "sections": {
+      "main-section": {
+        "type": "s-faq-recurrency"
+      }
+    },
+    "order": [
+        "main-section"
+    ]
+  }

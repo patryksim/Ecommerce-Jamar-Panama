@@ -1,0 +1,87 @@
+<!-- Formulario para estilos y colecciones -->
+<div class="row mt-4">
+  <div class="col-12 col-sm-6 text-center align-self-center">
+    <img class="m-0" src="{{ section.settings.image | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+  </div>
+  <div class="d-block d-sm-none">
+    <br>
+  </div>
+  <div class="col-12 col-sm-6 align-self-center">
+    <h2 class="text-body mt-0">{{ section.settings.title }}</h2>
+    <p>{{ section.settings.text }}</p>
+    {% form 'customer', id: section.settings.form_id, class: 'row' %}
+        {% if form.posted_successfully? %}
+          <p class="newsletter-success">{{ 'general.newsletter.success' | t }}</p>
+        {% else %}
+        <input type="hidden" name="contact[tags]" value="{{ section.settings.tags }}">
+        <div class="col-7 mb-3">
+          <input type="text" id="name" name="contact[note][Nombre]" class="form-control" placeholder="Nombre completo *">
+        </div>
+        <div class="col-5 mb-3">
+          <input type="tel" id="tel"  name="contact[note][Teléfono]" class="form-control" placeholder="Teléfono *">
+        </div>
+        <div class="col-12 mb-3">
+          <input type="email" id="email"  name="contact[email]" class="form-control" placeholder="Direccion de correo electrónico *">
+        </div>
+        <div class="mb-0 submit">
+          <button id="{{ section.settings.btn_id }}" name="subscribe" type="submit" value="Sign up" class="btn btn-dark ps-4 pe-4">ENVIAR</button>
+        </div>
+      {% endif %}
+    {% endform %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Formulario Col y Estilos",
+    "tag":"section",
+    "class":"container pt-4",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Imagen"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Titulo de formulario",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "text",
+        "label": "Texto de formulario",
+        "default": "Text"
+      },
+      {
+        "type": "text",
+        "id": "tags",
+        "label": "Tags de formulario",
+        "default": "Estilos y colecciones"
+      },
+      {
+        "type": "text",
+        "id": "form_id",
+        "label": "ID de formulario"
+      },
+      {
+        "type": "text",
+        "id": "btn_id",
+        "label": "ID de botón"
+      }
+    ],
+    "presets": [
+        {
+          "name": "Formulario Col y Estilos"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,464 @@
+{%- assign shopify_store_country = shop.address.country_code -%}
+{%- assign list_product_collections = false -%}
+{%- assign cart_step_one = true -%}
+{%- assign google_business_vertical = "retail" -%}
+<script>
+	(function () {
+		var dataLayerData = {
+            'pageType': {{ template.name | capitalize | json }},
+			'page': {
+				'template': {{ template | json }},
+				'title': {{ page_title | json }},
+				'currentPage': {{ current_page | json }}
+			},
+            'visitorLoginState': 'Guest',
+            'currency': {{ shop.currency | json }},
+            'customerType': 'newCustomer'
+		};
+
+        {%- if customer -%}
+            dataLayerData.visitorLoginState = 'Logged In';
+            dataLayerData.customer = {
+                'id': 			{{ customer.id | json }},
+                'firstName': 	{{ customer.first_name | json }},
+                'lastName': 	{{ customer.last_name | json }},
+                'email': 		{{ customer.email | json }},
+                'phone': 		{{ customer.phone | json }},
+                'address': {
+                    'street': 		{{ customer.default_address.street | json }},
+                    'city': 		{{ customer.default_address.city | json }},
+                    'state': 		{{ customer.default_address.province | json }},
+                    'stateCode': 	{{ customer.default_address.province_code | json }},
+                    'postalCode': 	{{ customer.default_address.zip | json }},
+                    'country': 		{{ customer.default_address.country | json }},
+                    'countryCode': 	{{ customer.default_address.country_code | json }},
+                    'company': 		{{ customer.default_address.company | json }},
+                    'phone': 		{{ customer.default_address.phone | json }}
+                },
+                'ordersCount': {{ customer.orders_count | json }},
+                'totalSpent':  {{ customer.total_spent | divided_by: 100.0 | json }},
+                'acceptsMarketing': {{ customer.accepts_marketing | json }},
+                'tags': {{ customer.tags | json }}
+            };
+            dataLayerData.customerType =  ({{customer.orders_count}} > 1) ? 'repeatCustomer' : 'newCustomer';
+        {%- endif -%}
+
+        {%- if template.name == 'index' -%}
+            dataLayerData.pageType = 'Home';
+
+        {%- elsif template.name == 'collection' and collection -%}
+			dataLayerData.page.collection = {{ collection.title | json }};
+
+        {%- elsif template.name == 'search' and search -%}
+            dataLayerData.pageType = 'SearchResults';
+			dataLayerData.page.searchTerm = {{ search.terms | json }};
+			dataLayerData.page.searchResults = {{ search.results_count | json }};
+
+        {%- elsif template.name == 'product' and product -%}
+
+        {%- elsif template.name == 'cart' and cart -%}
+
+        {%- elsif template.name == 'article' and article -%}
+            dataLayerData.pageType = 'Blog';
+
+        {%- else -%}
+            dataLayerData.pageType = 'Other > ' + {{ template.name | capitalize | json }};
+
+        {%- endif -%}
+
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push(dataLayerData);
+	})();
+
+    function _ready(fn) {
+        if (document.readyState != 'loading') {
+            fn();
+        } else {
+            document.addEventListener('DOMContentLoaded', fn);
+        }
+    }
+
+    _ready(function() {
+		var dataLayerData = {};
+
+        {%- if template.name == 'index' -%}
+			dataLayerData.event = 'home';
+
+        {%- elsif template.name == 'collection' and collection -%}
+			dataLayerData.event = 'collection';
+
+			dataLayerData.collection = {
+				'id': 			{{ collection.id | json }},
+				'name': 		{{ collection.title | json }},
+				'productCount': {{ collection.products_count | json }},
+				'type': 		{{ collection.current_type | json }},
+				'handle': 		{{ collection.handle | json }},
+				'products': 	[]
+			};
+
+			{%- if list_product_collections -%}
+				{%- for product in collection.products -%}
+					{%- assign variantsAvailable = 0 -%}
+					{%- assign variantStock = 0 -%}
+					{%- assign stockNotManaged = false -%}
+
+					{%- for variant in product.variants -%}
+						{%- if variant.available == true -%}
+							{%- assign variantsAvailable = variantsAvailable | plus: 1 -%}
+							{%- if variant.inventory_management == null -%}
+								{%- assign stockNotManaged = true -%}
+							{%- else -%}
+								{%- assign variantStock = variantStock | plus: variant.inventory_quantity -%}
+							{%- endif -%}
+						{%- endif -%}
+					{%- endfor -%}
+
+					{%- if stockNotManaged == true -%}{%- assign variantStock = null -%}{%- endif -%}
+
+					dataLayerData.collection.products.push({
+						'id': 				{{ product.id | json }},
+						'sku': 				{{ product.selected_or_first_available_variant.sku | json }},
+						'variantId': 		{{ product.selected_or_first_available_variant.variant.id | json }},
+						'variantSku': 		{{ product.selected_or_first_available_variant.sku | json }},
+						'shopifyId': 		'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ product.selected_or_first_available_variant.id }}',
+						'name': 			{{ product.title | json }},
+						'price': 			{{ product.price | divided_by: 100.0 | json }},
+						'comparePrice': 	{{ product.compare_at_price_max | divided_by: 100.0 | json }},
+						'type': 			{{ product.type | json }},
+						'tags': 			{{ product.tags | json }},
+						'brand': 			{{ product.vendor | json }},
+						'handle': 			{{ product.handle | json }},
+						'url': 				{{ product.url | json }},
+						'imageUrl': 		{{ product | image_url: width: 1024 | json }},
+						'inStock': 			{{ product.available | json }},
+						'stockQty': 		{{ variantStock | json }},
+						'hasNoVariants': 	{{ product.has_only_default_variant | json }},
+						'numVariants': 		{{ product.variants.size | json }},
+						'variantsInStock':  {{ variantsAvailable | json }},
+						'variants': [
+							{%- for variant in product.variants -%}
+								{%- if variant.image.src -%}
+									{%- assign variantImage = variant | image_url: width: 1024 -%}
+								{%- else -%}
+									{%- assign variantImage = product | image_url: width: 1024 -%}
+								{%- endif -%}
+								{
+									'id': 			  {{ variant.id | json }},
+									'sku': 			  {{ variant.sku | json }},
+									'shopifyId': 	  'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ variant.id }}',
+									'name': 		  {{ variant.title | json }},
+									'inStock': 		  {{ variant.available }},
+									'stockQty': 	  {{ variant.inventory_quantity }},
+									'price': 		  {{ variant.price | divided_by: 100.0 | json }},
+									'compareAtPrice': {{ variant.compare_at_price | divided_by: 100.0 | json }},
+									'imageUrl': 	  {{ variantImage | json }}
+								},
+							{%- endfor-%}
+						]
+					});
+				{%- endfor -%}
+			{%- endif -%}
+
+        {%- elsif template.name == 'search' and search -%}
+			dataLayerData.event = 'searchResults';
+
+			dataLayerData.search = {
+				'term': 		{{ search.terms | json }},
+				'resultsCount': {{ search.results_count | json }},
+				'types': 		{{ search.types | json }},
+				'products': 	[],
+				'articles': 	[],
+				'pages': 		[]
+			};
+
+			{%- if list_product_collections -%}
+				{%- for item in search.results -%}
+					{%- if item.object_type == 'article' -%}
+						dataLayerData.search.articles = {
+							'id': 			 {{ item.id | json }},
+							'author': 		 {{ item.author | json }},
+							'title': 		 {{ item.title | json }},
+							'commentsCount': {{ item.comments_count | json }},
+							'dateCreated': 	 {{ item.created_at | date:"%Y-%m-%d" | json }}
+						};
+
+					{%- elsif item.object_type == 'page' -%}
+						dataLayerData.search.pages = {
+							'id': 			 {{ item.id | json }},
+							'author': 		 {{ item.author | json }},
+							'title': 		 {{ item.title | json }},
+							'datePublished': {{ item.published_at | date:"%Y-%m-%d" | json }}
+						};
+
+					{%- else -%}
+						{%- assign variantsAvailable = 0 -%}
+						{%- assign variantStock = 0 -%}
+						{%- assign stockNotManaged = false -%}
+
+						{%- for variant in item.variants -%}
+							{%- if variant.available == true -%}
+								{%- assign variantsAvailable = variantsAvailable | plus: 1 -%}
+								{%- if variant.inventory_management == null -%}
+									{%- assign stockNotManaged = true -%}
+								{%- else -%}
+									{%- assign variantStock = variantStock | plus: variant.inventory_quantity -%}
+								{%- endif -%}
+							{%- endif -%}
+						{%- endfor -%}
+
+						{%- if stockNotManaged == true -%}{%- assign variantStock = null -%}{%- endif -%}
+
+						dataLayerData.search.products.push({
+							'id': 				{{ item.id | json }},
+							'sku': 				{{ item.selected_or_first_available_variant.sku | json }}
+							'variantId': 		{{ item.selected_or_first_available_variant.id | json }},
+							'variantSku': 		{{ item.selected_or_first_available_variant.sku | json }},
+							'shopifyId': 		'shopify_{{ shopify_store_country }}_{{ item.id }}_{{ item.selected_or_first_available_variant.id }}',
+							'name': 			{{ item.title | json }},
+							'price': 			{{ item.price | divided_by: 100.0 | json }},
+							'comparePrice': 	{{ item.compare_at_price_max | divided_by: 100.0 | json }},
+							'type': 			{{ item.type | json }},
+							'tags': 			{{ item.tags | json }},
+							'brand': 			{{ item.vendor | json }},
+							'handle': 			{{ item.handle | json }},
+							'url': 				{{ item.url | json }},
+							'imageUrl': 		{{ item | image_url: width: 1024 | json }},
+							'inStock': 			{{ item.available | json }},
+							'stockQty': 		{{ variantStock | json }},
+							'hasNoVariants': 	{{ item.has_only_default_variant | json }},
+							'numVariants': 		{{ item.variants.size | json }},
+							'variantsInStock':  {{ variantsAvailable | json }},
+							'variants': [
+								{%- for variant in item.variants -%}
+									{%- if variant.image.src -%}
+										{%- assign variantImage = variant | image_url: width: 1024 -%}
+									{%- else -%}
+										{%- assign variantImage = product | image_url: width: 1024 -%}
+									{%- endif -%}
+									{
+										'id': 			  {{ variant.id | json }},
+										'sku': 			  {{ variant.sku | json }},
+										'shopifyId': 	  'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ variant.id }}',
+										'name': 		  {{ variant.title | json }},
+										'inStock': 		  {{ variant.available }},
+										'stockQty': 	  {{ variant.inventory_quantity }},
+										'price': 		  {{ variant.price | divided_by: 100.0 | json }},
+										'compareAtPrice': {{variant.compare_at_price | divided_by: 100.0 | json }},
+										'imageUrl': 	  {{ variantImage | json }}
+									},
+								{%- endfor-%}
+							]
+						});
+					{%- endif -%}
+				{%- endfor -%}
+			{%- endif -%}
+
+        {%- elsif template.name == 'product' and product -%}
+			dataLayerData.event = 'productDetail';
+
+			{%- assign variantsAvailable = 0 -%}
+			{%- assign variantStock = 0 -%}
+			{%- assign stockNotManaged = false -%}
+
+			{%- for variant in product.variants -%}
+				{%- if variant.available == true -%}
+					{%- assign variantsAvailable = variantsAvailable | plus: 1 -%}
+					{%- if variant.inventory_management == null -%}
+						{%- assign stockNotManaged = true -%}
+					{%- else -%}
+						{%- assign variantStock = variantStock | plus: variant.inventory_quantity -%}
+					{%- endif -%}
+				{%- endif -%}
+			{%- endfor -%}
+
+			{%- if stockNotManaged == true -%}{%- assign variantStock = null -%}{%- endif -%}
+
+			dataLayerData.product = {
+				'id': 				{{ product.id | json }},
+				'sku': 				{{ product.selected_or_first_available_variant.sku | json }},
+				'variantId': 		{{ product.selected_or_first_available_variant.id | json }},
+				'variantSku': 		{{ product.selected_or_first_available_variant.sku | json }},
+				'shopifyId': 		'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ product.selected_or_first_available_variant.id }}',
+				'name': 			{{ product.title | json }},
+				'variantName': 		{{ product.selected_or_first_available_variant.title | json }},
+				'price': 			{{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+				'comparePrice': 	{{ product.selected_or_first_available_variant.compare_at_price | divided_by: 100.0 | json }},
+				'type': 			{{ product.type | json }},
+				'category': 		{{ product.type | json }},
+				'categories': 		{{ product.collections | map:"title" | json }},
+				'tags': 			{{ product.tags | json }},
+				'brand': 			{{ product.vendor | json }},
+				'handle': 			{{ product.handle | json }},
+				'url': 				{{ product.url | json }},
+				'imageUrl': 		{{ product | image_url: width: 1024 | json }},
+				'inStock': 			{{ product.available | json }},
+				'stockQty': 		{{ variantStock | json }},
+				'hasNoVariants': 	{{ product.has_only_default_variant | json }},
+				'numVariants': 		{{ product.variants.size | json }},
+				'variantsInStock': 	{{ variantsAvailable | json }},
+				'variants': [
+					{%- for variant in product.variants -%}
+						{%- if variant.image.src -%}
+							{%- assign variantImage = variant | image_url: width: 1024 -%}
+						{%- else -%}
+							{%- assign variantImage = product | image_url: width: 1024 -%}
+						{%- endif -%}
+						{
+							'id': 			  {{ variant.id | json }},
+							'sku': 			  {{ variant.sku | json }},
+							'shopifyId': 	  'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ variant.id }}',
+							'name': 		  {{ variant.title | json }},
+							'inStock': 		  {{ variant.available | json }},
+							'stockQty': 	  {{ variant.inventory_quantity }},
+							'price': 		  {{ variant.price | divided_by: 100.0 | json }},
+							'compareAtPrice': {{variant.compare_at_price | divided_by: 100.0 | json }},
+							'imageUrl': 	  {{ variantImage | json }}
+						},
+					{%- endfor -%}
+				],
+				'currentVariant': {
+					'id': 			  {{ product.selected_or_first_available_variant.id | json }},
+					'sku': 			  {{ product.selected_or_first_available_variant.sku | json }},
+					'shopifyId': 	  'shopify_{{ shopify_store_country }}_{{ product.id }}_{{ product.selected_or_first_available_variant.id }}',
+					'name': 		  {{ product.selected_or_first_available_variant.title | json }},
+					'inStock': 		  {{ product.selected_or_first_available_variant.available | json }},
+					'stockQty': 	  {{ product.selected_or_first_available_variant.inventory_quantity }},
+					'price': 		  {{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+					'compareAtPrice': {{product.selected_or_first_available_variant.compare_at_price | divided_by: 100.0 | json }},
+					'imageUrl': 	  {{ product | image_url: width: 1024 | json }}
+				},
+				'options'  : {
+					{%- for option in product.options_with_values -%}
+						{%- for value in option.values -%}
+							{%- if option.selected_value == value -%}
+								{{ option.name | json }} : {{ value | json }},
+							{%- endif -%}
+						{%- endfor -%}
+					{%- endfor -%}
+				}
+			};
+
+			dataLayerData.ecommerce = {
+                'currencyCode': {{ shop.currency | json }},
+                'detail': {
+                    'products': [{
+                        'id': 		{{ product.selected_or_first_available_variant.sku | json }},
+                        'name': 	{{ product.title | json }},
+                        'price': 	{{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+                        'brand': 	{{ product.vendor | json }},
+                        'variant': 	{{ product.selected_or_first_available_variant.title | json }},
+                        'category': {{ product.type | json }}
+                    }]
+                },
+				'currency': {{ shop.currency | json }},
+				'items': [{
+					'item_id':        {{ product.selected_or_first_available_variant.sku | json }},
+					'item_name':      {{ product.title | json }},
+					'price':          {{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }},
+					'item_brand':     {{ product.vendor | json }},
+					'item_category':  {{ product.type | json }},
+					'item_variant':   {{ product.selected_or_first_available_variant.title | json }},
+					'id':             {{ product.selected_or_first_available_variant.sku | json }},
+					'google_business_vertical': {{ google_business_vertical | json }}
+				}],
+				value: {{ product.selected_or_first_available_variant.price | divided_by: 100.0 | json }}
+            };
+
+        {%- elsif template.name == 'cart' and cart -%}
+			dataLayerData.event = 'cart';
+
+			dataLayerData.cart = {
+				'total': 		 {{ cart.total_price | divided_by: 100.0 | json }},
+				'totalDiscount': {{ cart.total_discount | divided_by: 100.0 | json }},
+				'originalTotal': {{ cart.original_total_price | divided_by: 100.0 | json }},
+				'itemCount': 	 {{ cart.item_count | json }},
+				'products': 	 []
+			};
+
+			dataLayerData.ecommerce = {
+			{%- if cart_step_one -%}
+				'currencyCode': {{ shop.currency | json }},
+				'checkout': {
+					'actionField': {
+						'step': 1
+					},
+					'products': []
+				},
+			{%- endif -%}
+				'currency': {{ shop.currency | json }},
+				'items': 	[],
+				'value': 	{{ cart.total_price | divided_by: 100.0 | json }}
+			};
+
+			{%- for line_item in cart.items -%}
+				dataLayerData.cart.products.push({
+					'index': 		{{ forloop.index }},
+					'id': 			{{ line_item.product_id | json }},
+					'sku': 			{{ line_item.sku | json }},
+					'shopifyId': 	'shopify_{{ shopify_store_country }}_{{ line_item.product_id }}_{{ line_item.variant_id }}',
+					'name': 		{{ line_item.product.title | json }},
+					'price': 		{{ line_item.final_price | divided_by: 100.0 | json }},
+					'quantity': 	{{ line_item.quantity | json }},
+					'linePrice': 	{{ line_item.final_line_price | divided_by: 100.0 | json }},
+					'category': 	{{ line_item.product.type | json }},
+					'brand': 		{{ line_item.product.vendor | json }},
+					'handle': 		{{ line_item.product.handle | json }},
+					'url': 			{{ line_item.product.url | json }},
+					'imageUrl': 	{{ line_item | image_url: width: 1024 | json }},
+					'variant': 		{{ line_item.variant.title | json }},
+					'variantId': 	{{ line_item.variant_id | json }},
+					'variantSku': 	{{ line_item.sku | json }}
+				});
+
+				{%- if cart_step_one -%}
+					dataLayerData.ecommerce.checkout.products.push({
+						'id': 		{{ line_item.sku | json }},
+						'name': 	{{ line_item.product.title | json }},
+						'price': 	{{ line_item.final_price | divided_by: 100.0 | json }},
+						'quantity': {{ line_item.quantity | json }},
+						'category': {{ line_item.product.type | json }},
+						'brand': 	{{ line_item.product.vendor | json }},
+						'variant': 	{{ line_item.variant.title | json }}
+					});
+				{%- endif -%}
+
+				dataLayerData.ecommerce.items.push({
+					'item_id':        {{ line_item.sku | json }},
+					'item_name':      {{ line_item.product.title | json }},
+					'price':          {{ line_item.final_price | divided_by: 100.0 | json }},
+					'item_brand':     {{ line_item.product.vendor | json }},
+					'item_category':  {{ line_item.product.type | json }},
+					'item_variant':   {{ line_item.variant.title | json }},
+					'quantity':		  {{ line_item.quantity | json }},
+					'id':             {{ line_item.sku | json }},
+					'google_business_vertical': {{ google_business_vertical | json }}
+				});
+			{%- endfor -%}
+
+        {%- elsif template.name == 'article' and article -%}
+			dataLayerData.event = 'blog';
+
+			dataLayerData.article = {
+				'id': 			 {{ article.id | json }},
+				'author': 		 {{ article.author | json }},
+				'title': 		 {{ article.title | json }},
+				'commentsCount': {{ article.comments_count | json }},
+				'dateCreated': 	 {{ article.created_at | date:"%Y-%m-%d" | json }}
+			};
+
+        {%- else -%}
+			dataLayerData.event = 'other';
+        {%- endif -%}
+
+		window.dataLayer = window.dataLayer || [];
+		window.dataLayer.push(dataLayerData);
+	});
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5BFKTBB');</script>
+<!-- End Google Tag Manager -->

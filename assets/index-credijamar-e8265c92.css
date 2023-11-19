@@ -1,0 +1,709 @@
+body, h1, h2, h4, h4, h5, h6, p, a, li, ul, button, span, div {
+  font-family: Lato;
+}
+
+header.main-header--top nav.menu-items--desktop {
+  height: 60px;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list {
+  list-style: none;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list li.enlaces-header a {
+  color: #fff;
+  min-height: 30px;
+  background-color: #00abb0;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  font-family: Lato;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list li.enlaces-header a.cliente-oro {
+  width: 98px;
+  text-align: center;
+  color: #e3a629;
+  letter-spacing: .015em;
+  background-color: #0000;
+  border-bottom: 2px solid #e3a629;
+  border-radius: 0;
+  margin: 0 10px;
+  padding: 0 5px;
+  font-size: .9em;
+  font-weight: 600;
+  line-height: 1em;
+  transition: all .3s ease-in;
+}
+
+@media (max-width: 599px) {
+  header.main-header--top nav.menu-items--desktop ul.menu-items--list li.enlaces-header a.enlace-header-credijamar {
+    font-size: 12px;
+  }
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list li.logo-credijamar-header {
+  text-align: center;
+  background-color: #0000;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list li.logo-credijamar-header a {
+  background: none;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list li.logo-credijamar-header a img {
+  width: 120px;
+}
+
+@media (max-width: 599px) {
+  header.main-header--top nav.menu-items--desktop ul.menu-items--list li.logo-credijamar-header a img {
+    width: 80px;
+  }
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list .burger-menu {
+  background-color: #0000;
+  border: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+header.main-header--top nav.menu-items--desktop ul.menu-items--list .burger-menu span {
+  width: 25px;
+  height: 2px;
+  background-color: #404b5a;
+  border-radius: 2px;
+  margin: 2px 0;
+}
+
+main.banner-principal-credijamar img {
+  max-width: 100%;
+  width: 100%;
+}
+
+section.main-section-features .row div .image-feature {
+  width: 80px;
+  height: 80px;
+  background-color: #00abb0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 599px) {
+  section.main-section-features .row div .image-feature {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+section.main-section-features .row div .image-feature svg {
+  color: #fff;
+  width: 30px;
+  font-size: 25px;
+}
+
+@media (max-width: 599px) {
+  section.main-section-features .row div .image-feature svg {
+    width: 25px;
+  }
+}
+
+section.main-section-features .row p.parrafo-feature-icons {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 599px) {
+  section.main-section-features .row p.parrafo-feature-icons {
+    font-size: 16px;
+  }
+}
+
+section.section-slide {
+  background-color: #f0f0f0;
+  padding: 30px 0;
+}
+
+section.section-slide .container div {
+  padding: 10px 0;
+}
+
+section.section-slide .container div h1.title-secondary {
+  width: 250px;
+  text-align: center;
+  justify-content: center;
+  font-family: Lato;
+  font-size: 31px;
+  font-weight: bold;
+  display: flex;
+  position: relative;
+}
+
+section.section-slide .container div h1.title-secondary:before {
+  content: "";
+  width: 250px;
+  height: 2px;
+  background-color: #00abb0;
+  position: absolute;
+  bottom: -20px;
+}
+
+.contenedor-texto-promo i {
+  color: #00abb0;
+  font-size: 30px;
+}
+
+.contenedor-texto-promo p {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 599px) {
+  .contenedor-texto-promo p {
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+a.enlace-credijamar-features {
+  text-align: center;
+  color: #fff;
+  background-color: #00abb0;
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+@media (max-width: 599px) {
+  a.enlace-credijamar-features {
+    max-width: 250px;
+    font-size: 14px;
+  }
+}
+
+#carrousel-credijamar {
+  width: auto !important;
+}
+
+#carrousel-credijamar .carousel-inner {
+  width: 400px;
+  height: 400px;
+}
+
+@media (max-width: 599px) {
+  #carrousel-credijamar .carousel-inner {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#carrousel-credijamar .carousel-inner .carousel-item img {
+  object-fit: cover;
+}
+
+.section-features-2 .row .section-features-2--card div.image-feature {
+  width: 80px;
+  height: 80px;
+  color: #fff;
+  background-color: #00abb0;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.section-features-2 .row .section-features-2--card div.image-feature i {
+  font-size: 30px;
+}
+
+.section-features-2 .row .section-features-2--card p {
+  margin-top: 5px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 599px) {
+  .section-features-2 .row .section-features-2--card p {
+    font-size: 14px;
+  }
+}
+
+.section-title--main {
+  padding: 30px 0;
+}
+
+.section-title--main div > div > i {
+  height: 80px;
+  width: 80px;
+  color: #fff;
+  background-color: #404b5a;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  display: inline-flex;
+}
+
+.main-title-section {
+  font-family: Lato;
+  font-size: 32px;
+}
+
+@media (max-width: 599px) {
+  .main-title-section {
+    font-size: 28px;
+  }
+}
+
+.btn-section--cta {
+  width: 137px;
+  height: 42px;
+  color: #fff;
+  background-color: #f33;
+  border-radius: 42px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  display: inline-flex;
+}
+
+.btn-section--cta:hover {
+  color: #fff;
+}
+
+.section-grid-destacada div > div > h4 {
+  margin-top: 16px;
+  font-family: Lato;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.section-grid-destacada div > div > p {
+  width: 70%;
+  font-weight: 400;
+}
+
+.section-grid-destacada div > div > p.parrafo-secton-destacada {
+  width: 90%;
+  font-weight: 400;
+}
+
+.section-grid-destacada div > div > a {
+  color: #00abb0;
+  width: 200px;
+  justify-content: start;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-flex;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  .section-grid-destacada div > div > a {
+    justify-content: center;
+  }
+}
+
+.section-grid-destacada div > div > a:before {
+  content: "";
+  width: 70%;
+  height: 2px;
+  background-color: #00abb0;
+  position: absolute;
+  bottom: -10px;
+}
+
+@media (max-width: 599px) {
+  .section-grid-destacada div > div > img.imagen-feature {
+    max-width: 40%;
+  }
+}
+
+main.section-hero--client-oro {
+  height: 50vh;
+}
+
+main.section-hero--client-oro img {
+  height: 100%;
+}
+
+@media (max-width: 599px) {
+  main.section-hero--client-oro {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+main.section-hero--client-oro div > div a {
+  color: #404b5a;
+  width: 45px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+main.section-hero--client-oro div > div span {
+  width: 200px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+main.section-hero--client-oro div > div span.line {
+  width: 20px;
+}
+
+main.section-hero--client-oro div > div h1 {
+  font-family: Lato;
+  font-size: 48px;
+  font-weight: bold;
+  position: relative;
+}
+
+@media (max-width: 599px) {
+  main.section-hero--client-oro div > div h1 {
+    font-size: 38px;
+  }
+}
+
+main.section-hero--client-oro div > div h1:before {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #00abb0;
+  position: absolute;
+  bottom: -5px;
+}
+
+main.section-hero--client-oro div > div p.main-text-title-oro {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main.section-hero--client-oro div > div svg {
+  width: 40px;
+  margin: 0 auto;
+  transform: translateX(-40px);
+}
+
+section.main-banners-client-oro div > div > div .text-banners-secondary {
+  color: #f0f0f0;
+  text-align: center;
+  margin: 20px 0;
+  padding: 0;
+  font-family: Lato;
+  font-size: 22px;
+}
+
+section.main-banners-client-oro div > div > div .text-banners-secondary-golden {
+  color: #f0f0f0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #e3a629;
+  margin: 0;
+  padding: 0;
+  font-family: Lato;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+section.main-banners-client-oro div > div > div span {
+  color: #f0f0f0;
+  text-align: center;
+  font-size: 14px;
+}
+
+section.section-beneficios {
+  padding: 60px 0;
+}
+
+section.section-beneficios div > div h4.title-beneficios {
+  margin-bottom: 30px;
+  font-family: Lato;
+  font-size: 32px;
+  position: relative;
+  transform: translateY(-10px);
+}
+
+section.section-beneficios div > div h4.title-beneficios:before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #e3a629;
+  position: absolute;
+  bottom: -10px;
+}
+
+section.section-beneficios div > div p.parrafos-globales {
+  margin-top: 5px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section.section-beneficios div > div img.img-beneficios-section {
+  margin: 25px 0;
+}
+
+section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios {
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 599px) {
+  section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios {
+    flex-direction: column;
+    margin: 15px 0;
+  }
+}
+
+section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios div.icon-beneficios {
+  height: 96px;
+  width: 96px;
+  border: 3px solid #e3a629;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios div.icon-beneficios svg {
+  height: 30px;
+}
+
+section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios p {
+  width: 220px;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 599px) {
+  section.section-beneficios div > div .contenedor-beneficios-individuales div > .contenedor-icon--beneficios p {
+    text-align: center;
+    width: 260px;
+    margin: 10px 0 0;
+  }
+}
+
+section.container-fluid.main-section-banner--large {
+  height: 400px;
+  background-image: url("https://credijamar.com.co/wp-content/uploads/2021/08/background-section-3.png");
+  position: relative;
+}
+
+section.container-fluid.main-section-banner--large .image-overlay-fix {
+  z-index: 0;
+  opacity: .3;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+section.container-fluid.main-section-banner--large .row.container-banner-large {
+  width: 500px;
+}
+
+@media (max-width: 599px) {
+  section.container-fluid.main-section-banner--large .row.container-banner-large {
+    width: 100%;
+  }
+}
+
+section.container-fluid.main-section-banner--large .row.container-banner-large h5 {
+  color: #fff;
+  z-index: 1;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 47px;
+}
+
+@media (max-width: 599px) {
+  section.container-fluid.main-section-banner--large .row.container-banner-large h5 {
+    text-align: center;
+    width: 75%;
+    font-size: 26px;
+    line-height: 1.25em;
+  }
+}
+
+section.container-fluid.main-section-banner--large .row.container-banner-large a.btn-enlace--aplica {
+  color: #fff;
+  width: 180px;
+  height: 40px;
+  background-color: #00abb0;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all .6s;
+  display: flex;
+  transform: translateX(90px);
+}
+
+section.container-fluid.main-section-banner--large .row.container-banner-large a.btn-enlace--aplica:hover {
+  background-color: #f33;
+  transition: all .6s;
+}
+
+@media (max-width: 599px) {
+  section.container-fluid.main-section-banner--large .row.container-banner-large a.btn-enlace--aplica {
+    transform: translateX(0);
+  }
+}
+
+.gris-jamar {
+  background-color: #404b5a;
+}
+
+#menu-expand-header .offcanvas-header button.btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+#menu-expand-header .offcanvas-body a.menu-btn-credijamar {
+  background-color: #00abb0;
+  border-radius: 25px;
+  padding: 8px 34px;
+  font-size: 18px;
+}
+
+#menu-expand-header .offcanvas-body a.enlace-menu {
+  color: #404b5a;
+  margin: 10px 0;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#menu-expand-header .offcanvas-body a.enlace-menu-credijamar {
+  color: #e3a629;
+}
+
+footer.footer {
+  background-color: #f0f0f0;
+  padding-top: 50px;
+}
+
+footer.footer .main-footer-credijamar div > div ul {
+  list-style: none;
+}
+
+footer.footer .main-footer-credijamar div > div ul li {
+  color: #404b5a;
+  text-align: left;
+  width: 100px;
+  margin: 3px 0;
+  font-family: Lato;
+  font-size: 16px;
+}
+
+@media (max-width: 599px) {
+  footer.footer .main-footer-credijamar div > div ul li {
+    text-align: center;
+    width: 100%;
+    margin: 4px 0;
+  }
+}
+
+footer.footer .main-footer-credijamar div > div ul li a {
+  color: #404b5a;
+  width: 100%;
+  text-decoration: none;
+}
+
+footer.footer .main-footer-credijamar div > div ul li:nth-child(1) {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+footer.footer .main-footer-credijamar div > div ul li.footer-list--item-logo {
+  margin-top: 20px;
+}
+
+@media (max-width: 599px) {
+  footer.footer .main-footer-credijamar div > div ul li.footer-list--item-logo {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+footer.footer .main-footer-credijamar div > div ul li.btn-credito {
+  color: #404b5a;
+  width: 200px;
+  height: 40px;
+  text-transform: uppercase;
+  border: 1px solid #404b5a;
+  border-radius: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 12px 0;
+  font-family: Lato;
+  font-size: 16px;
+  display: flex;
+}
+
+footer.footer .main-footer-credijamar div > div ul li.btn-credito a {
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+footer.footer .main-footer-credijamar div > div ul .contenedor-social-media a.icon-social-media {
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  background-color: #404b5a;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  line-height: 0;
+  display: flex;
+}
+
+footer.footer .main-footer-credijamar div > div ul .contenedor-social-media a.icon-social-media i {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+footer.footer .end-level {
+  background-color: #404b5a;
+}
+
+footer.footer .end-level div > .footer-end-level-text > div p {
+  color: #f0f0f0;
+  font-size: 20px;
+}
+
+@media (max-width: 599px) {
+  footer.footer .end-level div > .footer-end-level-text > div p {
+    font-size: 16px;
+  }
+}
+
+/*# sourceMappingURL=index.e8265c92.css.map */

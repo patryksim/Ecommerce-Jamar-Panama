@@ -1,0 +1,76 @@
+<div class="row mt-4 col-style-acordeon">
+  <div class="col-12">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      {% for block in section.blocks %}
+        <div class="accordion-item">
+          <h2 class="accordion-header mt-0 mb-4" id="flush-1">
+              <button class="accordion-button {% unless block.settings.expanded %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-{{ block.id }}" aria-expanded="{{ block.settings.expanded }}" aria-controls="flush-collapse-{{ block.id }}">
+              {{ block.settings.boton }}
+            </button>
+          </h2>
+          <div id="flush-collapse-{{ block.id }}" class="accordion-collapse collapse {% if block.settings.expanded %}show{% endif %}" aria-labelledby="flush-1" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body row">
+              <div class="col-12 col-md-5">
+                <img src="{{ block.settings.image | image_url }}" data-rimg="lazy" loading="lazy">
+              </div>
+              <div class="col-12 col-md-7">
+                {{ block.settings.paragraph }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Tabs informativas",
+    "tag":"section",
+    "class":"container pt-4",
+    "settings": [
+    ],
+    "blocks": [
+       {
+         "name": "Tab",
+         "type": "tab",
+         "settings": [
+           {
+             "type": "text",
+             "id": "boton",
+             "label": "Texto del botón"
+           },
+           {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Imagen"
+           },
+           {
+              "type": "textarea",
+              "id": "paragraph",
+              "label": "Parrafo",
+              "default": "Write your paragraph here"
+            },
+           {
+              "type": "checkbox",
+              "id": "expanded",
+              "label": "Abierto",
+              "default": false
+           }
+         ]
+       }
+     ],
+    "presets": [
+        {
+          "name": "Tabs informativas"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

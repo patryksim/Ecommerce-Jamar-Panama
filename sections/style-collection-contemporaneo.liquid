@@ -1,0 +1,405 @@
+<section  class="style-section">
+  <div class="grid image-with-text-1">
+    <div class="item-a text-side">
+      <h3>{{ section.settings.subheading_text }}</h3>
+      <h2>{{ section.settings.heading_text }}</h2>
+      {{ section.settings.open_text }}
+    </div>
+    <div class="item-b image-side">
+      <img src="{{ section.settings.image | img_url:'master' }}" alt="Header-Image">
+    </div>
+  </div>
+  <div class="grid image-with-text-overlap-1">
+    <div class="item-a image-side">
+      <img src="{{ section.settings.ov1_image_1 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-b text-side">
+      <h2>{{ section.settings.ov1_heading }}</h2>
+      <p>{{ section.settings.ov1_text_1 }}</p>
+      <hr>
+    </div>
+    <div class="item-c image-side">
+      <img src="{{ section.settings.ov1_image_2 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-d">
+      <p>{{ section.settings.ov1_text_2 }}</p>
+    </div>
+  </div>
+  <div class="spotify rte">
+    {{ section.settings.spotify_iframe }}
+  </div>
+  <div class="grid image-with-text-overlap-2">
+    <div class="item-a text-side">
+      {{ section.settings.ov2_text }}
+    </div>
+    <div class="item-b">
+      <img src="{{ section.settings.ov2_image_1 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-c">
+      <img src="{{ section.settings.ov2_image_2 | img_url:'master' }}" alt="Header-Image">
+    </div>
+  </div>
+  <center class="video rte">
+    <video controls="" autoplay="" muted="" loop="" preload="auto">
+      <source src="{{ section.settings.video }}">
+    </video>
+  </center>
+  <div class="grid image-grid">
+    <div class="item-a">
+      <img src="{{ section.settings.grid1_image_1 | img_url:'master' }}">
+    </div>
+    <div class="item-b">
+      <img src="{{ section.settings.grid1_image_2 | img_url:'master' }}">
+    </div>
+    <div class="item-c text-side">
+      <h2>{{ section.settings.grid1_heading_text }}</h2>
+      {{ section.settings.grid1_text }}
+    </div>
+    <div class="item-d">
+      <img src="{{ section.settings.grid1_image_3 | img_url:'master' }}">
+    </div>
+    <div class="item-e">
+      <img src="{{ section.settings.grid1_image_4 | img_url:'master' }}">
+    </div>
+  </div>
+  <div class="grid collections">
+    <div class="item-a text-side">
+      <h2>{{ section.settings.heading_collection }}</h2>
+    </div>
+    <div class="item-b image-side">
+      <img src="{{ section.settings.collection_image_1 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-c text-side collection-tempo">
+      <h3>COLECCIÓN</h3>
+      <h2>{{ section.settings.heading_collection_1 }}</h2>
+      {{ section.settings.text_collection_1 }}<br>
+      <button><a href="{{ section.settings.collection_link_1 }}">Ver más <i class="fas fa-chevron-right"></i></a></button>
+    </div>
+    <div class="item-d text-side collection-blossom">
+      <h3>COLECCIÓN</h3>
+      <h2>{{ section.settings.heading_collection_2 }}</h2>
+      {{ section.settings.text_collection_2 }}<br>
+      <button><a href="{{ section.settings.collection_link_2 }}">Ver más <i class="fas fa-chevron-right"></i></a></button>
+    </div>
+    <div class="item-e image-side">
+      <img src="{{ section.settings.collection_image_2 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-f image-side">
+      <img src="{{ section.settings.collection_image_3 | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-g text-side collection-silver">
+      <h3>COLECCIÓN</h3>
+      <h2>{{ section.settings.heading_collection_3 }}</h2>
+      {{ section.settings.text_collection_3 }}<br>
+      <button><a href="{{ section.settings.collection_link_3 }}">Ver más <i class="fas fa-chevron-right"></i></a></button>
+    </div>
+  </div>
+  <div class="grid image-with-text-2">
+    <div class="item-a text-side">
+      <h2>{{ section.settings.heading_image_with_text_2 }}</h2>
+      <hr>
+      <p>{{ section.settings.text_image_with_text_2 }}</p>
+    </div>
+    <div class="item-b">
+      <img src="{{ section.settings.image_image_with_text_2 | img_url:'master' }}" alt="Header-Image">
+    </div>
+  </div>
+  <div class="grid image-with-newsletter">
+    <div class="item-a">
+      <img src="{{ section.settings.image_style_newsletter | img_url:'master' }}" alt="Header-Image">
+    </div>
+    <div class="item-b text-side">
+      <h2>{{ section.settings.heading_style_newsletter }}</h2>
+      <p>{{ section.settings.text_style_newsletter }}</p>
+      <div class="newsletter">
+        {% form 'customer', id: form_id %}
+        {% if form.posted_successfully? %}
+        <p class="newsletter-success">
+          {{ 'general.newsletter.success' | t }}
+        </p>
+        {% else %}
+        <input
+               type="hidden"
+               name="contact[tags]"
+               value="{{ newsletter_tags }}"
+               >
+        <div class="form-fields-inline ">
+          <div class="form-field name">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][Nombre]"
+                   id="{{ input_name }}"
+                   type="text"
+                   aria-label="nombre"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_name }}"
+                   >
+              Nombre *
+            </label>
+          </div>
+          <div class="form-field tel">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][Nombre]"
+                   id="{{ input_tel }}"
+                   type="tel"
+                   aria-label="telefono"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_tel }}"
+                   >
+              Telefono *
+            </label>
+          </div>
+          <div class="form-field email">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[email]"
+                   id="{{ input_id }}"
+                   type="email"
+                   aria-label="{{ 'general.newsletter.placeholder' | t }}"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_id }}"
+                   >
+              {{ 'general.newsletter.placeholder' | t }}
+            </label>
+          </div>
+          <div class="form-field">
+            <button
+                    name="subscribe"
+                    type="submit"
+                    >
+              Enviar
+            </button>
+          </div>
+        </div>
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "style-contemporaneo",
+  "settings": [
+    {
+      "id": "subheading_text",
+      "type": "text",
+      "label": "Text",
+      "default": "Subheading"
+    },
+    {
+      "id": "heading_text",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "ov1_image_1",
+      "label": "Image"
+    },
+    {
+      "id": "ov1_heading",
+      "type": "text",
+      "label": "Text",
+      "label": "Heading 1"
+    },
+    {
+      "id": "ov1_text_1",
+      "type": "text",
+      "label": "Text 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "ov1_image_2",
+      "label": "Image"
+    },
+    {
+      "id": "ov1_text_2",
+      "type": "richtext",
+      "label": "Text 2"
+    },
+    {
+      "type": "html",
+      "id": "spotify_iframe",
+      "label": "HTML",
+      "default": "<p>Write or paste your HTML code here</p>"
+    },
+    {
+      "id": "ov2_text",
+      "type": "richtext",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "ov2_image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "ov2_image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "url",
+      "id": "video",
+      "label": "Link to video"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid1_image_1",
+      "label": "Image Grid 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid1_image_2",
+      "label": "Image Grid 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid1_image_3",
+      "label": "Image Grid 3"
+    },
+    {
+      "id": "grid1_heading_text",
+      "type": "text",
+      "label": "Text",
+      "label": "Heading"
+    },
+    {
+      "id": "grid1_text",
+      "type": "richtext",
+      "label": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "grid1_image_4",
+      "label": "Image Grid 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_image_1",
+      "label": "Image Grid 5"
+    },
+    {
+      "id": "heading_collection",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading Collection"
+    },
+    {
+      "id": "heading_collection_1",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading Collection 1"
+    },
+    {
+      "id": "text_collection_1",
+      "type": "text",
+      "label": "Text",
+      "label": "Text collection 1"
+    },
+    {
+      "id": "collection_link_1",
+      "type": "url",
+      "label": "Collection link 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_image_2",
+      "label": "Image Grid 5"
+    },
+    {
+      "id": "heading_collection_2",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading Collection 2"
+    },
+    {
+      "id": "text_collection_2",
+      "type": "text",
+      "label": "Text",
+      "label": "Text collection 2"
+    },
+    {
+      "id": "collection_link_2",
+      "type": "url",
+      "label": "Collection link 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "collection_image_3",
+      "label": "Image Grid 5"
+    },
+    {
+      "id": "heading_collection_3",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading Collection 3"
+    },
+    {
+      "id": "text_collection_3",
+      "type": "text",
+      "label": "Text",
+      "label": "Text collection 3"
+    },
+    {
+      "id": "collection_link_3",
+      "type": "url",
+      "label": "Collection link 3"
+    },
+    {
+      "id": "heading_image_with_text_2",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading image with text"
+    },
+    {
+      "id": "text_image_with_text_2",
+      "type": "text",
+      "label": "Text",
+      "label": "Text image with text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_image_with_text_2",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_style_newsletter",
+      "label": "Image newsletter"
+    },
+    {
+      "id": "heading_style_newsletter",
+      "type": "text",
+      "label": "Text",
+      "default": "Heading newsletter"
+    },
+    {
+      "id": "text_style_newsletter",
+      "type": "text",
+      "label": "Text",
+      "label": "Text newsletter"
+    }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

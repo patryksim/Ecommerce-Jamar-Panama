@@ -1,0 +1,206 @@
+{% comment %}
+  Display options for a product
+
+  @param product
+
+  @param selected_variant
+
+  @param style
+{% endcomment %}
+
+{% assign hide_select_a11y = "" %}
+
+{% if style == 'radio' %}
+  {% assign hide_select_a11y = "tabindex='-1'" %}
+{% endif %}
+
+{%- capture form_id -%}{% increment form_id %}{%- endcapture -%}
+
+<div
+  data-product-options-container
+  {%
+    if settings.swatches_enable
+    and settings.swatches_shape == 'square'
+    and settings.swatches_option_style == 'variant_image'
+  %}
+    class="swatches-variant-images-square"
+  {% endif %}
+>
+  <select name="id" data-variants {{ hide_select_a11y }}  class="form-options no-js-required">
+    {% for variant in product.variants %}
+      {%- capture option_content -%}
+        {%- if variant.available -%}
+          {{ variant.title }} - {{ variant.price | money }}
+        {%- else -%}
+          {{ variant.title }} - {{ 'products.status.sold_out' | t }}
+        {%- endif -%}
+      {%- endcapture -%}
+
+      <option
+        {% if variant.id == selected_variant.id %}selected="selected"{% endif %}
+        data-variant-id="{{ variant.id }}"
+        {% if variant.available %}
+          data-sku="{{ variant.sku }}"
+          value="{{ variant.id }}"
+        {% else %}
+          disabled="disabled"
+        {% endif %}>
+        {{ option_content | strip_newlines }}
+      </option>
+    {% endfor %}
+  </select>
+
+  {% for option in product.options_with_values %}
+    {% assign show_swatches = false %}
+    {% if settings.swatches_enable %}
+      {%- assign swatch_trigger = settings.swatches_swatch_trigger | strip | downcase -%}
+      {% assign option_name = option.name | downcase %}
+      {% if option_name == swatch_trigger %}
+        {% assign show_swatches = true %}
+        {% assign swatch_option_key = 'option' | append: forloop.index %}
+      {% endif %}
+    {% endif %}
+
+    {% if style == 'select' and show_swatches == false %}
+      <div
+        class="
+          form-field
+          form-options
+          js-required
+          {% if forloop.index0 == 0 %}form-options-first{% endif %}
+        "
+      >
+        <div class="form-field-select-wrapper">
+          <select
+            id="data-product-option-{{ forloop.index0 }}"
+            class="form-field-input form-field-select selectVariant"
+            onchange="crediJamarPrecios('6',null,this.value)"
+            data-product-option="{{ forloop.index0 }}"
+           >
+            {% for value in option.values %}
+              <option
+                value="{{ value | escape }}"
+                {% if option.selected_value == value %}selected="selected"{% endif %}
+                      
+                >
+                {{ value }}
+              </option>
+            {% endfor %}
+          </select>
+          
+          <label
+            for="data-product-option-{{ forloop.index0 }}"
+            class="form-field-title"
+          >
+            {{ option.name }}
+          </label>
+          {% render 'icon-chevron-down-small' %}
+        </div>
+      </div>
+  <script>
+  	let opciones = {{ product.variants | json }};
+
+
+  </script>
+  
+    {% elsif style == 'radio' or show_swatches == true %}
+      <fieldset
+        class="
+          form-options
+          js-required
+          {% if show_swatches %}
+            form-options-swatches
+          {% else %}
+            form-options-selectable-boxes
+          {% endif %}
+          {% if forloop.index0 == 0 %}form-options-first{% endif %}"
+        "
+      >
+        {% assign optionIndex = forloop.index0 %}
+        <legend class="option-header">
+          {% if show_swatches %}
+            <span class="option-name">{{ option.name }}: <span class="option-swatch-value" data-option-swatch-value="{{ optionIndex }}">{{ option.selected_value }}</span></span>
+          {% else %}
+            <span class="option-name">{{ option.name }}</span>
+          {% endif %}
+        </legend>
+
+        <div class="option-values">
+            {% for value in option.values %}
+              <div
+                class="
+                  option-value
+                  {% if option.selected_value == value %}option-selected{% endif %}
+                "
+              >
+                <label
+                  for="{{ section.id }}-form-{{ form_id }}data-product-option-{{ optionIndex }}-{{ forloop.index0 }}"
+                  class="option-value-label"
+                >
+                  <input
+                    class="option-value-input"
+                    type="radio"
+                    name="{{ option.name | url_encode }}"
+                    value="{{ value | escape }}"
+                    tabindex="0"
+                    aria-label="{{ value | escape }}"
+                    {% if option.selected_value == value %}checked{% endif %}
+                    data-product-option="{{ optionIndex }}"
+                    id="{{ section.id }}-form-{{ form_id }}data-product-option-{{ optionIndex }}-{{ forloop.index0 }}"
+                  >
+
+                  <span
+                    class="
+                      option-value-name
+                      {% if show_swatches %}option-value-swatch-wrapper{% endif %}
+                    "
+                    tabindex="-1"
+                    {% if show_swatches %}
+                      data-swatch-tooltip="{{ value | escape }}"
+                    {% endif %}
+                  >
+                    {% if show_swatches %}
+                      {% assign use_variant_images = false %}
+                      {% if settings.swatches_option_style == 'variant_image' %}
+                        {% assign use_variant_images = true %}
+                      {% endif %}
+                      {% assign use_aspect_ratio = false %}
+                      {% if settings.swatches_shape == 'square' %}
+                        {% assign use_aspect_ratio = true %}
+                      {% endif %}
+                      {% capture swatch_styles %}
+                        {%
+                          render 'swatch-styles',
+                          color_name: value,
+                          use_variant_images: use_variant_images,
+                          swatch_product: product,
+                          swatch_option_key: swatch_option_key,
+                          swatch_size: settings.swatches_product_page_size,
+                          use_aspect_ratio: use_aspect_ratio,
+                        %}
+                      {% endcapture %}
+                      <div
+                        class="swatch"
+                        style="
+                          {{ swatch_styles | split: '/* variables */' | last | remove: '/* variables */' }}
+                          {% comment %} {% if use_variant_images and settings.swatches_shape == 'square' %}border-radius: 0;{% endif %} {% endcomment %}
+                        "
+                      >
+                        <div
+                          class="swatch-inner"
+                          style="{{ swatch_styles | split: '/* variables */' | first }}"
+                        >
+                        </div>
+                      </div>
+                    {% else %}
+                      {{ value }}
+                    {% endif %}
+                  </span>
+                </label>
+              </div>
+            {% endfor %}
+        </div>
+      </fieldset>
+    {% endif %}
+  {% endfor %}
+</div>

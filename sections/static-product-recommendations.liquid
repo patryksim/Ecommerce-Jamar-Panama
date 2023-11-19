@@ -1,0 +1,109 @@
+{% if section.settings.show_product_recommendations %}
+  {% assign product_limit = 5 %}
+
+  <script
+    type="application/json"
+    data-section-type="static-product-recommendations"
+    data-section-id="{{ section.id }}"
+    data-section-data
+  >
+    {
+      "settings": {
+        "limit": {{ product_limit }}
+      },
+      "productId": {{ product.id | json }}
+    }
+  </script>
+
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}
+ 
+  {% for product in products limit: product_count %}
+    <script>
+      skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+    </script>
+  {% endfor %}
+
+  {% render 'product-grid-fee' %}
+ 
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}  
+
+
+  <section
+    class="product-section--container product-row--container product-recommendations--container"
+    data-html
+    data-product-recommendations
+  >
+    {% if recommendations.products_count > 0 %}
+      <h2 class="product-section--title product-recommendations--title">
+        {{ section.settings.product_recommendations_heading }}
+      </h2>
+
+    
+  	{% comment %}
+  	/**********************************************************
+                   ATRIBUTOS DATA PARA EL DMP
+  		               PATRYKSIM@GMAIL.COM
+  	**********************************************************/
+  	{% endcomment %}
+    {% assign template_name = "product" %}
+    {% assign list_name = "Productos Recomendados" %}
+    
+      <ul
+        class="product-section--content product-row"
+        data-product-row
+      >
+        {% for product in recommendations.products limit: product_limit %}
+          {%
+            render 'product-grid-item',
+            product: product
+            template_name: template_name
+          	list_name: list_name
+          %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </section>
+
+  {% render 'quick-shop' %}
+    {% comment %}
+    /**********************************************************
+    *          DIV RETAIL ROCKET CONTENIDO PERSONALIZADO
+    *                   PATRYKSIM@GMAIL.COM
+    **********************************************************/
+    {% endcomment %}
+    <div data-retailrocket-markup-block="60edf83097a52815f450399d" data-product-id="{% if product.variants.length > 1 %}{{ product.selected_variant.id | json }}{% else %}{{ product.selected_or_first_available_variant.id | json }}{% endif %}"></div>
+    <div data-retailrocket-markup-block="60edf83a97a52815f450399e" data-product-id="{% if product.variants.length > 1 %}{{ product.selected_variant.id | json }}{% else %}{{ product.selected_or_first_available_variant.id | json }}{% endif %}"></div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product recommendations",
+  "class": "product-recommendations--section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_product_recommendations",
+      "label": "Show dynamic recommendations",
+      "info": "Dynamic recommendations change and improve with time. [Learn more](https://help.shopify.com/en/themes/development/recommended-products)",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_recommendations_heading",
+      "label": "Heading",
+      "default": "You may also like"
+    }
+  ]
+}
+
+{% endschema %}

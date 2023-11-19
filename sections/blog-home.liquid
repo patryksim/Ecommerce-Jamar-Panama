@@ -1,0 +1,126 @@
+<br><br><br>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-11 col-md-8 p-0">
+      <h2 class="text-center text-gris-jamar mb-3">{{ section.settings.title }}</h2>
+      <p class="text-gris-jamar mt-2 text-center">{{ section.settings.text }}</p>
+      <br>
+    </div>
+  </div>
+  <div class="row">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'imagen' %}
+          <div class="col-{{ block.settings.mobile_width }} col-md-{{ block.settings.desktop_width }} {% if block.settings.padding_mobile_0 == true %}p-xs-0{% endif %} mb-5 mb-md-0">
+            <a href="{{ block.settings.link }}">
+              <img class="d-none d-md-block" alt="{{ block.settings.image_desktop.alt}}" src="{{ block.settings.image_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+              <img class="d-block d-md-none" alt="{{ block.settings.image_desktop.alt}}" data-rimg="lazy" loading="lazy"
+                  src="{% if block.settings.image_mobile != blank %}
+                          {{ block.settings.image_mobile | img_url:'master' }}
+                       {% else %}
+                          {{ block.settings.image_desktop | img_url:'master' }}
+                       {% endif %}" >
+            </a>
+            <h4 class="text-gris-jamar mt-2 fw-bold">{{ block.settings.title }}</h4>
+            <p class="text-gris-jamar">{{ block.settings.text }}</p>
+            <a href="{{ block.settings.link }}" class="text-gris-jamar fw-bold text-decoration-underline">Saber más</a>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Blogs home",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texto"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "Imagen",
+       "type": "imagen",
+       "settings": [
+         {
+           "type": "image_picker",
+           "id": "image_desktop",
+           "label": "Image desktop"
+         },
+         {
+           "type": "image_picker",
+           "id": "image_mobile",
+           "label": "Image mobile"
+         },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texto"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "range",
+          "id": "mobile_width",
+          "min": 6,
+          "max": 12,
+          "step": 1,
+          "label": "Ancho mobile",
+          "default": 6
+        },
+        {
+          "type": "checkbox",
+          "id": "padding_mobile_0",
+          "label": "Padding mobile 0",
+          "default": false
+        },
+        {
+          "type": "range",
+          "id": "desktop_width",
+          "min": 4,
+          "max": 12,
+          "step": 2,
+          "label": "Ancho desktop",
+          "default": 4
+        }
+       ]
+     }
+   ],
+  "presets": [
+     {
+       "name": "Blogs home",
+       "settings": {
+          "title": "Blogs home"
+        },
+       "blocks": [
+         {
+           "type": "imagen"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

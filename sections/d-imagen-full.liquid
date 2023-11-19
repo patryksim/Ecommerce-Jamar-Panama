@@ -1,0 +1,55 @@
+{% comment %}  
+CATALOGO DE LA TIENDA JAMAR NUEVO FORMATO
+---------------------------------------------
+{% endcomment %} 
+
+
+        <div class="row justify-content-center flex-column align-items-center">
+            {% for block in section.blocks %}
+                <a class="d-flex justify-content-center" href="{{ block.settings.enlace }}">
+                    <picture>
+                        <source srcset="{{ block.settings.imagen | image_url }}" media="(min-width: 600px)">
+                          <img src="{{block.settings.imagen_movil | image_url }}" class="img-catalogo" style="filter: brightness({{bloque.overlay}})" data-rimg="lazy" loading="lazy">
+                    </picture>
+                </a>
+            {% endfor %}
+        </div>
+{% schema %}
+
+{
+    "name":"Catalogo",
+    "tag":"section",
+    "class":"container-fluid p-0",
+    "settings": [],
+    "blocks": [
+        {
+        "name" : "Catalogo",
+        "type": "block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "imagen",
+                "label": "Imagen para Desktop"
+            },
+            {
+                "type": "image_picker",
+                "id": "imagen_movil",
+                "label": "Imagen para Movil"
+            },
+            {
+                "type": "url",
+                "id": "enlace",
+                "label": "Enlace"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Imagenes Full Width",
+            "category": "Catalogo"
+        }
+    ]
+}
+
+{% endschema %}

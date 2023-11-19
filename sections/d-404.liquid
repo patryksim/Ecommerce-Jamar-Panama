@@ -1,0 +1,83 @@
+<style>
+    h1.titulo-404-page {
+        font-size: 34px;
+        font-weight: 700;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #404B5A;
+    }
+
+    h1.titulo-404-page span {
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #404B5A;
+    }
+
+    p.parrafo-404-page {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #404B5A;
+    }
+
+    a.button-404-page {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width: 201px;
+        height: 40px;
+        border: 1px solid #404B5A;
+        border-radius: 27px;
+        text-decoration: none;
+        color: #404B5A;
+        font-weight: 600;
+    }
+
+    a.enlace-404-page {
+        font-weight: 600;
+        color: #404B5A;
+    }
+  
+    @media only screen and (min-width: 360px) and (max-width: 768px) {
+     h1.titulo-404-page {
+        font-size: 22px;
+    }
+  }
+  
+  
+</style>
+    
+    
+        <div class="row flex-md-row flex-column-reverse mt-md-4">
+            <div class="col-md-6 col-12 mt-md-0 mt-3 text-center d-flex flex-column align-items-center">
+                <h1 class="titulo-404-page">¡Lo sentimos!<br><span>La página no ha sido encontrada</span></h1>
+                <p class="parrafo-404-page mt-2">Pero no te preocupes, hay más productos para que descubras.</p>
+                <a class="button-404-page mt-2" href="/" target="_blank" rel="noopener noreferrer">
+                    Ir a la página de inicio
+                </a>
+                <p class="parrafo-404-page mt-3">ó <a class="enlace-404-page" href="/account/register" target="_blank" rel="noopener noreferrer">Regístrate</a> y entérate de todas las ofertas <br> que tenemos para ti.</p>
+            </div>
+            <div class="col-md-6 col-12">
+                <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/ilustracion-error-404.png?v=1643152159" alt="" data-rimg="lazy" loading="lazy">
+            </div>
+        </div>
+
+    {% schema %}
+    {
+       "name":"Grid Two Col",
+       "class":"container",
+       "settings": [
+        
+       ],
+       "presets":[
+        {
+            "name":"Grid Two Col"
+        }
+       ]
+    }
+    {% endschema %} 

@@ -1,0 +1,163 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'prospect' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', Estilos y colecciones' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+{% if page_title == "Colección Tempo" %}
+	{% assign form_id = "form_tempo_col" %}
+	{% assign form_btn = "btn_form_tempo_col" %}
+{%- endif -%}
+{% if page_title == "Colección Silver" %}
+	{% assign form_id = "form_silver_col" %}
+	{% assign form_btn = "btn_form_silver_col" %}
+{%- endif -%}
+{% if page_title == "Colección Royal" %}
+	{% assign form_id = "form_royal_col" %}
+	{% assign form_btn = "btn_form_royal_col" %}
+{%- endif -%}
+{% if page_title == "Colección Play" %}
+	{% assign form_id = "form_play_col" %}
+	{% assign form_btn = "btn_form_play_col" %}
+{%- endif -%}
+{% if page_title == "Colección Mystic" %}
+	{% assign form_id = "form_mystic_col" %}
+	{% assign form_btn = "btn_form_mystic_col" %}
+{%- endif -%}
+{% if page_title == "Colección Natural" %}
+	{% assign form_id = "form_natural_col" %}
+	{% assign form_btn = "btn_form_natural_col" %}
+{%- endif -%}
+{% if page_title == "Estilo Contemporáneo" %}
+	{% assign form_id = "form_contemporaneo_style" %}
+	{% assign form_btn = "btn_form_contemporaneo_style" %}
+{%- endif -%}
+{% if page_title == "Estilo Moderno Glam" %}
+	{% assign form_id = "form_modernoglam_style" %}
+	{% assign form_btn = "btn_form_modernoglam_style" %}
+{%- endif -%}
+{% if page_title == "Estilo Natural Century" %}
+	{% assign form_id = "form_naturalcentury_style" %}
+	{% assign form_btn = "btn_form_naturalcentury_style" %}
+{%- endif -%}
+
+<div class="page-content rte collection-section {{page_title}}">
+  <div class="row mt-2">
+    <div class="col-12 col-sm-6 text-center align-self-center">
+      <img class="m-0" src="{{ section.settings.image_style_newsletter | img_url:'master' }}" alt="Header-Image" data-rimg="lazy" loading="lazy">
+    </div>
+    <div class="d-block d-sm-none">
+      <br>
+    </div>
+    <div class="col-12 col-sm-6 align-self-center">
+      <h2 class="text-body mt-0">{{ section.settings.heading_style_newsletter }}</h2>
+      <p>{{ section.settings.text_style_newsletter }}</p>
+      <div class="newsletter">
+        {% form 'customer', id: form_id %}
+        {% if form.posted_successfully? %}
+          <p class="newsletter-success">
+            {{ 'general.newsletter.success' | t }}
+          </p>
+        {% else %}
+        <input
+               type="hidden"
+               name="contact[tags]"
+               value="{{ newsletter_tags }}"
+               >
+        <div class="form-fields-inline ">
+          <div class="form-field name">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][Nombre]"
+                   id="nameCol"
+                   type="text"
+                   aria-label="nombre"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_name }}"
+                   >
+              Nombre *
+            </label>
+          </div>
+          <div class="form-field tel">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][telefono]"
+                   id="telCol"
+                   type="tel"
+                   aria-label="telefono"
+                   >
+            <label
+                   class="form-field-title"
+                   for="telCollections"
+                   >
+              Telefono *
+            </label>
+          </div>
+          <div class="form-field email">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[email]"
+                   id="correoCol"
+                   type="email"
+                   aria-label="{{ 'general.newsletter.placeholder' | t }}"
+                   >
+            <label
+                   class="form-field-title"
+                   for="emailCollections"
+                   >
+              {{ 'general.newsletter.placeholder' | t }}
+            </label>
+          </div>
+          <div class="form-field">
+            <button class="btn btn-dark" id="{{ form_btn }}"  name="subscribe" type="submit">Enviar</button>
+          </div>
+        </div>
+        
+        
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+{% schema %}
+{
+  "name": "contact-form",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_style_newsletter",
+      "label": "Image newsletter"
+    },
+    {
+      "id": "heading_style_newsletter",
+      "type": "text",
+      "label": "Heading",
+      "default": "Heading newsletter"
+    },
+    {
+      "id": "text_style_newsletter",
+      "type": "text",
+      "label": "Text",
+      "default": "Text newsletter"
+    }
+   ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

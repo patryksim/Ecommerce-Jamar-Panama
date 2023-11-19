@@ -1,0 +1,33 @@
+{% render 'custom-separator' %}
+<section class="container">{% comment %} Banner de la seccion final ### {% endcomment %}
+        <div class="row justify-content-center">
+            <picture>
+                <source srcset="{{ section.settings.feature_image | image_url }}" media="(min-width: 600px)">
+                {{ section.settings.feature_movil | image_url : width: auto | image_tag: alt: 'My favicon', class: 'w-100' }}
+            </picture>
+        </div>
+    </section>{% comment %} Fin de la seccion final ### {% endcomment %}
+{% schema %}
+{
+  "name": "Banner Promocional",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "feature_image",
+      "label": "Imagen destacada"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_movil",
+      "label": "Imagen destacada"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Banner Promocional",
+    "category": "Promo Colchones"
+    }
+    ]
+    }
+{% endschema %}
+

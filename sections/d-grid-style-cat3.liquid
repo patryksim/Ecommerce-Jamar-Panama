@@ -1,0 +1,88 @@
+{% if template.name != "index" %} 
+  {% render 'custom-separator' %}
+{% endif %}
+
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center lato-titulos">{{ section.settings.title_style_cat}} </h2>
+    </div>
+  </div>
+  <div class="row overflow-auto flex-nowrap pb-4 mt-4 container-scrollbar
+    {% if section.blocks.size > 5  %}
+        justify-content-md-start
+    {% endif %}
+
+    {% if section.blocks.size < 6  %}
+        justify-content-md-around 
+    {% endif %}
+
+    ">
+      {% for block in section.blocks %}
+    
+    	<span class="d-none">{% increment contador %}</span>
+    
+    
+      {% assign b = block.settings %}
+      <div class="col-5 col-md-auto">
+        <a href="{{b.enlace}}" class="tag-cta-ambiente-{{contador}}">
+          <div class="card shadow-none border-0">
+            {{ b.imagen | image_url : width: 200,format: 'pjpg' | image_tag: alt: 'Imagen ambientes', srcset: nil, class: 'img-fluid', loading: 'lazy' }}
+            <div class="card-body">
+              <p class="card-text text-center"><b>{{b.textoimage}}</b></p>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+  </div>
+
+
+{% schema %}
+
+{
+    "name":"Grid Promo Cat3",
+    "tag":"section",
+    "class":"container section-completa-ambientes",
+    "settings": [
+    {
+      "type": "text",
+      "id": "title_style_cat",
+      "label": "Colocar titulo de sección",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+    {
+        "name" : "imagen",
+        "type": "imagen",
+        "settings": [
+        {
+            "type": "image_picker",
+            "id": "imagen",
+            "label": "Imagen de la tarjeta"
+        },
+        {
+            "type": "text",
+            "id": "textoimage",
+            "label": "Texto sobre la imagen"
+        },
+        {
+            "type": "url",
+            "id": "enlace",
+            "label": "Enlace personalizado"
+        }
+        ]
+    }
+
+    ],
+    "presets": [
+        {
+            "name": "Grid Promo Cat3",
+            "category": "Categorias"
+        }
+    ]
+}
+
+
+
+{% endschema %}

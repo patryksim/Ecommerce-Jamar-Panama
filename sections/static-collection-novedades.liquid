@@ -1,0 +1,349 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'prospect' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', Zona de Novedades' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+
+<article class="site-page rich-text--container" data-template-page>
+  
+  <br>
+
+  <div class="row mt-4 mb-4">
+    <div class="col-12">
+      <div class="col-sm-6 border-top-0 border-end-0 border-start-0 border border-dark">
+        <h2 class="ps-4 text-dark fs-4">Novedades en <b>Categorías</b></h2>
+      </div>
+    </div> 
+  </div>
+
+  <div class="row layout--has-sidebar productgrid-gridview">
+      <div class="productgrid--wrapper">
+        <ul class="nav nav-pills novedades-pills" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary active" id="pills-todos-tab" data-bs-toggle="pill" data-bs-target="#pills-todos" type="button" role="tab" aria-controls="pills-todos" aria-selected="true">Todos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary active" id="pills-salas-tab" data-bs-toggle="pill" data-bs-target="#pills-salas" type="button" role="tab" aria-controls="pills-salas" aria-selected="false">Salas</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary" id="pills-comedores-tab" data-bs-toggle="pill" data-bs-target="#pills-comedores" type="button" role="tab" aria-controls="pills-comedores" aria-selected="false">Comedores</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary" id="pills-tv-tab" data-bs-toggle="pill" data-bs-target="#pills-tv" type="button" role="tab" aria-controls="pills-tv" aria-selected="false">Muebles para TV y Escritorios</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary" id="pills-colchones-tab" data-bs-toggle="pill" data-bs-target="#pills-colchones" type="button" role="tab" aria-controls="pills-colchones" aria-selected="false">Colchones y Bases</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary" id="pills-recamaras-tab" data-bs-toggle="pill" data-bs-target="#pills-recamaras" type="button" role="tab" aria-controls="pills-recamaras" aria-selected="false">Recámaras</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="btn btn-secondary" id="pills-juvenil-tab" data-bs-toggle="pill" data-bs-target="#pills-juvenil" type="button" role="tab" aria-controls="pills-juvenil" aria-selected="false">Juvenil e Infantil</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-todos" role="tabpanel" aria-labelledby="pills-todos-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                    {%
+                      render 'product-grid-item',
+                      product: product,
+                      list_name: list_name
+                    %}
+                {% endfor %}
+                {% render 'product-grid-fee' %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-salas" role="tabpanel" aria-labelledby="pills-salas-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Salas' %}
+                    {%
+                      render 'product-grid-item',
+                      product: product,
+                      list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+                {% render 'product-grid-fee' %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-comedores" role="tabpanel" aria-labelledby="pills-comedores-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Comedores' %}
+                    {%
+                      render 'product-grid-item',
+                    product: product,
+                    list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-tv" role="tabpanel" aria-labelledby="pills-tv-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Muebles para TV y Escritorios' %}
+                    {%
+                      render 'product-grid-item',
+                    product: product,
+                    list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-colchones" role="tabpanel" aria-labelledby="pills-colchones-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Colchones y Bases' %}
+                    {%
+                      render 'product-grid-item',
+                    product: product,
+                    list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-recamaras" role="tabpanel" aria-labelledby="pills-recamaras-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Recámaras' %}
+                    {%
+                      render 'product-grid-item',
+                    product: product,
+                    list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="pills-juvenil" role="tabpanel" aria-labelledby="pills-juvenil-tab">
+            <div class="collection--section">
+              <ul class="productgrid--items products-per-row-4">
+                {% for product in collections.novedades.products %}
+                  {% if product.tags contains 'Juvenil e Infantil' %}
+                    {%
+                      render 'product-grid-item',
+                    product: product,
+                    list_name: list_name
+                    %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  
+  <br>
+  <div class="row mt-4 mb-4">
+    <div class="col-12">
+      <div class="col-12">
+        <div class="col-sm-6 border-top-0 border-end-0 border-start-0 border border-dark">
+          <h2 class="ps-4 text-dark fs-4">Estilos que transformarán tu hogar</h2>
+        </div>
+      </div> 
+    </div> 
+    <div class="col-12 col-sm-4">
+      <a href="/pages/estilo-moderno-glam">
+        <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/MODERNO_GLAM_52c170da-e3cd-448c-81b1-28401602dd91.jpg?v=1646841588" data-rimg="lazy" loading="lazy">
+      </a>
+      <p class="fs-5">E S T I L O</p>
+      <h2 class="mt-0 text-dark fs-3 text-break style-moderno-glam">MODERNO GLAM</h2>
+      <p>Ambientes refinados y elegantes con contrastes modernos y delicados en sus colores y tapizados.</p>
+      <a class="text-dark fw-bolder text-decoration-underline" href="/pages/estilo-moderno-glam"><p>Ver especial</p></a>
+    </div>    
+    <div class="col-12 col-sm-4">
+      <a href="/pages/estilo-natural-century">
+        <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/NATURAL_CENTURY_db1fc990-e3f1-4a06-a13a-0efde13bdee7.jpg?v=1646841588" data-rimg="lazy" loading="lazy">
+      </a>
+      <p class="fs-5">E S T I L O</p>
+      <h2 class="mt-0 text-dark fs-3 text-break style-natural-century ">NATURAL CENTURY</h2>
+      <p>Espacios frescos, coloridos y acogedores para transmitir una naturaleza minimalista en casa.</p>
+      <a class="text-dark fw-bolder text-decoration-underline" href="/pages/estilo-natural-century"><p>Ver especial</p></a>
+    </div>
+    <div class="col-12 col-sm-4">
+      <a href="/pages/estilo-contemporaneo">
+        <img class="mt-4" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/NATURAL_CENTURY-1.jpg?v=1646841588" data-rimg="lazy" loading="lazy">
+      </a>
+      <p class="fs-5">E S T I L O</p>
+      <h2 class="mt-0 text-dark fs-3 text-break style-contemporaneo">CONTEMPORÁNEO</h2>
+      <p>Hogares vanguardistas y clásicos con diseños, elementos y colores que perduran en el tiempo.</p>
+      <a class="text-dark fw-bolder text-decoration-underline" href="/pages/estilo-contemporaneo"><p>Ver especial</p></a>
+    </div>
+</div>
+  
+  <br>
+  <div class="row d-none d-sm-block mt-4 mb-4">
+    <div class="col-12">
+      <figure class="figure">
+        <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Banner_Promo-Credito_Colchones.jpg?v=1646841588" data-rimg="lazy" loading="lazy">
+      </figure>
+    </div>
+  </div>
+  <div class="row d-block d-sm-none mt-4 mb-4">
+    <div class="col-12">
+      <figure class="figure">
+        <img class="img-fluid" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Banner_Promo-Credito_Colchones-Movil.jpg?v=1646843623" data-rimg="lazy" loading="lazy">
+      </figure>
+    </div>
+  </div>
+  
+  <br>
+  <div class="row mt-4">
+    <div class="col-12 col-md-6 text-center align-self-center">
+      <img class="m-0" src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/jamar-muebles.png?v=1642120285" alt="Header-Image" data-rimg="lazy" loading="lazy">
+    </div>
+    <div class="d-block d-sm-none">
+      <br>
+    </div>
+    <div class="col-12 col-md-6 align-self-center">
+      <h2 class="text-body mt-0">¡Recibe <b>promociones y ofertas exclusivas</b> en tu <b>correo electrónico</b> y en tu <b>WhatsApp</b>!</h2>
+      <p>{{ section.settings.text_style_newsletter }}</p>
+      <div class="newsletter">
+        {% form 'customer', id: form_id %}
+        {% if form.posted_successfully? %}
+          <p class="newsletter-success">
+            {{ 'general.newsletter.success' | t }}
+          </p>
+        {% else %}
+        <input
+               type="hidden"
+               name="contact[tags]"
+               value="{{ newsletter_tags }}"
+               >
+        <div class="form-fields-inline ">
+          <div class="form-field w-100 mb-2">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[note][telefono]"
+                   id="{{ input_tel }}"
+                   type="tel"
+                   aria-label="Tu número de WhatsApp"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_tel }}"
+                   >
+              Tu número de WhatsApp
+            </label>
+          </div>
+          <div class="form-field w-100 mb-2">
+            <input
+                   class="form-field-input form-field-text"
+                   name="contact[tel]"
+                   id="{{ input_id }}"
+                   type="tel"
+                   aria-label="tel"
+                   >
+            <label
+                   class="form-field-title"
+                   for="{{ input_id }}"
+                   >
+              Tu correo electrónico *
+            </label>
+          </div>
+          
+          <div class="form-field w-100 d-flex">
+            <input
+                   class="mt-2 mr-4 form-field-checkbox align-self-center"
+                   name="contact[ck-box WhatsApp]"
+                   id="{{ input_id }}"
+                   type="checkbox"
+                   aria-label="ck-ws"
+                   >
+            <p class="mt-2 mb-0 align-self-center">
+              Desseo recibir promociones por WhatsApp
+            </p>
+          </div>
+          
+          <div class="form-field w-100 mb-3 d-flex ">
+            <input
+                   class="mt-0 mr-4 form-field-checkbox align-self-center"
+                   name="contact[ck-box Aceptación políticas]"
+                   id="{{ input_id }}"
+                   type="checkbox"
+                   aria-label="ck-ap"
+                   > 
+            <p class="mt-0 mb-0 align-self-center">
+              Acepto <a class="text-danger" href="/pages/politicas-de-proteccion-de-datos">Acepto Política de Protección de Datos</a>
+            </p>
+          </div>
+          
+          <div class="form-field">
+            <button class="btn btn-dark" name="subscribe" type="submit">Enviar</button>
+          </div>
+        </div>
+        
+        
+        {% endif %}
+        {% endform %}
+      </div>
+    </div>
+  </div>
+
+  
+</article>
+
+{% comment %}
+/**********************************************************
+*			VARIABLE PARA EL SERVICIO DE PRECIO
+*					PATRYKSIM@GMAIL.COM
+**********************************************************/
+{% endcomment %}
+
+{% for product in collections.novedades.products %}
+<script>
+    skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+  </script>
+{% endfor %}
+
+
+
+     {% render 'product-grid-fee' %}
+
+
+
+{% comment %}
+/**********************************************************
+*			VARIABLE PARA EL SERVICIO DE PRECIO
+*					PATRYKSIM@GMAIL.COM
+**********************************************************/
+{% endcomment %}  
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

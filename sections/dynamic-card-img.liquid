@@ -1,0 +1,77 @@
+{% comment %} 
+NUEVO CARD CONTAINER
+{% endcomment %}
+
+<section class="container">
+    <div class="row">
+            <h2 class="text-center lato-os"> {{section.settings.tamano_title}} </h2>
+            <div class="col-12">
+                <div class="row justify-content-md-center">
+                        <div class="col col-md-10">
+                            <div class="row justify-content-md-around justify-content-start">
+                                 {% for block in section.blocks %}
+                                    {% assign b = block.settings %}
+                                    <div class="col-6 col-md-3 d-flex justify-content-center">
+                                            <a href="{{b.enlace_tamano}}" target="_blank" rel="noopener noreferrer" class="text-decoration-none">
+                                                <figure class="figure-sizes">
+                                                    {{ b.image_sizes | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid' }}
+                                                    <figcaption class="mt-2"><b>{{ b.title }}</b></figcaption>
+                                                </figure>
+                                            </a>
+                                    </div>
+                            {% endfor %} 
+                            </div>
+                        </div>
+                </div>
+            </div>
+    </div>
+</section>
+{% comment %} 
+NUEVO CARD CONTAINER
+{% endcomment %}
+{% schema %}
+
+{
+  "name": "Section Card",
+  "class": "section section-card-img",
+  "settings": [
+      {
+      "type": "text",
+      "id": "tamano_title",
+      "label": "Titulo Tamaños",
+      "default": "Tamaños de nuestros <b>colchones</b>"
+    }
+],
+    "blocks": [
+    {
+        "name" : "Tamaño de Colchones",
+        "type": "Texto",
+        "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Nombre de la sucursal"
+        },
+        {
+            "type": "page",
+            "id": "enlace_tamano",
+            "label": "Enlace"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_sizes",
+            "label": "Imagen Ref"
+        }
+        ]       
+    }
+    ],
+    "presets": [
+        {
+            "name": "Section Card Imagen",
+            "category": "Custom"  
+        }
+    ]
+  
+}
+
+{% endschema %}

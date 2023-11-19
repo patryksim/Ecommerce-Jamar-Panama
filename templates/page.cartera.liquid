@@ -1,0 +1,113 @@
+{% comment %}
+<article class="cartera site-page m-0" data-template-page="">
+    <nav class="container-fluid bg-medium-gris-jamar">
+        <div class="row pt-3 pb-3">
+            <div class="col-6 text-end border-end">
+              <a href="https://www.jamar.com.pa/">
+                <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Logo-Jamar.svg?v=1677676834">
+              </a>
+            </div>
+            <div class="col-6 text-start">
+              <a href="https://www.credijamar.com.pa">
+                <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Logo-Credijamar.svg">
+              </a>
+            </div>
+        </div>
+    </nav><!-- Cabecera -->
+    <div class="" id="cartera-steps">
+        <section class="container-fluid d-grid align-items-center overflow-hidden" id="step-1">
+            <div class="row justify-content-center">
+                <div class="col-11 col-md-4 bg-white p-4 rounded">
+                    <h2 class="text-center text-gris-jamar fw-bold mb-4">Notificación plazo vencido Credijamar S.A.</h2>
+                    <form action="javascript:void(0);" id="cartera-form" method="post">
+                        <div id="step-1-1">
+                            <label class="text-gris-jamar mb-2 form-label" for="nombre">Nombre</label> <input
+                                type="text" class="form-control mb-4 rounded-pill" id="nombre"
+                                placeholder="Escribe tu nombre completo"> <label class="text-gris-jamar mb-2 form-label"
+                                for="tipo_documento">Tipo de documento*</label><select
+                                class="form-select mb-4 rounded-pill" id="tipo_documento">
+                                <option value="" disabled selected>Seleccione</option>
+                                <option value="cedula_nacional">Cédula</option>
+                                <option value="cedula_extranjera">Cédula de extranjeria</option>
+                                <option value="pasaporte">Pasaporte</option>
+                            </select>
+                            <label class="text-gris-jamar mb-2 form-label" for="nro_documento">No. de documento*</label>
+                          <input type="text" class="form-control mb-4 rounded-pill" required id="nro_documento" placeholder="Digita el número de tu documento" onclick="warningShow()" onblur="warningHide()">
+                          <div id="documento-warning" class="visually-hidden">
+                            <ul class="list-bullet text-gris-jamar text-start ps-3 mb-4" style="font-size:11px">
+                              <li>Si tú documento de identidad empieza con cero (0) no incluirlo.</li>
+                              <li>Si tú documento de identidad incluye guiones (-) debes ingresarlo.</li>
+                              <li>Si tu documento de identidad incluye Letras, debes incluirlas.</li>
+                            </ul>
+                          </div>
+                          <button type="submit" class="btn bg-azul-jamar rounded-pill text-white w-100" disabled id="btn-step-1">Continuar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="container d-grid align-items-center visually-hidden" id="step-2">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9">
+                    <br><br>
+                    <p class="text-center text-gris-jamar">Señor (a)</p>
+                    <p class="text-center text-gris-jamar text-uppercase fw-bold" data-client="nombre"> </p>
+                    <p class="text-center text-gris-jamar text-uppercase">Panamá</p>
+                    <p class="text-gris-jamar">Estimado Sr(a). <span data-client="nombre"></span></p>
+                    <p class="text-gris-jamar">RE: CONTRATO No. <span class="fw-bold" data-client="num-contrato"></span></p>
+                    <p class="text-gris-jamar">Nuestra empresa siempre está agradecida por los negocios realizados con
+                        su persona.</p>
+                    <p class="text-gris-jamar">La revisión de nuestra contabilidad demuestra que usted ha incurrido en
+                        mora o atraso en el pago de las cuotas mensuales acordadas en el Contrato No. <span class="fw-bold" data-client="num-contrato"></span> firmado el <span class="fw-bold" data-client="dia-firma"></span> de <span
+                        class="fw-bold" data-client="mes-firma"></span> del año <span class="fw-bold" data-client="ano-firma"></span>, lo cual tiene
+                        como consecuencia que declaremos de plazo vencido el total de la deuda. Le instamos a pagar el
+                        total adeudado o acercarse a nuestras oficinas para celebrar un arreglo de pago.</p>
+                    <p class="text-gris-jamar">Detallamos a continuación el saldo adeudado por usted:</p>
+                    <p class="text-gris-jamar fw-bold">Capital: <span class="fw-bold">$</span><span class="fw-bold" data-client="capital"></span></p>
+                    <p class="text-gris-jamar fw-bold">Intereses a la fecha de esta nota: <span class="fw-bold">$</span><span class="fw-bold" data-client="intereses"></span></p>
+                    <p class="text-gris-jamar fw-bold">Gastos de cobranza: <span class="fw-bold">$</span><span class="fw-bold" data-client="gastos-cobranza"></span>
+                    </p>
+                    <p class="text-gris-jamar fw-bold">Otros gastos: <span class="fw-bold">$</span><span class="fw-bold" data-client="otros-gastos"></span></p>
+                    <p class="text-gris-jamar">Dado en la Ciudad de Panamá a los <span data-date="dia"></span> días del mes de <span data-date="mes"></span> del año <span data-date="ano"></span>.</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/firma-dpto-cobros.png?v=1677523040"
+                        alt="">
+                    <hr class="w-25">
+                    <p class="text-gris-jamar mb-0">DEPARTAMENTO DE COBROS</p>
+                    <p class="text-gris-jamar">CREDIJAMAR S.A.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- PROCESO -->
+    <div class="container-fluid d-grid align-items-center visually-hidden" id="exit-section">
+        <section class="row justify-content-center">
+            <div class="col-11 col-md-4 bg-white p-4 text-center">
+                <h2 class="text-gris-jamar mb-4">Tu información no la encontramos en nuestro sistema</h2>
+                <img src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/sin-exito.png?v=1677523041">
+                <p class="text-gris-jamar">Intenta nuevamente y revisa que tu tipo y número de documento esté correcto.
+                </p>
+                <a href="/pages/cartera"> <button type="button"
+                        class="btn bg-azul-jamar rounded-pill text-white w-100 mb-3">Reintenar</button> </a> <a
+                    href="https://www.jamar.com.pa/"> <button type="button"
+                        class="btn bg-white rounded-pill text-gris-jamar w-100 border border-1 border-gris-jamar">Salir</button>
+                </a>
+            </div>
+        </section>
+    </div>
+    <!-- SALIDA DEL PROCESO -->
+</article>
+{% endcomment %}
+
+{{ page.content }}
+
+
+<!-- Script Visor CrediJamar -->
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" type="text/javascript" defer="defer"></script> -->
+{{'jquery.min.js' | asset_url | script_tag}}
+{{'inputmask.min.js' | asset_url | script_tag}}
+{{'cartera.js' | asset_url | script_tag}}
+{{'https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js' | script_tag}}
+{{'https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.css' | stylesheet_tag}}
+{{'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' | stylesheet_tag}}
+{{'written-number.min.js' | asset_url | script_tag}}
+

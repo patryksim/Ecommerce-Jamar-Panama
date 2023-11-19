@@ -1,0 +1,101 @@
+<article class="site-page rich-text--container mt-3" data-template-page>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-7 text-center align-self-center">
+      <img class="d-none d-md-block m-0" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Group_2389.jpg?v=1647613226" alt="Formulario-desktop">
+      <img class="d-block d-md-none mb-4 w-100" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Group_2390_e0d9a6bd-e0ec-4098-911b-1535097564eb.jpg?v=1647613226" alt="Formulario-movil">
+    </div>
+    <div class="col-12 col-md-5 align-self-center">
+      <h2 class="text-gris-jamar mt-0" style="line-height: 27px;">
+        ¡Suscríbete a nuestro boletín para <b>recibir más ofertas</b>!
+      </h2>
+      <p>{{ section.settings.text_style_newsletter }}</p>
+      <div class="newsletter">
+        {% form 'customer', id: form_id %}
+        {% if form.posted_successfully? %}
+          <p class="newsletter-success">
+            {{ 'general.newsletter.success' | t }}
+          </p>
+        {% else %}
+        <input  type="hidden" name="contact[tags]" value="{{ newsletter_tags }}">
+        <div class="form-fields-inline ">
+          <div class="w-100 mb-2">
+            <input class="form-field-input form-field-text rounded-pill p-2"
+              name="contact[name]"
+              id="{{ input_name }}"
+              type="text"
+              placeholder=" Nombre completo*"
+            >
+            <label class="form-field-title" for="{{ input_name }}">
+              
+            </label>
+          </div>
+          <div class="w-100 mb-2">
+            <input class="form-field-input form-field-text rounded-pill p-2"
+              name="contact[email]"
+              id="{{ input_email }}"
+              type="email"
+              placeholder=" Email"
+            >
+            <label class="form-field-title" for="{{ input_email }}">
+             
+            </label>
+          </div>class="form-field">
+            <button class="btn rounded-pill text-white bg-gris-jamar p-2" name="subscribe" type="submit" >
+              Enviar
+            </button>
+          </div>
+        </div>
+        {% endif %}
+        {% endform %}
+      </div>
+  </div>
+</div>
+</article>
+
+{% section 'static-collection-ofertas' %}
+
+<article class="site-page rich-text--container" data-template-page>
+<div class="container">
+  <div class="row">
+    <div class="col-12 align-self-center d-none d-md-block">
+      <div class="d-grid zl-credijamar">
+        <div class="item-a align-self-center">
+          <div class="p-4 bg-light text-center">
+            <img class="m-2" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/img-servicios-credijamar.png?v=1647284062">
+            <h2 class="text-gris-jamar m-0" style="line-height: 27px;">Tarjeta <b>Credijamar</b></h2>
+            <p class="text-gris-jamar">La única tarjeta especializada para que tengas los <b>muebles que sueñas</b> en tu hogar.</p>
+            <a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion">
+              <button class="btn rounded-pill text-white bg-azul-jamar" id="pills-salas-tab" data-bs-toggle="pill" data-bs-target="#pills-salas" type="button"  aria-controls="pills-salas" aria-selected="false">
+                ¡Pidela ya!
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="item-b">
+          <div class="h-100 w-100"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 align-self-center d-block d-md-none">
+      <div class="d-grid zl-credijamar">
+        <div class="item-c">
+          <div class="h-100 w-100"></div>
+        </div>
+        <div class="item-d align-self-center">
+          <div class="p-4 bg-light text-center">
+            <img class="m-2" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/img-servicios-credijamar.png?v=1647284062">
+            <h2 class="text-gris-jamar m-0" style="line-height: 27px;">Tarjeta <b>Credijamar</b></h2>
+            <p class="text-gris-jamar">La única tarjeta especializada para que tengas los <b>muebles que sueñas</b> en tu hogar.</p>
+            <a href="https://tarjetizacion.jamar.com.pa/form-one?utm_source=jamar&utm_medium=ecommerce&utm_campaign=tarjetizacion">
+              <button class="btn rounded-pill text-white bg-azul-jamar" id="pills-salas-tab" data-bs-toggle="pill" data-bs-target="#pills-salas" type="button"  aria-controls="pills-salas" aria-selected="false">
+                ¡Pidela ya!
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</article>

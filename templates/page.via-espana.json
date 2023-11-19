@@ -1,0 +1,98 @@
+{
+    "sections": {
+        "21272eee-1ee5-4b63-9e1b-54f16bc5d69a": {
+            "type": "d-banner",
+            "settings": {
+                "imagen_desktop": "shopify:\/\/shop_images\/jamar-via-espana_b1b8b1d5-19e8-4ebc-85d8-c35a51a5f512.jpg",
+                "imagen_movil": "shopify:\/\/shop_images\/jamar-via-espana-mob_16a567f8-6e13-4875-9b49-08427b7f54f1.jpg",
+                "text_up": "Vía España",
+                "text_down": "Panamá"
+            }
+        },
+        "styles": {
+            "type": "styles-render",
+            "disabled": true,
+            "settings": {
+                "main_title": "Estilos"
+            }
+        },
+        "1dd80692-b3e0-4f87-b794-4f738da9789e": {
+            "type": "d-info-tienda",
+            "settings": {
+                "h2": "Visítanos y renueva tus muebles",
+                "store_name": "Vía España",
+                "phone": "205-6500",
+                "breadcump": "Sucursal Jamar",
+                "iframe_link": "https:\/\/www.google.com\/maps\/embed?pb=!1m14!1m8!1m3!1d6847.847719256073!2d-79.52000218410998!3d8.992487639551305!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb26a65b6f98a9563!2zSmFtYXIgfCBWw61hIEVzcGHDsWE!5e0!3m2!1ses-419!2spa!4v1666101896506!5m2!1ses-419!2spa",
+                "share_link": "https:\/\/goo.gl\/maps\/igHHh5iAtH2xrLoW7",
+                "store_info": "Lunes a Sábados\n<p>8:00 AM a 7:00 PM <\/p>\n<p>Domingos<\/p>\n<p>10:00 AM a 6:00 PM <\/p>\n<p>Estacionamiento disponible<\/p>"
+            }
+        },
+        "7f6aa873-88ce-42af-9f1f-c237fb82308a": {
+            "type": "d-description-tienda",
+            "settings": {
+                "title": "Conoce nuestra tienda en Vía España",
+                "description": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra <a href=\"\/collections\/salas\"> juegos de sala<\/a> , <a href=\"\/pages\/comedores\"> comedores<\/a> y mucho más. Pregunta también por nuestros <a href=\"\/pages\/tarjeta-jamar\"> muebles a crédito<\/a>.",
+                "main_image": "shopify:\/\/shop_images\/via-espana-01.webp",
+                "second_image": "shopify:\/\/shop_images\/via-espana-02_ae899495-0bd6-40f0-aa43-17e52360001a.jpg",
+                "third_image": "shopify:\/\/shop_images\/via-espana-03_578c1dee-91d6-4779-a06f-8a423281df83.jpg",
+                "fourt_image": "shopify:\/\/shop_images\/via-espana-05.jpg",
+                "five_image": "shopify:\/\/shop_images\/via-espana-04_e63fb096-6cd5-4c92-b511-7f419994a76a.jpg"
+            }
+        },
+        "3c25bdc0-2fd0-4dbd-a9cb-916a65e8def0": {
+            "type": "d-carrousel-list",
+            "settings": {
+                "collections": [
+                    "7021492",
+                    "7025277",
+                    "7010498",
+                    "7017218",
+                    "7020275",
+                    "7020276",
+                    "7020365",
+                    "7020626",
+                    "7020904",
+                    "7021383",
+                    "7023034",
+                    "7023037",
+                    "7023040",
+                    "7019403"
+                ],
+                "titleCarousel": "Muebles modernos y a crédito en Panamá",
+                "descriptionCarousel": "",
+                "position": "text-start"
+            }
+        },
+        "4977a70d-892b-47f1-8303-497a1a5c5ad6": {
+            "type": "d-titles",
+            "settings": {
+                "titulo": "Aquí encuentras los mejores muebles en Panamá",
+                "subtitulo": "Sabemos que siempre buscas la mejor opción para renovar tu hogar con muebles de calidad y al mejor precio. Visítanos y encuentra  juegos de sala, comedores y mucho más. Pregunta también por nuestros muebles a crédito.",
+                "vertical_alignment": "start",
+                "columnas": 12
+            }
+        },
+        "bd8ac504-e5af-4948-af52-08c22037da3f": {
+            "type": "dynamic-promo-form",
+            "settings": {
+                "main_title": "Entérate de nuestras novedades",
+                "main_description": "",
+                "banner_form": "shopify:\/\/shop_images\/Formulario-de-Home-634x405_5976a75c-3296-44ce-a8d3-780475c0dea7.jpg",
+                "invertir_col": true,
+                "vertical_alignment_movil": "align-items-center",
+                "vertical_alignment_desktop": "align-items-md-center",
+                "etiqueta": "newsletter-colchones"
+            }
+        }
+    },
+    "order": [
+        "21272eee-1ee5-4b63-9e1b-54f16bc5d69a",
+        "styles",
+        "1dd80692-b3e0-4f87-b794-4f738da9789e",
+        "7f6aa873-88ce-42af-9f1f-c237fb82308a",
+        "3c25bdc0-2fd0-4dbd-a9cb-916a65e8def0",
+        "4977a70d-892b-47f1-8303-497a1a5c5ad6",
+        "bd8ac504-e5af-4948-af52-08c22037da3f"
+    ]
+}

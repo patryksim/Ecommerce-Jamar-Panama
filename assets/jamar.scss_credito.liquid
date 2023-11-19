@@ -1,0 +1,4662 @@
+/*****************************************
+         DEFINICION DE VARIABLES
+		   PATRYKSIM@GMAIL.COM
+******************************************/ 
+$rojo-jamar: #ED0000;
+$azul-jamar: #00AEB3;
+$verde-jamar: #25D366;
+$light-gray: #6E7A8A;
+$medium-gray: #6E7A8A;
+$dark-gray: #404B5A;
+
+.bg-rojo-jamar {
+  background: $rojo-jamar;
+}
+.bg-azul-jamar {
+  background: $azul-jamar;
+}
+.bg-gris-jamar {
+  background: $dark-gray;
+}
+
+.text-rojo-jamar {
+  color: $rojo-jamar;
+}
+.text-light-gris-jamar {
+  color: $light-gray;
+}
+.text-medium-gris-jamar {
+  color: $medium-gray;
+}
+.text-gris-jamar {
+  color: $dark-gray;
+}
+
+h2, h3 {
+  letter-spacing: 0.5px;
+}
+
+.ls-0 {
+  letter-spacing: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
+{%- assign fonts_type_body_family = settings.type_body.family | append: ',' | append: settings.type_body.fallback_families -%}
+/*****************************************
+      LÍNEA AL TITULO DE LA SECCION
+		   PATRYKSIM@GMAIL.COM
+******************************************/ 
+.home-section--title {
+  height: 10px;
+  opacity: 0;
+  display: none;
+}
+
+.home-section--title, .linea {
+  background-image: url(https://cdn.shopify.com/s/files/1/0040/0464/2925/files/Linea.jpg);
+  background-repeat: repeat-x;
+  background-position: center center;
+  width: 100%;
+  opacity: 0;
+  span {
+    background-color: #fff;
+    display: inline-block;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .custom-html--container .home-section--title, .home-section--title, .linea {
+    font-size: 0;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  .custom-html--container .home-section--title, .home-section--title, .linea {
+    font-size: 0;
+  }
+}
+
+
+/*****************************************
+      NUEVO ESTILO DE LA SECCION
+		   PATRYKSIM@GMAIL.COM
+******************************************/ 
+/**
+.contenedor-titulos-secciones {
+  display: grid;
+  grid-tempalte-colums: 10% 40%;
+  h2.title-section {
+    font-weight: 300;
+    position: relative;
+    height: 70px;
+    line-height: 30px;
+    color: $dark-gray;
+    &::before {
+      content: "";
+      width: 100%;
+      border-bottom: 2px solid #000;
+      position: absolute;
+      bottom: 0px;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+
+  figure {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 5rem;
+    transform: translateY(0px) translateX(0px);
+    margin-left: 0;
+    margin-right: 15px;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 719px) {
+  .contenedor-titulos-secciones {
+    width: inherit;
+    h2.title-section {
+      font-size: 1rem;
+    }
+  }
+}
+@media screen and (min-width: 720px) {
+  .contenedor-titulos-secciones {
+    width: 610px;
+  }
+}
+*/
+
+/*  */
+
+/*  */
+.container .contenedor-titulos-secciones {
+    display: grid;
+    grid-template-columns: 400px 0px;
+    grid-column-gap: 10px;
+    justify-content: start;
+    align-items: flex-end;
+
+}
+
+@media only screen and (min-width: 100px) and (max-width: 768px) {
+  .container .contenedor-titulos-secciones {
+      grid-template-columns: 100%;
+  }
+}
+
+.container .contenedor-titulos-secciones h2 {
+  border-bottom: 2px solid black;
+  font-size: 24px;
+  padding-bottom: 10px;
+  line-height: 30px;
+  font-weight: 400;
+  color: $dark-gray;
+  margin: 0 !important;
+}
+
+.contenedor-titulos-secciones figure  {
+  padding: 0px; 
+  margin: 0px;
+  display:none;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+.contenedor-titulos-secciones figure img {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.welcome .contenedor-titulos-secciones p strong {
+	color: $dark-gray;
+}
+
+.container .contenedor-titulos-secciones p strong {
+	color: $dark-gray;
+}
+
+/*  */
+
+
+/*****************************************
+           PÁGINA DE ASEGURANZA
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.verdades {
+	background-color: $dark-gray;
+	color: #fff;
+	padding: 10px;
+	li {
+		text-align: center;
+		&:nth-child(2) {
+			border-top: none;
+			border-bottom: none;
+			border-right: solid 2px #ffffff;
+			border-left: solid 2px #ffffff;
+		}
+		.trust-subtitle {
+			text-transform: uppercase;
+			letter-spacing: 3.5px;
+			font-weight: 300;
+			font-size: 15px;
+		}
+		.trust-title {
+			text-transform: uppercase;
+			margin: 15px 0 20px;
+			font-size: 2vw;
+			letter-spacing: .8px;
+			font-weight: 400;
+			font-family: Roboto,serif;
+        }
+        .trust-link {
+          margin-top: 0;
+          margin-bottom: 0.5rem;
+          a {
+            color: #fff;
+            font-size: 13.5px;
+            letter-spacing: .4px;
+            font-weight: 300;
+          }
+        }
+    }
+}
+
+@media screen and (max-width: 859px) {
+.productgrid--items.products-per-row-3.verdades {
+  padding-right: 20px;
+	li.productgrid--item {
+      width: 100%;
+		text-align: center;
+		&:nth-child(2) {
+          margin-left: 0;
+              margin-right: 10px;
+          			border-right: none;
+			border-left: none;
+          border-top: solid 2px #ffffff;
+    border-bottom: solid 2px #ffffff;
+          
+
+		}
+		.trust-subtitle {
+		}
+		.trust-title {
+              font-size: 5vw;
+		}
+		.trust-link a {
+          margin-bottom: 10px;
+		}
+	}
+}
+  
+ 
+}
+@media screen and (min-width: 860px) {
+
+}
+
+/*****************************************
+        TEMPLATE PAGE.FULL-WIDTH
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.rich-text--container .page-content  {
+  max-width: 100%;
+}
+
+/*****************************************
+       	    CATALOGO DIGITAL
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.promo-grid--container {
+  .home-section--content {
+    margin-top: 3rem;
+  }
+  .promo-block {
+    a:hover {
+      color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 719px) {
+  #shopify-section-1620834120a903abc2, #shopify-section-16281042933ea6b357, #shopify-section-1621359260e8bcb9f2, #shopify-section-1635523677e0644e4f { // mobile catalogo, tour virtual y fechas patrias
+    display: block; 
+  }
+  #shopify-section-1628007658cb9c29ec, #shopify-section-16210053814c931658, #shopify-section-16213590557085b0cf, .video-home-child-2, #shopify-section-16355166645f21b002 { // desktop catalogo, tour virtual y fechas patrias 
+  	display: none;
+  }
+}
+
+
+@media screen and (min-width: 720px) {
+  #shopify-section-1620834120a903abc2, #shopify-section-16281042933ea6b357, #shopify-section-1621359260e8bcb9f2, #shopify-section-1635523677e0644e4f { // mobile catalogo, tour virtual y fechas patrias
+    display: none; 
+  }
+  #shopify-section-1628007658cb9c29ec, #shopify-section-16210053814c931658, #shopify-section-16213590557085b0cf, #shopify-section-16355166645f21b002 { // desktop catalogo, tour virtual y fechas patrias
+  	display: block;
+  }
+}
+
+/*****************************************
+          PAGE NOSOTROS 2 COLUMN
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+@media screen and (max-width: 719px){
+  .site-page {
+    margin-top: 60px;
+    .promo-block--content.animating-in, .promo-block--content.promo-block--expanded:not(.animating-out) {
+      height: fit-content;
+    }
+  }
+}
+
+.site-page {
+  .promo-block, .navmenu-meganav--image {
+    background: white;
+    h3 {
+      margin-top: 0;
+    }
+    img {
+      position: unset;
+      width: 100%;
+      height: auto;
+      opacity: unset;
+      margin-top: 0;
+    }
+  }
+}
+
+/*****************************************
+         PAGE RASTREA TU PEDIDO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+#rastrea-tu-pedido iframe {
+  width: 100%;
+}
+
+@media screen and (min-width: 1096px) {
+#rastrea-tu-pedido iframe {
+  min-height: 566px;
+}
+}
+
+@media screen and (max-width: 1095px) {
+#rastrea-tu-pedido iframe {
+  min-height: 723px;
+}
+}
+
+
+/*****************************************
+         PAGE SERVICIO DE ARMADO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+
+.servicio-de-armado {
+
+
+  
+  .parent {display: table}
+
+.child {
+  display: table-cell;
+  vertical-align: middle;
+     .odd {
+      margin-left: 15px;
+    }
+
+   .even {
+      margin-right: 15px;
+      
+      
+    }
+  &.child-80 {
+    width: 80%;
+  }
+    &.child-20 {
+    width: 20%;
+  }
+ }
+}
+
+
+/*****************************************
+            PAGE TARJETA JAMAR
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.tarjeta-credijamar-block-1 {
+  background-color: $azul-jamar;
+  P {
+    color: #FFFFFF;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .facil {
+    p {
+      color: white;
+
+      &:nth-child(1) {
+        font-weight: 300;
+      } 
+      &:nth-child(2) {
+        font-weight: 300;
+      }
+      &:nth-child(3) {
+        font-weight: 200;
+      }
+    }
+  }
+  .solicita {
+    p {
+      color: white;
+      font-weight: 200;
+    }
+  }
+  .btn{
+    color: white;
+  }
+}
+
+.tarjeta-credijamar-block-2 {
+  background-color: #F1F1F1;
+}
+
+.tarjeta-credijamar-block-4 {
+  background-color: #F1F1F1;
+}
+
+.tarjeta-credijamar-block-5 {
+  ul {
+    text-align: left;
+    margin-left: 4vw;
+  }
+}
+
+@media screen and (max-width: 719px) {
+  .tarjeta-credijamar-block-1 {
+    .table {
+      display: block;
+      .cell{
+        display: block;
+      }
+    }
+    .facil {
+      p {
+        &:nth-child(1) {
+          font-size: 4.3vw;
+          line-height: 4.3vw;
+        } 
+        &:nth-child(2) {
+          font-size: 16vw;
+          line-height: 16vw;
+        }
+        &:nth-child(3) {
+          font-size: 4.3vw;
+          line-height: 4.3vw;
+        }
+      }
+    }
+    .solicita {
+      p {
+        font-size: 4vw;
+        line-height: 4vw;
+      }
+    }
+    .btn{
+      margin-bottom: 1.0rem;
+    }
+  }
+}
+ 
+@media screen and (min-width: 720px) {
+  .tarjeta-credijamar-block-1 {
+    .table {
+      display: table;
+      .cell{
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+    .facil {
+      p {
+        &:nth-child(1) {
+          letter-spacing: 0.35vw;
+          font-size: 1.3vw;
+          line-height: 1.3vw;
+        } 
+        &:nth-child(2) {
+          font-size: 6vw;
+          line-height: 6vw;
+        }
+        &:nth-child(3) {
+          letter-spacing: 0.34vw;
+          font-size: 1.2vw;
+          line-height: 1.2vw;
+        }
+      }
+    }
+    .solicita {
+      p {
+        font-size: 1.75vw;
+        line-height: 1.75vw;
+        margin-top: 0;
+      }
+    }
+    .btn{
+      margin: 0;
+      font-size: 1.3vw;
+    }
+  }
+  .tarjeta-credijamar-block-1, .tarjeta-credijamar-block-2, .tarjeta-credijamar-block-3, .tarjeta-credijamar-block-4, .tarjeta-credijamar-block-5 {
+    figure {
+      margin: 0;
+    }
+  }
+}
+
+/*****************************************
+             PAGE CLIENTE ORO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.cliente-oro-block-1 {
+  background-color: $rojo-jamar;
+  P {
+    color: #FFFFFF;
+  }
+  img {
+    vertical-align: middle;
+  }
+  .facil {
+    p {
+      color: white;
+
+      &:nth-child(1) {
+        font-weight: 300;
+      } 
+      &:nth-child(2) {
+        font-weight: 300;
+      }
+      &:nth-child(3) {
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.cliente-oro-block-2 {
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+}
+
+.cliente-oro-block-3 {
+  .cupo {
+    background-color: #fcbc4b;
+    margin: auto;
+    padding: 0 20px;
+    border-bottom: 20px solid #f5a32a;
+    border-bottom-left-radius: 20px;
+    p {
+      &:nth-child(1) {
+        text-align: right;
+        color: #f5a32a;
+      }     
+      &:nth-child(2) {
+        color: white;
+        font-weight: 200;
+      } 
+      &:nth-child(3) {
+        color: $rojo-jamar;
+        font-weight: 300;
+      }
+      &:nth-child(4) {
+        color: white;
+        font-weight: 200;
+      }
+    }
+  }
+  .preferencial {
+    background-color: #fcbc4b;
+    width: fit-content;
+    margin: auto;
+    padding: 0 20px;
+    border-bottom: 20px solid #f5a32a;
+    border-bottom-left-radius: 20px;
+    p {
+      &:nth-child(1) {
+        text-align: right;
+        color: #f5a32a;
+      }
+    }
+    ul {
+      color: #FFFFFF;
+      font-weight: 200;
+      text-align: justify;
+    }
+  }
+}
+
+
+@media screen and (max-width: 719px) {
+  .cliente-oro-block-1 {
+    .facil {
+      p {
+        &:nth-child(1) {
+          font-size: 4.3vw;
+          line-height: 4.3vw;
+        } 
+        &:nth-child(2) {
+          font-size: 16vw;
+          line-height: 16vw;
+        }
+        &:nth-child(3) {
+          font-size: 4.3vw;
+          line-height: 4.3vw;
+        }
+      }
+    }
+  }
+  .cliente-oro-block-3 {
+    .cupo {
+      width: 60vw;
+      height: 35vw;
+      p {
+        &:nth-child(1) {
+          font-size: 5vw;
+          line-height: 5vw;
+        }
+        &:nth-child(2) {
+    font-size: 3.96vw;
+    line-height: 4vw;
+    margin: 2vw 0;
+        } 
+        &:nth-child(3) {
+    font-size: 10.8vw;
+    line-height: 7.8vw;
+    margin: 2vw 0;
+        }
+        &:nth-child(4) {
+    font-size: 4vw;
+    line-height: 4vw;
+    margin: 2vw 0;
+        }
+      }
+    }
+    .preferencial {
+      width: 60vw;
+      height: 35vw;
+      p {
+        &:nth-child(1) {
+          font-size: 5vw;
+          line-height: 5vw;
+        }
+      }
+      ul {
+        font-size: 4vw;
+        line-height: 4vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .cliente-oro-block-1 {
+    .facil {
+      p {
+        &:nth-child(1) {
+          letter-spacing: 0.35vw;
+          font-size: 1.3vw;
+          line-height: 1.3vw;
+        } 
+        &:nth-child(2) {
+          font-size: 6vw;
+          line-height: 6vw;
+        }
+        &:nth-child(3) {
+          letter-spacing: 0.34vw;
+          font-size: 1.2vw;
+          line-height: 1.2vw;
+        }
+      }
+    }
+  }
+  .cliente-oro-block-3 {
+    .cupo {
+      height: 15vw;
+      width: 25vw;
+      p {
+        &:nth-child(1) {
+          font-size: 1.6vw;
+          line-height: 1.6vw;
+        }
+        &:nth-child(2) {
+          font-size: 1.3vw;
+          line-height: 1.3vw;
+          letter-spacing: 0.1vw;
+          margin: 1vw 0;
+        } 
+        &:nth-child(3) {
+          font-size: 4vw;
+          line-height: 4vw;
+          margin: 1vw 0;
+        }
+        &:nth-child(4) {
+          font-size: 1.3vw;
+          line-height: 1.3vw;
+          letter-spacing: 0.1vw;
+          margin: 1vw 0;
+        }
+      }
+    }
+    .preferencial {
+      height: 15vw;
+      width: 25vw;
+      p {
+        &:nth-child(1) {
+          font-size: 1.6vw;
+          line-height: 1.6vw;
+        }
+      }
+      ul {
+        font-size: 1.3vw;
+        line-height: 1.3vw;
+      }
+    }
+  }
+  .cliente-oro-block-1, .tarjeta-credijamar-block-2, .tarjeta-credijamar-block-3, .tarjeta-credijamar-block-4, .tarjeta-credijamar-block-5 {
+    figure {
+      margin: 0;
+    }
+  }
+}
+
+/*****************************************
+                HIGHLIGHTS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+/*.highlights-banners-block {
+  center {
+    width: 100%;
+    .highlights-banners-icon {
+      display: table-cell;
+      vertical-align: middle;
+      .highlights-banners-custom-icon {
+        height: auto;
+      }
+    }
+    .highlights-banners-text {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .highlights-banners {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .highlights-banners-block {
+      width: 33.33%;
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .highlights-banners {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+}*/
+
+.highlights-banners {
+  //padding: 0.7rem 10px;
+  &.is-draggable .flickity-viewport {
+    width: -webkit-fill-available;
+  }
+  .highlights-banners-block {
+    .highlights-banners-icon {
+      height: 2.5rem;
+    }
+    .highlights-banners-text {
+      .highlights-banners-heading {
+        font-size: 1rem;
+      }
+      p {
+        font-size: .8rem;
+        color: black;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .highlights-banners--section {
+    margin-top: 2.125rem;
+    .highlights-banners {
+         // padding: 1.0rem 10px;
+    }
+  }
+}
+
+/*****************************************
+               OFERTAS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+@media screen and (min-width: 681px) {
+  #shopify-section-16068338758ddee666 {
+    h2 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+/*****************************************
+                SERVICIOS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.servicios {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 20px;
+  .servicios-item {
+    display: block;
+    margin-bottom: 1.5rem;
+    .servicios-icon {
+      img {
+        margin: 0;
+      }
+
+    }
+    .servicios-text {
+      span {
+        font-size: 1.1rem;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        color: $dark-gray;
+      }
+      p {
+        font-size: .9rem;
+        margin: 0;
+        color: $light-gray;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .servicios {
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    .servicios-item {
+      .servicios-text {
+        span {
+          font-size: 0.9rem;
+        }
+              p {
+        font-size: .8rem;
+      }
+      }
+    }
+  }
+}
+
+  @media screen and (max-width: 680px) and (min-width: 441px)  {
+    .servicios {
+      grid-template-columns: 50% 50%;
+      padding: 0;
+      .servicios-item {
+        .servicios-text {
+          span {
+            font-size: 0.9rem;
+          }
+                p {
+        font-size: .8rem;
+      }
+        }
+      }
+    }
+  }
+@media screen and (min-width: 681px) {
+  .servicios {
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+  }
+}
+
+
+/*****************************************
+                FOOTER
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.pxs-newsletter-section {
+  background: #e8e8e8;
+  padding-bottom: 2rem;
+
+  .pxs-newsletter {
+    padding-top: 1rem;
+    .newsletter {
+      .contact-form {
+        margin: 0 auto;
+        .form-fields-inline {
+          display: inline-table;
+          text-align: left;
+        }
+      }
+      .name {
+        margin-bottom: 15px;
+      }
+      .tel {
+        margin-bottom: 15px;
+      }
+      .email {
+        margin-bottom: 15px;
+      }
+      .direccion {
+        margin-bottom: 15px;
+      }
+      .coleccion {
+        margin-bottom: 15px;
+      }
+      button {
+        background-color: #000;
+        color: #fff;
+        height: 48px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        border-radius: 7px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 719px)  {
+  .pxs-newsletter-section {
+    .pxs-newsletter {
+      .newsletter {
+        .contact-form {
+          width: 100%;
+        }
+        .name, .tel, .email, .direccion, .coleccion, button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 720px)  {
+  .pxs-newsletter-section {
+    .pxs-newsletter {
+      .newsletter {
+        .contact-form {
+          width: 60%;
+        }
+        .name {
+          margin-right: 15px;
+          width: calc(60% - 15px);
+        }
+        .tel {
+          width: 40%;
+        }
+        .email {
+          margin-right: 15px;
+          width: calc(60% - 15px);
+        }
+        .direccion {
+          width: 40%;
+        }
+        .coleccion {
+          width: calc(100% - 15px - 185px);
+        }
+        .boton {
+          margin-left: 15px;
+          width: 185px;
+          transform: translateY(-7px);
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.site-footer-block-title {
+  font-weight: 600;
+}
+
+.site-footer-wrapper {
+  margin: 0;
+  padding-bottom: 0;
+  .social-link{
+    width: 40px;
+    height: 40px;
+    &:nth-child(1):before {
+      background-color: #3B5998;
+    }
+    &:nth-child(2):before {
+      background-color: #00ACEE;
+    }
+    &:nth-child(3):before {
+      background-color: #EE02AB;
+    }
+    &:nth-child(4):before {
+      background-color: #FF0000;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  p strong {
+    color: white;
+  }
+  .site-footer-item:nth-child(2) {
+    background: #272727;
+    .site-footer-information {
+      padding-bottom: 1.5rem;
+      padding-top: 1.5rem;
+      .fa-heart {
+        color: $rojo-jamar;
+      } 
+    }
+  }
+  .site-footer-block-menu .navmenu-item:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+
+.btn-asesoria {
+  position: fixed;
+  z-index: 502;
+  bottom: 20px;
+  left: 20px;
+  top: auto;
+  right: auto;
+  &::after {
+    content: '';
+    width: 30px; 
+    height: 30px;
+    border-radius: 5%;
+    border: 4px outset  #d71921;
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    left: 50px;
+    transform: translate(-50%, -50%);
+    animation: ring 4.5s infinite;
+  }
+  img{
+    width: 30%;
+  }
+}
+
+@keyframes ring {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+  }
+  100% {
+    width: 180px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1023px) { // Mobile
+  .site-footer-wrapper > .site-footer-item:nth-child(1) {
+    width: 100%;
+  }
+}
+
+
+@media screen and (min-width: 1024px) { // Desktop
+  .site-footer-wrapper > .site-footer-item:nth-child(1) {
+    width: 80%;
+  }
+}
+
+/*****************************************
+               SLIDESHOW
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+@media screen and (min-width: 720px) {
+  .slideshow-slide-content {
+    top: 79%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .slideshow .flickity-viewport {
+    height: 270px !important;
+    .slideshow-slide {
+      height: 100% !important;
+      .slideshow-background{
+        height: 100%;
+      }
+    }
+  }
+  
+  
+  
+  
+  .slideshow-mobile{ display: block; }
+  .slideshow-desktop{ display: none; }
+  
+
+}
+
+@media screen and (min-width: 441px) {
+  .slideshow-mobile{ display: none; }
+  .slideshow-desktop{ display: block; }
+}
+
+/*.flickity-prev-next-button {
+  background-color: $rojo-jamar;
+  color: white;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  &:hover {
+    background-color: #ed000082;
+  }
+  svg {
+    fill: white !important;
+  }
+}*/
+
+/*****************************************
+     CLASES QUE SE USAN EN LAS PAGINAS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.justify {
+  text-align: justify;
+  p, li {
+    text-align: justify;
+  }
+  .btn {
+    color: white;
+  }
+}
+
+
+/*****************************************
+           PAGINA DE CONTACTO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.site-page {
+  .form-field {
+    .form-field-select-wrapper {
+      position: unset;
+      .form-field-select {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/*****************************************
+          PAGINA DE SUCURSALES
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.find-store {
+  .button--clear-change-region {
+    color: $rojo-jamar;
+  }
+  .fa-store {
+    color: $rojo-jamar;
+    font-size: 25px;
+  }
+}
+
+
+/*****************************************
+          PREGUNTAS FRECUENTES
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.site-page.rich-text--container {
+   margin-top: 0;
+}
+
+.rte .faq {
+  list-style: none;
+  padding-left: 0;
+  li {
+    margin-bottom: 5px; 
+    .question {
+      width: 100%;
+      padding: 0 0.625rem;
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 3px;
+      h5 {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .answer {
+      display: none;
+      border-left: 5px solid $azul-jamar;
+      padding-left: 10px;
+    }
+  }
+}
+
+/*****************************************
+           PAGINA PAGA Y GANA
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.site-page .rich-text--container {
+   margin-top: 0;
+}
+.paga-y-gana-block-1 {
+  div {
+    width: 100%;
+  }
+  figure {
+    margin: 1em 0;
+  }
+  p {
+    font-size: 4vw;
+    color: $azul-jamar;
+  }
+}
+.paga-y-gana-block-2 {
+  .rich-text-content {
+    p {
+      color: $azul-jamar;
+      font-weight: 600;
+      font-size: 2.5vw;
+      span {
+        color: $rojo-jamar;
+      }
+
+    }
+    &.sabias {
+      background-image: linear-gradient(to bottom right, #f7f7f7, white);
+      border-top-left-radius: 100px;
+      border-top: 5px solid #D9D9D9;
+      border-left: 5px solid #D9D9D9;
+      padding: 15px 0 15px 40px;
+      span {
+        img {
+          height: 60px;
+          width: auto;
+          margin: 0;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+.paga-y-gana-block-3 {
+  p {
+    font-size: 3.5vw;
+    font-weight: 700;
+  }
+}
+
+/*****************************************
+         Envíos y Entregas GRATIS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.envios-entregas-gratis {
+      line-height: 0;
+  .entregas {
+    display: inline-flex;
+    width: 100%;
+    height: 7vw;
+    .caja-texto {
+      height: 7vw;
+      #texto {
+        font-size: 2.4vw;
+        line-height: 7vw;
+        margin: 0;
+        padding-left: 20vw;
+        display: none;
+      }
+    }
+    #camion {
+      position: absolute;
+      left: 2vw;
+      height: 7vw;
+      padding-right: 30px;
+      margin: 0;
+    }
+    #senor {
+      height: 7vw;
+      position: absolute;
+      left: 60vw;
+      display: none;
+      margin: 0;
+    }
+  }
+  .carretera {
+    background-color: #c0bfbf;
+    width: 100%;
+    height: 30px;
+  }
+}
+
+/*****************************************
+           DETALLE DE PRODUCTO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.product-details {
+  .sku-plus-ratings {
+    display: flex;
+    .product-sku {
+      margin: 0rem 0 0.5rem;
+    }
+    .product-ratings {
+      margin: 0rem 0 0.5rem 1rem;
+      font-size: 0.875rem;
+      line-height: 1.3;
+    }
+  }
+  .product-pricing {
+    margin-top: 0;
+    .price--main {
+      .money {
+        color: black;
+        font-weight: 700;
+        font-size: 30px;
+      }
+    }
+  }
+}
+  
+.producto-observacion {
+  //background-color: $dark-gray;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+  width: 100%;
+  height: fit-content;
+  p {
+    //color: white;
+    margin: 0;
+    text-align: center;
+    font-size: smaller;
+  }
+  &.pago {
+    background-color: white;
+    p {
+      &:nth-child(1) {
+        /*border-bottom: 1px solid white;
+        padding-bottom: 5px;*/
+        color: $dark-gray;
+      }
+      /*&:nth-child(2) {
+        padding-top: 5px;
+      }*/
+    }
+  }  
+  &.compralo-credito {
+    background-color: $dark-gray;
+    padding-left: 0;
+    a {
+      color: black;
+      text-align: left;
+      font-size: 25px;
+      font-weight: 600;
+      cursor:pointer;
+      text-decoration: none;
+      line-height: 45px;
+      span {
+        img {
+          height: 45px;
+          width: auto;
+          margin: 0;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+.planes-de-credito .product-detail-credit {
+  .grid-container {
+    grid-template-columns: 50% 50%;
+    display: grid;
+    &>div {
+      &:nth-child(1) {
+        padding-right: 5px;
+
+      }
+      &:nth-child(2) {
+        padding-left: 5px;
+      }
+    }
+    .couta-semanal {
+      height: 50px;
+      padding-left: 15px;
+      display: table;
+      p {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+/*****************************************
+    MODAL AGREGADO AL CARRITO DE CREDITO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.modal {
+  visibility: visible;
+  white-space: inherit;
+  //z-index: 1000000;
+  opacity: 1;
+}
+.modal-content {
+    margin: 0 auto;
+}
+@media (max-width: 767px) {
+  #exampleModal {
+    .picture {
+      padding-right: 0;
+    }
+    .info {
+      p, h5 {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+    h5 {
+      font-size: 14px;
+    }
+  }
+
+}
+@media (min-width: 768px) {
+  .modal-dialog {
+    max-width: 720px;
+  }
+  #exampleModal {
+    .info {
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0.3rem;
+      }
+      h5 {
+        font-size: 16px;
+      }
+    }
+    .summary {
+      
+      h5 {
+        font-size: 16px;
+      }
+      button {
+        font-size: 0.65rem;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  .modal-dialog {
+    max-width: 960px;
+  }
+  #exampleModal {
+    .info, .summary {
+      p, button {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .modal-dialog {
+    max-width: 1140px;
+  }
+}
+#exampleModal {
+  .picture {
+  }
+}
+
+
+[data-product-form-area] {
+  .form-options  {
+    width: 50%;
+    float: right;
+    padding-left: 5px;
+    margin-bottom: -49px;
+    margin-top: 0;
+  }
+  .product-form--atc {
+    .product-form--atc-qty {
+      width: 51%;
+      //margin-top: -50px;
+      .form-field-select-wrapper {
+       width: calc(100% - 10px);
+      }
+    }
+    .product-form-buttons {
+      .grid-container {
+        grid-template-columns: 50% 50%;
+        display: grid;
+        &>div {
+          &:nth-child(1) {
+            padding-right: 5px;
+
+          }
+          &:nth-child(2) {
+            padding-left: 5px;
+          }
+        }
+        .btn-credito, .btn-contado {
+          color: white;
+          font-size: 13px;
+          padding: 15px 0;
+        }
+        .btn-credito {
+          background-color: $azul-jamar;
+          text-align: center;
+          letter-spacing: 0.02em;
+          line-height: 1.15;
+          &:hover {
+            color: $azul-jamar;
+            background-color: #f7f8fa;
+          }
+        }
+        .btn-contado {
+          background-color: $rojo-jamar;
+          &:hover {
+            color: $rojo-jamar;
+            background-color: #f7f8fa;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-description {
+  background: #f7f8fa;
+  text-align: justify;
+  padding: 5px 10px;
+  p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.sello-producto {
+  width: 105px;
+  position: absolute;
+  z-index: 1;
+  left: 10px;
+  top: 10px;
+  display: none;
+}
+
+
+/*****************************************
+           GRILLA DE PRODUCTOS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.featured-collection--content.flickity-enabled .productgrid--item {
+  max-height: 430px;
+}
+
+.featured-collection--container .planes-de-credito .product-detail-credit {
+  display: none;
+}
+
+.collection--section .planes-de-credito .product-detail-credit {
+  display: none;
+}
+
+.search--section .planes-de-credito .product-detail-credit {
+  display: none;
+}
+
+.product-recommendations--container .planes-de-credito .product-detail-credit {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .featured-collection--content[data-layout="slideshow"] .productgrid--item {
+    width: calc(100% / 4 - 15px);
+    margin-right: 20px;
+  }
+}
+
+/*****************************************
+             PRODUCT REVIEWS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+#shopify-product-reviews {
+  margin-top: 4.25rem !important;
+  .spr-container  {
+    .spr-header {
+      .spr-header-title {
+        font-size: var(--font-size-heading-4);
+        color: $rojo-jamar;
+      }
+    }
+    .spr-summary-actions-newreview {
+      color: $rojo-jamar;
+    }
+    .spr-review-content {
+      margin-bottom: 0;
+      .spr-summary {
+        font-size: var(--font-size-body);
+          line-height: 1.625;
+          }
+    }
+    .spr-review-footer {
+      display: none;
+      .spr-review-reportreview {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+#shopify-section-static-product-reviews {
+  display: none;
+}
+
+/*****************************************
+            ANNOUNCEMENT BAR
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.announcement-bar {
+  padding: 10px 0;
+}
+    
+
+/*****************************************
+                NAVEGACION
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+header {
+  .site-header-wrapper {
+    box-shadow: none;
+    .site-navigation-wrapper {
+    background: transparent;
+    }
+  }
+  /*fechas patrias
+  .site-header--full-width .site-navigation-1 {
+    background: url(https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Header-fiestas_patrias_Prueba-02.jpg?v=1636384837);
+    background-position-y: center;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .site-header-actions {
+      position: absolute;
+      right: 189px;
+    }
+  }
+  fin fechas patrias*/
+  .site-navigation {
+
+ background: transparent;
+    .navmenu-id-i-class-fas-fa-store-alt-i-tour-virtual {
+      a {
+        font-weight: 600 !important;
+        color: $azul-jamar;
+      }
+    }
+    .navmenu-id-i-class-fas-fa-bell-i-ofertas {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+      a {
+        background-color: $rojo-jamar;
+        border-radius: 10px;
+        color: white;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url("https://res.cloudinary.com/www-ismyt-com/image/upload/v1637257999/icon_svg_hyzi6h.svg");
+        transform: translateY(0px);
+        transition: .6s;
+        z-index: -10;
+      }
+      &:hover::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-image: url("https://res.cloudinary.com/www-ismyt-com/image/upload/v1637257999/icon_svg_hyzi6h.svg");
+        transform: translateY(-30px);
+        transition: .6s;
+      }
+    }
+    .navmenu-id-i-class-fas-fa-credit-card-i-aplica-credito,  {
+      a {
+        background-color: $azul-jamar;
+        border-radius: 10px;
+        color: white;
+        margin-left: .7rem;
+      }
+    }
+    a:focus {
+      &:focus {
+        outline: none;
+        outline-offset: initial;
+      }
+    }
+    .navmenu-depth-2 {
+      .navmenu-link {
+        &.navmenu-link-parent {
+          text-transform: uppercase;
+          color: $rojo-jamar;
+        }
+
+        &:focus {
+          outline: none;
+          outline-offset: initial;
+        }
+      }
+    }
+  }
+}
+
+.site-mobile-nav {
+  .navmenu-id-i-class-fas-fa-credit-card-i-aplica-credito,  {
+    a {
+      font-weight: 600 !important;
+      color: $azul-jamar;
+    }
+  }
+}
+.site-navigation .navmenu-meganav.navmenu-meganav--desktop .navmenu-multi-column-items .navmenu-depth-2.multi-column-count-4 {
+  column-count: 6;
+}
+ 
+.site-navigation .navmenu-meganav-item > a:focus,
+.site-navigation .navmenu-meganav--image-text > a:focus {
+  outline: none;
+  outline-offset: initial;
+}
+.site-navigation .navmenu-meganav.navmenu-meganav--desktop .navmenu-multi-column-items .navmenu-depth-2 > li > ul {
+  margin-left: 0;
+}
+
+.live-search .search-flydown--content-item a {
+  color: #003D74;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 679px) {
+  header {
+    .live-search {
+      width: 100%;
+      top: 5.5px;
+      .live-search-form {
+        border-radius: 15px;
+        .form-field {
+          height: 35px;
+          input {
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+          }
+        }
+        .live-search-button {
+          border-radius: 15px;
+          border-bottom-left-radius: 0;
+          border-top-left-radius: 0;
+          padding: 4px;
+        }
+      }
+    }
+    .site-header-logo {
+      margin-left: 45px;
+    }
+  }
+}
+
+@media screen and (min-width: 680px) {
+  header {
+    .live-search {
+      width: calc(100% - 589px);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site-header-main-content {
+      margin-right: 30px;
+  }
+  .site-navigation.small-menu {
+    width: 517px;
+    justify-content: flex-end;
+    ul {
+      display: flex;
+      flex: inherit;
+      margin-left: initial;
+      li{
+        i {
+              font-size: 21px;
+        }
+        a {
+        padding: 10px;
+        }
+      }
+    }
+  }
+  .site-navigation-1 .navmenu-depth-1 {
+    .navmenu-id-i-class-fas-fa-store-alt-i-tour-virtual,
+    .navmenu-id-i-class-fas-fa-map-marker-alt-i-sucursales,
+    .navmenu-id-i-class-fas-fa-bell-i-ofertas,
+    .navmenu-id-i-class-fas-fa-credit-card-i-aplica-credito  {
+      display: none;
+    }
+  }
+}
+
+/*****************************************
+         CATEGORIAS RECOMENDADAS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.collection--item {
+  /*a {
+    position: relative;
+    display: block;
+    margin-bottom: 17px;
+    overflow: hidden;
+  }*/
+  .collection--item-title {
+    /*top: 45%;
+    transform: translateY(-50%);
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 0 10px;*/
+    span {
+      /*display: inline-block;
+      width: 100%;
+      background-color: #0000007a;*/
+      color: #444444;
+      font-size: 1.1rem;
+      /*padding: 10px 15px;
+      line-height: 1em;*/
+    }
+  }
+}
+
+
+/*****************************************
+       	   PAGINA DE COLECCION
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.collection--section {
+  .collection--title {
+	font-size: 1.5rem;
+  }
+}
+
+
+/*****************************************
+               MENU-LIST
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.menulist-inner {
+  border: none;
+  box-shadow: none;
+}
+
+/*****************************************
+       PAGINA DE FOOTER APLICA CREDITO
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.footer-aplica-credito {
+  margin-top: 3.125rem;
+  padding: 0.7rem 0;
+  background: $azul-jamar;
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}
+
+/*****************************************
+                WHATSAPP
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+#whatsapp-header {
+  position: absolute;
+  right: 52px;
+  p {
+    font-size: 32px;
+    color: #22ce5a;
+  }
+}
+
+{% comment %}
+.sagicc-floating-button-bottom-right {
+  background-image: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Widget-Sagicc.png?v=1621286483");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 82px;
+  width: 82px;
+  & > button {
+    background-color: transparent !important;
+    .material-icons {
+      color: transparent !important;
+    }
+  }
+}
+
+{% endcomment %}
+
+@media screen and (max-width: 679px) {
+  #whatsapp-header { // mobile
+    display: flex; 
+  }
+  #sagicc-chat-div { // desktop
+  	display: none;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  #whatsapp-header { // mobile
+    display: none; 
+  }
+  #sagicc-chat-div { // desktop
+  	display: block;
+  }
+}
+
+/*****************************************
+             INSTAGRAM FEED
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+#insta-feed {
+  
+  h2 {
+    color: $rojo-jamar;
+    font-weight: 300;
+  }
+  & > a[href*="insta-feed"] {
+    .instafeed-container {
+      img {
+        /*height: auto !important;*/
+      }
+    }
+  }
+}
+.instafeed-lightbox .lightbox-instagram {
+  top: 64% !important;
+}
+@media screen and (max-width: 719px) {
+  #insta-feed {
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 75px;
+    & > a[href*="insta-feed"] {
+      margin-left: 10px;
+      &:nth-child(6n+1) {
+        margin-left: 0;
+      }
+      .instafeed-container {
+        width: calc(33.333% - 10px) !important;
+        padding-top: calc(50% - 17% - 17.5px) !important;
+        margin-bottom: 10px;
+      }
+    }
+  }
+} 
+@media screen and (max-width: 859px) and (min-width: 720px) {
+  #insta-feed {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 75px;
+    & > a[href*="insta-feed"] {
+      margin-left: 15px;
+      &:nth-child(6n+1) {
+        margin-left: 0;
+      }
+      .instafeed-container {
+        width: calc(33.333% - 10px) !important;
+        padding-top: calc(50% - 17% - 17.5px) !important;
+        margin-bottom: 15px;
+      }
+    }
+  }
+} 
+@media screen and (max-width: 1023px) and (min-width: 860px) {
+  #insta-feed {
+    width: calc(75% - 15px) !important;
+    margin-top: 75px;
+    & > a[href*="insta-feed"] {
+      margin-left: 15px;
+      &:nth-child(6n+1) {
+        margin-left: 0;
+      }
+      .instafeed-container {
+        width: calc(33.333% - 15px) !important;
+        padding-top: calc(50% - 17% - 17.5px) !important;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px){
+  #insta-feed {
+    width: calc(75% - 20px) !important;
+    margin-top: 75px;
+    & > a[href*="insta-feed"] {
+      margin-left: 20px;
+      &:nth-child(6n+1) {
+        margin-left: 0;
+      }
+      .instafeed-container {
+        width: calc(33.333% - 15px) !important;
+        /*padding-top: calc(50% - 15% - 15px) !important;*/
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/*****************************************
+   VER MAS DYNAMIC FEATURED COLLECTION
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+.ver-mas {
+  margin-top: 0.5rem;
+  vertical-align: middle;
+  font-size: .8rem;
+  i:nth-child(1) {
+    color: $rojo-jamar;
+  }
+  i:nth-child(2) {
+    color: $rojo-jamar;
+    opacity: 0.6;
+  }
+}
+
+/*****************************************
+             GENERALES PAGE
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+@media screen and (max-width: 480px) {
+  .page-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .page-title {
+    
+  }
+}
+
+/*****************************************
+             	 MOSAICS
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+.promo-mosaic--container {
+  div[class*="promo-block promo-block"] {
+    a[href*="blogs"] {
+      &:hover {
+        color: #ffffff;
+        font-weight: 600;
+      }
+      .promo-block--header {
+        color:white;
+        font-weight: bold;
+        font-size: 1.34rem;
+      }
+    }
+  }
+}
+
+/*****************************************
+                GENERALES
+		   PATRYKSIM@GMAIL.COM
+******************************************/
+
+:focus, :active {
+    outline: none;
+}
+.rojo {
+  color: $rojo-jamar;
+}
+.azul {
+  color: $azul-jamar;
+}
+
+
+/*****************************************
+   			 UTILIDADES VARIAS
+		 MENDIETA.ARNULFO@GMAIL.COM
+******************************************/
+
+.display-no {
+  display: none;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 719px) {
+    .mobile{
+        display: block;
+    }
+    .desktop{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 720px)  {
+	.desktop{
+        display: block;
+    }
+    .mobile{
+        display: none;
+    }
+}
+
+/*****************************************
+   	 UTILIDADES VARIAS ADD TO BOOSTRAP
+		 PATRYKSIM@GMAIL.COM
+******************************************/
+
+.fs-7 {
+    font-size: 4.5rem!important;
+}
+
+/*****************************************
+       HIDE COOKIE POLICY ON DEVICES
+		 MENDIETA.ARNULFO@GMAIL.COM
+******************************************/
+.cc-revoke.cc-top{
+	display: none !important;
+}
+
+/*****************************************
+     PROGRESSIVE BAR FOR CREDIJAMAR
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+.progress-bar {
+  display: flex;
+  margin: 40px 0;
+  user-select: none;
+  .step{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    p {
+      font-weight: 500;
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 8px;
+      &.active{
+        color: #ed0000;
+        transition: 0.2s linear;
+      }
+    }
+    .bullet {
+      height: 25px;
+      width: 25px;
+      border: 2px solid #000;
+      display: inline-block;
+      border-radius: 50%;
+      position: relative;
+      transition: 0.2s;
+      font-weight: 500;
+      font-size: 17px;
+      line-height: 22px;
+      background-color: white;
+      &.active{
+        border-color: #ed0000;
+        background: #ed0000;
+        span{
+          display: none;
+        }
+        &:after{
+          background: #ed0000;
+          transform: scaleX(0);
+          transform-origin: left;
+          animation: animate 0.3s linear forwards;
+        }
+      }
+       &:after{
+        position: absolute;
+        content: '';
+        bottom: 8px;
+        height: 3px;
+        left: 22px;
+        background: #262626;
+      }
+      span{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .check{
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      font-size: 15px;
+      transform: translate(-50%, -50%);
+      display: none;
+      &.active{
+        display: block;
+        color: #fff;
+      }
+    }
+    &:last-child .bullet {
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+#progress-bar-1 {
+  .step{
+    .bullet {
+       &:after{
+        width: calc(30vw - 15px);
+      }
+    }
+  }
+}
+
+#progress-bar-2 {
+  .step{
+    .bullet {
+       &:after{
+        width: calc(17vw - 15px);
+      }
+    }
+  }
+}
+
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+/*****************************************
+    		 PAGE TOUR VIRTUAL
+			PATRYKSIM@GMAIL.COM
+******************************************/
+.newsletter {
+  button {
+    color: #fff;
+    width: 127px;
+    height: auto;
+    letter-spacing: 5px;
+    border-radius: 7px;
+  }
+}
+
+@media only screen and (max-width: 719px)  {
+  .newsletter {
+    .name, .tel {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .email {
+      margin-right: 15px;
+      width: calc(100% - 127px - 15px);
+    }
+  }
+}
+
+@media only screen and (min-width: 720px)  {
+  .newsletter {
+    .name {
+      margin-right: 15px;
+      margin-bottom: 15px;
+      width: calc(60% - 15px);
+    }
+    .tel {
+      margin-bottom: 15px;
+      width: 40%;
+    }
+    .email {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  }
+}
+
+/*****************************************
+     CREDIJAMAR / VISOR PAGE FORMS STYLES
+		 MENDIETA.ARNULFO@GMAIL.COM
+******************************************/
+
+#credijamar-steps {
+  //max-width: 100%;
+  
+  .form-field-input {
+    color: black;
+  }
+
+  .form-field-datalist-wrapper > input {
+    width: 100%;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    color: #4d4d4d;
+    cursor: pointer;
+    background-color: #ffffff;
+    line-height: 1.15;
+    margin: 0;
+    padding: 1.5rem 0.625rem 0.375rem;
+
+    box-shadow: none;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+  }
+  #form-field__cedula-warning ul {
+    list-style: none;
+    align-text: right;
+    padding: 25px;
+  }
+
+  #documents {
+    div {
+      margin-bottom: 0.5rem;
+      input {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+#help-section {
+  padding-top: 15px;
+  a {
+    color: $rojo-jamar;
+    p {
+      line-height: 40px;
+      font-size: x-large;
+      i {
+        font-size: 35px;
+
+      }
+    }
+  }
+}
+
+.subtitle-form-step{
+  text-align: center; 
+  font-size: 1.1rem;
+}
+
+.form-field .form-field-title{
+	top: 0.5rem;
+}
+
+p.error-message.form-field__incorrecto-inactivo{
+	display: none;
+}
+
+p.error-message.form-field__incorrecto-activo{
+	display: block;
+}
+
+p.error-message{
+	color: #ed0000;
+}
+.form-field__incorrecto input{
+	border-color: #ed0000;
+}
+
+.credijamar-form-step-1-message.message--error.inactivo{
+	display: none;
+}
+
+.credijamar-form-step-1-message.message--error.activo{
+	display: block;
+}
+
+.credijamar-form-step-1-message.message--error{
+   	background-color: #fce2e2;
+	color: #f05d5d;
+    padding: 5px 0;
+    margin: 20px 0;
+}
+
+.credijamar-form-step-1-message .errors ul{
+	list-style-type: none;
+}
+
+.credijamar-page-wrapper #form-field__rango .form-field-title {
+    top: 1.5rem !important;
+}
+
+.credijamar-page-wrapper #form-field__rango p{
+    margin-top: 25px;
+    font-size: 1.2rem;
+}
+
+.btn-step2{
+	float: right;
+}
+
+.btn-atras, .btn-sig2{
+	float: left;
+}
+
+.img-step-3, .img-step-4{
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 10px;
+}
+
+.stepInPage{
+  display: none;
+}
+
+.form-step-2, .form-step-3{
+  display: none;
+}
+
+#credijamar-form .error-message{
+  color: #ed0000;
+  visibility: hidden;
+}
+
+#credijamar-form .form-field.error .error-message{
+  visibility: visible;
+}
+
+.swal2-modal{
+  border-radius: 18px !important;
+
+  .swal2-image{
+      position: absolute;
+      top: -7rem;
+      width: 150px;
+  }
+
+  .swal2-title{
+      margin-top: 3rem;
+      font-size: 1.8rem;
+  }
+
+  #swal2-content{
+      font-size: 1.2rem;
+  }
+}
+
+/*****************************************
+     			VIDEO HOME
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+
+
+@media only screen and (max-width: 719px) {
+  .video-home {
+    display: block;
+    .video-home-child-1 {
+      width: 100%;
+    }
+    .video-home-child-2 {
+      width: 100%;
+      text-align: center;
+      padding-top: .5rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 720px)  {
+  .video-home {
+    display: table;
+    .video-home-child-1 {
+      display: table-cell;
+      width: 50%;
+    }
+    .video-home-child-2 {
+      display: table-cell;
+      width: 50%;
+      vertical-align: middle;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+/*****************************************
+     			SANGRADO
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+@media screen and (min-width: 1024px) {
+	.footer-aplica-credito, .pxs-newsletter-section, .site-footer-wrapper, .slideshow--section, .site-header, .highlights-banners--section, .article--section {
+		max-width: 1250px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+/*****************************************
+     			ESTILOS PAGES
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+/*****************************************
+     	COLLECTION AND STYLE PAGES
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+.style-section, .collection-section {
+  & > div {
+    padding-top: 50px;
+  }
+  .grid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    grid-auto-columns: 1fr;
+  }
+  .enamorado {
+    .image-overlap {
+      .item-a {
+        grid-column: 1 / 7;
+        grid-row: 3 / 10;
+      } 
+      .item-b {
+        grid-column: 5 / 9;
+        grid-row: 1 / 8;
+      } 
+    }
+  }
+  .acordeon {
+    .accordion-button {
+      background-color: #f0f0f0;
+    }
+    .accordion-button:focus {
+      box-shadow: none;
+    }
+    .accordion-button:not(.collapsed) {
+      color: white;
+      background-color: #6e7a8a;
+    }
+    .image-overlap {
+      .item-a {
+        grid-column: 1 / 7;
+        grid-row: 1 / 8;
+      } 
+      .item-b {
+        grid-column: 5 / 9;
+        grid-row: 3 / 10;
+      } 
+    }
+  }
+  .img-linked {
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+/*****************************************
+     		ZONA DE NOVEDADES
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+.novedades-cabecera {
+  background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Header_Novedades.jpg?v=1646842564");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 26vh;
+}
+
+@media screen and (max-width: 719px) {
+  .novedades-pills {
+    display: flex;
+    overflow: scroll;
+    flex-wrap: nowrap;
+  }
+  .novedades-pills li {
+    flex: none;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .novedades-pills {
+    justify-content: space-between;
+  }
+}
+
+/*****************************************
+     		ZONA DE SALE
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+#shopify-section-static-collection-ofertas {
+  .layout--has-sidebar:not(.productgrid-listview) .productgrid--items.products-per-row-4 .productgrid--item {
+    margin-top: 45px;
+  }
+}
+
+.zl-credijamar {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px;
+  .item-a {
+    grid-column:  1 / 4;
+    grid-row:  2 / 8;
+    z-index: 1;
+  }
+  .item-b {
+    grid-column:  3 / 9;
+    grid-row:  1 / 9;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Rectangle_2072_eb2b73e5-6796-48a1-a4e4-aef7186d3934.png?v=1647524185");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .item-c {
+    grid-column:  1 / 9;
+    grid-row:  1 / 6;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/Rectangle_2072_1.png?v=1647524185");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .item-d {
+    grid-column:  2 / 8;
+    grid-row:  5 / 10;
+    z-index: 1;
+  }
+}
+
+/*****************************************
+     			ESTILOS HOME
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+.style-collection-home {
+  .style-item {
+    h2 {
+      margin-top: 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 35px;
+      line-height: 45px;
+      color: #000;
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .featured-collection--link {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 18px;
+      text-align: center;
+      text-decoration: underline;
+      letter-spacing: .05em;
+      color: #202833;
+      margin-top: auto;
+      margin-bottom: auto;
+      img {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.colchon-buscado {
+  grid-template-columns: 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33% 8.33%;
+  grid-template-rows: 30px 10% 10% 10% 10% 10% 30px 24.5% 24.5%;
+  .item-a {
+    grid-column:  1 / 13;
+    grid-row:  2 / 7;
+  }
+  .item-b {
+    grid-column:  1 / 7;
+    grid-row:  2 / 8;
+  }
+  .item-c {
+    grid-column:  7 / 13;
+    grid-row:  1 / 8;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/COLCHON-1_1.jpg?v=1648238239");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+.colchon-buscado-mobile {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px;
+  .item-a {
+    grid-column:  1 / 9;
+    grid-row:  1 / 6;
+    background: $dark-gray;
+  }
+  .item-b {
+    grid-column:  2 / 8;
+    grid-row:  5 / 10;
+    z-index: 1;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/COLCHON-1_1.jpg?v=1648238239");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+ .container-scrollbar::-webkit-scrollbar {
+     width: 10px;
+     height: 7px;
+ }
+
+.canales-atencion {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px;
+  .item-a {
+    grid-column:  1 / 7;
+    grid-row:  1 / 9;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0519/2695/8235/files/armado-gratis.png?v=1642191185");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .item-b {
+    grid-column:  5 / 10;
+    grid-row:  2 / 8;
+  }
+}
+
+.canales-atencion-mobile {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px;
+  .item-a {
+    grid-column:  1 / 9;
+    grid-row:  1 / 6;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0519/2695/8235/files/armado-gratis.png?v=1642191185");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .item-b {
+    grid-column:  2 / 8;
+    grid-row:  5 / 10;
+    z-index: 1;
+  }
+}
+
+.canales-credijamar-desktop {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 51.5px 51.5px 51.5px 51.5px 51.5px 51.5px 51.5px 51.5px;
+  .item-a {
+    grid-column:  1 / 5;
+    grid-row:  2 / 8;
+	z-index: 1;
+  }
+  .item-b {
+    grid-column:  3 / 10;
+    grid-row:  1 / 9;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/584x394.jpg?v=1649343181");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+}
+
+.canales-credijamar-mobile {
+  grid-template-columns: 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%;
+  grid-template-rows: 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px 42.7px;
+  .item-a {
+    grid-column:  1 / 9;
+    grid-row:  1 / 6;
+    div {
+      background: url("https://cdn.shopify.com/s/files/1/0516/5478/7271/files/584x394.jpg?v=1649343181");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+  }
+  .item-b {
+    grid-column:  2 / 8;
+    grid-row:  5 / 10;
+    z-index: 1;
+  }
+}
+
+/*****************************************
+     MEDIAQUERYS BOOSTRAP ADAPTACIONES
+	    	PATRYKSIM@GMAIL.COM
+******************************************/
+
+.fs-7 {
+  font-size: 0.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .fs-md-5 {
+    font-size: 1rem !important;
+  }
+  .fs-md-5 {
+    font-size: 1.25rem !important;
+  }
+}
+@media (max-width: 767px) {
+  div.modal-content {
+      width: 100%;
+      /*height: 100%;
+      transform: translateY(40px);*/
+  }
+}
+@media (min-width: 768px) {
+  div.modal-content {
+      width: 80%;
+      /*height: 100%;
+      transform: translateY(40px);*/
+  }
+}
+
+{% comment %}
+/*****************************************
+     FIX PROGRESS BAR -- BOOTSSTRAP RESET
+	    	JAMAYA@JAMAR.COM
+******************************************/
+{% endcomment %}
+
+.progress-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    white-space: nowrap;
+	background-color: white; 
+    transition: width .6s ease;
+}
+
+.menu_top_left__nuevo,
+.menu_top_right__nuevo {
+display:flex;
+justify-content:start;
+list-style: none;
+margin: 0px;
+padding: 0px;
+}
+
+.envio,
+.enlace {
+font-size: 13px;
+font-weight: 600;
+}
+
+.envio_enlace {
+font-size: 13px;
+}
+
+.envio_enlace a
+{
+text-decoration: none;
+color:#404b5a;
+text-decoration: underline;
+font-weight: 400;
+}
+
+.envio_enlace_sucursal {
+  text-decoration: none;
+  color:#404b5a;
+  position: relative;
+  display:flex;
+  align-items:center;
+  font-size: 13px;
+  line-height: 13px;
+ 
+}
+
+.envio_enlace_sucursal .icon_sucursal {
+	margin-right: 6px;
+  	transform: translateY(-2px);
+}
+
+.envio_enlace_sucursal a {
+  text-decoration: none;
+  color:#404b5a;
+}
+
+.envio_enlace_sucursal__separator {
+width: 1px;
+height: 10px;
+color:#404b5a;
+background: rgb(136, 136, 136);
+height: 14px;
+}
+
+.env {
+width: 1px;
+height: 10px;
+color:#404b5a;
+background: rgb(136, 136, 136);
+height: 14px;
+}
+
+.separation {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bg-nav-top {
+background-color: rgb(240, 240, 240);
+}
+
+.form_predictice__search {
+    background-color: rgb(240, 240, 240);
+    padding: 5px 0px;
+    border-radius: 20px;
+    padding-right: 10px;
+    position: relative;
+    }
+
+.form_predictice__search input{
+background-color: transparent;
+border: none;
+width: 100%;
+outline: none;
+padding-left: 10px;
+outline: none;
+height: 25px;
+
+}
+
+.enlace_credijamar a{
+    font-weight: 600;
+    background-color: $azul-jamar;
+    color: white;
+    padding: 11px 15px;
+    font-weight: 900;
+    border-radius: 20px;
+    line-height: 13px;
+    font-size: 13px;
+}
+
+.icons_nav {
+width: 16px;
+height: 16px;
+margin-left: 15px;
+}
+
+
+
+
+
+
+
+.cont_categorias {
+list-style: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #404b5a;
+  height: 100%;
+  margin:0px;
+}
+
+
+.cont_categorias div li {
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    cursor: pointer;
+    font-family: {{ fonts_type_body_family }};
+}
+
+
+.item_cat {
+position: relative;
+  height: 100%;
+  font-family: {{ fonts_type_body_family }};
+}
+
+.item_cat_movil {
+  	color: #404b5a;
+	font-weight: 600;
+  	font-family: {{ fonts_type_body_family }};
+  	position: relative;
+}
+
+
+.sub_menu {
+position: absolute;
+background-color: #F8F9FA;
+width: 600px;
+height: 300px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+padding-top: 10px;
+grid-template-columns: 60% 40%;
+visibility: hidden;
+z-index: 1000;
+top: 20px;  
+ font-family: {{ fonts_type_body_family }};
+}
+
+.sub_menu_movil[data-show="false"] {
+  	display:none;
+  	padding-left: 0px;
+  	transition:.5s;
+}
+
+.sub_menu_movil[data-show="true"] {
+  	display:block;
+  	padding-left: 15px;
+  	transition:.5s;
+}
+
+
+.sub_menu_movil .sub_items_menu li {
+	font-size: 12px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    color: #404b5a;
+}
+
+.sub_menu:hover {
+position: absolute;
+background-color: #F8F9FA;
+width: 600px;
+height: 300px;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+padding-top: 10px;
+grid-template-columns: 60% 40%;
+visibility: hidden;
+}
+
+li:hover .sub_menu{
+display: grid;
+transition: .4s all;
+visibility: visible;
+padding:20px;
+}
+
+
+
+.sub_items_menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+    align-items: center;
+    align-content: flex-start;
+    font-family: Lato,sans-serif;
+}
+
+
+.sub_menu_catalogo {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 5px;
+    align-items: center;
+    align-content: flex-start;
+    font-family: Lato,sans-serif;
+}
+
+.sub_menu_catalogo {
+  width: 600px;
+  height: auto;
+}
+
+.sub_menu_catalogo:hover {
+  width: 600px;
+  height: auto;
+}
+
+@media only screen and (min-width: 260px) and (max-width: 768px) {
+	.sub_items_menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      align-content: center;
+      background: transparent;
+
+	}
+}
+
+.sub_items_menu li{
+padding: 0px;
+  font-family: {{ fonts_type_body_family }};
+
+}
+
+.sub_items_menu li:hover{
+padding: 0px;
+color: red;
+
+}
+
+.contenedor_image_destacada {
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.contenedor_image_destacada img {
+border-radius: 5px;
+}
+
+.ofertas {
+list-style: none;
+position: relative;
+display:flex;
+justify-content:center;
+align-items:center;
+  font-family: {{ fonts_type_body_family }};
+}
+
+.ofertas::before {
+position: absolute;
+content: "";
+height: 14px;
+width: 2px;
+background-color: #000;
+}
+
+.ofertas li {
+width: 100px;
+text-align: center;
+font-size: 15px;
+font-weight: 500;
+ font-family: {{ fonts_type_body_family }};
+}
+
+.ofertas li {
+width: 100px;
+text-align: center;
+font-size: 15px;
+font-weight: 500;
+font-family: {{ fonts_type_body_family }};
+
+}
+
+.ofertas li a{
+color: #000;
+ font-family: {{ fonts_type_body_family }};
+
+}
+
+.ofertas li a.rojo_jamar {
+color: red;
+}
+
+ul {
+margin: 0px;
+padding: 0px;
+}
+
+.main_menu_movil {
+background-color: transparent;
+border: none;
+outline: none;
+height: 40px;
+}
+
+.main_menu_movil {
+background-color: transparent;
+border: none;
+outline: none;
+height: 40px;
+align-items: center;
+margin: 0px;
+padding: 0px;
+display: flex;
+justify-content: center;
+width: 25px;
+}
+
+.main_menu_movil img {
+width: 80px;
+}
+
+.logo_movil {
+width: 130px;
+margin: 0px;
+padding: 0px;
+}
+
+.logo_movil img{
+width: 80%;
+}
+
+.icon_movil {
+background-color: transparent;
+border: none;
+outline: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.icon_movil img {
+	min-width: 15px;
+}
+
+.icon_movil {
+background-color: transparent;
+border: none;
+outline: none;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+.buscador_movil {
+    position: relative;
+    background-color: #f1f1f1;
+    height: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+  
+}
+
+
+
+.menu_movil_image {
+    width: 120px;
+}
+
+.slide_homologation .carousel-inner .carousel-item {
+    width: 100%;
+    {% comment %} height: 85vh; {% endcomment %}
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+.icon_panama::before {
+    content: "";
+  	top: 5px;
+    width: 20px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    background-image: url(https://res.cloudinary.com/www-ismyt-com/image/upload/v1639556773/IMAGENES/JAMAR/icon_arrow_frkiwi.svg);
+    z-index: 100;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+
+    .slide_homologation .carousel-inner .carousel-item {
+        width: 100%;
+        {% comment %} height: 60vh; {% endcomment %}
+
+    }
+
+    .slide_homologation .carousel-inner .carousel-item picture {
+        width: 100%;
+    }
+
+    .slide_homologation .carousel-inner .carousel-item picture img {
+        height: 100%;
+    }
+
+    .img-sucursal-icon {
+      mix-width: 21px;
+      max-width: 22px;
+    }
+
+}
+
+
+.footer_list {
+    list-style: none;
+}
+
+.footer_list li {
+    text-decoration: none;
+}
+
+.footer_list li>a {
+    text-decoration: none;
+}
+
+.footer_list_item_title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #000;
+  	font-family: {{ fonts_type_body_family }};
+}
+
+.footer_list_item {
+    margin: 3px 0px;
+    color: rgb(56, 56, 56);
+}
+
+.footer_list_item a {
+    font-size: 16px;
+    color: rgb(56, 56, 56);
+}
+
+a {
+    text-decoration-line: none;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+
+
+/* Offcanvas Movil */
+.offcanvas-2 {
+  	width: 80%;
+    padding-right: 15px;
+    padding-left: 30px;
+}
+
+    .offcanvas-2 .offcanvas-header {
+        position: relative;
+    }
+
+    .offcanvas-2 .offcanvas-header .btn-close {
+        position: absolute;
+        right: 15px;
+    }
+
+    .offcanvas-2 .offcanvas-header .btn-close:hover {
+        transition: .5s all;
+        transform: rotate(180deg);
+    }
+
+
+    .offcanvas-2 .offcanvas-header img{
+
+        max-width: 110px;
+        min-width: 110px;
+    }
+
+    .offcanvas-body {
+        padding-left: 30px;
+    }
+
+    #cont_categorias_movil {
+        list-style: none;
+    }
+
+    #cont_categorias_movil {
+        list-style: none;
+        font-size: 16px;
+      	font-family: {{ fonts_type_body_family }};
+    }
+
+    #cont_categorias_movil div .sub_menu {
+        height: 0px;
+        transition: .7s;
+      	position: static;
+    }
+
+    #cont_categorias_movil div .sub_menu[data-show="true"] {
+        transition: .7s;
+        height: auto;
+        
+    }
+
+    #cont_categorias_movil div .sub_menu[data-show="false"] {
+        overflow: hidden;
+        transition: .7s;
+        display: none;
+    }
+
+     #cont_categorias_movil div .sub_menu .sub_items_menu {
+        list-style: none;
+    }
+
+
+
+    #cont_categorias_movil div .sub_menu .sub_items_menu li {
+        color: #707070;
+    }
+
+     #cont_categorias_movil div .sub_menu .sub_items_menu li a {
+        color: #707070;
+    }
+
+
+
+  #cont_categorias_movil div .item_cat {
+        font-weight: 500;
+        font-size: 16px;
+        font-weight: 600;
+        //color: #404b5a; 
+        position: relative;
+    	display: flex;
+        align-items: center;
+    	font-family: {{ fonts_type_body_family }};
+
+    }
+
+
+    img.icon_movil_fecha {
+        position: absolute;
+        width: 13px;
+      	right: 20px;
+      	top: 15px;
+    }
+
+
+    #cont_categorias_movil div .item_cat .cont_icon_mob {
+        width: 30px;
+        height: 30px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 50%;
+        border: 2px solid #404B5A;
+
+    }
+
+
+    #cont_categorias_movil div .item_cat .cont_icon_mob a img {
+        max-height: 12.5px;
+      	max-width: 12.5px;
+
+    } 
+
+.slide_homologation .carousel-inner .carousel-item img  {
+    width: 100%;
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+	.slide_homologation .carousel-inner .carousel-item {
+        max-width: 100%;
+        {% comment %} height:55vh; {% endcomment %}
+    }
+}
+
+
+/*  */
+
+#form_predictice__search {
+	position:relative;
+}
+
+.contenedor-item-comprar {
+	padding: 2px;
+  	background: 000;
+}
+
+#contenedor-resultados-search {
+	display: grid;
+  	grid-template-columns: 1fr 1fr 1fr 1fr;
+  	position: absolute;
+  	width: 450px;
+  	z-index: 1000;
+  	justify-content: center;
+  	background: white;
+  	top: 90px;
+  	border-radius: 5px;
+  	padding: 10px;
+    grid-gap: 10px;
+  	height: 400px;
+  	overflow-y: scroll;
+}
+
+#contenedor-resultados-search[data-search_cont="false"] {
+	display:none;
+}
+
+#contenedor-resultados-search[data-search_cont="true"] {
+	display:grid;
+}
+
+#contenedor-resultados-search::-webkit-scrollbar{
+	background: #EEEEEE;
+  	width: 10px;
+  
+}
+
+#contenedor-resultados-search::-webkit-scrollbar-thumb{
+	background: #565656;
+  border-radius: 5px;
+  
+}
+
+#contenedor-resultados-search a {
+	text-decoration: none;	
+}
+
+#contenedor-resultados-search a {
+	text-decoration: none;	
+}
+
+.contenedor-item-comprar 
+.contenedor-details-search-item
+.details-item-text{
+  color: #404b5a; 
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0px;
+  word-wrap: break-word;
+  -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2;
+  word-wrap: break-word;
+  font-family: {{ fonts_type_body_family }};
+}
+
+.contenedor-item-comprar 
+.contenedor-details-search-item
+.details-item-price{
+  color: #404b5a; 
+  font-size: 13px;
+  font-weight: 700;
+  margin: 0px;
+  color: #f33;
+  line-height: 13px;
+}
+
+.envio_enlace a.terminos {
+    text-decoration: underline;
+    color: #9b9999;
+/*     text-decoration: underline; */
+  	font-family: {{ fonts_type_body_family }};
+  	font-size: 13px;
+  	line-height: 13px;
+ 	font-weight: 600;
+}
+
+.envio_enlace_sucursal a {
+  	color: #404b5a;
+    font-size: 13px;
+    font-weight: 600;
+  	line-height: 13px;
+    margin: 0px;
+  	font-family: {{ fonts_type_body_family }};
+}
+
+.envio_enlace_sucursal a:hover {
+  	color: #d8232a;
+}
+
+
+
+
+
+/* #contenedor-resultados-search-movil {
+position: absolute;
+grid-template-columns: 1fr 1fr;
+  top: 70px;
+  z-index: 1000;
+  background: white;
+  height: 70vh;
+  overflow-y: scroll;
+} */
+
+#contenedor-resultados-search-movil[data-show="false"] {
+ display: none;
+position: absolute;
+grid-template-columns: 1fr 1fr;
+  top: 70px;
+  z-index: 1000;
+  background: white;
+  height: 70vh;
+}
+
+  
+ #contenedor-resultados-search-movil[data-show="true"] {
+position: absolute;
+display: grid;
+grid-template-columns: 1fr 1fr;
+  top: 70px;
+  z-index: 1000;
+  background: white;
+  height: 70vh;
+   width: 70vw;
+  overflow-y: scroll;
+}
+
+.enlace, .envio {
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  	font-family: {{ fonts_type_body_family }};
+}
+
+.enlace .icon_user {
+	width: 17px;
+  	margin-right:6px;
+}
+
+.envio_enlace_sucursal img {
+	width:16px;
+}
+
+.enlace {
+font-family: "Lato";
+  }
+
+@media screen and (min-width: 1024px) {
+  .footer-aplica-credito, .pxs-newsletter-section, .site-footer-wrapper, .slideshow--section, .site-header, .highlights-banners--section, .article--section {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto; } }
+
+.footer-aplica-credito, .pxs-newsletter-section, .site-footer-wrapper, .slideshow--section, .site-header, .highlights-banners--section, .article--section {
+    width: 100%;
+  	margin-right: auto;
+    margin-left: auto; 
+} 
+
+/* Estilos Homologación  */
+
+/* Navegación top  */
+
+.contenedor-navegacion-top {
+	display:flex;
+  	
+}
+
+.contenedor-icons {
+  display: flex;
+}
+
+.contenedor-icons > li{
+  margin-right: 7px;
+}
+
+.contendor-icon-top {
+	display: flex;
+}
+
+.contendor-icon-top > li {
+	margin-right: 7px;
+}
+
+.contendor-icon-top > li > a {
+	text-decoration: none;
+  	color: black;
+  	font-size: 13px;
+}
+
+.slideshow--section {
+	max-width: 100%;
+  
+}
+
+.slideshow-slide {
+max-width: 100%;
+  top: 0px;
+}
+
+
+    .contenedor_pais {
+        list-style: none;
+        width: 80px;
+        position: relative;
+        cursor: pointer;
+      	display: flex;
+        alig-items: center;
+    }
+
+    .icon_pais {
+        position: absolute;
+      	z-index: 20;
+        display: flex;
+        alig-items: center;
+    }
+
+    .contenedor_pais>img {
+        position: absolute;
+        width:8px;
+        left: 30px;
+      	z-index: 10000;
+
+    }
+
+    
+    .colom {
+      	z-index: 1000000;
+        opacity: 0;
+        bottom: -32px;
+        padding: 3px;
+        background-color: rgb(236, 236, 236);
+        border-radius: 4px;
+        transition: .4s;
+    }
+
+.colom-movil {
+	position:absolute;
+}
+
+    .colom:hover {
+        opacity: 1;
+        background-color: rgb(255, 241, 241);
+    }
+
+    .contenedor_pais:hover .colom {
+        opacity: 1;
+        transition: .4s;
+    }
+
+li.item_cat img.arrow {
+    transform: translateX(5px);
+    width: 8px;
+    transition: .5s;
+    
+}
+
+li.item_cat:hover img.arrow {
+    transform: translateX(5px) rotate(180deg);
+  	transition: .5s;
+    
+}
+
+.list_catalogo_ofertas {
+  list-style: none;
+}
+
+.list_catalogo_ofertas li {
+  display: flex;
+  list-style: none;
+}
+
+.list_catalogo_ofertas .menu__line {
+  height: 13px;
+  display: block;
+  width: 2px;
+  background-color: #f33;
+}
+
+.list_catalogo_ofertas a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color:#404b5a;
+}
+
+
+
+
+.item_cat {font-family: {{ fonts_type_body_family }};}
+
+.icon_search {
+	width:15px;
+}
+
+span.separation_2 {
+  display:block;
+  margin-left: 7px;
+  margin-right: 7px;
+  height: 20px;
+  min-width:1.9px;
+  max-width:2px;
+  background: red;
+}
+
+.offcanvas-body {
+	overflow: scroll;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  	background:#404B5A;
+  border-radius: 20px;
+  width: 10px;
+	
+}
+.offcanvas-body::-webkit-scrollbar-track {
+  background:#D5DDE5;
+  border-radius: 20px;
+}
+
+.offcanvas-body::-webkit-scrollbar-track-piece{
+	background:#D5DDE5;
+  	border-radius: 20px;
+  	
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb{
+  background:#404B5A;
+  border-radius: 20px;
+}
+
+.offcanvas-body::-webkit-scrollbar-corner {
+  border-radius: 20px;
+}
+
+/* Fin de Navegación top  */
+/* Fin de estilos homologación */
+
+
+
+/* Estilos utilizados para el nuevo contenedor de los iconos de social media */
+
+.contenedor_social_media {
+    display: flex;
+}
+
+.icon_social_media {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    border: solid 1px black;
+    border-radius: 50%;
+  	margin-right: 10px;
+}
+
+
+/* Corrección de que no emita el clic en el icon Pais  */
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+.fix-top-position {
+    position: static;
+    height: 142.6px;
+}
+
+{% comment %} .buscador_movil input {
+width: 100%;
+heigth: 100%;
+border-radius: 15px;
+
+padding: 4px 5px 4px 10px;
+font-size: 14px;
+
+} {% endcomment %}
+
+#custom_predictive_input_movil {
+    font-weight:600;
+    font-size:13px;
+    heigth: 100%;
+    width: 100%;
+    font-family: {{ fonts_type_body_family }};
+    border: none;
+}
+{% comment %}
+
+{% endcomment %}
+
+@media (max-width: 599px) {
+  #sagicc-chat-div {
+    display: none;
+  }
+
+  .fix-top-position {
+    position: static;
+    height: 130px;
+}
+  
+}
+
+
+.icon_cart_nav {
+	padding: 0px;
+    margin: 0px;
+    text-decoration: none;
+    line-height: 0px;
+}
+
+#cont_categorias_movil div .sub_menu_movil .sub_items_menu li a {
+        color: #707070;
+  		font-size:16px;
+}
+
+
+
+
+{% comment %} Buscador inteligente - Style  {% endcomment %}
+div#dfclassic { //Ajuste busq
+  width: 90% !important;
+  border-radius: 5px!important;
+  border: 1px solid #f7f7f7!important;
+      left: 50%!important;
+      top: 95px !important;
+    filter: drop-shadow(0px 9px 18px rgba(0, 0, 0, 0.19))!important;
+}
+.df-history-header {
+    font-family: 'Lato'!important;
+   color:#404B5A!important;
+  }
+.df-history-results ol {
+    font-family: 'Lato'!important;
+    color: #404B5A!important;
+  }
+ 
+a.df-card__main {
+    background:#F8F9FA !important;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 0;
+  border: 1px solid #f1f1f1;
+}
+ 
+a.df-card__main:hover {
+    background: #D5DDE5!important;
+   border: 2.5px solid #D5DDE5;
+}
+ 
+.df-classic .df-card:hover {
+    background-color: #fff!important;
+}
+ 
+[data-layout=grid] .df-card__image {
+    margin: 0 0 8px!important;
+}
+.df-card__image{
+  width: 100%;
+  height: auto!important;
+}
+.df-card__image img{
+  width: 100%!important;
+  height: auto!important;
+  border-radius: 5px 5px 0 0;
+}
+[data-layout=list] .df-card__image img {
+    border-radius: 5px 0 0 5px;
+}
+.df-classic .df-card__image {
+      height: auto;
+    background-color: transparent!important;
+}
+.df-card__title {
+    
+    font-size: 14px;
+    line-height: 15px;
+    color:#404B5A!important;
+    font-weight: 400;
+    text-align: left;
+    padding: 0 8px;
+}
+ 
+[data-layout=list] .df-card__title {
+    
+    font-size: 16px;
+    color: #404B5A!important;
+    font-weight: 400!important;
+    text-align: left;
+    margin: 12px 0 8px 0;
+}
+.df-classic .df-card__description {
+        display: none!important;
+    font-size: 12px!important;
+    padding: 0 8px;
+}
+span.df-card__price {
+    
+    font-size: 15px;
+    color: #404B5A!important;
+    font-weight: 600;
+    text-align: left;
+    float: left;
+    padding: 0 8px 10px;
+    margin: 0;
+}
+[data-layout=list] .df-card__price {
+    font-size: 16px!important;
+  }
+ 
+.df-icon svg {
+    fill: #929FB1!important;
+}
+ 
+.df-icon:active svg, .df-icon:focus svg, .df-icon:hover svg {
+    fill: #D80027!important;
+}
+ 
+.df-classic .df-suggestion { //Ajuste busq
+    
+    color: #404B5A!important;
+    padding: 7px 13px!important;
+  background: #f1f1f1;
+    margin: 9px 4px;
+  border-radius: 21px;
+  
+}
+.df-classic .df-header {//Ajuste busq
+    font-size: 13px;
+    height: 38px!important;
+    padding: 10px 4px!important;
+}
+ 
+.df-classic .df-header .df-header-title span { //Ajuste busq
+    text-align: center;
+    color: #404B5A!important;
+    
+      font-weight: 600;
+}
+ 
+.df-sort-select { //Ajuste busq
+    display: block!important;
+    
+  color: #404b5a;
+  padding-left: 13px;
+    border-left: 1px solid #E9EAE9;
+}
+ 
+.df-sort-select label { //Ajuste busq
+    font-weight: 600;
+}
+ 
+.df-sort-select select option{ //Ajuste busq
+color: #404B5A;
+    font-family: 'Lato'!important;
+    background-color: #fff;
+}
+ 
+.df-sort-select select { //Ajuste busq
+    padding: 5px 8px!important;
+    border: 1px solid #929fb1!important;
+    width: 55%;
+  font-size: 12px!important;
+}
+ 
+.df-classic .df-suggestion-label { //Ajuste busq
+  display: none!important;
+    color: #404B5A!important;
+    
+    padding-left: 8px;
+    display: inline-block;
+    font-weight: 600;
+}
+.df-branding {
+    display: none!important;
+ }
+.df-results::-webkit-scrollbar-track {
+    background: #D5DDE5!important;
+    border-radius: 4px!important;
+}
+.df-results::-webkit-scrollbar-thumb {
+    background: #404B5A!important; 
+    border-radius: 4px!important;
+}
+.df-results::-webkit-scrollbar {
+    width: 8px!important;
+    height: 8px!important;
+}  
+ 
+//filtro
+.df-aside { //Ajuste busq
+    width: 234px!important;
+   display: block!important;
+}
+.df-classic .df-selected-filters, .df-mobile .df-selected-filters, .df-panel {
+  border-bottom: solid 1.2px #f1f1f1!important;}
+ 
+.df-classic .df-panel__title, .df-classic .df-selected-filters__title {
+    
+    background-color: inherit;
+    color: #404b5a!important;
+    font-size: 14.5px!important;
+}
+ 
+.df-term__value {
+  
+color: #404b5a;
+  text-align: left;
+  font-size: 14px!important;
+}
+.df-classic .df-term[data-selected], .df-classic .df-term[data-selected] .df-term__count, .df-classic .df-term[data-selected]:hover {
+    color: #404b5a!important;
+}
+ 
+.df-term {    
+  margin-bottom: 8px!important;
+      padding: 3px 8px!important;
+}
+ 
+.df-classic .df-term {
+    padding: 3px 14px!important;
+    border-radius: 20px!important;
+  font-size: 14px!important;
+  color: #404b5a!important;
+}
+ 
+ 
+.df-classic .df-selected-filters__content, .df-mobile .df-selected-filters__content, .df-panel__content {
+    padding: 8px 14px 2px 14px!important;
+}
+ 
+.df-classic .df-term[data-selected] {
+    background-color: #fff!important;
+    border-color: #404b5a!important;
+}
+ 
+.df-classic .df-aside {
+  margin-top: 11px;}
+ 
+.df-classic .df-aside__content::-webkit-scrollbar-track {
+    background: #D5DDE5!important;
+    border-radius: 4px!important;
+}
+ 
+.df-classic .df-aside__content::-webkit-scrollbar-thumb {
+    background: #404B5A!important; 
+    border-radius: 4px!important;
+}
+ 
+.df-classic .df-aside__content::-webkit-scrollbar {
+    width: 8px!important;
+    height: 8px!important;
+}  
+ 
+//Resultado de búsqueda
+.cajaResultBusquedaDF {//Ajuste al enter del buscador
+    max-width: 100%!important;
+    margin: 0 auto!important;
+    padding: 132px 0 0 0!important;
+}
+ 
+.contenedorResultBusquedaDF {
+  width: 100%;
+    padding: 0!important;
+}
+.df-panel__title {
+    font-family: 'Lato' !important;
+    text-align: left!important;
+  color: #404b5a!important;
+   font-size: 14.5px!important;
+}
+.df-term[data-selected] {
+    border-radius: 30px!important;
+    border: solid 1px #404b5a;
+}
+ 
+.df-header .df-header-title span {
+    text-align: center;
+    font-family: 'Lato'!important;
+    color: #404b5a!important;
+    font-weight: 700!important;
+}
+ 
+.df-page a, .df-page span{font-family: 'Lato' !important;}
+ 
+[data-layout=list] .df-card__description {
+    display: none!important;
+}
+ 
+@media only screen and (max-width: 1199px){
+      div#dfclassic {
+      left: 50%!important;
+      } 
+  .df-aside { //Ajuste busq
+    width: 198px!important;}
+}
+@media only screen and (max-width: 999px){ //Ajuste busq
+      .df-sort-select {
+      display: none!important;
+      } 
+}
+@media only screen and (max-width: 800px){ //Ajuste busq
+  
+  div#dfclassic {
+  width: 96%!important;
+  }
+     
+}
+ 
+@media only screen and (max-width: 799px){
+ 
+      div#dfclassic {//Ajuste busq
+      width: 100%!important;
+      } 
+  .df-mobile .df-mobile__aside__actions {
+    background-color: #f7f7f7!important;
+}
+  .df-mobile .df-mobile__suggestions::-webkit-scrollbar-track {
+    background: #D5DDE5!important;
+    border-radius: 4px!important;
+}
+  .df-mobile .df-mobile__suggestions::-webkit-scrollbar-thumb {
+    background: #404B5A!important; 
+    border-radius: 4px!important;
+}
+  .df-mobile .df-mobile__suggestions::-webkit-scrollbar {
+    width: 5px!important;
+    height: 5px!important;
+}  
+  
+  .df-mobile .df-mobile__button--switch-on {
+    color: #404b5a!important;
+}
+.df-mobile .df-term:active, .df-mobile .df-term:focus, .df-mobile .df-term:hover {
+    padding: 3px 14px;
+    border-radius: 20px!important;
+}
+ 
+  .df-mobile .df-term {
+    font-size: 14px!important;
+    color: #404b5a!important;
+    padding-top: 0!important;
+    padding-bottom: 0!important;
+    height: 38px!important;
+}
+  .df-classic .df-selected-filters__content, .df-mobile .df-selected-filters__content, .df-panel__content {
+    padding: 0px 14px 2px 14px!important;
+}
+ 
+  .df-mobile .df-panel__title {
+    font-size: 13px!important;
+    letter-spacing: 0.5px;
+    font-family: 'Lato'!important;
+    color: #404b5a!important;
+}
+.df-mobile .df-term[data-selected] {
+    background-color: transparent!important;
+    border: solid 1px#404b5a!important;
+    border-radius: 20px!important;
+    padding: 0 16px!important;
+    height: 35px!important;
+      margin-bottom: 13px!important;
+}
+  .df-mobile .df-term[data-selected], .df-mobile .df-term[data-selected] .df-term__count, .df-mobile .df-term[data-selected]:hover {
+    color: #404b5a!important;
+}
+  
+.df-mobile .df-mobile__button:focus, .df-mobile .df-mobile__button:hover {
+    background-color: #f0f0f0!important;
+    border-radius: 20px;
+}
+ 
+  .df-mobile .df-mobile__button {
+    
+    color: #404b5a!important;
+    letter-spacing:0.7px;
+    font-size: 12px!important;
+    font-weight: 400!important;
+}
+  
+  .df-mobile .df-mobile__button--sm {//Filtro mobile
+  
+    color: #404b5a !important;
+    border:1px solid #929fb1!important;
+    border-radius: 40px;
+    padding: 5px 15px !important;
+    margin: 7px 0 1px;
+    display: block!important;
+    text-transform: uppercase!important ;
+}
+ .df-mobile[data-browser-support~=voicesearch] button[data-role=voicesearch] {
+    width: 40px;
+    height: auto!important;
+    margin: 0!important;
+   padding-left: 4px;
+    border-radius: 33px!important;
+    border-right: none;
+} 
+     .df-suggestion { 
+    font-family: Lato!important;
+    color: #404b5a!important;
+    padding: 7px 15px 10px!important;
+    background: #f1f1f1;
+    margin: 14px 10px 14px 0!important;
+       border-radius: 40px;
+     }
+  
+  .df-suggestion-label {
+    display: none!important;
+}
+  
+  .df-mobile .df-mobile__header__actions span { 
+    margin-top: 6px;
+    font-family: 'Lato'!important;  
+    color: #404B5A!important;
+}
+  .df-mobile[data-layout=grid] .df-card__main {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+  .df-mobile .df-card:hover {
+    background-color: #fff!important;
+}
+  
+.df-mobile__searchbox {
+    font-family: 'Lato'!important;
+}
+  .df-mobile .df-mobile__searchbox {
+    background: #f1f1f1!important;
+    color: #404B5A!important;
+    border-radius: 40px!important;
+    box-shadow: none!important;
+}
+.df-mobile .df-mobile__searchbox svg {
+    fill: #404B5A!important;
+}
+  input#df-mobile__searchbox__dfclassic {
+    -webkit-appearance: none !important;   
+    font-family: 'Lato'!important;
+    font-size: 14px!important;
+}
+.df-mobile .df-mobile__searchbox button { 
+    font-weight: 300!important;
+    font-size: 12px!important;
+    border-radius: 33px!important; 
+  }
+  .df-mobile .df-mobile__searchbox button[data-role=clear] {
+     font-size: 12px!important;
+    font-weight:300;
+    -webkit-appearance: none !important;   
+    font-family: 'Lato'!important;
+}
+  
+.df-mobile .df-mobile__header {
+    background-color: #fff!important;
+}
+.df-mobile .df-mobile__action-button[data-role=scrolltop] {
+    border-color: #202833!important;
+    background-color: #202833!important;
+}
+  .df-mobile .df-mobile__action-button[data-role=close] {
+    -webkit-appearance: none !important;   
+    left: 24px;
+    border-color: #FF3333!important;
+    background-color: #FF3333!important;
+}
+.df-mobile .df-mobile__action-button svg {
+    fill: #fff;
+    width: 34px!important;
+}
+}
+@media only screen and (max-width: 699px){
+ div#dfclassic {//Ajuste busq
+      left: 0%!important;
+        top: 0!important;
+      } 
+}
+
+.collection--image img {
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+
+.icons_cart_contenedor a {
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+.item_cat a {
+    color: #404b5a;
+}
+
+.sub_items_menu li a.item_sub_menu_2 {
+    color: #404b5a;
+}
+
+{% comment %} Estilos para las nuevas fuentes en las colecciones en el Header NAV {% endcomment %}
+
+li.estilos:nth-child(2) a {
+    font-family: prata;
+    font-weight: 400!important;
+}
+
+li.estilos:nth-child(1) a {
+    font-family: Delius;
+    font-weight: 400!important;
+    text-align: left;
+    padding: 0!important;
+    margin: 0!important;
+}
+
+li.estilos:nth-child(3) a {
+}
+
+li.colecciones:nth-child(1) a {
+    font-family: Jost,"sans-serif";
+}
+
+li.colecciones:nth-child(2) a {
+    font-family: Delius,cursive;
+}
+
+li.colecciones:nth-child(3) a {
+    font-family: Cardo,serif;
+}
+
+li.colecciones:nth-child(4) a,
+li.colecciones:nth-child(5) a {
+    font-family: Taviraj,serif;
+}
+
+
+
+
+
+li.item_cat:nth-last-child(2):hover div,
+li.item_cat:nth-last-child(1):hover div{
+    background-color: #f8f9fa;
+    width: 400px;
+    height: 300px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 10px;
+    grid-template-columns: 40% 60%;
+    top: 20px;
+    font-family: Lato,sans-serif;
+}
+
+
+li.item_cat:nth-last-child(2):hover div .sub_items_menu,
+li.item_cat:nth-last-child(1):hover div .sub_items_menu{
+    grid-template-columns: 1fr;
+}
+
+li.item_cat:nth-last-child(2):hover div img{
+    margin-left:10px;
+}
+
+{% comment %} Estilos para portal de clientes {% endcomment %}
+.btn_portal_tooltip {
+    position:absolute;
+    margin-top: 20px;
+    width: 150px;
+    height: 30px;
+    top: 40px;
+    background-color: #404B5A;
+    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.btn_portal_tooltip::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    width: 20px;
+    height: 20px;
+    background-color: #404B5A;
+    top: -8px;
+    transform: rotate(45deg);
+    border-radius: 3px;
+    z-index: -1;
+    }
+
+
+
+
+
+ .btn_whatsapp_toltip {
+    margin-top: 20px;
+    /* height: 50px; */
+    background-color: #25d366;
+    color: white;
+    display:flex;
+    width: 240px;
+    font-size: 14px;
+    justify-content:center;
+    align-items:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    position: absolute;
+    padding: 10px;
+    right: 0px;
+    top: -100px;
+}
+
+.btn_whatsapp_toltip::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    width: 20px;
+    height: 20px;
+    background-color: #25d366;
+    bottom: -8px;
+    transform: rotate(45deg);
+    z-index: -1;
+    right: 30px;
+    border-radius: 3px;
+}
+
+
+.btn_portalcliente_toltip {
+background-color: #f73633;
+color: white;
+display:flex;
+width: 180px;
+font-size: 14px;
+justify-content:center;
+align-items:center;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+border-radius: 5px;
+position: absolute;
+padding: 4px;
+right: 60px;
+}
+
+.btn_portalcliente_toltip::before {
+content: "";
+position: absolute;
+background: inherit;
+width: 15px;
+height: 15px;
+background-color: #f73633;
+transform: rotate(45deg);
+z-index: -1;
+right: -6px;
+border-radius: 3px;
+}
+
+.btn_portalcliente_toltip[data-show="false"] {
+    opacity:0;
+    tranform: scale(0);
+    transition: .8s ease;
+}
+
+.btn_portalcliente_toltip[data-show="true"] {
+        opacity:1;
+        tranform: scale(1);
+        transition: .8s ease;
+}
+
+.btn_whatsapp_toltip[data-show="false"] {
+    opacity:0;
+    tranform: scale(0);
+    transition: .8s ease;
+}
+
+.btn_whatsapp_toltip[data-show="true"] {
+        opacity:1;
+        tranform: scale(1);
+        transition: .8s ease;
+}
+
+.btn_portal_tooltip[data-show="false"] {
+    opacity:0;
+    tranform: scale(0);
+    transition: .8s ease;
+}
+
+.btn_portal_tooltip[data-show="true"] {
+        opacity:1;
+        tranform: scale(1);
+        transition: .8s ease;
+}
+
+span.close_btn_whats {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    font-size: 14px;
+}
+
+{% comment %} 
+Sping 3: Ajustes blog Agregando display none a los autrores y fechas de publicaciones 
+{% endcomment %}
+.article--meta {
+    display: none;
+}
+
+
+{% comment %} Soporte: 
+Error con el boton de buscar, no se muestra correctamente
+ {% endcomment %}
+
+ [type="search"] {
+  -webkit-appearance: none; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+.badge--sale {
+    display:none;
+}
+
+body {
+overflow-x: hidden
+}
+
+{% comment %}
+  #REFACTORIZAR
+  ENLACE DE REGISTRATE 
+{% endcomment %}
+a.enlace {
+  color: #404b5a;
+}
+
+{% comment %}
+  COPIA DE ESTILOS DE TEXTO DE COLOMBIA
+--------------------------------------------
+  Agregando los estilos del parrafo del slider principal
+{% endcomment %}
+.subparrafo-slider {
+  font-family: Lato !important;
+  font-size: 18px !important;
+  line-height: 20px !important;
+  padding-bottom: 30px !important;
+  font-weight: 500 !important;
+  color: white !important;
+}

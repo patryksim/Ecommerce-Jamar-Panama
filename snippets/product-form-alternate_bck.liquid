@@ -1,0 +1,225 @@
+{% comment %}
+  Product form
+
+  @param product
+
+  @param selected_variant
+{% endcomment %}
+
+
+{% if is_product_modal and settings.quickshop_show_dcb %}
+  {% assign quickshop_smart_buttons = true %}
+{% endif %}
+
+{% if is_product_modal == false and section.settings.show_dcb %}
+  {% assign product_smart_buttons = true %}
+{% endif %}
+
+{% if selected_variant.available == false %}
+  {% assign quickshop_smart_buttons = false %}
+  {% assign product_smart_buttons = false %}
+{% endif %}
+
+{% assign product_form_class = '' %}
+{% if product_smart_buttons or quickshop_smart_buttons %}
+  {% assign product_form_class = 'smart-payment-enabled' %}
+{% endif %}
+
+
+
+
+{% form 'product', product, class: product_form_class, data-product-form: '' %}
+
+  {% if product.has_only_default_variant %}
+    <input
+      name="id"
+      value="{{ product.variants[0].id }}"
+      type="hidden">
+  {% else %}
+    {%
+      render 'product-options',
+      product: product,
+      selected_variant: selected_variant,
+      style: settings.product_option_style
+    %}
+  {% endif %}
+
+<style>
+   
+  .form-field-title {
+  	visibility:hidden;
+    display:none;
+  }
+</style>
+
+<div class="product-separador-items"> </div>
+  <div class="product-form--atc">
+    <div class="product-form--atc-qty form-fields--qty" data-quantity-wrapper>
+      <div class="form-field form-field--qty-select">
+        <div class="container-select">
+          <label
+            for="product-quantity-select"
+          >
+            {{ 'general.general.quantity' | t }}
+          </label>
+
+          <select
+            class="bg-transparent d-flex justify-content-center text-center"
+            id="product-quantity-select"
+            aria-label="{{ 'general.general.quantity' | t }}"
+            data-quantity-select
+          >
+            {% for i in (1..9) %}
+              <option 
+                      class="text-center d-flex justify-content-center text-center w-100"
+                      {% if i == 1 %}selected {% endif %}value="{{ i }}">
+                {{ i }}
+              </option>
+            {% endfor %}
+            <option value="10+">
+              10+
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="form-field form-field--qty-input hidden">
+        <input
+          id="product-quantity-input"
+          class="form-field-input form-field-number form-field-filled d-none"
+          value="1"
+          name="quantity"
+          pattern="\d*"
+          aria-label="{{ 'general.general.quantity' | t }}"
+          data-quantity-input
+        >
+        <label
+          for="product-quantity-input"
+          class="form-field-title"
+        >
+          {{ 'general.general.quantity' | t }}
+        </label>
+      </div>
+    </div>
+    
+    <div class="product-separador-items"> </div>
+    
+    <div class="product-form-buttons">
+      <div class="container-button-comprar">
+        <div>
+          <div class="btn-credito product-form--atc-button mt-3 {% unless selected_variant.available %}disabled{% endunless %}"
+               {% unless selected_variant.available %}disabled{% endunless %} data-product-atc>
+            <span class="atc-button--text">
+              {% if selected_variant.available %}
+              COMPRA CON CREDIJAMAR
+              {% else %}
+              {{ 'product.buttons.sold_out' | t }}
+              {% endif %}
+            </span>
+            <span class="atc-button--icon">
+              {% comment %} {%- render 'icon-spinner' -%} {% endcomment %}
+            </span>
+          </div>
+        </div>
+        <div>
+        <div class="row-chat-planes">
+            <a href="/">Te ayudamos a comprar con credijamar <img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/files/whatsapp.svg?v=1615912637" class="img1logowp" style="width: 30px;background: #30C2BB;border-radius: 14px;border: 6px #30C2BB solid;position: relative;left: 5px;"> </a>
+            
+        </div>
+          <button
+                  id = "rr"
+                  class="btn-contado product-form--atc-button mb-3 {% unless selected_variant.available %}disabled{% endunless %}"
+                  type="submit"
+                  {% unless selected_variant.available %}disabled{% endunless %}
+                  data-product-atc>
+            <span class="atc-button--text">
+              {% if selected_variant.available %}
+              Otros medios de pago{% comment%}{{ 'product.buttons.add_to_cart' | t }}{%endcomment%}
+              {% else %}
+              {{ 'product.buttons.sold_out' | t }}
+              {% endif %}
+            </span>
+          </button>
+          
+          {% comment %}
+          /**********************************************************
+          *             RETAIL ROCKET CONTENIDO PERSONALIZADO
+          *                   PATRYKSIM@GMAIL.COM
+          **********************************************************/
+          {% endcomment %}
+          
+          {%- for rrProduct in product.variants limit:1 -%}
+          {%- assign rrProductId = rrProduct.id -%}
+          {%- endfor -%}
+          <script type="text/javascript">
+            var rrButton = document.getElementById('rr');
+            rrButton.addEventListener('click', function (event) {
+              if (new URL(document.location.href).searchParams.get("variant")) {
+                rrApi.addToBasket(new URL(document.location.href).searchParams.get("variant"));
+              } else {
+                rrApi.addToBasket({{rrProductId}})
+              }
+            });
+          </script>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+{% comment %}
+  {% if product_smart_buttons or quickshop_smart_buttons %}
+    {{ form | payment_button }}
+  {% endif %}
+{% endcomment %}
+
+
+{% comment %} Modal {% endcomment %}
+
+<script type="text/javascript">
+          let icon_bubble_cart = document.querySelector('.icon_bubble_cart');
+          let icon_bubble_cart_movil = document.querySelector('.icon_bubble_cart_movil');
+          let btn_contado = document.querySelector(".btn-contado");
+            
+
+        btn_contado.addEventListener("click", (e) => {
+          document.querySelector('.atc-button--text').style.opacity=1;
+            
+            {% comment %} e.preventDefault(); {% endcomment %}
+            setTimeout( () => {
+                fetch("/cart.js").then(data => data.json()).then( dt => {
+                icon_bubble_cart.style.display = "flex";
+                icon_bubble_cart_movil.style.display = "flex";
+            	icon_bubble_cart.textContent = dt.item_count;
+                icon_bubble_cart_movil.textContent = dt.item_count;
+
+                {% comment %} Mostrar el contenido del objeto del carrito {% endcomment %}
+                });
+
+
+
+            fetch("/?sections=cart-pop-homologation")
+            .then((res) => res.json())  
+            .then((data) => {
+                document.querySelector('.contenedor_items_cart_popup').innerHTML = `${data["cart-pop-homologation"]}`;
+            })
+            .then( () => {
+                  document.querySelector('.atc-button--text').style.opacity=1;
+             })
+            
+            .catch((e) => {alert(e)})
+}, 350)})
+function prueba() {
+   document.querySelector('.contenedor_items_cart_popup').innerHTML = "";
+}
+
+
+</script>
+
+
+  <div class="surface-pick-up" data-surface-pick-up></div>
+{% endform %}
+
+
+
+

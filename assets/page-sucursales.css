@@ -1,0 +1,209 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,span,li,ul, button {
+  font-family: Lato;
+}
+
+main.cover_sucursal {
+        background-image: url('https://cdn.shopify.com/s/files/1/0519/2695/8235/files/header-desktop_b2fa019b-eeaf-4460-8340-8d65d84bd00c.png');
+}
+
+div.cover_container {
+    height: 200px;
+}
+
+.cover_container h1.main_site_title {
+    color: white;
+    font-size: 32px;
+    /* color: red; */
+    font-weight: 400; 
+
+}
+
+
+.main-title-sucursales {
+  color: #404b5a;
+  font-family: Lato;
+  font-size: 42px;
+  line-height: 42px;
+}
+
+@media (max-width: 599px) {
+  .main-title-sucursales {
+    line-height: 30px;
+  }
+}
+
+.main-title-sucursales-individual {
+  font-family: Lato;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 42px;
+}
+
+@media (max-width: 599px) {
+  .main-title-sucursales-individual {
+    font-size: 36px;
+  }
+}
+
+.main-title-sucursales .subtitulo {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+@media (max-width: 599px) {
+  .main-title-sucursales .subtitulo {
+    font-size: 16px;
+  }
+}
+
+.main-title-sucursales .titulo {
+  font-family: Lato;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+@media (max-width: 599px) {
+  .main-title-sucursales .titulo {
+    font-size: 32px;
+  }
+}
+
+.main-title-sucursales:before {
+  content: "";
+  height: 3px;
+  width: 120px;
+  background-color: red;
+  position: absolute;
+  bottom: -5px;
+}
+
+.icono-tienda {
+  width: auto;
+  height: 32px;
+  letter-spacing: .5em;
+  background: #404b5ad4;
+  border: 1px solid #fff;
+  border-radius: 35px;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  transform: translateY(-80px);
+}
+
+@media (max-width: 599px) {
+  .icono-tienda {
+    height: 28px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12px;
+  }
+}
+
+.icono-tienda svg {
+  margin-right: 10px;
+}
+
+.container-info-btn h2.main-title-tienda {
+  color: #404b5a;
+  margin-bottom: 20px;
+  font-size: 34px;
+  font-weight: 400;
+}
+
+@media (max-width: 599px) {
+  .container-info-btn h2.main-title-tienda {
+    font-size: 22px;
+  }
+}
+
+.container-info-btn .info-btn-informacion {
+  height: 38px;
+  width: auto;
+  color: #404b5a;
+  border: 1px solid #404b5a;
+  border-radius: 29px;
+  align-items: center;
+  padding: 0 10px 0 4px;
+  text-decoration: none;
+  display: flex;
+}
+
+.container-info-btn .info-btn-horario {
+  color: #404b5a;
+  text-decoration: none;
+  padding-left: 4px;
+}
+
+.container-info-btn .info-btn-horario svg {
+  margin-right: 6px;
+}
+
+.container-info-btn .info-btn-horario p {
+  margin: 4px 4px 4px 37px;
+}
+
+.contenedor-iframe-tienda iframe {
+  height: 365px;
+}
+
+.container-description-title > div h2 {
+  color: #404b5a;
+  font-family: Lato;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.container-description-title > div p {
+  color: #404b5a;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+
+span.underline_bar {
+    height: 3px;
+    background-color: #FF3333;
+}
+
+.page_tienda__home a, 
+.page_tienda__slash, 
+.page_tienda_tiendas a { 
+    text-decoration: none; 
+    font-size: 16px; 
+    color: #929FB1;
+     
+    }
+    
+@media (max-width: 599px) {
+  .page_tienda__home a, 
+  .page_tienda__slash, 
+  .page_tienda_tiendas a {
+    font-size: 12px;
+  }
+}
+.page_tienda_tiendas a { 
+    font-weight:600; 
+    color: #404b5a;
+}
+
+.btn_nombre__sucursal span {
+    font-size:14px;
+}

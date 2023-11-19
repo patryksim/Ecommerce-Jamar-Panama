@@ -1,0 +1,77 @@
+@font-face {
+    font-family:"Geomanist Regular";
+    src: url('https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Regular.otf')
+}
+@font-face {
+    font-family:"Geomanist Bold";
+    src: url('https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Bold.otf')
+}
+@font-face {
+    font-family:"Geomanist Medium";
+    src: url('https://joseamayadev.github.io/jamar_designs_public/Geomanist/Geomanist-Medium.otf')
+}
+.contenedor-titulos-seccion-detalles-iluminan {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    display: flex;
+  }
+  
+  @media (max-width: 800px) {
+    .contenedor-titulos-seccion-detalles-iluminan {
+      margin-bottom: 32px;
+      margin-top: 32px;
+      padding: 0 8%;
+    }
+  }
+  
+  .contenedor-titulos-seccion-detalles-iluminan h2 {
+    color: #4e4e4e;
+    width: 880px;
+    text-transform: uppercase;
+    font-family: "Geomanist Bold";
+    font-size: 48px;
+  }
+  
+  @media (max-width: 800px) {
+    .contenedor-titulos-seccion-detalles-iluminan h2 {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+  
+  .contenedor-titulos-seccion-detalles-iluminan p {
+    color: #4e4e4e;
+    width: 880px;
+    font-family: Geomanist Regular;
+    font-size: 32px;
+  }
+  
+  @media (max-width: 800px) {
+    .contenedor-titulos-seccion-detalles-iluminan p {
+      width: 100%;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+  
+  .banner-video-large {
+    width: 100%;
+    margin: 0 0 -10px;
+    padding: 0;
+  }
+  
+  .banner-video-large img {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .banner-video-large video {
+    max-height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }

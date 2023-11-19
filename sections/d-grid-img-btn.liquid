@@ -1,0 +1,74 @@
+{% comment %} Sección que contiene los grados de suavidad  ###LISTO {% endcomment %} 
+{% render 'custom-separator' %}
+        <div class="row justify-content-center">
+                <h2 class="h1 text-center lato-titulos">{{ section.settings.main_title }}</h2>
+                <div class="col-11 col-md-11">
+                    <div class="row justify-content-start justify-content-md-center container-scrollbar overflow-auto flex-nowrap pb-0">
+                         {% for block in section.blocks %}
+                      		  <span class="d-none">
+                                {% increment contador %}</span>                             
+                      			{% assign b = block.settings %}
+                                <div class="col-md-4 col-8 d-flex justify-content-center">
+                                    <div class="card border-0 shadow-none" style="width: 18rem;">
+                                    {{ b.imagen | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'card-img-top', data-rimg:'lazy' }}
+                                        <div class="card-body d-flex flex-column align-items-center pt-0">
+                                            <p class="card-text text-center lato-parrafos">{{ b.title }}</p>
+                                            <a href="{{b.enlace}}" class="btn_to_suavidad lato-parrafos mt-0 tag-cta-banner-firmeza-{{contador}} text-white"><b>Ir a comprar</b></a>
+                                        </div>
+                                    </div>
+                                </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+        </div>
+{% comment %} Fin de la sección que contiene los grados de suavidad {% endcomment %}
+
+
+
+{% schema %}
+
+{
+    "name":"Seccion Hero 1",
+    "tag":"section",
+    "class":"container pb-0 section-banners-firmeza",
+    "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Colocar titulo del Hero",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    }
+    ],
+    "blocks": [
+        {
+        "name" : "B Firmeza",
+        "type": "block",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "imagen",
+                "label": "Imagen de tamano"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Subtitulo de tamano"
+            },
+            {
+                "type": "url",
+                "id": "enlace",
+                "label": "Enlace"
+            }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Imagen con botones",
+            "category": "Colchones"
+        }
+    ]
+}
+
+{% endschema %}

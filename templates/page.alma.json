@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "banner": {
+      "type": "d-banner",
+      "custom_css": [
+        ".icono-tienda {display: none;}"
+      ],
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/IMG-1-ALMA-DESKTOP.webp",
+        "imagen_movil": "shopify:\/\/shop_images\/IMG-1-ALMA-MOBILE.webp",
+        "text_up": "",
+        "text_down": ""
+      }
+    },
+    "07e2c382-f8d5-4312-9f95-292fdc5d9a2a": {
+      "type": "section-titles-col",
+      "settings": {
+        "collection_title": "“Un reencuentro con lo natural, la serenidad y la calma”.",
+        "collection_parrafo": "Inspirada en un estilo de vida tranquilo, donde prevalece el bienestar, la comodidad y la armonía.",
+        "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/4e29b9d074094c618ba8babfdd1e4c26.mp4"
+      }
+    },
+    "d18b5993-a64c-4dce-9c78-e076acf7cadf": {
+      "type": "section-parrafo-col-btn",
+      "settings": {
+        "collection_parrafo": "La funcionalidad de los muebles de la colección Alma, se vale de diseños con curvas perfectas para aprovechar al máximo el área, de las texturas y fibras de corte artesanal, las vetas exóticas de la madera para resaltar detalles y los estampados que brindan sensación de confianza y frescura.",
+        "imagen_link": "shopify:\/\/shop_images\/IMG-3-ALMA-DESKTOP_4131742e-e703-4fae-bbb5-d27298786f1c.webp",
+        "url_whatsapp": "http:\/\/bit.ly\/3M2NE8W",
+        "color_butt_wha": "#B8A789"
+      }
+    },
+    "d5ac9344-dd37-4a66-9471-23db82b3f6b7": {
+      "type": "section-titulos-imagenes",
+      "settings": {
+        "collection_title": "Muebles funcionales, cálidos y frescos.",
+        "collection_parrafo": "Si buscas generar ambientes con una estética acogedora, tonalidades suaves, finos apliques en madera y texturas que se mezclan con linos y microfibras naturales. <br><br> Alma es la opción perfecta. Sus formas curvas le darán mucha personalidad a tus ambientes y siempre impactará a la vista.",
+        "imagen_link": "shopify:\/\/shop_images\/IMG_4.webp"
+      }
+    },
+    "40a63c32-7ba5-4671-8fb7-0f5d0eb46113": {
+      "type": "section-video-imagenes",
+      "settings": {
+        "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/9179c7adae7a4781a3d918ecb8ab277a.mp4",
+        "imagen_link1": "shopify:\/\/shop_images\/IMG_6.1.jpg",
+        "imagen_link2": "shopify:\/\/shop_images\/IMG_6.2.jpg",
+        "imagen_link3": "shopify:\/\/shop_images\/IMG_6.3.jpg",
+        "imagen_bg": "shopify:\/\/shop_images\/bg-img.jpg"
+      }
+    },
+    "36a97889-7a70-4ad9-bcc5-dffc87a56c3a": {
+      "type": "section-credijamar-col",
+      "settings": {
+        "imagen_link1": "shopify:\/\/shop_images\/desktop.webp",
+        "imagen_link2": "shopify:\/\/shop_images\/IMG_7-DESKTOP.webp"
+      }
+    },
+    "a78fedb5-65a5-48a9-969c-af25b13310e0": {
+      "type": "collection-grid-products",
+      "blocks": {
+        "69f1c6b3-c054-4e85-9951-d60117014704": {
+          "type": "imagen",
+          "settings": {
+            "title": "Recámara Queen Tampa",
+            "imagen": "shopify:\/\/shop_images\/IMG_10.1_-_DESKTOP-alma.png",
+            "enlace_producto": "shopify:\/\/products\/7024573"
+          }
+        },
+        "54d1368e-e59d-4919-abe5-f36af5abcdc5": {
+          "type": "imagen",
+          "settings": {
+            "title": "Sofá 3 Ptos Stella",
+            "imagen": "shopify:\/\/shop_images\/IMG_10.6_-_DESKTOP-alma.png",
+            "enlace_producto": "shopify:\/\/products\/7024877"
+          }
+        },
+        "64a84589-75d4-461a-9d4a-92818a4ca01c": {
+          "type": "imagen",
+          "settings": {
+            "title": "Recámara Full Oxford",
+            "imagen": "shopify:\/\/shop_images\/IMG_10.3_-_DESKTOP-alma.png",
+            "enlace_producto": "shopify:\/\/products\/7024281"
+          }
+        },
+        "791a6acf-6f01-4741-9e43-57b3ec5d646a": {
+          "type": "imagen",
+          "settings": {
+            "title": "Comedor 4 Pto Bruno",
+            "imagen": "shopify:\/\/shop_images\/IMG_10._2_-_DESKTOP-alma_3380b9dd-825d-4a0a-b4b1-9b6cbb79a0e2.png",
+            "enlace_producto": "shopify:\/\/products\/7024827"
+          }
+        },
+        "97e63691-8812-4901-b586-e26d8614c188": {
+          "type": "imagen",
+          "settings": {
+            "title": "Recámara Queen Madeira",
+            "imagen": "shopify:\/\/shop_images\/img-7023983.webp",
+            "enlace_producto": "shopify:\/\/products\/7023983"
+          }
+        },
+        "2e38dc48-6aeb-4d4e-9f97-b79fa060c227": {
+          "type": "imagen",
+          "settings": {
+            "title": "Sala en L Floyd",
+            "imagen": "shopify:\/\/shop_images\/IMG_10.5_-_DESKTOP-alma.png",
+            "enlace_producto": "shopify:\/\/products\/7023045"
+          }
+        }
+      },
+      "block_order": [
+        "69f1c6b3-c054-4e85-9951-d60117014704",
+        "54d1368e-e59d-4919-abe5-f36af5abcdc5",
+        "64a84589-75d4-461a-9d4a-92818a4ca01c",
+        "791a6acf-6f01-4741-9e43-57b3ec5d646a",
+        "97e63691-8812-4901-b586-e26d8614c188",
+        "2e38dc48-6aeb-4d4e-9f97-b79fa060c227"
+      ],
+      "settings": {
+        "title_text": "Crea un hogar con espacios en armonía.  <br> Alma es una colección única que te conectará con la esencia de la naturaleza."
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "07e2c382-f8d5-4312-9f95-292fdc5d9a2a",
+    "d18b5993-a64c-4dce-9c78-e076acf7cadf",
+    "d5ac9344-dd37-4a66-9471-23db82b3f6b7",
+    "40a63c32-7ba5-4671-8fb7-0f5d0eb46113",
+    "36a97889-7a70-4ad9-bcc5-dffc87a56c3a",
+    "a78fedb5-65a5-48a9-969c-af25b13310e0"
+  ]
+}

@@ -1,0 +1,295 @@
+
+<style>
+
+    :root {
+        --main_font:"Montserrat";
+    }
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    main.cover_sucursal {
+            background-image: url('https://cdn.shopify.com/s/files/1/0519/2695/8235/files/header-desktop_b2fa019b-eeaf-4460-8340-8d65d84bd00c.png');
+    }
+    
+    div.cover_container {
+        height: 200px;
+        
+    }
+    
+    .cover_container h1.main_site_title {
+        color: white;
+        font-size: 32px;
+        /* color: red; */
+        font-weight: 400; 
+    
+    }
+    
+    
+    
+    span.underline_bar {
+        height: 3px;
+        background-color: #FF3333;
+    }
+    
+    .page_tienda__home a,
+    .page_tienda__slash,
+    .page_tienda_tiendas a  {
+        text-decoration: none;
+        font-size: 16px;
+        color: #202833;
+    }
+    
+    .page_tienda_tiendas a {
+        font-weight:500;
+        color: #FF3333;
+    }
+    
+    
+    .select_div__styling  {
+        background-color: #202833;
+        position: relative;
+        border-radius: 10px;
+        height: 60px;
+    }
+    
+    .select_div__styling select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0px 30px;
+        background-color: transparent;
+        border: none;
+        color: white;
+        outline: none;
+    }
+    
+    
+    
+    .select_div__styling select option {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding: 0px 30px;
+        background-color: rgb(241, 241, 241);
+        border: none;
+        color: #202833;
+        outline: none;
+        border-radius: 2px;
+    }
+    
+    
+    
+    .page_tienda_tiendas a {
+        font-weight:500;
+        color: #FF3333;
+    }
+    
+    svg.svg_arrow__tiendas {
+        position: absolute;
+        right: 20px;
+        pointer-events: none;
+    }
+    
+    
+    button.btn_nombre__sucursal {
+        width: 235px;
+        height: 40px;
+        background-color: transparent;
+        border: #000000 solid 2px;
+        border-radius: 20.2175px;
+        color: #000000;
+        font-weight: 500;
+        text-align: left;
+        position: relative;
+        padding-left: 15px;
+    
+    }
+    
+    button.btn_nombre__sucursal:hover {
+        background-color: #202833;
+        color: white;
+    }
+    
+    svg.icon_target__sucursal {
+        position: absolute;
+        right: 15px;
+    }
+    
+    .page__location span {
+        background: transparent;
+    }
+    
+    
+    </style>
+    
+    
+    {% comment %} Contenedor de header y la foto de portada de la tienda {% endcomment %}
+    
+    <main class="container-fluid cover_sucursal">
+        <div class="container">
+        <div class="row justify-content-end">
+                <div class="col-10 col-md-12 d-flex p-0 cover_container m-0 d-flex flex-column justify-content-center">
+                <h1 class="main_site_title col-8 col-lg-10 col-xl-10">Buscar una <b>sucursal</b></h1>
+                <span class="underline_bar col-7 col-sm-4"></span>
+            </div>
+        </div>
+        </div>
+    </main>
+    
+    
+    {% comment %} Contenedor de header y la foto de portada de la tienda {% endcomment %}
+    
+    <section class="container">{% comment %} Contenedor de la sección de las url y la foto de portada de la tienda {% endcomment %}
+        <div class="row justify-content-end">
+            <div class="col-10 col-md-12 p-0 mt-4 page__location">
+                <span class="page_tienda__home"><a href="/">Inicio</a></span>
+                <span class="page_tienda__slash">/</span>
+                <span class="page_tienda_tiendas fw-bold"> <a href="/">Sucursales</a> </span>
+            </div>
+    </section>{% comment %} Fin del contenedor de la sección de las url y la foto de portada de la tienda {% endcomment %}
+    
+    
+    <section class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-8 col-sm-3 p-0 select_div__styling d-flex align-items-center justify-content-start ">
+                <select class="col-12 col-md-12 h-100" name="" id="">
+                    <option value="/">Seleccionar sucursal</option>
+                    <option value="/">Seleccionar sucursal</option>
+                    <option value="/">Seleccionar sucursal</option>
+                </select>
+    
+                <svg class="svg_arrow__tiendas" width="19" height="12" viewBox="0 0 19 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3.28701 0.553711L9.83157 7.09827L16.3761 0.553711L18.9939 1.86262L9.83157 11.025L0.669189 1.86262L3.28701 0.553711Z" fill="white"/>
+                </svg>
+    
+            </div>
+    
+            <div class="col-8 col-sm-9 p-0 d-flex justify-content-start justify-content-md-end mt-4 mt-md-0">
+                <p class="col-12 col-sm-11 text-justify">En Jamar puedes comprar tus muebles en diferentes tiendas que se encuentran disponibles cerca de tu hogar. Tenemos sedes en una gran variedad de tiendas en todo el territorio colombiano donde puedes comprar tu clóset preferido, incluida la capital del país.</p>
+            </div>
+        </div>
+            
+    </section>
+    
+    
+    
+    
+        <section class="container">
+            <div class="row justify-content-end justify-content-md-start">
+                <div class="col-10 col-sm-3 d-flex flex-column">
+                    <h4>SUCURSALES</h4>
+                    <span class="underline_bar col-7"></span>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-sm-3 col-10 mt-4">
+                    <img src="img_bg.png" class="img-fluid" alt="" data-rimg="lazy" loading="lazy">
+                </div>
+    
+                <div class="col-sm-9 mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-sm-10">
+                            <div class="row flex-column flex-sm-row align-items-center">
+    
+                                 {% for block in section.blocks %}
+                                {% assign b = block.settings %}
+                                <div class="col-10 d-flex justify-content-center col-sm-6 mb-4">
+                                    <a href="{{ b.provincia }}" target="_blank" rel="noopener noreferrer">
+                                        <button class="btn_nombre__sucursal">{{ b.image_title }} 
+                                            <svg class="icon_target__sucursal" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11 22C17.0751 22 22 17.0751 22 11C22 4.92487 17.0751 0 11 0C4.92487 0 0 4.92487 0 11C0 17.0751 4.92487 22 11 22Z" fill="#FF3333"/>
+                                                <path d="M14.5384 10.2308C14.5384 12.9231 11.0769 15.2308 11.0769 15.2308C11.0769 15.2308 7.61536 12.9231 7.61536 10.2308C7.61536 9.31274 7.98006 8.43231 8.62922 7.78315C9.27839 7.13399 10.1588 6.76929 11.0769 6.76929C11.995 6.76929 12.8754 7.13399 13.5246 7.78315C14.1737 8.43231 14.5384 9.31274 14.5384 10.2308Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M11.077 11.3845C11.7143 11.3845 12.2308 10.868 12.2308 10.2307C12.2308 9.59348 11.7143 9.0769 11.077 9.0769C10.4398 9.0769 9.92322 9.59348 9.92322 10.2307C9.92322 10.868 10.4398 11.3845 11.077 11.3845Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </button>
+                                    </a>
+                                </div>
+                                {% endfor %}
+    
+                            </div>
+                        </div>
+                        
+    
+                    </div>
+                </div>
+            </div>
+                
+        </section>
+    
+    
+    
+    
+    
+    
+    
+    {% schema %}
+    {
+        "name": "Contenido principal",
+        "settings": [
+        {
+          "type": "text",
+          "id": "main_title",
+          "label": "Titulo Sucursales"
+        },
+        {
+          "type": "text",
+          "id": "texto_descriptivo",
+          "label": "Texto descriptivo"
+        },
+        {
+          "type": "image_picker",
+          "id": "imagen_destacada",
+          "label": "Seleccion Imagen destacada"
+        }
+        ],
+        "blocks": [
+            {
+            "name" : "Landing Page Image",
+            "type": "Hero",
+            "settings": [
+            {
+                "type": "text",
+                "id": "image_title",
+                "label": "Titulo de la imagen"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_select",
+                "label": "Seleccionar imagen"
+            },
+            {
+                "type": "page",
+                "id": "pagina_sucursal",
+                "label": "Enlace"
+            }
+            ]       
+        },
+        {
+            "name" : "Sucursal Jamar",
+            "type": "Texto",
+            "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Nombre de la sucursal"
+            },
+            {
+                "type": "page",
+                "id": "provincia",
+                "label": "Enlace"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_sucursal",
+                "label": "Selecciona una imagen"
+            }
+            ]       
+        }
+        ]
+    }
+    {% endschema %}

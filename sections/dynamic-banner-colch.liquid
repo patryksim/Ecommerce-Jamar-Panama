@@ -1,0 +1,106 @@
+<br><br><br>
+<div class="container section-banners-promocionales">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="text-center text-gris-jamar">{{ section.settings.main_title }}</h2>
+      <p class="text-gris-jamar mt-2 text-center">{{ section.settings.main_description }}</p>
+    </div>
+  </div>
+  <br>
+  <div class="row justify-content-center">
+    {% for block in section.blocks %}
+      {% if block.type == "imagenes" %}
+        <div class="col-md-3">
+          <a href="{{ block.settings.enlace }}">
+            <img
+              class="mb-4"
+              src="{{ block.settings.coltitle | img_url:'master' }}"
+              data-rimg="lazy"
+              loading="lazy">
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+{% for block in section.blocks %}
+  {% if block.type == "vermas" %}
+    <style>
+      .btn-ver-mas-banners {
+        width: 200px;
+        height: 50px;
+        border-radius: 30px;
+        border: 1px solid #404b5a;
+        color: #404b5a;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .btn-ver-mas-banners:hover {
+        background-color: #404b5a;
+        color: #fff;
+      }
+    </style>
+    <div class="row justify-content-center align-items-center">
+      <a href=" {{ block.settings.texto_url   }}" class="btn-ver-mas-banners mt-3 d-flex justify-content-center align-items-center">
+        {{ block.settings.texto }}
+      </a>
+    </div>
+  {% endif %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Tarjetas promocionales",
+    "settings": [
+      {
+        "type": "text",
+        "id": "main_title",
+        "label": "Titulo Principal",
+        "default": "Titulo"
+      }, {
+        "type": "text",
+        "id": "main_description",
+        "label": "Descripción",
+        "default": "Texto"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Seleccionar",
+        "type": "imagenes",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "coltitle",
+            "label": "Imagen 580 x 693"
+          }, {
+            "type": "url",
+            "id": "enlace",
+            "label": "Enlace de coleccion"
+          }
+        ]
+      }, {
+        "name": "boton",
+        "type": "vermas",
+        "settings": [
+          {
+            "type": "text",
+            "id": "texto",
+            "label": "Colocar el texto del boton"
+          }, {
+            "type": "url",
+            "id": "texto_url",
+            "label": "Colocar el link del boton"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Tarjetas promocionales"
+      }
+    ]
+  }
+{% endschema %}

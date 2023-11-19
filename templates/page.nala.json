@@ -1,0 +1,179 @@
+{
+  "sections": {
+    "a3e40b7a-93cc-4185-aba0-e0139b80332f": {
+      "type": "d-banner",
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/01-nala-7029132.webp",
+        "imagen_movil": "shopify:\/\/shop_images\/01-nala-7029132-mob.webp",
+        "text_up": "",
+        "text_down": ""
+      }
+    },
+    "1912deaf-40c1-4915-8bbb-926256b03a52": {
+      "type": "section-titles-col-what",
+      "settings": {
+        "collection_title": "Nala: Donde la Belleza se Despliega en un Estilo Decorativo Simple y Cálido",
+        "collection_parrafo": "Es la fusión perfecta entre lo minimalista, la sofisticación y la practicidad. Su diseño simple aporta modernidad con cálidos detalles exclusivos, adaptándose a cualquier espacio.",
+        "product": "",
+        "image_1_desktop": "shopify:\/\/shop_images\/02-nala-7026458.webp",
+        "url_whatsapp": "https:\/\/bit.ly\/3tc4ESO",
+        "color_butt_wha": "#e1b8ae"
+      }
+    },
+    "b26b3884-50cb-494f-9624-e112bd02322a": {
+      "type": "dynamic-rich-text",
+      "blocks": {
+        "template--16311380574407__b26b3884-50cb-494f-9624-e112bd02322a-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Sus muebles se destacan por su simplicidad elegante, añadiendo un toque de calidez y comodidad a cualquier espacio. Sus materiales naturales y resistentes, como la madera de roble, garantizan durabilidad y facilidad de mantenimiento. Además, sus telas acanaladas ofrecen un tacto suave y lujoso que completa la experiencia.\"<\/p>",
+            "heading_size": "medium",
+            "text_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16311380574407__b26b3884-50cb-494f-9624-e112bd02322a-text-1"
+      ],
+      "settings": {
+        "width": "regular"
+      }
+    },
+    "e7ab5c31-b114-4e18-a2d4-4274273d9842": {
+      "type": "section-img-3-col",
+      "settings": {
+        "imagen_link1": "shopify:\/\/shop_images\/03-7027024-1.webp",
+        "imagen_link2": "shopify:\/\/shop_images\/03-7027024-2.webp",
+        "imagen_link3": "shopify:\/\/shop_images\/03-7027024-3.webp"
+      }
+    },
+    "45dbdf69-34fe-42e8-8373-0b54624f8e4b": {
+      "type": "section-dual-img",
+      "settings": {
+        "text_principal": "",
+        "imagen_derecha": "shopify:\/\/shop_images\/04-izq-7024827.webp",
+        "url_img": "https:\/\/www.jamar.com.pa\/products\/7024827",
+        "text_derecha": "En Nala, destacan diseños versátiles y curvas suaves que aportan dinamismo y distinción a cada pieza.",
+        "imagen_izquier": "shopify:\/\/shop_images\/04-der-7029249.webp",
+        "url_img_2": "https:\/\/www.jamar.com.pa\/products\/7029249",
+        "text_izquier": "Las líneas simples en madera son las protagonistas, fusionándose con su estética limpia y fresca para dar vida a interiores acogedores y llenos de luz."
+      }
+    },
+    "702b178a-15ad-47be-845b-34b02ed1fda0": {
+      "type": "dynamic-rich-text",
+      "blocks": {
+        "template--16311380574407__702b178a-15ad-47be-845b-34b02ed1fda0-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Cada detalle de esta colección es meticulosamente seleccionado. <br\/>Sus muebles y complementos se adaptan a la perfección a cualquier espacio, añadiendo amplitud y armonía.<\/p>",
+            "heading_size": "medium",
+            "text_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16311380574407__702b178a-15ad-47be-845b-34b02ed1fda0-text-1"
+      ],
+      "settings": {
+        "width": "regular"
+      }
+    },
+    "15aa7048-efac-45d7-9d63-676210355fc8": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "<b>SÉ EL PRIMERO EN ENTERARTE DE TODAS LAS NOVEDADES<\/b>",
+        "main_description": "Déjanos tus datos y recibe tips de decoración, promociones y mucho más.",
+        "banner_form": "shopify:\/\/shop_images\/formulario-nala-pa.webp",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": "",
+        "fondo_boton": "#e1b8ae",
+        "color_letra_boton": "#ffffff"
+      }
+    },
+    "2803e8e7-a269-411c-91d0-ff8b8c87fcb0": {
+      "type": "collection-grid-products",
+      "blocks": {
+        "d2cb6a75-2ca5-4f9a-ade7-38066b61d3eb": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/01_7021441.webp",
+            "enlace_producto": "shopify:\/\/products\/7021441"
+          }
+        },
+        "568541e9-0de5-4245-bbe0-6712ef481f7e": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/02-7024827.webp",
+            "enlace_producto": "shopify:\/\/products\/7024827"
+          }
+        },
+        "adcb11aa-4a8a-4c2e-be85-70367f1053ad": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/03-7025937.webp",
+            "enlace_producto": "shopify:\/\/products\/7025937"
+          }
+        },
+        "4870e7c6-a77c-407d-927e-7e39639945a5": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/03-7029253.webp",
+            "enlace_producto": "shopify:\/\/products\/7029253"
+          }
+        },
+        "09548832-3853-484b-97c6-36f7b5b67853": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/04-7026458.webp",
+            "enlace_producto": "shopify:\/\/products\/7026458-1"
+          }
+        },
+        "90da04c8-dfc4-4601-9900-2f117894ec55": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/06-7029132.webp",
+            "enlace_producto": "shopify:\/\/products\/7029132"
+          }
+        }
+      },
+      "block_order": [
+        "d2cb6a75-2ca5-4f9a-ade7-38066b61d3eb",
+        "568541e9-0de5-4245-bbe0-6712ef481f7e",
+        "adcb11aa-4a8a-4c2e-be85-70367f1053ad",
+        "4870e7c6-a77c-407d-927e-7e39639945a5",
+        "09548832-3853-484b-97c6-36f7b5b67853",
+        "90da04c8-dfc4-4601-9900-2f117894ec55"
+      ],
+      "settings": {
+        "title_text": "Dale a tu hogar un toque fresco y moderno con diseños que aportan luz, amplitud y exclusividad a tus espacios."
+      }
+    },
+    "styles": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    }
+  },
+  "order": [
+    "a3e40b7a-93cc-4185-aba0-e0139b80332f",
+    "1912deaf-40c1-4915-8bbb-926256b03a52",
+    "b26b3884-50cb-494f-9624-e112bd02322a",
+    "e7ab5c31-b114-4e18-a2d4-4274273d9842",
+    "45dbdf69-34fe-42e8-8373-0b54624f8e4b",
+    "702b178a-15ad-47be-845b-34b02ed1fda0",
+    "15aa7048-efac-45d7-9d63-676210355fc8",
+    "2803e8e7-a269-411c-91d0-ff8b8c87fcb0",
+    "styles"
+  ]
+}

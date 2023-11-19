@@ -1,0 +1,367 @@
+{% render  'title-for-feature-coll' %}
+{% assign selected_collection = collections[section.settings.collection] %}
+{% assign product_count = section.settings.product_count %}
+{% assign layout = section.settings.layout %}
+
+{% assign products = blank %}
+{% assign onboarding = false %}
+{% assign title_card = blank %}
+{% assign title_card_position = blank %}
+
+{% if selected_collection %}
+  {% assign products = selected_collection.products %}
+{% else %}
+  {% assign onboarding = true %}
+{% endif %}
+
+{% comment %}
+  If there are less than or equal to 5 products to display, we always
+  show the grid layout.
+{% endcomment %}
+{% if product_count <= 5 and products.size <= 5 %}
+  {% assign layout = 'grid' %}
+{% endif %}
+
+{% comment %}
+  Title card
+
+  The title card is captured here because its relative location
+  in the DOM is managed by a setting, this allows us to avoid duplication.
+{% endcomment %}
+{% if section.blocks.size > 0 %}
+  {% comment %}
+    If there are empty slots (remainder > 0) then we do not
+    need to remove a product to display the title card.
+  {% endcomment %}
+  {% assign product_count_remainder = product_count | modulo: 5 %}
+  {% if product_count_remainder == 0 %}
+    {% assign product_count = product_count | minus: 1 %}
+  {% endif %}
+  {% assign first_block = section.blocks.first %}
+  {% assign title_card_position = first_block.settings.position %}
+  {% style %}
+    .featured-collection--title-card {
+      color: {{ first_block.settings.text_color }};
+    }
+
+    .featured-collection--title-card--outer::before {
+      background-color: {{ first_block.settings.overlay_color }};
+      opacity: {{ first_block.settings.overlay_opacity | divided_by: 100.00 }};
+    }
+  {% endstyle %}
+
+  {% capture title_card %}
+    <li
+      class="
+        productgrid--item
+        featured-collection--title-card
+        {% unless first_block.settings.image %}featured-collection--title-card--placeholder{% endunless %}
+      "
+      {% if first_block.settings.image %}
+        {%
+          render 'rimg',
+          img: first_block.settings.image
+          size: '500x750',
+          crop: 'center',
+          background: true,
+          lazy: true
+        %}
+      {% endif %}
+    >
+      {% if first_block.settings.image %}
+        {%
+          render 'rimg',
+          img: first_block.settings.image
+          size: '500x750',
+          crop: 'center',
+          canvas: true,
+          lazy: true
+        %}
+      {% else %}
+        {{ 'collection-5' | placeholder_svg_tag }}
+      {% endif %}
+
+      <a
+        class="featured-collection--title-card--outer"
+        {% if selected_collection.url != blank %}
+          href="{{ selected_collection.url }}"
+        {% endif %}
+      >
+        <div class="featured-collection--title-card--inner">
+          <span class="featured-collection--title-card--pre-heading">
+            {% unless onboarding %}
+              {{ first_block.settings.pre_heading }}
+            {% else %}
+              {{ 'onboarding.featured_collection.subtitle' | t }}
+            {% endunless %}
+          </span>
+
+          <span class="featured-collection--title-card--heading">
+            {% unless onboarding %}
+              {{ first_block.settings.heading }}
+            {% else %}
+              {{ 'onboarding.featured_collection.title' | t }}
+            {% endunless %}
+          </span>
+        </div>
+      </a>
+    </li>
+  {% endcapture %}
+{% endif %}
+
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-type="dynamic-featured-collection">
+</script>
+
+<script type="application/pxs-animation-mapping+json">
+  {
+    "blocks": [".productgrid--item"],
+    "elements": [
+      ".productitem--info"
+    ]
+  }
+</script>
+
+<section class="featured-collection--container">
+  {% if section.settings.title != blank %}
+
+
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}
+ 
+  {% for product in products limit: product_count %}
+    <script>
+      skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+    </script>
+  {% endfor %}
+
+  {% render 'product-grid-fee' %}
+ 
+  {% comment %}
+  /**********************************************************
+            VARIABLE PARA EL SERVICIO DE PRECIO
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}  
+  
+  
+    {% comment %}
+    /**********************************************************
+              SE AGREGA LINEA AL TITULO DE LA SECCION
+                     PATRYKSIM@GMAIL.COM
+    **********************************************************/
+    {% endcomment %}
+    <h2 class="home-section--title linea">
+      <span>{{ section.settings.title | escape }}</span>
+    </h2>
+  {% endif %}
+  
+  
+  {% comment %}
+  /**********************************************************
+                   ATRIBUTOS DATA PARA EL DMP
+                      PATRYKSIM@GMAIL.COM
+  **********************************************************/
+  {% endcomment %}
+  {% assign list_name = section.settings.title | escape %}
+
+  <ul
+    class="home-section--content featured-collection--content mt-0"
+    data-content
+    data-layout="{{ layout }}"
+  >
+    {% if title_card != blank and title_card_position == 'beginning' %}{{ title_card }}{% endif %}
+
+    {% for p in products limit: product_count %}
+      {%
+        render 'product-grid-item',
+        product: p,
+    	list_name: list_name
+      %}
+    {% else %}
+      {% for i in (1..product_count) %}
+        {%
+          render 'product-grid-item',
+          product: false,
+    	  list_name: list_name
+        %}
+      {% endfor %}
+    {% endfor %}
+
+    {% if title_card != blank and title_card_position == 'end' %}{{ title_card }}{% endif %}
+  </ul>
+
+  {% if section.settings.cta_label != blank %}
+    <a
+      class="
+        button-{{ section.settings.cta_button_style }}
+        featured-collection--button
+      "
+      {% if selected_collection.url != blank %}href="{{ selected_collection.url }}"{% endif %}
+    >
+      {{ section.settings.cta_label | escape }}
+    </a>
+  {% endif %}
+  
+  {% comment %}
+  /**********************************************************
+            SE AGREGA NOTA PARA DESLIZAR EN MOBIL
+                   PATRYKSIM@GMAIL.COM
+  **********************************************************/
+    <p class="mobile ver-mas">
+      <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-left"></i>
+       Desliza para ver más {{ selected_collection.title | escape }}
+    </p>
+  {% endcomment %}
+  {% render 'quick-shop' %}
+  
+</section>
+
+{% schema %}
+{
+  "name": "Featured collection Temp",
+  "class": "featured-collection--section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Featured collection"
+    },
+    {
+      "id": "layout",
+      "type": "select",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid"
+        },
+        {
+          "value": "slideshow",
+          "label": "Slideshow"
+        }
+      ],
+      "default": "grid"
+    },
+    {
+      "id": "collection",
+      "type": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_count",
+      "min": 5,
+      "max": 25,
+      "step": 5,
+      "label": "Number of products",
+      "default": 5
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Label",
+      "default": "Shop collection"
+    },
+    {
+      "id": "cta_button_style",
+      "type": "select",
+      "label": "Button style",
+      "options": [
+        {
+          "value": "primary",
+          "label": "Primary"
+        },
+        {
+          "value": "secondary",
+          "label": "Secondary"
+        }
+      ],
+      "default": "primary"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title_card",
+      "name": "Title card",
+      "settings": [
+        {
+          "id": "position",
+          "type": "select",
+          "label": "Position",
+          "options": [
+            {
+              "value": "beginning",
+              "label": "Beginning"
+            },
+            {
+              "value": "end",
+              "label": "End"
+            }
+          ],
+          "default": "beginning"
+        },
+        {
+          "type": "text",
+          "id": "pre_heading",
+          "label": "Pre-heading",
+          "default": "Shop this"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Collection"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#FFFFFF"
+        },
+        {
+          "type": "color",
+          "id": "overlay_color",
+          "label": "Overlay color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Opacity",
+          "default": 50
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image",
+          "info": "500 x 750px .jpg recommended"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 1,
+  "presets": [
+    {
+      "name": "Featured collection 2",
+      "category": "Collection"
+    }
+  ]
+}
+
+{% endschema %}

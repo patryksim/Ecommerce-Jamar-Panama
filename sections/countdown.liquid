@@ -1,0 +1,180 @@
+<div class="container" id="countdown" style="margin-top: -{{ section.settings.upper }}px">
+	<div class="row d-flex justify-content-center mb-3">
+		<div class="col">
+			<p class="rounded bg-gris-jamar p-2 w-fit text-center text-white m-auto" style="opacity: 0.9">{{ section.settings.text_1 }}</p>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center mb-3 ps-4 pe-4">
+		<div class="col-3 col-sm-2 col-md-1 ps-md-2 pe-1">
+			<div class="border border-white rounded bg-gris-jamar border border-white" style="opacity: 0.9">
+				<p class="fs-1 fw-bold text-center text-white mb-0" id="countdown_days"></p>
+				<p class="fs-7 text-center text-white">DÍAS</p>
+			</div>
+		</div>
+		<div class="col-3 col-sm-2 col-md-1 ps-1 pe-1">
+			<div class="border border-white rounded bg-gris-jamar border border-white" style="opacity: 0.9">
+				<p class="fs-1 fw-bold text-center text-white mb-0" id="countdown_hours"></p>
+				<p class="fs-7 text-center text-white">HORAS</p>
+			</div>
+		</div>
+		<div class="col-3 col-sm-2 col-md-1 ps-1 pe-1">
+			<div class="border border-white rounded bg-gris-jamar border border-white" style="opacity: 0.9">
+				<p class="fs-1 fw-bold text-center text-white mb-0" id="countdown_minutes"></p>
+				<p class="fs-7 text-center text-white">MINUTOS</p>
+			</div>
+		</div>
+		<div class="col-3 col-sm-2 col-md-1 ps-1 pe-md-2">
+			<div class="border border-white rounded bg-gris-jamar border border-white" style="opacity: 0.9">
+				<p class="fs-1 fw-bold text-center text-white mb-0" id="countdown_seconds"></p>
+				<p class="fs-7 text-center text-white">SEGUNDOS</p>	
+			</div>
+		</div>
+	</div>
+	<div class="row d-flex justify-content-center">
+		<div class="col">
+			<p class="text-gris-jamar text-center m-0">{{ section.settings.text_2 }}</p>
+		</div>
+	</div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Countdown",
+    "settings": [   
+        {
+          "type": "range",
+          "id": "year_end",
+          "min": 2022,
+          "max": 2032,
+          "step": 1,
+          "label": "Año de finalización",
+          "default": 2023
+        },
+        {
+          "type": "select",
+          "id": "month_end",
+          "label": "Mes de finalización",
+          "options": [
+            {
+              "value": "January",
+              "label": "Enero"
+            },
+            {
+              "value": "February",
+              "label": "Febrero"
+            },
+            {
+              "value": "March",
+              "label": "Marzo"
+            },
+            {
+              "value": "April",
+              "label": "Abril"
+            },
+            {
+              "value": "May",
+              "label": "Mayo"
+            },
+            {
+              "value": "June",
+              "label": "Junio"
+            },
+            {
+              "value": "July",
+              "label": "Julio"
+            },
+            {
+              "value": "August",
+              "label": "Agosto"
+            },
+            {
+              "value": "September",
+              "label": "Septiembre"
+            },
+            {
+              "value": "October",
+              "label": "Octubre"
+            },
+            {
+              "value": "November",
+              "label": "Noviembre"
+            },
+            {
+              "value": "December",
+              "label": "Diciembre"
+            }
+          ],
+          "default": "January"
+        },
+        {
+          "type": "range",
+          "id": "day_end",
+          "min": 1,
+          "max": 31,
+          "step": 1,
+          "label": "Día de finalización",
+          "default": 31
+        },
+        {
+          "type": "text",
+          "id": "text_1",
+          "label": "Texto de tope"
+        },
+        {
+          "type": "text",
+          "id": "text_2",
+          "label": "Texto de abajo"
+        },
+        {
+          "type": "range",
+          "id": "upper",
+          "min": 0,
+          "max": 180,
+          "step": 10,
+          "label": "Subirlo un poco",
+          "default": 0
+        }
+    ],
+  	"presets":[{
+		"name":"Countdown ",
+		"category":"Countdown "
+	}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+<script type="text/javascript">
+  // Set the date we're counting down to
+  var countDownDate = new Date("{{section.settings.month_end}} {{section.settings.day_end}}, {{section.settings.year_end}} 23:59:59").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime()
+      
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+      
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+    // Output the result in an element with id="demo"
+    document.getElementById("countdown_days").innerHTML = days;
+    document.getElementById("countdown_hours").innerHTML = hours;
+    document.getElementById("countdown_minutes").innerHTML = minutes;
+    document.getElementById("countdown_seconds").innerHTML = seconds;
+      
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").remove();
+    }
+  }, 1000);
+</script>

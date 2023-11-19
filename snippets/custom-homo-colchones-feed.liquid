@@ -1,0 +1,74 @@
+
+
+    {% for collection in collections %}
+        {% assign col = collection.title | downcase %}
+    
+    {% if  col == colecciones %}
+        {% for product in collection.products limit:9 %}
+            {% comment %} 
+                {{product.featured_image | img_tag: img_url}}
+                {{ product.title }}
+                <hr>
+                {{product.selected_or_first_available_variant.sku}}
+                <hr>
+                <span data-sku-item={{product.selected_or_first_available_variant.sku}}> </span>
+                <hr>
+                <script>
+                    skuLISTAS.push( {{ product.selected_or_first_available_variant.sku |json }} );
+                </script>
+                 {% endcomment %}
+
+
+
+        <div class="card col-md-3 m-0 p-0 position-relative radius-card-product">
+            {{ product.featured_image | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-fluid w-100' }}
+            <div class="card-body description-prod">
+                <h5 class="card-title m-0"> {{product.title}} </h5>
+                <p class="card-text m-0"> {{product.price | money }} </p>
+                <div data-sku-item={{product.selected_or_first_available_variant.sku}}> </div>
+                <a class="btn_to_suavidad position-absolute" href="{{ product.url }}" class="btn btn-light border-dark">Ir a comprar</a>
+
+                <script>
+                    skuLISTAS.push( {{ product.selected_or_first_available_variant.sku | json }} );
+                </script>
+                
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    {% endfor %}
+
+
+
+<script>
+  
+    function showFee(){
+      let sendToService = {
+        "agency": "C2",
+        "groups":["A","G"],
+        "skus": skuLISTAS,
+        "fees":["24"],
+        "saleTypes":["TJ"]
+      };
+
+      fetch("https://8wrhzmlo68.execute-api.us-east-1.amazonaws.com/api/v1/JP/prices", {
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(sendToService)
+      })
+      .then( data => data.json() )
+      .then( data => {
+        data.map( i => {
+          let precio = i.precios[0].data.cuota_sem;
+          var novedadesPage = document.querySelector(`[data-sku-item="${i.sku}"]`);
+          if( novedadesPage != null ){
+            novedadesPage.innerHTML = `<p class="card-text">Cuota semanal desde <b> ${precio} </b> con Credijamar.</p>`;
+          } 
+        })    
+      })
+    } ;
+    showFee();
+  
+</script>

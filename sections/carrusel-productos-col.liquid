@@ -1,0 +1,67 @@
+{{ 'lumina.css' | asset_url | stylesheet_tag }}
+
+{% assign blocks = section.blocks %}    
+    
+    {% for block in blocks %}
+        <a class="d-flex justify-content-center align-items-center flex-column" href="{{ block.settings.enlace }}">
+            <img loading="lazy" src="{{ block.settings.imagen | image_url: width: "300" }}" alt="{{ block.settings.enlace.alt }}">
+            {% if block.settings.icono %}
+                <img class="img-icon-bag" src="{{ block.settings.icono | image_url: width: "200" }}" alt="">
+            {% else %}
+                <img class="img-icon-bag" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/icon-bag.svg?v=1676121418" alt="">
+            {% endif %}
+        </a>
+    {% endfor %}
+
+{% schema %}
+{
+  "name": "Banner solo imagen",
+  "tag": "section",
+  "class":"carousel-productos-lumina",
+    "settings": [
+    {
+      "type": "text",
+      "id": "image_desktop",
+      "label": "Imagen desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_movil",
+      "label": "Imagen móvil"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "productos",
+      "type": "tarjeta",
+      "settings": [
+        {
+          "type": "url",
+          "id": "enlace",
+          "label": "Enlace de la tarjeta"
+        }, 
+        {
+          "type": "image_picker",
+          "id": "imagen",
+          "label": "Imagen de la tarjeta"
+        }, 
+        {
+          "type": "image_picker",
+          "id": "icono",
+          "label": "Icono de la tarjeta"
+        },
+        {
+          "type": "text",
+          "id": "tagging_id",
+          "label": "Id con el tagging"
+        }
+      ]
+    }
+  ],
+  "presets": [
+     {
+       "name": "carrusel-productos-col"       
+     }
+   ]
+}
+{% endschema %}

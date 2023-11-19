@@ -1,0 +1,70 @@
+{% assign title_tag =  section.settings.title_tag  %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      {% if section.settings.icono_grid %}
+        {{ section.settings.icono_grid | image_url : width: auto | image_tag: alt: 'My favicon', srcset: nil, class: 'img-icon-promo' }}
+      {% endif %}
+      <h2 class="text-center text-gris-jamar">{{ section.settings.main_title }}</h2>
+      {% if section.settings.subtitle != "" %}
+          <p class="lato-parrafos text-center col-10">{{ section.settings.subtitle }}</p>
+      {% endif %}
+      {% if section.settings.subtitle == "" %}
+          <p class="lato-parrafos text-center col-10"></p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+    {% schema %}
+    {
+  "name": "Promotional title",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Titulo Principal",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitulo",
+      "default": "Doler ipsum dolor sit amet consectetur adipiscing"
+    },
+    {
+      "type": "image_picker",
+      "id": "icono_grid",
+      "label": "Icono"
+    },
+    {
+      "type": "select",
+      "id": "title_tag",
+      "label": "Etiqueta para el titulo",
+      "options": [
+        {
+          "value": "h1",
+          "label": "H1"
+        },
+        {
+          "value": "h2",
+          "label": "H2"
+        },
+        {
+          "value": "h3",
+          "label": "H3"
+        }
+      ],
+      "default": "h2"
+    }
+    ],
+    "presets": [
+    {
+    "name": "Titulo Promo",
+    "category": "Promo Colchones"
+    }
+    ]
+    }
+
+    {% endschema %}

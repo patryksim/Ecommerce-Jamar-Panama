@@ -1,0 +1,65 @@
+{
+  "sections": {
+    "5a4dddbb-b3f6-4a09-912d-f710d528052b": {
+      "type": "d-catalogo-style",
+      "blocks": {
+        "bc854a0b-4c42-469a-8f05-12b143ae89dc": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/LANDING_DETALLE_TOMBOLA.jpg",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "bc854a0b-4c42-469a-8f05-12b143ae89dc"
+      ],
+      "settings": {
+      }
+    },
+    "1660758584c0cf199d": {
+      "type": "d-imagen-full",
+      "blocks": {
+        "bd27268b-9c1d-4658-a62f-af158413fa82": {
+          "type": "block",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/LANDING_DETALLE_TOMBOLA.jpg",
+            "imagen_movil": "shopify:\/\/shop_images\/LANDING_DETALLE_TOMBOLA.jpg",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "bd27268b-9c1d-4658-a62f-af158413fa82"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "b1482dca-6963-472c-b14f-c154b38362f6": {
+      "type": "dynamic-rich-text",
+      "blocks": {
+        "template--16159878512839__b1482dca-6963-472c-b14f-c154b38362f6-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "",
+            "text": "<p>Promoción aprobada por la Junta de Control de Juegos según Resolución MEF-RES-2023-2166 del 14 de Agosto de 2023. La promoción válida por tiempo limitado, inicia a partir del dos (2) de Septiembre de 2023 hasta el dia veintisiete (27) de diciembre a las dos de la tarde (2:00 p.m.) del año dos mil veintitrés (2023).<\/p><p>Para la presente Promoción participarán únicamente personas naturales mayores de edad con capacidad juridica para actuar y que sean clientes de MUEBLES JAMAR PANAMÁ, S.A. Y CREDIJAMAR, S.A, ya sea al contado o a crédito; para estos iltimos que se encuentren a paz y salvo en su cuenta de crédito, además participan aquellas personas naturales que endos an contratos a crédito como co-deudor (siempre que el crédito sea aprobado y recibido por el titular). Quedando imposibilitados de participar cualquier otro tipo de persona.<\/p><p>Aplican restricciones. para los colaboradores de MUEBLES JAMAR PANAMÁ, S.A. Y CREDIJAMAR, S.A. para participar de esta promoción TECNO TOMBOLA VOL.2\"<\/p><p>La Tombola se realizará el dia veintisiete (27) de diciembre de 2023, a las tres de la tarde (3:00 p.m.) en MUEBLES JAMAR PANAMÁ, S.A., ubicada en Via España, en presencis de un Notario y un Representante de la Junta de Control de Juegos (J.C.J).<\/p><p>Los favorecidos en la promoción \" TECNO TÓMBOLA VOL. 2\" tienen hasta tres (3) dias hábiles, a partir del dia veintisiete (27) de diciembre de 2023 fecha en que se celebra la premiación para reclamar su premio.De no hacerlo, se procederá en comón acuerdo con la Junta de Control de Juegos a donarlos a una Institución Benéfica.A<\/p>",
+            "heading_size": "medium",
+            "text_alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "template--16159878512839__b1482dca-6963-472c-b14f-c154b38362f6-text-1"
+      ],
+      "settings": {
+        "width": "regular"
+      }
+    }
+  },
+  "order": [
+    "5a4dddbb-b3f6-4a09-912d-f710d528052b",
+    "1660758584c0cf199d",
+    "b1482dca-6963-472c-b14f-c154b38362f6"
+  ]
+}

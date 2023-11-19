@@ -1,0 +1,158 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 p-0">
+    	<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            {% if section.blocks.size > 1 %}
+              <div class="carousel-indicators mb-1">
+                {% for block in section.blocks %}
+                  <button type="button" data-bs-target="#carouselExampleIndicators" 
+                    data-bs-slide-to="{{ forloop.index | minus: 1 }}"  
+                    class="{% if forloop.index == 1 %}active{% endif %} rounded-circle mt-auto mb-auto" aria-current="true" 
+                    aria-label="Slide {{ forloop.index }}" style="width: 10px; height: 10px;">
+                  </button>
+                {% endfor %}
+              </div>
+            {% endif %}
+	        <div class="carousel-inner">
+	          {% for block in section.blocks %}
+	            <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
+                  {% if forloop.index == 1 and section.settings.hover == true %}
+                    <div class="position-relative d-none d-sm-block">
+                      <a href="{{ block.settings.product.url }}">
+                        <img class="w-100" src="{{ block.settings.image_desktop | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+                      </a>
+                      <div class="position-absolute top-50 start-0 translate-middle-y col-sm-6 col-md-{{ section.settings.hover_width }} h-100" style="background-image: url('{{ section.settings.hover_image | img_url:'master' }}'); opacity: {{ section.settings.hover_opacity }};">
+                        <div class="row d-flex justify-content-center h-100">
+                          <div class="col-10 align-self-center text-center ">
+                            <!-- para pantalla grande -->
+                            <h2 class="text-gris-jamar m-0 text-center d-none d-md-block fw-bold">{{ section.settings.hover_title }}</h2>
+                            <p class="text-gris-jamar mt-2 text-center d-none d-md-block">{{ section.settings.hover_text }}</p>
+                            <!-- para table -->
+                            <h2 class="text-gris-jamar m-0 text-center fs-5 d-sm-block d-md-none fw-bold">{{ section.settings.hover_title }}</h2>
+                            <p class="text-gris-jamar mt-2 text-center d-sm-block d-md-none lh-sm  fs-7">{{ section.settings.hover_text }}</p>
+                            <img class="arrow-movil" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/flechas-abajo_31763cc1-16d5-43d9-b807-cfece700a06a.svg?v=1669150439" data-rimg="lazy" loading="lazy">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="position-relative d-block d-sm-none">
+                      <a href="{{ block.settings.product.url }}">
+                        <img class="w-100" src="{{ block.settings.image_mobile | img_url:'master' }}" data-rimg="lazy">
+                      </a>
+                      <div class="position-absolute bottom-0 start-50 translate-middle-x w-100 h-50" style="background-image: url('{{ section.settings.hover_image | img_url:'master' }}'); opacity: {{ section.settings.hover_opacity }};">
+                        <div class="row d-flex justify-content-center w-100 h-100 m-0">
+                          <div class="col-11 align-self-center text-center">
+                            <h2 class="text-gris-jamar m-0 text-center fs-3 fw-bold">{{ section.settings.hover_title }}</h2>
+                            <p class="text-gris-jamar mt-2 text-center mb-0">{{ section.settings.hover_text }}</p>
+                            <img class="arrow-movil" width="25" src="https://cdn.shopify.com/s/files/1/0516/5478/7271/files/flechas-abajo_31763cc1-16d5-43d9-b807-cfece700a06a.svg?v=1669150439" data-rimg="lazy" loading="lazy">
+                            <br>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  {% else %}
+                    <a href="{{  block.settings.product.url }}">
+                      <img src="{{ block.settings.image_desktop | img_url:'master' }}"class="d-none d-sm-block" alt="..." data-rimg="lazy" loading="lazy">
+                      <img src="{{ block.settings.image_mobile | img_url:'master' }}"class="d-block d-sm-none w-100" alt="..." data-rimg="lazy" loading="lazy">
+                    </a>
+                  {% endif %}
+	            </div>
+	          {% endfor %}
+	        </div>
+			<!--button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+        </button-->
+		</div>
+      </div>
+	</div>
+</div>
+{% if section.blocks.size > 1 %}
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Carrusel SEO",
+    "settings": [
+       {
+          "type": "checkbox",
+          "id": "hover",
+          "label": "Mostrar hover",
+          "info": "Esta seccion solo aplica al primer slider",
+          "default":false
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Imagen"
+        },
+        {
+          "type": "range",
+          "id": "hover_width",
+          "min": 4,
+          "max": 8,
+          "step": 1,
+          "label": "Ancho en desktop",
+          "default": 4
+        },
+        {
+          "type": "range",
+          "id": "hover_opacity",
+          "min": 0.4,
+          "max": 1,
+          "step": 0.1,
+          "label": "Opacidad",
+          "default": 0.8
+        },
+        {
+          "type": "text",
+          "id": "hover_title",
+          "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "hover_text",
+          "label": "Texto"
+        }
+    ],
+  "blocks": [
+     {
+       "name": "Imagen",
+       "type": "imagen",
+       "settings": [
+          {
+            "type": "image_picker",
+            "id": "image_desktop",
+            "label": "Image desktop 1920 x 650"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image mobile 900 x 940"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Producto"
+          }
+       ]
+     }
+   ],
+      "presets": [
+        {
+        "name": "Carrusel SEO"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

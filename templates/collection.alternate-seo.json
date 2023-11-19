@@ -1,0 +1,35 @@
+{
+  "layout": "collection",
+  "sections": {
+    "estilos": {
+      "type": "custom-styles",
+      "settings": {
+      }
+    },
+    "coleccion": {
+      "type": "static-collection-alternate-seo",
+      "settings": {
+        "show_collection_image": false,
+        "products_per_page_range": 24,
+        "products_per_row": "3",
+        "sort_by": true,
+        "show_by": false,
+        "grid_list": false,
+        "default_view": "grid-view",
+        "show_sidebar": true,
+        "show_prod_count": false,
+        "filter_style": "groups",
+        "filter_limit": "5",
+        "filter_position": "below_menus",
+        "grid_categories": "",
+        "custom_ordered_categories": "",
+        "custom_ordered_tags": "Tamaño_Doble Full,Tamaño_Full,Tamaño_Queen",
+        "menu_depth_range": 1
+      }
+    }
+  },
+  "order": [
+    "estilos",
+    "coleccion"
+  ]
+}

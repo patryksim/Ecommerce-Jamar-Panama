@@ -1,0 +1,68 @@
+<!-- Medio -->
+<div class="row mt-4">
+    <div class="col-12 col-sm-6 align-self-center">
+       {{ section.settings.custom_html }}
+    </div>
+    <div class="col-12 col-sm-6 align-self-center">
+        <img class="img-fluid" alt="{{ section.settings.image_alt }}" src="{{ section.settings.image | img_url:'master' }}" data-rimg="lazy" loading="lazy">
+    </div>
+</div>
+ 
+{% schema %}
+
+  {
+    "name": "Par imagen custom HTML",
+    "tag":"section",
+    "class":"container pt-4",
+    "settings": [      
+      {
+        "type": "select",
+        "id": "font_class",
+        "label": "Tipo de Letra",
+        "options": [
+          {
+            "value": "style-moderno-glam",
+            "label": "Estilo Moderno Glam"
+          },
+          {
+            "value": "style-natural-century",
+            "label": "Estilo Natural Century"
+          },
+          {
+            "value": "style-contemporaneo",
+            "label": "Estilo Contemporáneo"
+          }
+        ],
+        "default": "style-moderno-glam"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Imagen"
+      },
+      {
+        "type": "text",
+        "id": "image_alt",
+        "label": "Imagen Alt",
+        "default": "Imagen Alt"
+      },
+      {
+        "type": "html",
+        "id": "custom_html",
+        "label": "HTML",
+        "default": "<p>Write or paste your HTML code here</p>"
+      }
+    ],
+    "presets": [
+        {
+          "name": "Par imagen custom HTML"
+        }
+      ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

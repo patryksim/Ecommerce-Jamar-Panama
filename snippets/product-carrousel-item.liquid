@@ -1,0 +1,26 @@
+<a class="producto-link--carrousel p-md-0 p-0" href="{{ producto.url }}">
+  <div class="card-producto--carrousel">
+    <span class="tag-discount">
+      {{ producto.compare_at_price | minus: producto.price | times: 100.0 | divided_by: producto.compare_at_price | round }}% Dto</span>
+    <img
+      src="{{producto.images[0] | img_url: '800x800', format: 'pjpg' }}"
+      alt=""
+      srcset="">
+    <div class="contenedor-informacion--carrousel">
+      <h4>{{ producto.title }}</h4>
+      <p>
+        <b>{{ producto.price | money }}
+        </b>
+        <span class="precio-lista">{{ producto.compare_at_price | money }}
+        </span>
+      </p>
+      <p
+        class="cuota"
+        data-ee-product-sku="{{ producto.selected_or_first_available_variant.sku }}"
+        class="test-prueba"></p>
+      <p class="credijamar-texto-notified">
+        PRECIOS INCLUYEN ITBMS
+      </p>
+    </div>
+  </div>
+</a>

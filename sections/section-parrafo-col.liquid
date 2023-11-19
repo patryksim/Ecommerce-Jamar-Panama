@@ -1,0 +1,32 @@
+{{ 'section-parrafo-col.css'  | asset_url | stylesheet_tag }}
+
+
+<div class="container-parrafo-con-fondo">
+    <p>{{section.settings.collection_parrafo}} </p>
+</div>
+<img width="100%" src="{{ section.settings.imagen_link | image_url : width: auto}}" alt="{{ section.settings.imagen_link.alt }}" data-rimg="lazy" loading="lazy">
+
+
+    {% schema %}
+    {
+       "name":"Parrafo Coleccion",
+       "class":"section-parrafo-colecciones",
+       "settings": [
+        {
+            "type":"text",
+            "id":"collection_parrafo",
+            "label":"Colocar el parrafo"
+        },
+        {
+            "type":"image_picker",
+            "id":"imagen_link",
+            "label":"Colocar el link del video"
+        }
+       ],
+       "presets":[
+        {
+            "name":"Parrafo Coleccion"
+        }
+       ]
+    }
+    {% endschema %}

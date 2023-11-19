@@ -1,0 +1,190 @@
+{
+  "sections": {
+    "af7dde4b-7d6d-473e-bc3d-422530087c84": {
+      "type": "d-banner",
+      "settings": {
+        "imagen_desktop": "shopify:\/\/shop_images\/01-line-7026329.webp",
+        "imagen_movil": "shopify:\/\/shop_images\/01-line-7026329-mob.webp",
+        "text_up": "",
+        "text_down": ""
+      }
+    },
+    "77c6fd5b-bfc9-44e6-845f-dea525394ca5": {
+      "type": "section-titles-col-what",
+      "settings": {
+        "collection_title": "Donde el Estilo, la Comodidad y la Elegancia se Unen",
+        "collection_parrafo": "Los detalles acolchados y las telas suaves al tacto crean una experiencia de confort inigualable.",
+        "product": "",
+        "image_1_desktop": "shopify:\/\/shop_images\/02-line-7026328.webp",
+        "url_whatsapp": "https:\/\/bit.ly\/3LFEL48",
+        "color_butt_wha": "#b9a996"
+      }
+    },
+    "f781d576-679a-49fa-9699-ff4bf62bc809": {
+      "type": "section-dual-img",
+      "settings": {
+        "text_principal": "",
+        "imagen_derecha": "shopify:\/\/shop_images\/03-img-izq-7026329.webp",
+        "url_img": "https:\/\/www.jamar.com.pa\/products\/7026329",
+        "text_derecha": "Butacas con siluetas curvas y modernas, aportan una sensación de fluidez y elegancia a cualquier espacio.",
+        "imagen_izquier": "shopify:\/\/shop_images\/03-img-der-7027048.webp",
+        "url_img_2": "https:\/\/www.jamar.com.pa\/products\/7027048",
+        "text_izquier": "Esta colección es la fusión perfecta de elegancia y comodidad, con patas de madera roble en un encantador tono champaña."
+      }
+    },
+    "e300a4ae-c7ec-4711-992b-a0aad44bd8a8": {
+      "type": "carrusel-productos-col",
+      "blocks": {
+        "5bf96c51-9ac4-4c03-92d4-d6f260309fac": {
+          "type": "tarjeta",
+          "settings": {
+            "enlace": "shopify:\/\/products\/7025517",
+            "imagen": "shopify:\/\/shop_images\/01-7025517.webp",
+            "icono": "shopify:\/\/shop_images\/bolsita-de-compra-icon.svg",
+            "tagging_id": ""
+          }
+        },
+        "f18d668b-a314-41b8-87d2-834b0ecf2575": {
+          "type": "tarjeta",
+          "settings": {
+            "enlace": "shopify:\/\/products\/7026299",
+            "imagen": "shopify:\/\/shop_images\/02-7026299.webp",
+            "icono": "shopify:\/\/shop_images\/bolsita-de-compra-icon.svg",
+            "tagging_id": ""
+          }
+        },
+        "dae6e024-5804-475f-b279-b3ea72d1d128": {
+          "type": "tarjeta",
+          "settings": {
+            "enlace": "shopify:\/\/products\/7025405",
+            "imagen": "shopify:\/\/shop_images\/03-7025405.webp",
+            "icono": "shopify:\/\/shop_images\/bolsita-de-compra-icon.svg",
+            "tagging_id": ""
+          }
+        },
+        "57f7361a-8996-41c0-a3d1-eaf77a0282d5": {
+          "type": "tarjeta",
+          "settings": {
+            "enlace": "shopify:\/\/products\/7025029",
+            "imagen": "shopify:\/\/shop_images\/04-7025029.webp",
+            "icono": "shopify:\/\/shop_images\/bolsita-de-compra-icon.svg",
+            "tagging_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "5bf96c51-9ac4-4c03-92d4-d6f260309fac",
+        "f18d668b-a314-41b8-87d2-834b0ecf2575",
+        "dae6e024-5804-475f-b279-b3ea72d1d128",
+        "57f7361a-8996-41c0-a3d1-eaf77a0282d5"
+      ],
+      "settings": {
+        "image_desktop": ""
+      }
+    },
+    "496e7ba8-c4b9-42e3-9b7a-6c5817bf75d8": {
+      "type": "color-bg-img",
+      "settings": {
+        "parrafo": "Diseño moderno, con líneas limpias y acabados impecables que elevan cualquier ambiente, aportando un toque de lujo y sofisticación a tus espacios.",
+        "image_desktop": "shopify:\/\/shop_images\/05-line-7027048.webp",
+        "image_movil": "shopify:\/\/shop_images\/05-line-7027048.webp",
+        "enlace": "",
+        "bg_color": "#B9A996"
+      }
+    },
+    "85d0ac11-df6e-4644-ab22-d57d505e87cf": {
+      "type": "dynamic-promo-form",
+      "settings": {
+        "main_title": "<b>SÉ EL PRIMERO EN ENTERARTE DE TODAS LAS NOVEDADES<\/b>",
+        "main_description": "Déjanos tus datos y recibe tips de decoración, promociones y mucho más.",
+        "banner_form": "shopify:\/\/shop_images\/formulario-line-pa.webp",
+        "invertir_col": false,
+        "vertical_alignment_movil": "align-items-center",
+        "vertical_alignment_desktop": "align-items-md-center",
+        "etiqueta": "",
+        "fondo_boton": "#b9a996",
+        "color_letra_boton": "#ffffff"
+      }
+    },
+    "5153d464-d565-4595-ab9b-9058739fa06e": {
+      "type": "collection-grid-products",
+      "blocks": {
+        "e23f8cb4-4d9f-435a-80d3-d173e6039430": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/01-7026328.webp",
+            "enlace_producto": "shopify:\/\/products\/7026328"
+          }
+        },
+        "e598bce3-b48f-4850-b710-550f0705d405": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/02-7027046.webp",
+            "enlace_producto": "shopify:\/\/products\/7027046"
+          }
+        },
+        "b640fc7e-36c4-4234-80e5-1eeac7c364d0": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/03-7025486.webp",
+            "enlace_producto": "shopify:\/\/products\/7025486"
+          }
+        },
+        "b7d567c5-6741-4ce2-bfb1-746c339d1ba2": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/04-7027048.webp",
+            "enlace_producto": "shopify:\/\/products\/7027048"
+          }
+        },
+        "63d33c74-5a61-44ef-8a0a-0e0c51b9376d": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/03-7029138.webp",
+            "enlace_producto": "shopify:\/\/products\/7029138"
+          }
+        },
+        "892df2ca-464f-4fca-8ca2-ecc3e11281cd": {
+          "type": "imagen",
+          "settings": {
+            "title": "",
+            "imagen": "shopify:\/\/shop_images\/06-7026299.webp",
+            "enlace_producto": "shopify:\/\/products\/7026299"
+          }
+        }
+      },
+      "block_order": [
+        "e23f8cb4-4d9f-435a-80d3-d173e6039430",
+        "e598bce3-b48f-4850-b710-550f0705d405",
+        "b640fc7e-36c4-4234-80e5-1eeac7c364d0",
+        "b7d567c5-6741-4ce2-bfb1-746c339d1ba2",
+        "63d33c74-5a61-44ef-8a0a-0e0c51b9376d",
+        "892df2ca-464f-4fca-8ca2-ecc3e11281cd"
+      ],
+      "settings": {
+        "title_text": "Elevar la personalidad de tus ambientes es  muy fácil con diseños en tendencia"
+      }
+    },
+    "styles": {
+      "type": "styles-render",
+      "settings": {
+        "main_title": "Estilos"
+      }
+    }
+  },
+  "order": [
+    "af7dde4b-7d6d-473e-bc3d-422530087c84",
+    "77c6fd5b-bfc9-44e6-845f-dea525394ca5",
+    "f781d576-679a-49fa-9699-ff4bf62bc809",
+    "e300a4ae-c7ec-4711-992b-a0aad44bd8a8",
+    "496e7ba8-c4b9-42e3-9b7a-6c5817bf75d8",
+    "85d0ac11-df6e-4644-ab22-d57d505e87cf",
+    "5153d464-d565-4595-ab9b-9058739fa06e",
+    "styles"
+  ]
+}

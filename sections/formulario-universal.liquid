@@ -1,0 +1,514 @@
+<br><br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 d-flex align-items-center">
+      {% form 'customer', id: "formulario-universal" %}
+        {% if form.errors %}
+          <script>
+          setInterval(function(){
+          $('.error-response').html('<p style="color:#E53733;"><img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/t/443/assets/icon-feedback.svg?v=1681251081"> Tu correo ya se encuentra registrado. Por favor utiliza un correo alternativo.</p>');
+          },100);
+          </script>
+        {%endif%}
+        {% if form.posted_successfully? %}
+          <div class="text-center">
+            <img src="https://cdn.shopify.com/s/files/1/0519/2695/8235/t/443/assets/Thanks%20icon.svg?v=1678865387"/>
+            <h2 class="text-center">¡Gracias por suscribirte!</h2>
+          </div>
+        {% else %}
+        <input type="hidden" name="contact[tags]" value="description_saleforce">
+        <div class="text-start">
+          <h2 class="text_header_h1">{{ section.settings.titulo1 }}</h2>
+          <p class="text_header_p">{{ section.settings.titulo2 }}</p>
+           
+          <div class="row">
+            <div class="col-12 col-md-6">
+              <input
+                class=" rounded-pill p-2 ps-3 bg-light-gris-jamar text-gris-jamar border-0 w-100"
+                name="contact[note][Nombre]"
+                id="name"
+                type="text"
+                placeholder="Nombre completo*"
+                required
+              >
+            </div>
+            <div class="col-12 col-md-6">
+              <input
+                class=" rounded-pill p-2 ps-3 bg-light-gris-jamar text-gris-jamar border-0 w-100"
+                name="contact[note][Whatsapp]"
+                id="Whatsapp"
+                type="text"
+                placeholder="Whatsapp*"
+                required
+              >
+            </div>
+            <div class="col-12 mt-3">
+              <input
+                class=" rounded-pill p-2 ps-3 bg-light-gris-jamar text-gris-jamar border-0 w-100"
+                name="contact[email]"
+                id="email"
+                type="email"
+                placeholder="Tu correo electrónico*"
+                required
+              > 
+            </div>
+            <div class="col-12">
+              <div class="error-response">
+              </div>
+            </div>
+                    <div class="cheket form-cheket-mobile aux-form-universal">
+                      <label style="color:{{ section.settings.color1 }} !important;" class="check1universal label labelref">Deseo recibir promociones por WhatsApp</a>
+                        <input type="checkbox" id="cbox3" checked name="contact[note][politicas_privacidad]" value="Acepto">
+                        <span class="checkmark"></span>
+                      </label>
+                      <label style="color:{{ section.settings.color1 }} !important;" class="label check1universal labelref">Acepto<b style="color:transparent;">_</b><a href="https://www.jamar.com/pages/aviso-legal" target="_blank"><b style=" color:{{ section.settings.color1 }}">Políticas de Privacidad de Datos</b></a>
+                        <input type="checkbox" id="cbox2" checked name="contact[note][politicas_privacidad]" value="Acepto" required>
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <button type="buttom" id="btn-form-universal" class="bg-dark-gray text-white rounded-pill pe-4 ps-4 pt-2 pb-2">
+                      {{ section.settings.boton1 }}
+              		</button>
+                    {% endif %}	
+                     {% endform %}  
+        </div>
+   
+
+      
+<div class="col-6 d-none d-md-block">
+   
+   {{ section.settings.imagen_universal | image_url : width: 614 | image_tag: class: 'img-fluid ', format: 'webp', data-rimg: 'lazy', loading: 'lazy' }}
+</div>
+    </div>
+</div>
+
+
+<style>
+
+  /quitar de cyberdays/
+
+  .cheket .label input:checked~.checkmark {
+    background-color: {{ section.settings.colorcheck }}!important;
+  }
+
+
+/quitar el important y eliminar la clase del epic.scss/
+  .btnSusCateg {
+    font-family: {{ section.settings.font_1 }},sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    width:110px; 
+    heigth:48px;
+    line-height: 16px;
+    border: none;
+    border-radius: 30px;
+    padding: 1px;
+    background-color: {{ section.settings.bgcolorbtn }} !important;
+    color: {{ section.settings.txtcolorbtn }}!important;
+    position: relative;
+    letter-spacing:1px;
+}
+
+.btnSusCateg:hover{
+   background:{{ section.settings.boton1hov }}!important;
+}
+  
+    .mensaje-formulario-gracias{
+
+    font-size: 34px;
+    margin-top:10px;
+    
+  }
+
+  #btn-form-universal{
+  
+    margin-left: 0rem !important;
+ 
+
+  }
+  
+  .section_formulario_universal{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem 0;
+  }
+
+  .container_funiversal_0 {
+    margin: 0 32px 0 0;
+    width: 37%;
+}
+
+  .center_h{
+    display: flex;
+    justify-content: center;
+  }
+
+  .center_v{
+    display: flex;
+    align-items: center;
+  }
+
+  .center_v_h{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text_header_h1{
+font-family: {{ section.settings.font_1 }};
+font-style: normal;
+font-weight: 500;
+font-size: 34px;
+line-height: 40px;
+color:{{ section.settings.color1 }};
+ margin-bottom: 16px;
+  }
+
+  .text_header_p{
+font-family: {{ section.settings.font_1 }};
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 19px;
+ margin-bottom:16px !important;
+  color:{{ section.settings.color1 }};
+  }
+
+.design_box_universal_1{
+
+    padding: 0px 16px;
+    width: 100%;
+    height: 48px;
+    background: #F6F6F6;
+    border-radius: 34px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    //border: 1px solid #D8D8D8;
+    border: none;
+    font-family: "{{ section.settings.font_1 }}";
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 16px;
+
+  
+}
+
+.design_box_universal_2{
+
+    padding: 0px 16px;
+    height: 48px;
+    background: #F6F6F6;
+    border-radius: 34px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    //border: 1px solid #D8D8D8;
+    border: none;
+    font-family: "{{ section.settings.font_1 }}";
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    margin-bottom: 16px;
+
+  
+}
+
+.ajuste001{
+  padding: 0 0 0 0;
+}
+.container_primeros_componentes {
+
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+
+}
+
+  .container_segundo_componentes {
+
+  display:flex;
+  justify-content: center;
+
+}
+  
+.aux-form-universal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4px!important;
+}
+
+    .check1universal {
+    display: flex !important;
+    align-items: center;
+    height: 21px;
+      margin-bottom:12px;
+}
+
+  .aux-form-universal label {
+    margin-top: 0px!important;
+  }
+
+  .cheket .label a {
+    font-size: 13px !important;
+  }
+
+  
+
+  @media only screen and (max-width: 1100px) {
+
+/* ajuste de texto error */
+.error-response{
+  margin-top:2px!important;
+
+  justify-content: flex-start!important;
+}
+
+.error-response p img  {
+        margin: 0 10px 0 0;
+  }
+
+.error-response p {
+        width: auto;
+  justify-content: start;
+  margin-top: -14px;
+  line-height: 14px;
+  }
+
+    
+  .container_tercer_componentes {
+
+  display:flex;
+  justify-content: center;
+
+}
+    
+.design_box_universal_1{
+  justify-content: center;
+align-items: flex-start;
+padding: 0px 16px;
+height: 48px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.ajuste001 div{
+
+  display:flex;
+  justify-content: center;
+  
+}
+
+.text_header_h1{
+
+  display:block;
+  font-size: 22px;
+  text-align: center;
+  line-height: 26px;
+  
+  
+}   
+
+    .text_header_p{
+
+  display:block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 18px;
+  margin-bottom: 16px;
+  
+}  
+
+ .ajuste001 div p{
+
+  display:flex;
+  justify-content: center;
+  
+}   
+     .ajuste001 div p b{
+
+  display:flex;
+  justify-content: center;
+  
+}   
+
+    .design_box_universal_2{
+
+       width: 100% !important;
+      margin-bottom: 16px;
+      
+    }
+    
+    .container_primeros_componentes{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+      gap: 0 !important;
+    
+    }
+
+  .ajuste001{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+    .container_funiversal_0 {
+    margin: 0 0 0 0;
+    width: 100%;
+      padding: 0 2.5rem;
+}
+
+    .aux-form-universal {
+    margin: 10px 0 0 1rem;
+}
+
+
+
+    #btn-form-universal{
+      
+    margin-left: 0 !important;
+    
+    }
+
+  .mensaje-formulario-gracias{
+
+    font-size: 22px !important;
+    margin-top:10px;
+    
+  }
+
+
+  }
+
+  @media only screen and (max-width: 1000px) {
+    .principal-00-jho{
+      display: none;
+    }
+  }
+
+  .cheket .label .checkmark{
+    border: 1px solid {{ section.settings.colorcheck }};
+  }
+
+/* focus */
+
+input:focus, textarea:focus, select:focus {
+    -webkit-box-shadow: 0 0 0 2px #6E7A8A !important;
+}
+
+/* error */
+  
+.alert-error {
+
+width: 100px;
+height: 100px;
+z-index:100;
+background: red;
+  
+}
+
+.principal-00-jho img {
+
+    width: 614px;
+    height: auto;
+    border-radius: 4px;
+      
+  }
+
+  .error-response{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: -14px;
+    font-size: 13px;
+    color: #E53733;
+    font-family: '{{ section.settings.font_1 }}';
+  }
+
+
+</style>
+
+{% schema %}
+ {
+   "name": "Formulario universal",
+   "settings": [
+     {
+     	"type": "html",
+     	"id": "description_saleforce",
+     	"label": "Descripción salesforce & shopify",
+       "default" : "Landing"
+   },
+     {
+	"type": "html",
+     	"id": "titulo1",
+     	"label": "Titulo del formulario"
+},
+{
+	"type": "html",
+     	"id": "titulo2",
+     	"label": "Descripción del formulario"
+},
+              {
+	"type": "color",
+     	"id": "color1",
+     	"label": "Color de titulo,descripción y textos del checkbox",
+        "default": "#404B5A"
+},
+{
+	"type": "html",
+     	"id": "font_1",
+     	"label": "tipo de fuente del formulario",
+        "default": "lato"
+},
+         {
+     	"type": "color",
+     	"id": "colorcheck",
+     	"label": "color del checkbox",
+       "default": "#6e7a8a"
+   },
+                {
+	"type": "text",
+     	"id": "boton1",
+     	"label": "Copy del botón submit ",
+        "default": "Enviar"
+}
+     ,{
+	"type": "color",
+     	"id": "txtcolorbtn",
+     	"label": "Color del copy del botón submit ",
+        "default": "#FFFFFF"
+},
+     {
+	"type": "color",
+     	"id": "bgcolorbtn",
+     	"label": "Color del background del botón submit ",
+        "default": "#404B5A"
+},
+                {
+	"type": "color",
+     	"id": "boton1hov",
+     	"label": "Hover del boton submit ",
+        "default": "#1F232A"
+},
+     {
+     	"type": "image_picker",
+     	"id": "imagen_universal",
+     	"label": "Imagen para el formulario"
+   }
+
+], "presets": [
+   {
+     "name": "Formulario Universal",
+     "category": "HTML Block"
+   }
+ ]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,83 @@
+{% comment %} Refactorizar  {% endcomment %}
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'popup_abril' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+  {% form 'customer', id: 'form_popup_home' , class: 'custom_form_cybermonday'%}
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="{{ newsletter_tags }}"
+      >
+
+          <input
+            class="form-field-input-cybermonday id_nombre"
+            name="contact[first_name]"
+            id="namePopupHome"
+            type="text"
+            placeholder="Nombre">
+          
+          <input
+            class="form-field-input-cybermonday id_apellido"
+            name="contact[last_name]"
+            id="apellidoPopupHome"
+            type="text"
+            placeholder="Apellido">
+        
+          <input
+            class="form-field-input-cybermonday id_correo"
+            name="contact[email]"
+            id="correoPopupHome"
+            type="email"
+            placeholder="Correo Electrónico"
+          >
+
+          <input
+            class="form-field-input-cybermonday id_celular"
+            name="contact[note][phone]"
+            id="telPopupHome"
+            type="tel"
+            placeholder="Celular"
+          >
+
+          <button
+            name="subscribe"
+            type="submit"
+            id="btn_form_popup_home"  
+          >
+
+            Enviar
+     </button>
+  {% endform %}
+
+{% comment %}
+/*****************************************************
+*			 TAGS PARA WEB RECOMENDATION
+*	            PATRYKSIM@GMAIL.COM
+******************************************************/
+
+
+<script>
+  _etmc.push(["setOrgId", "515007278"]);
+  _etmc.push(["setUserInfo", {
+    "email": document.querySelector("#correoPopupHome").value,
+    /*"details": {
+      "sexo": "INSERT_VALUE_HERE",
+      "edad": "INSERT_VALUE_HERE",
+      "estado civil": "INSERT_VALUE_HERE"
+    }*/
+  }]);
+  _etmc.push(["trackPageView"]);
+  
+ {% endcomment %}
+  
+</script>

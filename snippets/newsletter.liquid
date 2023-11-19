@@ -1,0 +1,84 @@
+{% assign form_id = form_id | default: nil %}
+{% assign newsletter_tags = 'prospect' %}
+
+{%- if template contains 'password' %}
+  {% assign newsletter_tags = newsletter_tags | append: ', password page' %}
+{%- else -%}
+  {% assign newsletter_tags = newsletter_tags | append: ', newsletter' %}
+{%- endif -%}
+
+{% unless input_id %}
+  {% assign input_id = 'newsletter_email' %}
+{% endunless %}
+
+<div class="newsletter">
+  {% form 'customer', id: form_id %}
+    {% if form.posted_successfully? %}
+      <p class="newsletter-success">
+        {{ 'general.newsletter.success' | t }}
+      </p>
+    {% else %}
+      <input
+        type="hidden"
+        name="contact[tags]"
+        value="{{ newsletter_tags }}"
+      >
+
+      <div class="form-fields-inline pxs-newsletter-form-fields">
+        <div class="form-field newsletter-input">
+          <input
+            class="form-field-input form-field-text"
+            name="contact[email]"
+            id="{{ input_id }}"
+            type="email"
+            aria-label="{{ 'general.newsletter.placeholder' | t }}"
+          >
+
+          <label
+            class="form-field-title"
+            for="{{ input_id }}"
+          >
+            {{ 'general.newsletter.placeholder' | t }}
+          </label>
+        </div>
+
+        <div class="form-field newsletter-submit">
+          <button
+            class="button-primary"
+            name="subscribe"
+            type="submit"
+            {% comment %}
+            /**********************************************************
+            *             RETAIL ROCKET CONTENIDO PERSONALIZADO
+            *                   PATRYKSIM@GMAIL.COM
+            **********************************************************/
+            {% endcomment %}
+            onclick="try {rrApi.setEmail($('#newsletter_email').val());}catch(e){}"     
+          >
+            {{ 'general.newsletter.subscribe' | t }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  {% endform %}
+</div>
+
+{% comment %}
+/*****************************************************
+*			 TAGS PARA WEB RECOMENDATION
+*	            PATRYKSIM@GMAIL.COM
+******************************************************/
+{% endcomment %}
+
+<script>
+  _etmc.push(["setOrgId", "515007278"]);
+  _etmc.push(["setUserInfo", {
+    "email": document.querySelector("#newsletter_email").value,
+    /*"details": {
+      "sexo": "INSERT_VALUE_HERE",
+      "edad": "INSERT_VALUE_HERE",
+      "estado civil": "INSERT_VALUE_HERE"
+    }*/
+  }]);
+  _etmc.push(["trackPageView"]);
+</script>

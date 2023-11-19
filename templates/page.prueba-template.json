@@ -1,0 +1,243 @@
+{
+  "sections": {
+    "main": {
+      "type": "dynamic-html",
+      "settings": {
+        "title": "",
+        "custom_html": "<br>"
+      }
+    },
+    "fbd54e50-7437-4eb1-9058-32525477804e": {
+      "type": "carrusel-section-grid",
+      "blocks": {
+        "54aad2ae-a744-4de9-b187-34be152b0cb5": {
+          "type": "tarjeta",
+          "settings": {
+            "textoimage": "<p>tarjeta 1<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        },
+        "06f82dc9-5074-4777-8da1-bdaf568994ff": {
+          "type": "tarjeta",
+          "settings": {
+            "textoimage": "<p>tarjeta 2<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        },
+        "5bc99aea-e221-470f-b6b7-7621732ba14b": {
+          "type": "tarjeta",
+          "settings": {
+            "textoimage": "<p>tarjeta 3<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        },
+        "0e557922-8b01-47da-9820-49bcbdb7ca9c": {
+          "type": "tarjeta",
+          "settings": {
+            "textoimage": "<p>tarjeta 4<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        },
+        "4b2bcad7-269d-48e7-9b65-e257e8297595": {
+          "type": "tarjeta",
+          "settings": {
+            "textoimage": "<p>tarjeta 5<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        },
+        "3cbbf474-6be8-4989-aa24-c69c48a7bce9": {
+          "type": "tarjeta",
+          "disabled": true,
+          "settings": {
+            "textoimage": "<p>tarjeta 6<\/p><p><strong>300$<\/strong><\/p>",
+            "imagen": "shopify:\/\/shop_images\/7024863-1.jpg",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "54aad2ae-a744-4de9-b187-34be152b0cb5",
+        "06f82dc9-5074-4777-8da1-bdaf568994ff",
+        "5bc99aea-e221-470f-b6b7-7621732ba14b",
+        "0e557922-8b01-47da-9820-49bcbdb7ca9c",
+        "4b2bcad7-269d-48e7-9b65-e257e8297595",
+        "3cbbf474-6be8-4989-aa24-c69c48a7bce9"
+      ],
+      "settings": {
+        "id_section": "carrusel-section-grid",
+        "title": "Nuevas secciones",
+        "text": "Entrega 1ra semana patri"
+      }
+    },
+    "3525bec7-b9e4-4a59-8af7-f05c3efd8d37": {
+      "type": "categorias-grid",
+      "blocks": {
+        "template--16234997383367__3525bec7-b9e4-4a59-8af7-f05c3efd8d37-card-1": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7004765_1500x1500_fdb2ab05-8089-4221-ab7a-88771a800fe0.webp",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "template--16234997383367__3525bec7-b9e4-4a59-8af7-f05c3efd8d37-outlet-card-1": {
+          "type": "outlet-card",
+          "settings": {
+            "imagen_sale": "shopify:\/\/shop_images\/7004765_1500x1500_fdb2ab05-8089-4221-ab7a-88771a800fe0.webp",
+            "text_outlet_card": "OUTLET",
+            "color_text_outlet": "#e53327",
+            "textoimage": "",
+            "enlace": ""
+          }
+        },
+        "408e4b2c-3a3a-4a2b-941f-df7a0e13b41f": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7004765_1500x1500_fdb2ab05-8089-4221-ab7a-88771a800fe0.webp",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "1e9b5597-3445-44c5-9ecd-6324574fe4c1": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7004765_1500x1500_fdb2ab05-8089-4221-ab7a-88771a800fe0.webp",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "be6d5bf7-a553-491b-93fd-2a175e9c3686": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7027117-1.jpg",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16234997383367__3525bec7-b9e4-4a59-8af7-f05c3efd8d37-card-1",
+        "template--16234997383367__3525bec7-b9e4-4a59-8af7-f05c3efd8d37-outlet-card-1",
+        "408e4b2c-3a3a-4a2b-941f-df7a0e13b41f",
+        "1e9b5597-3445-44c5-9ecd-6324574fe4c1",
+        "be6d5bf7-a553-491b-93fd-2a175e9c3686"
+      ],
+      "disabled": true,
+      "settings": {
+        "id_section": "categorias-grid",
+        "title": "Nuevas secciones",
+        "text": "Entregas 1era semana patri",
+        "section_type": true,
+        "cards_aligment": "left",
+        "desktop_width": 5
+      }
+    },
+    "d67840c9-a573-4413-9d2c-ada6d9ba0825": {
+      "type": "banner-with-grid",
+      "blocks": {
+        "fa4441e9-14aa-48c2-b6b3-a7313c3b3d11": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "63914952-d00f-41d7-99e4-8f1a62ae7882": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "7d8ee076-217a-40c0-85cc-f1a57bbe15c1": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        },
+        "c6f2091d-bd84-471b-9601-15be98947cfd": {
+          "type": "card",
+          "settings": {
+            "imagen": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "textoimage": "<p>Texto de la tarjeta<\/p>",
+            "enlace": ""
+          }
+        }
+      },
+      "block_order": [
+        "fa4441e9-14aa-48c2-b6b3-a7313c3b3d11",
+        "63914952-d00f-41d7-99e4-8f1a62ae7882",
+        "7d8ee076-217a-40c0-85cc-f1a57bbe15c1",
+        "c6f2091d-bd84-471b-9601-15be98947cfd"
+      ],
+      "settings": {
+        "id_section": "blog-post",
+        "title": "Nuevas secciones",
+        "text": "entregas 1 semana patricia hung",
+        "tipo": "video",
+        "video_object": "shopify:\/\/files\/videos\/BANNER BONO 300 WEB.mp4",
+        "video_object_movil": "shopify:\/\/files\/videos\/mobile-video-bono.mp4",
+        "url": "shopify:\/\/pages\/alma",
+        "fondo": true,
+        "box_title": "titulo",
+        "box_subtitle": "subtitulo",
+        "boton": "btn",
+        "margen": 100
+      }
+    },
+    "f85c40a0-624d-45e8-b3bf-3371258f86b9": {
+      "type": "tarjetas-ancho-variable",
+      "blocks": {
+        "template--16234997383367__f85c40a0-624d-45e8-b3bf-3371258f86b9-imagen-1": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "title": "Visita nuestro blog",
+            "link": "shopify:\/\/blogs\/noticias",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        },
+        "c228d9fc-1354-43c9-8ee8-237741f6271b": {
+          "type": "imagen",
+          "settings": {
+            "image_desktop": "shopify:\/\/shop_images\/7027119-1.jpg",
+            "title": "Visita nuestro blog",
+            "link": "shopify:\/\/blogs\/decoracion-y-estilo",
+            "mobile_width": 12,
+            "padding_mobile_0": false,
+            "desktop_width": 6
+          }
+        }
+      },
+      "block_order": [
+        "template--16234997383367__f85c40a0-624d-45e8-b3bf-3371258f86b9-imagen-1",
+        "c228d9fc-1354-43c9-8ee8-237741f6271b"
+      ],
+      "disabled": true,
+      "settings": {
+        "id_section": "tarjetas-ancho-variable",
+        "title": "Nuevas secciones de ancho variable",
+        "text": "entrega 1ra semana patri",
+        "button_style": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fbd54e50-7437-4eb1-9058-32525477804e",
+    "3525bec7-b9e4-4a59-8af7-f05c3efd8d37",
+    "d67840c9-a573-4413-9d2c-ada6d9ba0825",
+    "f85c40a0-624d-45e8-b3bf-3371258f86b9"
+  ]
+}

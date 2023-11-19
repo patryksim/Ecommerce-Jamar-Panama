@@ -1,0 +1,27 @@
+{{ 'contador.css' | asset_url | stylesheet_tag }}
+
+<div class="container-contador">
+        <div class="contador-group">
+            <div class="box">
+                <span class="labels-contador" id="daystxt">Días</span>
+                <span class="intervals" id="days">000</span>
+            </div>
+            <div class="box">
+                <span class="labels-contador" id="hourstxt">Horas</span>
+                <span class="intervals" id="hours">00</span>
+            </div>
+            <div class="box">
+                <span class="labels-contador" id="minutestxt">Minutos</span>
+                <span class="intervals" id="minutes">00</span>
+            </div>
+            <div class="box">
+                <span class="labels-contador" id="secondstxt">Segundos</span>
+                <span class="intervals" id="seconds">00</span>
+            </div>
+        </div>
+
+        <p class="parrafo-contador">Para las ofertas de fin de año</p>
+    </div>
+
+
+{{ 'contador.js' | asset_url | script_tag }}

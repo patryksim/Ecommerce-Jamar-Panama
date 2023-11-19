@@ -1,0 +1,38 @@
+.contenedor-titulos-seccion-detalles-iluminan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.contenedor-titulos-seccion-detalles-iluminan h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Geomanist Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #4E4E4E;
+    width: 80%;
+    margin-bottom: 24px;
+}
+.contenedor-titulos-seccion-detalles-iluminan h2.style-2{
+    color: #A7977E;
+}
+.contenedor-titulos-seccion-detalles-iluminan p{
+    font-family: 'Geomanist Regular';
+    font-style: normal;
+    font-weight: Regularer;
+    font-size: 32px;
+    width: 80%;
+    color: #4E4E4E;
+}
+.contenedor-titulos-seccion-detalles-iluminan p:nth-of-type(1){
+    font-family: 'Geomanist Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    width: 80%;
+    color: #4E4E4E;
+    margin-bottom: 24px;
+}
